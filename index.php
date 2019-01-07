@@ -1,5 +1,3 @@
-<?php include("db/connect.php"); ?>
-
 <!DOCTYPE HTML>
 <html>
 
@@ -643,7 +641,7 @@
 			</div>
 			<div class="choose animate-box">
 				<h2>Contact</h2>
-				<form action="db/submit.php" method="POST">
+				<form action="#" method="">
 					<div class="row form-group">
 						<div class="col-md-6">
 							<input type="text" name="fname" id="fname" class="form-control" placeholder="Your firstname" required>
