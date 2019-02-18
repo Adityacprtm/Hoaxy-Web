@@ -1,0 +1,4 @@
+RewriteEngine On
+
+ErrorDocument 404 /site/error/404.html
+ErrorDocument 403 /site/error/403.html
