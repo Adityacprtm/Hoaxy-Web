@@ -76,6 +76,20 @@
 		gtag('config', 'UA-128216763-1');
 	</script>
 
+	<style>
+		.float-back {
+			position: fixed;
+			width: 50px;
+			height: 50px;
+			bottom: 100px;
+			right: 25px;
+			background-color: rgb(0, 0, 0);
+			color: #FFF;
+			border-radius: 50px;
+			text-align: center;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -518,12 +532,11 @@
 		</div>
 	</div>
 
-	<!-- <div class="gototop js-top">
-		<a href="#home" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div> -->
 	<div class="gototop js-top">
-		<a href="/" class=""><i class="icon-arrow-left22"> New</i></a>
+		<a href="#home" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
+
+	<a href="/" class="float-back" style="text-decoration: none" title="Back"><span style="font-size: 30px">&#8629;</span></a>
 
 	<!-- jQuery -->
 	<script src="{{ asset('assets/old/v1/js/jquery.min.js') }}"></script>

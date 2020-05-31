@@ -5,10 +5,10 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Bako - Personal Portfolio & Resume HTML Template</title>
+	<title>Adityacprtm.</title>
 	<meta name="description" content="Bako - Personal Portfolio & Resume HTML Template">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/old/v2/images/favicon.png') }}">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/old/v2/images/logo.png') }}">
 
 	<!-- STYLESHEETS -->
 	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/bootstrap.min.css') }}" type="text/css" media="all">
@@ -17,6 +17,20 @@
 	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/slick.css') }}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/jquery.mCustomScrollbar.min.css') }}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/style.css') }}" type="text/css" media="all">
+
+	<style>
+		.float-back {
+			position: fixed;
+			width: 50px;
+			height: 50px;
+			bottom: 100px;
+			right: 25px;
+			background-color: rgb(0, 0, 0);
+			color: #FFF;
+			border-radius: 50px;
+			text-align: center;
+		}
+	</style>
 
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -48,7 +62,7 @@
 				<span></span>
 			</button>
 			<a href="/" class="logo"><img src="{{ asset('assets/old/v2/images/logo.png') }}" alt="Bako Doe" /></a>
-			<a href="/" class="site-title dot ml-2">Bako Doe</a>
+			<a href="/" class="site-title dot ml-2">Adityacprtm</a>
 		</div>
 
 		<!-- header -->
@@ -57,9 +71,9 @@
 				<span aria-hidden="true">&times;</span>
 			</button>
 			<div class="header-inner d-flex align-items-start flex-column">
-				<a href="/"><img src="{{ asset('assets/old/v2/images/logo.png') }}" alt="Bako Doe" /></a>
-				<a href="/" class="site-title dot mt-3">Bako Doe</a>
-				<span class="site-slogan">Web Developer</span>
+				<a href="/"><img src="{{ asset('assets/old/v2/images/logo.png') }}" alt="Bako Doe" width="70" height="70" /></a>
+				<a href="/" class="site-title dot mt-3">Adityacprtm.</a>
+				<span class="site-slogan">Tech Enthusiast</span>
 
 				<!-- navigation menu -->
 				<nav>
@@ -68,8 +82,8 @@
 						<li><a href="#about"><i class="icon-user"></i>About</a></li>
 						<li><a href="#services"><i class="icon-bulb"></i>Services</a></li>
 						<li><a href="#resume"><i class="icon-graduation"></i>Resume</a></li>
-						<li><a href="#works"><i class="icon-grid"></i>Works</a></li>
-						<li><a href="#blog"><i class="icon-pencil"></i>Blog</a></li>
+						{{-- <li><a href="#works"><i class="icon-grid"></i>Works</a></li> --}}
+						{{-- <li><a href="#blog"><i class="icon-pencil"></i>Blog</a></li> --}}
 						<li><a href="#contact"><i class="icon-phone"></i>Contact</a></li>
 					</ul>
 				</nav>
@@ -79,15 +93,24 @@
 
 					<!-- social icons -->
 					<ul class="social-icons list-inline">
-						<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+						<li class="list-inline-item" title="Facebook"><a target="_blank" href="https://facebook.com/adityacprtm"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="list-inline-item" title="Twitter"><a target="_blank" href="https://twitter.com/adityacprtm"><i class="fab fa-twitter"></i></a></li>
+						<li class="list-inline-item" title="Instagram"><a target="_blank" href="https://instagram.com/adityacprtm"><i class="fab fa-instagram"></i></a></li>
+						<li class="list-inline-item" title="Linkedin"><a target="_blank" href="https://linkedin.com/in/adityacprtm"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="list-inline-item" title="Github"><a target="_blank" href="https://github.com/adityacprtm"><i class="fab fa-github"></i></a></li>
 					</ul>
 
+					<!-- dark mode button -->
+					<div class="theme-switch-wrapper">
+						<label class="theme-switch" for="checkbox">
+							<input type="checkbox" id="checkbox" />
+							<div class="slider round"></div>
+						</label>
+						<em class="align-middle"> &nbsp; Enable Dark Mode!</em>
+					</div>
+
 					<!-- copyright -->
-					<span class="copyright">© 2020 Bako Template</span>
+					<span class="copyright">Configured with <i style="color: #FF5959" class="fas fa-heart"></i> at 2019 <br> by <a target="_blank" href="https://adityacprtm.com"><strong>Adityacprtm.com</strong></a></span>
 				</div>
 			</div>
 		</header>
@@ -96,13 +119,14 @@
 		<main class="content float-right">
 
 			<!-- section hero -->
-			<section class="hero background parallax shadow-dark d-flex align-items-center" id="home" data-image-src="{{ asset('assets/old/v2/images/hero.jpg') }}">
+			<section class="hero background parallax shadow-dark d-flex align-items-center" id="home" data-image-src="{{ asset('assets/old/v2/images/background-1.jpg') }}">
 				<div class="cta mx-auto mt-2">
-					<h1 class="mt-0 mb-4">I’m Bako Doe<span class="dot"></span></h1>
-					<p class="mb-4">He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-					<a href="#" class="btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View Portfolio</a>
+					{{-- <h1 class="mt-0 mb-4">I’m Bako Doe<span class="dot"></span></h1> --}}
+					<h1 class="mt-0 mb-4 typewrite" data-period="2000" data-type='[ "Hello World!", "I Am Aditya.", "Hi, mbeb." ]'><span class="wrap"></span><span class="dot"></span></h1>
+					<p class="mb-4">Just because something doesn’t do what you planned it to do doesn’t mean it’s useless. –Thomas Edison</p>
+					<a href="#resume" class="btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View Resume</a>
 					<div class="spacer d-md-none d-lg-none d-sm-none" data-height="10"></div>
-					<a href="#" class="btn btn-border-light btn-lg"><i class="icon-envelope"></i>Hire me</a>
+					<a target="_blank" href="mailto:adityacprtm[at]gmail[dot]com?body=PLEASE CHANGE RECIPIENT'S EMAIL WITH THE CORRECT SYMBOL!" class="btn btn-border-light btn-lg"><i class="icon-envelope"></i>Contact Me</a>
 				</div>
 				<div class="overlay"></div>
 			</section>
@@ -118,19 +142,19 @@
 					</div>
 					<div class="col-md-9">
 						<h2 class="mt-4 mt-md-0 mb-4">Hello,</h2>
-						<p class="mb-0">I am Bako Doe, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at wordpress.</p>
+						<p class="mb-0">I was Born in Pangkalan Bun, June 21, 1997 at 13:00. I live in Banjarbaru, South Kalimantan, Indonesia. Currently pursuing a bachelor's degree at the Faculty of Computer Science, Universitas Brawijaya focuses on Network Based Computing. Become one of the selected participants to take part in the Partner Certification of the DIGITALENT 2019 program implemented by the Ministry of Communication and Information.</p>
 						<div class="row my-4">
 							<div class="col-md-6">
-								<p class="mb-2">Name: <span class="text-dark">Bako Doe</span></p>
-								<p class="mb-0">Birthday: <span class="text-dark">14 August, 1990</span></p>
+								<p class="mb-2">Name: <span class="text-dark">Aditya Chamim Pratama</span></p>
+								<p class="mb-0">Birthday: <span class="text-dark">21 June, 1997</span></p>
 							</div>
 							<div class="col-md-6 mt-2 mt-md-0 mt-sm-2">
-								<p class="mb-2">Location: <span class="text-dark">London, UK</span></p>
-								<p class="mb-0">Email: <span class="text-dark">hello@bako.com</span></p>
+								<p class="mb-2">Location: <span class="text-dark">Banjarbaru, ID</span></p>
+								<p class="mb-0">Email: <span class="text-dark">adityacprtm[at]gmail[dot]com</span></p>
 							</div>
 						</div>
-						<a href="#" class="btn btn-default mr-3"><i class="icon-cloud-download"></i>Download CV</a>
-						<a href="#" class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Hire me</a>
+						<a target="_blank" href="https://adityacprtm-shared.s3-ap-southeast-1.amazonaws.com/pdf/Aditya_Pratama_CV.pdf" class="btn btn-default mr-3"><i class="icon-cloud-download"></i>Download CV</a>
+						<a target="_blank" href="mailto:adityacprtm[at]gmail[dot]com?body=PLEASE CHANGE RECIPIENT'S EMAIL WITH THE CORRECT SYMBOL!" class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Contact me</a>
 					</div>
 				</div>
 			</section>
@@ -140,7 +164,7 @@
 				<h3 class="section-title">My skills</h3>
 				<div class="spacer" data-height="80"></div>
 
-				<p class="mb-0">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+				<p class="mb-0">Don’t compare yourself with anyone in this world…if you do so, you are insulting yourself. <strong>-Bill Gates</strong></p>
 
 				<div class="row mt-5">
 
@@ -148,41 +172,71 @@
 						<!-- skill item -->
 						<div class="skill-item">
 							<div class="skill-info clearfix">
-								<h4 class="float-left mb-3 mt-0">WordPress</h4>
-								<span class="float-right">85%</span>
-							</div>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
-								</div>
-							</div>
-							<div class="spacer" data-height="50"></div>
-						</div>
-					</div>
-
-					<div class="col-md-6">
-						<!-- skill item -->
-						<div class="skill-item">
-							<div class="skill-info clearfix">
-								<h4 class="float-left mb-3 mt-0">HTML & CSS</h4>
-								<span class="float-right">90%</span>
-							</div>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
-								</div>
-							</div>
-							<div class="spacer" data-height="50"></div>
-						</div>
-					</div>
-
-					<div class="col-md-6">
-						<!-- skill item -->
-						<div class="skill-item">
-							<div class="skill-info clearfix">
-								<h4 class="float-left mb-3 mt-0">jQuery</h4>
-								<span class="float-right">60%</span>
+								<h4 class="float-left mb-3 mt-0">Amazon Web Service</h4>
+								<span class="float-right">Intermediate</span>
 							</div>
 							<div class="progress">
 								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+								</div>
+							</div>
+							<div class="spacer" data-height="50"></div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<!-- skill item -->
+						<div class="skill-item">
+							<div class="skill-info clearfix">
+								<h4 class="float-left mb-3 mt-0">Microsoft Office</h4>
+								<span class="float-right">Expert</span>
+							</div>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+								</div>
+							</div>
+							<div class="spacer" data-height="50"></div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<!-- skill item -->
+						<div class="skill-item">
+							<div class="skill-info clearfix">
+								<h4 class="float-left mb-3 mt-0">Web Development</h4>
+								<span class="float-right">Intermediate</span>
+							</div>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+								</div>
+							</div>
+							<div class="spacer" data-height="50"></div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<!-- skill item -->
+						<div class="skill-item">
+							<div class="skill-info clearfix">
+								<h4 class="float-left mb-3 mt-0">Computer Networking</h4>
+								<span class="float-right">Intermediate</span>
+							</div>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+								</div>
+							</div>
+							<div class="spacer" data-height="50"></div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<!-- skill item -->
+						<div class="skill-item">
+							<div class="skill-info clearfix">
+								<h4 class="float-left mb-3 mt-0">Dota2</h4>
+								<span class="float-right">Expert</span>
+							</div>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
 								</div>
 							</div>
 							<div class="spacer d-md-none d-lg-none" data-height="50"></div>
@@ -193,13 +247,14 @@
 						<!-- skill item -->
 						<div class="skill-item">
 							<div class="skill-info clearfix">
-								<h4 class="float-left mb-3 mt-0">Sketch</h4>
-								<span class="float-right">70%</span>
+								<h4 class="float-left mb-3 mt-0">Futsal</h4>
+								<span class="float-right">Expert</span>
 							</div>
 							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
 								</div>
 							</div>
+							<div class="spacer d-md-none d-lg-none" data-height="50"></div>
 						</div>
 					</div>
 
@@ -207,14 +262,14 @@
 			</section>
 
 			<!-- section facts -->
-			<section id="facts" class="shadow-dark color-white background parallax padding-50" data-image-src="{{ asset('assets/old/v2/images/background-1.jpg') }}">
+			<section id="facts" class="shadow-dark color-white background parallax padding-50" data-image-src="{{ asset('assets/old/v2/images/background-2.jpg') }}">
 
 				<div class="row relative z-1">
 					<div class="col-md-3 col-sm-6">
 						<!-- fact item -->
 						<div class="fact-item text-center">
 							<i class="icon-like icon-circle"></i>
-							<h2 class="count">157</h2>
+							<h2 id="count1" class="count">counting</h2>
 							<span>Projects completed</span>
 						</div>
 					</div>
@@ -222,7 +277,7 @@
 						<!-- fact item -->
 						<div class="fact-item text-center">
 							<i class="icon-cup icon-circle"></i>
-							<h2 class="count">2765</h2>
+							<h2 id="count2" class="count">counting</h2>
 							<span>Cup of coffee</span>
 						</div>
 					</div>
@@ -230,7 +285,7 @@
 						<!-- fact item -->
 						<div class="fact-item text-center">
 							<i class="icon-emotsmile icon-circle"></i>
-							<h2 class="count">350</h2>
+							<h2 id="count3" class="count">counting</h2>
 							<span>Happy customers</span>
 						</div>
 					</div>
@@ -238,8 +293,8 @@
 						<!-- fact item -->
 						<div class="fact-item text-center">
 							<i class="icon-trophy icon-circle"></i>
-							<h2 class="count">29</h2>
-							<span>Awards won</span>
+							<h2 id="count4" class="count">1</h2>
+							<span>Certifications</span>
 						</div>
 					</div>
 				</div>
@@ -250,7 +305,7 @@
 
 			<!-- section services -->
 			<section id="services" class="shadow-blue white-bg padding">
-				<h3 class="section-title">Services</h3>
+				<h3 class="section-title">What I'm Doing</h3>
 				<div class="spacer" data-height="80"></div>
 
 				<div class="row">
@@ -258,9 +313,9 @@
 					<div class="col-md-4 col-sm-6">
 						<!-- service item -->
 						<div class="service-item text-center">
-							<i class="icon-globe icon-simple"></i>
-							<h4 class="my-3">Development</h4>
-							<p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p>
+							<i class="fa fa-cloud icon-simple"></i>
+							<h4 class="my-3">Cloud Computing</h4>
+							{{-- <p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p> --}}
 						</div>
 						<div class="spacer" data-height="20"></div>
 					</div>
@@ -268,9 +323,9 @@
 					<div class="col-md-4 col-sm-6">
 						<!-- service item -->
 						<div class="service-item text-center">
-							<i class="icon-chemistry icon-simple"></i>
-							<h4 class="my-3">Design</h4>
-							<p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p>
+							<i class="fa fa-network-wired icon-simple"></i>
+							<h4 class="my-3">Networking</h4>
+							{{-- <p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p> --}}
 						</div>
 						<div class="spacer" data-height="20"></div>
 					</div>
@@ -278,9 +333,9 @@
 					<div class="col-md-4 col-sm-6">
 						<!-- service item -->
 						<div class="service-item text-center">
-							<i class="icon-directions icon-simple"></i>
-							<h4 class="my-3">Advertising</h4>
-							<p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p>
+							<i class="fa fa-laptop-code icon-simple"></i>
+							<h4 class="my-3">Web Development</h4>
+							{{-- <p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p> --}}
 						</div>
 						<div class="spacer" data-height="20"></div>
 					</div>
@@ -288,9 +343,9 @@
 					<div class="col-md-4 col-sm-6">
 						<!-- service item -->
 						<div class="service-item text-center">
-							<i class="icon-rocket icon-simple"></i>
-							<h4 class="my-3">SEO</h4>
-							<p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p>
+							<i class="fa fa-microchip icon-simple"></i>
+							<h4 class="my-3">Internet of Things</h4>
+							{{-- <p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p> --}}
 						</div>
 						<div class="spacer d-md-none d-lg-none" data-height="20"></div>
 					</div>
@@ -298,9 +353,9 @@
 					<div class="col-md-4 col-sm-6">
 						<!-- service item -->
 						<div class="service-item text-center">
-							<i class="icon-note icon-simple"></i>
-							<h4 class="my-3">Copy Write</h4>
-							<p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p>
+							<i class="fa fa-user-shield icon-simple"></i>
+							<h4 class="my-3">Cyber Security</h4>
+							{{-- <p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p> --}}
 						</div>
 						<div class="spacer d-md-none d-lg-none" data-height="20"></div>
 					</div>
@@ -308,9 +363,9 @@
 					<div class="col-md-4 col-sm-6">
 						<!-- service item -->
 						<div class="service-item text-center">
-							<i class="icon-bubbles icon-simple"></i>
-							<h4 class="my-3">Support</h4>
-							<p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p>
+							<i class="fa fa-user-edit icon-simple"></i>
+							<h4 class="my-3">Coming Soon</h4>
+							{{-- <p class="mb-0">Lorem ipsum dolor sit amet consectetuer elit.</p> --}}
 						</div>
 					</div>
 
@@ -319,305 +374,98 @@
 
 			<!-- section experience -->
 			<section id="resume" class="shadow-blue white-bg padding">
-				<h3 class="section-title">Experience</h3>
-				<div class="spacer" data-height="80"></div>
-
-				<!-- timeline -->
-				<div class="timeline">
-					<div class="entry">
-						<div class="title">
-							<span>2019 - Present</span>
-						</div>
-						<div class="body">
-							<h4 class="mt-0">Academic Degree</h4>
-							<p>Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget dolor aenean massa.</p>
-						</div>
-					</div>
-					<div class="entry">
-						<div class="title">
-							<span>2018 - 2015</span>
-						</div>
-						<div class="body">
-							<h4 class="mt-0">Bachelor’s Degree</h4>
-							<p>Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget dolor aenean massa.</p>
-						</div>
-					</div>
-					<div class="entry">
-						<div class="title">
-							<span>2015 - 2012</span>
-						</div>
-						<div class="body">
-							<h4 class="mt-0">Honours Degree</h4>
-							<p>Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget dolor aenean massa.</p>
-						</div>
-					</div>
-					<span class="timeline-line"></span>
-				</div>
-			</section>
-
-			<!-- section works -->
-			<section id="works" class="shadow-blue white-bg padding">
-				<h3 class="section-title">Portfolio</h3>
-				<div class="spacer" data-height="80"></div>
-
-				<!-- portfolio filter (desktop) -->
-				<ul class="portfolio-filter list-inline">
-					<li class="current list-inline-item" data-filter="*">All Projects</li>
-					<li class="list-inline-item" data-filter=".branding">Branding</li>
-					<li class="list-inline-item" data-filter=".creative">Creative</li>
-					<li class="list-inline-item" data-filter=".design">Design</li>
-					<li class="list-inline-item" data-filter=".video">Video</li>
-				</ul>
-
-				<!-- portfolio filter (mobile) -->
-				<div class="pf-filter-wrapper mb-4">
-					<select class="portfolio-filter-mobile">
-						<option value="*">Everything</option>
-						<option value=".creative">Creative</option>
-						<option value=".video">Video</option>
-						<option value=".design">Design</option>
-						<option value=".branding">Branding</option>
-					</select>
-				</div>
-
-				<!-- portolio wrapper -->
-				<div class="row portfolio-wrapper">
-
-					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item video">
-						<a href="work-single.html">
-							<div class="portfolio-item">
-								<div class="details">
-									<h4 class="title">Creative Art</h4>
-									<span class="term">Art, Creative</span>
-								</div>
-								<span class="plus-icon">+</span>
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/portfolio/1.jpg') }}" alt="Portfolio-title" />
-									<div class="mask"></div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item creative design">
-						<a href="work-single.html">
-							<div class="portfolio-item">
-								<div class="details">
-									<h4 class="title">Apple USB</h4>
-									<span class="term">Creative, Design</span>
-								</div>
-								<span class="plus-icon">+</span>
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/portfolio/2.jpg') }}" alt="Portfolio-title" />
-									<div class="mask"></div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item branding">
-						<a href="work-single.html">
-							<div class="portfolio-item">
-								<div class="details">
-									<h4 class="title">Work Space</h4>
-									<span class="term">Branding</span>
-								</div>
-								<span class="plus-icon">+</span>
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/portfolio/3.jpg') }}" alt="Portfolio-title" />
-									<div class="mask"></div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item creative">
-						<a href="work-single.html">
-							<div class="portfolio-item">
-								<div class="details">
-									<h4 class="title">Creative Bulb</h4>
-									<span class="term">Creative</span>
-								</div>
-								<span class="plus-icon">+</span>
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/portfolio/4.jpg') }}" alt="Portfolio-title" />
-									<div class="mask"></div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item video branding">
-						<a href="work-single.html">
-							<div class="portfolio-item">
-								<div class="details">
-									<h4 class="title">iPhone 8</h4>
-									<span class="term">Art, Branding</span>
-								</div>
-								<span class="plus-icon">+</span>
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/portfolio/5.jpg') }}" alt="Portfolio-title" />
-									<div class="mask"></div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item creative design">
-						<a href="work-single.html">
-							<div class="portfolio-item">
-								<div class="details">
-									<h4 class="title">Minimal Art</h4>
-									<span class="term">Design, Creative</span>
-								</div>
-								<span class="plus-icon">+</span>
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/portfolio/6.jpg') }}" alt="Portfolio-title" />
-									<div class="mask"></div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-				</div>
-
-				<!-- more button -->
-				<div class="load-more text-center mt-4">
-					<a href="javascript:" class="btn btn-default"><i class="fas fa-circle-notch"></i> Load more</a>
-					<!-- numbered pagination (hidden for infinite scroll) -->
-					<ul class="portfolio-pagination list-inline d-none">
-						<li class="list-inline-item">1</li>
-						<li class="list-inline-item"><a href="works-2.html">2</a></li>
-					</ul>
-				</div>
-			</section>
-
-			<!-- section pricing table -->
-			<section id="price" class="shadow-blue white-bg padding">
-				<h3 class="section-title">Pricing table</h3>
-				<div class="spacer" data-height="97"></div>
-
 				<div class="row">
-
-					<div class="col-md-4 pr-md-0 mt-3">
-						<!-- price item -->
-						<div class="price-item text-center">
-							<i class="price-icon icon-energy"></i>
-							<span class="plan">Basic</span>
-							<h3 class="price"><em>$</em>14<span>/mo</span></h3>
-							<div class="price-content">
-								<ul>
-									<li>Frontend Builder</li>
-									<li>Regular Support</li>
-									<li>1 Years of Updates</li>
-								</ul>
-							</div>
-							<a href="#" class="btn btn-default">Get Started</a>
-						</div>
-					</div>
-
-					<div class="col-md-4 px-md-0 my-5 my-md-0">
-						<!-- price item -->
-						<div class="price-item text-center recommended">
-							<i class="price-icon icon-fire"></i>
-							<span class="plan">Professional</span>
-							<h3 class="price"><em>$</em>41<span>/mo</span></h3>
-							<div class="price-content">
-								<ul>
-									<li>Frontend Builder</li>
-									<li>Regular Support</li>
-									<li>2 Years of Updates</li>
-									<li>White Labeling</li>
-								</ul>
-							</div>
-							<a href="#" class="btn btn-default">Get Started</a>
-						</div>
-					</div>
-
-					<div class="col-md-4 pl-md-0 mt-0 mt-md-3">
-						<!-- price item -->
-						<div class="price-item text-center">
-							<i class="price-icon icon-rocket"></i>
-							<span class="plan">Premium</span>
-							<h3 class="price"><em>$</em>99<span>/mo</span></h3>
-							<div class="price-content">
-								<ul>
-									<li>Frontend Builder</li>
-									<li>Regular Support</li>
-									<li>3 Years of Updates</li>
-								</ul>
-							</div>
-							<a href="#" class="btn btn-default">Get Started</a>
-						</div>
-					</div>
-
-				</div>
-			</section>
-
-			<!-- section testimonials -->
-			<section id="testimonials" class="shadow-blue white-bg padding">
-				<h3 class="section-title">Testimonials</h3>
-				<div class="spacer" data-height="97"></div>
-
-				<div class="row testimonials-wrapper">
-
 					<div class="col-md-6">
-						<!-- testimonial item -->
-						<div class="testimonial-item">
-							<span class="symbol"><i class="fas fa-quote-left"></i></span>
-							<p>I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck!</p>
-							<div class="testimonial-details">
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/customer-1.png') }}" alt="customer-name" />
+						<h3 class="section-title">Education</h3>
+						<div class="spacer" data-height="80"></div>
+
+						<!-- timeline -->
+						<div class="timeline">
+							<div class="entry">
+								<div class="title">
+									<span>2015 - 2020</span>
 								</div>
-								<div class="info">
-									<h4>Helen Doe</h4>
-									<span>Themeforest customer</span>
+								<div class="body">
+									<h4 class="mt-0">Bachelors Degree</h4>
+									<p>Brawijaya University<br>Malang - Indonesia</p>
+									{{-- <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget dolor aenean massa.</p> --}}
 								</div>
 							</div>
+							<div class="entry">
+								<div class="title">
+									<span>2012 - 2015</span>
+								</div>
+								<div class="body">
+									<h4 class="mt-0">Senior High School</h4>
+									<p>SMA N 1 Banjarbaru <br> Banjarbaru - Indonesia</p>
+								</div>
+							</div>
+							<div class="entry">
+								<div class="title">
+									<span>2009 - 2012</span>
+								</div>
+								<div class="body">
+									<h4 class="mt-0">Junior High School</h4>
+									<p>SMP N 1 Kuranji <br> Tanah Bumbu - Indonesia</p>
+								</div>
+							</div>
+							<div class="entry">
+								<div class="title">
+									<span>2003 - 2009</span>
+								</div>
+								<div class="body">
+									<h4 class="mt-0">Elementary School</h4>
+									<p>SD N 1 Mustika <br> Tanah Bumbu - Indonesia</p>
+								</div>
+							</div>
+							<span class="timeline-line"></span>
 						</div>
 					</div>
-
 					<div class="col-md-6">
-						<!-- testimonial item -->
-						<div class="testimonial-item">
-							<span class="symbol"><i class="fas fa-quote-left"></i></span>
-							<p>I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck!</p>
-							<div class="testimonial-details">
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/customer-2.png') }}" alt="customer-name" />
+						<h3 class="section-title">Experience</h3>
+						<div class="spacer" data-height="80"></div>
+
+						<!-- timeline -->
+						<div class="timeline">
+							<div class="entry">
+								<div class="title">
+									<span>2019</span>
 								</div>
-								<div class="info">
-									<h4>Jane Doe</h4>
-									<span>Themeforest customer</span>
+								<div class="body">
+									<h4 class="mt-0">AWS Cloud Computing Training</h4>
+									<p>Digital Talent Scholarship 2019</p>
 								</div>
 							</div>
-						</div>
-					</div>
-
-					<div class="col-md-6">
-						<!-- testimonial item -->
-						<div class="testimonial-item">
-							<span class="symbol"><i class="fas fa-quote-left"></i></span>
-							<p>I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck!</p>
-							<div class="testimonial-details">
-								<div class="thumb">
-									<img src="{{ asset('assets/old/v2/images/customer-1.png') }}" alt="customer-name" />
+							<div class="entry">
+								<div class="title">
+									<span>2017 - 2019</span>
 								</div>
-								<div class="info">
-									<h4>Helen Doe</h4>
-									<span>Themeforest customer</span>
+								<div class="body">
+									<h4 class="mt-0 ml-0">Computer Network Practicum Assistant</h4>
+									<p>Laboratory Learning FILKOM UB</p>
 								</div>
 							</div>
+							<div class="entry">
+								<div class="title">
+									<span>2018</span>
+								</div>
+								<div class="body">
+									<h4 class="mt-0">Network Engineer (Internship)</h4>
+									<p>NOC FIA UB</p>
+								</div>
+							</div>
+							<div class="entry">
+								<div class="title">
+									<span>2017 - 2018</span>
+								</div>
+								<div class="body">
+									<h4 class="mt-0">Social Community (SOSMA)</h4>
+									<p>BEM FILKOM</p>
+								</div>
+							</div>
+							<span class="timeline-line"></span>
 						</div>
 					</div>
-
 				</div>
 			</section>
 
@@ -634,7 +482,7 @@
 						<!-- client item -->
 						<div class="client-item">
 							<div class="inner">
-								<img src="{{ asset('assets/old/v2/images/clients/1.png') }}" alt="client-name" />
+								<img src="{{ asset('assets/old/v2/images/clients/coming-soon.png') }}" alt="client-name" />
 							</div>
 						</div>
 					</div>
@@ -643,7 +491,7 @@
 						<!-- client item -->
 						<div class="client-item">
 							<div class="inner">
-								<img src="{{ asset('assets/old/v2/images/clients/2.png') }}" alt="client-name" />
+								<img src="{{ asset('assets/old/v2/images/clients/coming-soon.png') }}" alt="client-name" />
 							</div>
 						</div>
 					</div>
@@ -652,7 +500,7 @@
 						<!-- client item -->
 						<div class="client-item">
 							<div class="inner">
-								<img src="{{ asset('assets/old/v2/images/clients/3.png') }}" alt="client-name" />
+								<img src="{{ asset('assets/old/v2/images/clients/coming-soon.png') }}" alt="client-name" />
 							</div>
 						</div>
 					</div>
@@ -661,7 +509,7 @@
 						<!-- client item -->
 						<div class="client-item">
 							<div class="inner">
-								<img src="{{ asset('assets/old/v2/images/clients/4.png') }}" alt="client-name" />
+								<img src="{{ asset('assets/old/v2/images/clients/coming-soon.png') }}" alt="client-name" />
 							</div>
 						</div>
 					</div>
@@ -670,81 +518,11 @@
 						<!-- client item -->
 						<div class="client-item">
 							<div class="inner">
-								<img src="{{ asset('assets/old/v2/images/clients/2.png') }}" alt="client-name" />
+								<img src="{{ asset('assets/old/v2/images/clients/coming-soon.png') }}" alt="client-name" />
 							</div>
 						</div>
 					</div>
-
 				</div>
-
-			</section>
-
-			<!-- section blog -->
-			<section id="blog" class="shadow-blue white-bg padding">
-				<h3 class="section-title">Recent posts</h3>
-				<div class="spacer" data-height="80"></div>
-
-				<div class="row">
-
-					<div class="col-md-4">
-						<!-- blog item -->
-						<div class="blog-item">
-							<div class="thumb">
-								<a href="#">
-									<span class="category">Thoughts</span>
-								</a>
-								<a href="#">
-									<img src="{{ asset('assets/old/v2/images/blog/1.jpg') }}" alt="blog-title" />
-								</a>
-							</div>
-							<h4 class="mt-4 mb-0"><a href="#">The Truth About Design In 3 Minutes</a></h4>
-							<ul class="list-inline meta mb-0 mt-3">
-								<li class="list-inline-item">13 March, 2019</li>
-								<li class="list-inline-item">Bako Doe</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-4">
-						<!-- blog item -->
-						<div class="blog-item">
-							<div class="thumb">
-								<a href="#">
-									<span class="category">Blog</span>
-								</a>
-								<a href="#">
-									<img src="{{ asset('assets/old/v2/images/blog/2.jpg') }}" alt="blog-title" />
-								</a>
-							</div>
-							<h4 class="mt-4 mb-0"><a href="#">The Ugly Truth About Design</a></h4>
-							<ul class="list-inline meta mb-0 mt-3">
-								<li class="list-inline-item">13 March, 2019</li>
-								<li class="list-inline-item">Bako Doe</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-4">
-						<!-- blog item -->
-						<div class="blog-item">
-							<div class="thumb">
-								<a href="#">
-									<span class="category">Tech</span>
-								</a>
-								<a href="#">
-									<img src="{{ asset('assets/old/v2/images/blog/3.jpg') }}" alt="blog-title" />
-								</a>
-							</div>
-							<h4 class="mt-4 mb-0"><a href="#">How To Become Better With UI Design</a></h4>
-							<ul class="list-inline meta mb-0 mt-3">
-								<li class="list-inline-item">13 March, 2019</li>
-								<li class="list-inline-item">Bako Doe</li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-
 			</section>
 
 			<!-- section contact -->
@@ -760,21 +538,21 @@
 							<i class="icon-phone"></i>
 							<div class="details">
 								<h5>Phone</h5>
-								<span>+44 1632 960428</span>
+								<span>+62 81234034511</span>
 							</div>
 						</div>
 						<div class="contact-info mb-5">
 							<i class="icon-envelope"></i>
 							<div class="details">
 								<h5>Email address</h5>
-								<span>hello@bako.com</span>
+								<span>adityacprtm@gmail.com</span>
 							</div>
 						</div>
 						<div class="contact-info">
 							<i class="icon-location-pin"></i>
 							<div class="details">
 								<h5>Location</h5>
-								<span>West Palm Beach, 4669 Travis Street</span>
+								<span>Banjarbaru, ID</span>
 							</div>
 						</div>
 					</div>
@@ -789,7 +567,7 @@
 								<div class="column col-md-6">
 									<!-- Name input -->
 									<div class="form-group">
-										<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Your name" required="required" data-error="Name is required.">
+										<input type="text" class="form-control" name="name" id="name" placeholder="Your name" required="required" data-error="Name is required.">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
@@ -797,7 +575,7 @@
 								<div class="column col-md-6">
 									<!-- Email input -->
 									<div class="form-group">
-										<input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" required="required" data-error="Email is required.">
+										<input type="email" class="form-control" id="email" name="email" placeholder="Email address" required="required" data-error="Email is required.">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
@@ -805,7 +583,7 @@
 								<div class="column col-md-12">
 									<!-- Email input -->
 									<div class="form-group">
-										<input type="text" class="form-control" id="InputSubject" name="InputSubject" placeholder="Subject" required="required" data-error="Subject is required.">
+										<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required="required" data-error="Subject is required.">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
@@ -813,9 +591,12 @@
 								<div class="column col-md-12">
 									<!-- Message textarea -->
 									<div class="form-group">
-										<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" required="required" data-error="Message is required."></textarea>
+										<textarea name="message" id="message" class="form-control" rows="5" placeholder="Message" required="required" data-error="Message is required."></textarea>
 										<div class="help-block with-errors"></div>
 									</div>
+								</div>
+								<div class="column col-md-12">
+									<div class="g-recaptcha" data-sitekey="6Lf2DrYUAAAAAGrNQQHNaSUEW6YuzLCSPuRkMXwh" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
 								</div>
 							</div>
 
@@ -836,6 +617,8 @@
 	<!-- Go to top button -->
 	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
+	<a href="/" class="float-back" style="text-decoration: none" title="Back"><span style="font-size: 30px">&#8629;</span></a>
+
 	<!-- SCRIPTS -->
 	<script src="{{ asset('assets/old/v2/js/jquery-1.12.3.min.js') }}"></script>
 	<script src="{{ asset('assets/old/v2/js/jquery.easing.min.js') }}"></script>
@@ -851,6 +634,8 @@
 	<script src="{{ asset('assets/old/v2/js/contact.js') }}"></script>
 	<script src="{{ asset('assets/old/v2/js/validator.js') }}"></script>
 	<script src="{{ asset('assets/old/v2/js/custom.js') }}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script src='https://www.google.com/recaptcha/api.js' async defer></script>
 
 </body>
 

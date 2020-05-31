@@ -25,6 +25,10 @@ Route::get('/', function () {
     return view('main.index');
 });
 
+Route::get('/mbeb', function () {
+    return view('main.mbeb');
+});
+
 Route::get('/manage', function () {
     return view('manage.index');
 })->name('manage');
