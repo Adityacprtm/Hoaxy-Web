@@ -32,9 +32,11 @@ Route::view('/contact', 'main.contact')->name('contact');
 Route::view('/mbeb','main.mbeb')->name('mbeb');
 
 // Route Manage
-Route::get('/manage', function () {
-    return view('manage.index');
-})->name('manage');
+Route::view('/manage', 'manage.index')->name('manage');
+Route::view('/blank', 'manage.blank')->name('blank');
+Route::get('/login', 'Manage\LoginController@index')->name('login');
+Route::post('/login', 'Manage\LoginController@login')->name('dologin');
+Route::view('/manage/info', 'manage.info.index');
 
 // Route old v1
 Route::get('/old/v1', function () {
