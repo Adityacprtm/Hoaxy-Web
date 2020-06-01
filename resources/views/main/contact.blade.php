@@ -25,7 +25,7 @@
 				<div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-12 col-md-12">
-				<textarea class="textarea form-control" id="messageContact" name="messageContact" placeholder="Your Message" rows="4" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')"></textarea>
+				<textarea class="textarea form-control" id="messageContact" name="messageContact" placeholder="Your Message" rows="9" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')"></textarea>
 				<div class="help-block with-errors"></div>
 			</div>
 		</div>

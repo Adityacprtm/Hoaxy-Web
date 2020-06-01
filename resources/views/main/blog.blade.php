@@ -15,7 +15,7 @@
 			<div class="news-item__image-wrap overlay overlay--45">
 				<div class="news-item__date">16<span>Sep</span></div>
 				<a class="news-item__link" href="single-post.html"></a>
-				<img class="cover lazyload" src="../assets/img/image_02.jpg" alt="" />
+				<img class="cover lazyload" src="{{ asset('assets/main/img/image_02.jpg') }}" alt="" />
 			</div>
 			<div class="news-item__caption">
 				<h3 class="title title--h3">Design Conferences in 2019</h3>
@@ -28,7 +28,7 @@
 			<div class="news-item__image-wrap overlay overlay--45">
 				<div class="news-item__date">15<span>Sep</span></div>
 				<a class="news-item__link" href="single-post.html"></a>
-				<img class="cover lazyload" src="../assets/img/image_06.jpg" alt="" />
+				<img class="cover lazyload" src="{{ asset('assets/main/img/image_06.jpg') }}" alt="" />
 			</div>
 			<div class="news-item__caption">
 				<h3 class="title title--h3">Best Fonts Every Designer</h3>
@@ -41,7 +41,7 @@
 			<div class="news-item__image-wrap overlay overlay--45">
 				<div class="news-item__date">14<span>Sep</span></div>
 				<a class="news-item__link" href="single-post.html"></a>
-				<img class="cover lazyload" src="../assets/img/image_08.jpg" alt="" />
+				<img class="cover lazyload" src="{{ asset('assets/main/img/image_08.jpg') }}" alt="" />
 			</div>
 			<div class="news-item__caption">
 				<h3 class="title title--h3">Design Digest #80</h3>
@@ -54,7 +54,7 @@
 			<div class="news-item__image-wrap overlay overlay--45">
 				<div class="news-item__date">13<span>Sep</span></div>
 				<a class="news-item__link" href="single-post.html"></a>
-				<img class="cover lazyload" src="../assets/img/image_07.jpg" alt="" />
+				<img class="cover lazyload" src="{{ asset('assets/main/img/image_07.jpg') }}" alt="" />
 			</div>
 			<div class="news-item__caption">
 				<h3 class="title title--h3">UI Interactions of the week</h3>
@@ -67,7 +67,7 @@
 			<div class="news-item__image-wrap overlay overlay--45">
 				<div class="news-item__date">12<span>Sep</span></div>
 				<a class="news-item__link" href="single-post.html"></a>
-				<img class="cover lazyload" src="../assets/img/image_05.jpg" alt="" />
+				<img class="cover lazyload" src="{{ asset('assets/main/img/image_05.jpg') }}" alt="" />
 			</div>
 			<div class="news-item__caption">
 				<h3 class="title title--h3">The Forgotten Art of Spacing</h3>
@@ -80,7 +80,7 @@
 			<div class="news-item__image-wrap overlay overlay--45">
 				<div class="news-item__date">11<span>Sep</span></div>
 				<a class="news-item__link" href="single-post.html"></a>
-				<img class="cover lazyload" src="../assets/img/image_01.jpg" alt="" />
+				<img class="cover lazyload" src="{{ asset('assets/main/img/image_01.jpg') }}" alt="" />
 			</div>
 			<div class="news-item__caption">
 				<h3 class="title title--h3">Design Digest #79</h3>

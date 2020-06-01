@@ -26,7 +26,7 @@
 		{{-- Item 1 --}}
 		<figure class="gallery-grid__item category-concept">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_01.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_01.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Half Avocado</h4>
@@ -37,7 +37,7 @@
 		{{-- Item 2 --}}
 		<figure class="gallery-grid__item category-concept">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_02.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_02.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Pink Flamingo</h4>
@@ -48,7 +48,7 @@
 		{{-- Item 3 --}}
 		<figure class="gallery-grid__item category-design">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_03.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_03.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Abstract</h4>
@@ -59,7 +59,7 @@
 		{{-- Item 4 --}}
 		<figure class="gallery-grid__item category-design">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_04.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_04.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Abstract #2</h4>
@@ -70,7 +70,7 @@
 		{{-- Item 5 --}}
 		<figure class="gallery-grid__item category-design">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_05.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_05.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Abstract #3</h4>
@@ -81,7 +81,7 @@
 		{{-- Item 6 --}}
 		<figure class="gallery-grid__item category-life">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_06.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_06.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Golden Gate</h4>
@@ -92,7 +92,7 @@
 		{{-- Item 7 --}}
 		<figure class="gallery-grid__item category-concept">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_07.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_07.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Peach</h4>
@@ -103,7 +103,7 @@
 		{{-- Item 8 --}}
 		<figure class="gallery-grid__item category-design">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_08.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_08.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Abstract #4</h4>
@@ -114,7 +114,7 @@
 		{{-- Item 9 --}}
 		<figure class="gallery-grid__item category-life">
 			<div class="gallery-grid__image-wrap">
-				<img class="gallery-grid__image cover lazyload" src="../assets/img/image_09.jpg" data-zoom alt="" />
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/image_09.jpg') }}" data-zoom alt="" />
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">Hedgehog</h4>
@@ -123,4 +123,4 @@
 		</figure>
 	</div>
 </div>{{-- Content End --}}
-@ensection
+@endsection
