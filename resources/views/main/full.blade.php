@@ -633,6 +633,7 @@
 		<li class="slideNav__item"><a href="background-4.html">4. Background 4</a></li>
 		<li class="slideNav__item"><a href="background-5.html">5. Background 5</a></li>
 		<li class="slideNav__item"><a href="background-6.html">6. Background 6</a></li> --}}
+		<li class="slideNav__item"><a href="one-page.html">Single page</a><span class="lable-new">NEW</span></li>
 		<li class="slideNav__item"><a href="{{ route('manage') }}">Manage</a></li>
 		<li class="slideNav__item"><a href="{{ route('old.v1') }}">Old Version 1</a></li>
 		<li class="slideNav__item"><a href="{{ route('old.v2') }}">Old Version 2</a></li>

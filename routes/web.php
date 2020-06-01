@@ -21,22 +21,27 @@ Route::get('/welcome', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', function () {
-    return view('main.index');
-});
+// Route main
+Route::view('/', 'main.about')->name('about');
+Route::view('/resume', 'main.resume')->name('resume');
+Route::view('/portfolio', 'main.portfolio')->name('portfolio');
+Route::view('/blog', 'main.blog')->name('blog');
+Route::view('/contact', 'main.contact')->name('contact');
 
-Route::get('/mbeb', function () {
-    return view('main.mbeb');
-});
+// Route Mbeb
+Route::view('/mbeb','main.mbeb')->name('mbeb');
 
+// Route Manage
 Route::get('/manage', function () {
     return view('manage.index');
 })->name('manage');
 
+// Route old v1
 Route::get('/old/v1', function () {
     return view('old.v1.index');
 })->name('old.v1');
 
+// Route old v2
 Route::get('/old/v2', function () {
     return view('old.v2.index');
 })->name('old.v2');
