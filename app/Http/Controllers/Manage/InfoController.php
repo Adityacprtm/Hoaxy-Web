@@ -1,0 +1,78 @@
+<?php
+
+namespace App\Http\Controllers\Manage;
+
+use App\Http\Controllers\Controller;
+use App\Models\Info;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use File;
+
+class InfoController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index()
+    {
+        $info = Info::all();
+        return view('manage.info.index', compact('info'));
+    }
+
+    public function add(Request $req)
+    {
+        $validator = Validator::make($req->all(), [
+            'infoKey' => 'required',
+            'infoText' => 'required_if:checkbox-image,null',
+            'infoImage' => 'required_if:checkbox-image,on|image',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            if ($req->infoImage) {
+
+                $file = $req->file('infoImage');
+
+                $tipe = 1;
+
+                $filename = $req->infoKey;
+                $extension = '.' . $req->infoImage->getClientOriginalExtension();
+                $name = $filename . $extension;
+
+                $dir = "assets/static/images/info";
+
+                $file->move($dir, $name);
+
+                $infoValue = $dir . '/' . $name;
+            } else {
+                $tipe = 0;
+                $infoValue = $req->infoText;
+            }
+            $info = Info::create([
+                'tipe' => $tipe,
+                'key' => $req->infoKey,
+                'value' => $infoValue
+            ]);
+
+            if (!$info) {
+                return redirect()->back()
+                    ->withErrors($validator)
+                    ->withInput();
+            }
+            return redirect()->route('manage.info');
+        }
+    }
+
+    public function delete(Request $req)
+    {
+        $dataInfo = Info::find($req->id);
+        File::delete($dataInfo->value);
+        $dataInfo->delete();
+        return redirect()->route('manage.info');
+    }
+}

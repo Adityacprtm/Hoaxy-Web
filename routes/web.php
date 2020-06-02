@@ -37,7 +37,13 @@ Route::get('/login', 'Manage\LoginController@index')->name('login');
 Route::post('/login', 'Manage\LoginController@login')->name('dologin');
 Route::get('/register', 'Manage\RegisterController@index')->name('register');
 Route::post('/register', 'Manage\RegisterController@register')->name('doregister');
-Route::view('/manage/info', 'manage.info.index');
+
+// Route Manage Info
+Route::get('/manage/info', 'Manage\InfoController@index')->name('manage.info');
+Route::post('/manage/info/add', 'Manage\InfoController@add')->name('add.manage.info');
+Route::get('/manage/info/edit/{id}', 'Manage\InfoController@edit')->name('edit.manage.info');
+Route::post('/manage/info/save', 'Manage\InfoController@save')->name('save.manage.info');
+Route::post('/manage/info/delete', 'Manage\InfoController@delete')->name('delete.manage.info');
 
 // Route old v1
 Route::get('/old/v1', function () {
