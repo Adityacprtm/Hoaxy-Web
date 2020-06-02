@@ -7,6 +7,7 @@ use App\Models\Info;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use File;
+use Throwable;
 
 class InfoController extends Controller
 {
@@ -53,19 +54,27 @@ class InfoController extends Controller
                 $tipe = 0;
                 $infoValue = $req->infoText;
             }
-            $info = Info::create([
-                'tipe' => $tipe,
-                'key' => $req->infoKey,
-                'value' => $infoValue
-            ]);
 
-            if (!$info) {
+            try {
+                Info::create([
+                    'tipe' => $tipe,
+                    'key' => $req->infoKey,
+                    'value' => $infoValue
+                ]);
+                return redirect()->route('manage.info');
+            } catch (Throwable $e) {
+                report($e);
                 return redirect()->back()
-                    ->withErrors($validator)
+                    ->withErrors($e->__toString())
                     ->withInput();
             }
-            return redirect()->route('manage.info');
         }
+    }
+
+    public function edit($id)
+    {
+        $info = Info::find($id);
+        return response()->json($info);
     }
 
     public function delete(Request $req)
@@ -73,6 +82,6 @@ class InfoController extends Controller
         $dataInfo = Info::find($req->id);
         File::delete($dataInfo->value);
         $dataInfo->delete();
-        return redirect()->route('manage.info');
+        return response()->json(['success' => 'Product deleted successfully.']);
     }
 }

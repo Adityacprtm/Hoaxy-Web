@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Adityacprtm Manage - @yield('title')</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/manage/assets/img/favicon.ico') }}" />
     <link href="{{ asset('assets/manage/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />

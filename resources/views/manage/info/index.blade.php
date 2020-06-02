@@ -39,7 +39,7 @@
                     <div class="widget-content widget-content-area">
                         <div class="table-responsive mb-4">
                             <div class="text-right">
-                                <button type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+                                <button id="btnAdd" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
                                     Add Info
                                 </button>
                             </div>
@@ -65,27 +65,33 @@
                                         <td>{{ $info->value }}</td>
                                         @endif
                                         <td class="text-center">{{ ($info->tipe == 1) ? 'Image' : 'Text' }}</td>
-                                        <td>{{ $info->updated_at }}</td>
+                                        <td>{{ date( 'd-m-Y H:i', strtotime($info->updated_at) ) }}</td>
                                         <td class="text-center">
                                             <ul class="table-controls">
                                                 <li>
-                                                    <a href="javascript:void(0);" class="bs-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                                                    <a href="javascript:void(0);" class="bs-tooltip editInfo" data-id="{{ $info->id }}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 p-1 br-6 mb-1">
                                                             <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
                                                         </svg>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a onclick="hapus({{ $info->id }})" class="bs-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                                                    {{-- <a onclick="hapus({{ $info->id }})" class="bs-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash p-1 br-6 mb-1">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    </svg>
+                                                    </a>
+                                                    <form id="deleteInfo{{ $info->id }}" action="{{ route('delete.manage.info') }}" method="POST" style="display: none;">
+                                                        {{ csrf_field() }}
+                                                        <input type="hidden" name="id" value="{{ $info->id }}">
+                                                    </form> --}}
+                                                    <a href="javascript:void(0);" class="bs-tooltip deleteInfo" data-id="{{ $info->id }}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash p-1 br-6 mb-1">
                                                             <polyline points="3 6 5 6 21 6"></polyline>
                                                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                         </svg>
                                                     </a>
-                                                    <form id="deleteInfo{{ $info->id }}" action="{{ route('delete.manage.info') }}" method="POST" style="display: none;">
-                                                        {{ csrf_field() }}
-                                                        <input type="hidden" name="id" value="{{ $info->id }}">
-                                                    </form>
                                                 </li>
                                             </ul>
                                         </td>
@@ -99,20 +105,6 @@
             </div>
         </div>
     </div>
-
-    @if ($errors->any())
-    <div class="alert alert-arrow-right alert-icon-right alert-light-danger mb-4" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg> ... </svg></button>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12" y2="16"></line>
-        </svg>
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </div>
-    @endif
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -130,7 +122,7 @@
                 <form action="{{ isset($singleInfo) ? route('save.manage.info') : route('add.manage.info') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
-                        {{-- <input type="hidden" name="infoId" id="infoId"> --}}
+                        <input type="hidden" name="infoId" id="infoId">
                         <div class="form-group row mb-4">
                             <div class="col-sm-2">Image</div>
                             <div class="col-sm-10">
@@ -153,7 +145,8 @@
                         <div id="value-text" class="form-group row mb-4">
                             <label for="infoText" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">Value</label>
                             <div class="col-xl-10 col-lg-9 col-sm-10">
-                                <input name="infoText" type="text" class="form-control" id="infoText" placeholder="">
+                                {{-- <input name="infoText" type="text" class="form-control" id="infoText" placeholder=""> --}}
+                                <textarea name="infoText" id="infoText" class="form-control" cols="30" rows="10"></textarea>
                             </div>
                         </div>
 
@@ -174,7 +167,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+                        <button id="btnDiscard" class="btn btnDiscard" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </form>
@@ -205,6 +198,11 @@
 <script src="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/sweetalerts/custom-sweetalert.js') }}"></script>
 <script>
+    $("#exampleModal").on("hidden.bs.modal", function(){
+        // $('#infoKey').attr('readonly', false);;
+        $(this).find("input,textarea").val('').end();
+    });
+
     // active or not
     $('#menu-info').addClass('active');
     $('#menu-info a').attr('data-active','true');
@@ -225,35 +223,62 @@
     var firstUpload = new FileUploadWithPreview('myFirstImage')
 
     c3 = $('#style-3').DataTable({
-            "oLanguage": {
-                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
-                "sInfo": "Showing page _PAGE_ of _PAGES_",
-                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
-                "sSearchPlaceholder": "Search...",
-               "sLengthMenu": "Results :  _MENU_",
-            },
-            "stripeClasses": [],
-            "lengthMenu": [5, 10, 20, 50],
-            "pageLength": 5
-        });
+        "oLanguage": {
+            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+            "sInfo": "Showing page _PAGE_ of _PAGES_",
+            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+            "sSearchPlaceholder": "Search...",
+            "sLengthMenu": "Results :  _MENU_",
+        },
+        "columnDefs": [
+    { "width": "20%", "targets": 2 }
+  ],
+        "stripeClasses": [],
+        "lengthMenu": [5, 10, 20, 50],
+        "pageLength": 5,
+        // "processing": true,
+        // "serverSide": true,
+        // "ajax": "{{ route('manage.info') }}",
+        // "columns": [
+        //     {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+        //     {data: 'key', name: 'key'},
+        //     {data: 'value', name: 'value'},
+        //     {data: 'tipe', name: 'type'},
+        //     {data: 'updated_at', name: 'updated_at'},
+        //     {data: 'action', name: 'action', orderable: false, searchable: false},
+        // ]
+    });
+    multiCheck(c3);
 
-        multiCheck(c3);
+    $.ajaxSetup({
+        headers: { "X-CSRF-Token" : $("meta[name=csrf-token]").attr("content") }
+    });
 
-    function hapus(id)
-	{
-		// swal({
-		// 	title: "Are you sure?",
-		// 	text: "You will not be able to recover this data!",
-		// 	type: "warning",
-		// 	showCancelButton: true,
-		// 	confirmButtonColor: "#DD6B55",
-		// 	confirmButtonText: "Yes, delete it!",
-		// 	closeOnConfirm: false
-		// },
-		// function(){
-		// 	$('#deleteBlogpost'+id).submit();
-		// 	swal("Deleted!", "Your data has been deleted.", "success");
-        // });
+    $('body').on('click', '.editInfo', function () {
+        var info_id = $(this).data("id");
+        $.get("info/edit/" + info_id, function(data) {
+            clear_value('exampleModal');
+            $('#exampleModal').modal('show');
+            // $('#infoKey').attr('readonly', true);;
+            if (data.tipe == 1) {
+                $('#checkboxImage').prop('checked', true);
+                $('#value-text').hide()
+                $('#value-image').show()
+                $('#infoKey').val(data.key);
+                // $('#infoImage').val(data.value)
+            } else {
+                $('#checkboxImage').prop('checked', false);
+                $('#value-text').show()
+                $('#value-image').hide()
+                $('#infoKey').val(data.key);
+                $('#infoText').val(data.value)
+            }
+        })
+    })
+
+    // Delete datatables row
+    $('body').on('click', '.deleteInfo', function () {
+        var info_id = $(this).data("id");
         swal({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -261,18 +286,47 @@
             showCancelButton: true,
             confirmButtonText: 'Delete',
             padding: '2em'
-        }).then(function() {
-            $('#deleteInfo'+id).submit();
-            swal({
-                title: 'Deleted!',
-                text: 'Your file has been deleted.',
-                type: 'success',
-                timer: 2000
-            }).then(function(){
-                multiCheck(c3);
-            })
+        }).then(function(result) {
+            if (result.value){
+                $.ajax({
+                    type: "post",
+                    url: "{{ route('delete.manage.info') }}",
+                    data: {
+                        id: info_id
+                    },
+                    success: function (data) {
+                        swal({
+                            title: 'Deleted!',
+                            text: 'Your file has been deleted.',
+                            type: 'success',
+                            padding: '2em'
+                        }).then(function() {
+                            window.location.reload()
+                        })
+                    },
+                    error: function (data) {
+                        swal({
+                            title: 'Oops!',
+                            text: data,
+                            type: 'error',
+                            padding: '2em'
+                        }).then(function() {
+                            window.location.reload()
+                        })
+                    }
+                });
+            }
         })
-	}
+    });
+
+    function clear_value(modal)
+    {
+        var ele = $('#'+modal+' .form-clear');
+        for (var i = 0; i < ele.length; i++) {
+            $(ele[i]).val('');
+        }
+    }
+
 </script>
 <!-- END PAGE LEVEL SCRIPTS -->
 @endpush
