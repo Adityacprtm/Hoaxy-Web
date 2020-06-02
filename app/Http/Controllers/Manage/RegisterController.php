@@ -26,19 +26,24 @@ class RegisterController extends Controller
 
     public function register(Request $req)
     {
-        $data  = $req->validate([
+        $validator = Validator::make($req->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
 
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            User::create([
+                'name' => $req->name,
+                'email' => $req->email,
+                'password' => Hash::make($req->password),
+            ]);
 
-        Auth::login($user);
-        return redirect()->route('manage');
+            return redirect()->intended('login');
+        }
     }
 }

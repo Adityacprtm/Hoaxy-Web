@@ -197,7 +197,7 @@
 	<script src="{{ asset('assets/main/demo/plugins-demo.js') }}"></script>
 
 	{{-- tambahan js --}}
-	@stack('javascript')
+	@stack('js')
 
 	@if (Route::currentRouteName() == 'contact')
 	{{-- Mapbox init --}}

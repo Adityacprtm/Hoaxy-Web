@@ -29,11 +29,10 @@ Route::view('/blog', 'main.blog')->name('blog');
 Route::view('/contact', 'main.contact')->name('contact');
 
 // Route Mbeb
-Route::view('/mbeb','main.mbeb')->name('mbeb');
+Route::view('/mbeb', 'main.mbeb')->name('mbeb');
 
 // Route Manage
 Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
-Route::view('/blank', 'manage.blank')->name('blank');
 Route::get('/login', 'Manage\LoginController@index')->name('login');
 Route::post('/login', 'Manage\LoginController@login')->name('dologin');
 Route::get('/register', 'Manage\RegisterController@index')->name('register');
