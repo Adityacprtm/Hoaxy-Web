@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from designreset.com/cork/ltr/demo10/auth_login_boxed.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 May 2020 08:25:50 GMT -->
+<!-- Mirrored from designreset.com/cork/ltr/demo10/auth_register_boxed.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 May 2020 08:25:50 GMT -->
 
 <head>
     <meta charset="utf-8">
@@ -32,21 +32,29 @@
                     <div class="form-content">
 
                         <img src="{{ asset('assets/manage/assets/img/logo.png') }}" width="100" height="100" alt="">
-                        <h1 class="">Sign In</h1>
-                        {{-- <p class="">Log in to your account to <a href="https://adityacprtm.com"><span class="brand-name">Adityacprtm Core</span></a>.</p> --}}
-                        <p class="signup-link register">Not registered ? <a href="{{ route('register') }}">Create an account</a></p>
+                        <h1 class="">Register</h1>
+                        <p class="signup-link register">Already have an account? <a href="{{ route('login') }}">Log in</a></p>
 
-                        <form class="text-left" method="post" action="{{ route('dologin') }}">
-                            {{ csrf_field() }}
+                        <form class="text-left" method="POST" action="{{ route('register') }}">
+                            @csrf
                             <div class="form">
 
-                                <div id="email-field" class="field-wrapper input">
-                                    <label for="email">EMAIL</label>
+                                <div id="name-field" class="field-wrapper input">
+                                    <label for="name">NAME</label>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
                                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
                                     </svg>
-                                    <input id="email" name="email" type="email" class="form-control" placeholder="Email">
+                                    <input id="name" name="name" type="text" class="form-control" placeholder="Name">
+                                </div>
+
+                                <div id="email-field" class="field-wrapper input">
+                                    <label for="email">EMAIL</label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign register">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                                    </svg>
+                                    <input id="email" name="email" type="email" value="" class="form-control" placeholder="Email">
                                 </div>
 
                                 <div id="password-field" class="field-wrapper input mb-3">
@@ -64,29 +72,42 @@
                                         <circle cx="12" cy="12" r="3"></circle>
                                     </svg>
                                 </div>
+
+                                {{-- <div class="field-wrapper terms_condition">
+                                    <div class="n-chk">
+                                        <label class="new-control new-checkbox checkbox-primary">
+                                            <input type="checkbox" class="new-control-input">
+                                            <span class="new-control-indicator"></span><span>I agree to the <a href="javascript:void(0);"> terms and conditions </a></span>
+                                        </label>
+                                    </div>
+                                </div> --}}
+
                                 <div class="d-sm-flex justify-content-between">
                                     <div class="field-wrapper">
-                                        <button type="submit" class="btn btn-primary" value="">Log In</button>
+                                        <button type="submit" class="btn btn-primary" value="">Get Started!</button>
                                         <a href="{{ route('about') }}" class="btn btn-dark btn-block btn-lg mt-2" value="">Cancel</a>
                                     </div>
                                 </div>
 
-                                <!-- <div class="division">
-                                      <span>OR</span>
+                                {{-- <div class="division">
+                                    <span>OR</span>
                                 </div>
 
                                 <div class="social">
                                     <a href="javascript:void(0);" class="btn social-fb">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                        </svg>
                                         <span class="brand-name">Facebook</span>
                                     </a>
-                                   <a href="javascript:void(0);" class="btn social-github">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    <a href="javascript:void(0);" class="btn social-github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                        </svg>
                                         <span class="brand-name">Github</span>
                                     </a>
-                                </div> -->
+                                </div> --}}
 
-                                {{-- <p class="signup-link">Not registered ? <a href="{{ route('register') }}">Create an account</a></p> --}}
                                 <p class="signup-link copyright">Configured with <i style="font-size: 19px; color: #FF5959">&hearts;</i> at 2020 <br> by <a target="_blank" href="https://adityacprtm.com"><strong>Adityacprtm.com</strong></a></p>
 
                             </div>
@@ -109,6 +130,6 @@
 
 </body>
 
-<!-- Mirrored from designreset.com/cork/ltr/demo10/auth_login_boxed.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 May 2020 08:25:50 GMT -->
+<!-- Mirrored from designreset.com/cork/ltr/demo10/auth_register_boxed.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 May 2020 08:25:50 GMT -->
 
 </html>

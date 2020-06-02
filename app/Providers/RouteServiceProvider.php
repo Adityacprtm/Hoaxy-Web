@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
+    public const MANAGE = '/manage';
+
     /**
      * This namespace is applied to your controller routes.
      *

@@ -32,10 +32,12 @@ Route::view('/contact', 'main.contact')->name('contact');
 Route::view('/mbeb','main.mbeb')->name('mbeb');
 
 // Route Manage
-Route::view('/manage', 'manage.index')->name('manage');
+Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
 Route::view('/blank', 'manage.blank')->name('blank');
 Route::get('/login', 'Manage\LoginController@index')->name('login');
 Route::post('/login', 'Manage\LoginController@login')->name('dologin');
+Route::get('/register', 'Manage\RegisterController@index')->name('register');
+Route::post('/register', 'Manage\RegisterController@register')->name('doregister');
 Route::view('/manage/info', 'manage.info.index');
 
 // Route old v1

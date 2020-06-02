@@ -4,9 +4,17 @@ namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class LoginController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('guest');
+    }
+
     public function index()
     {
         return view('manage.login');
@@ -14,19 +22,17 @@ class LoginController extends Controller
 
     public function login(Request $req)
     {
-        $validatedData  = $req->validate([
-            'username' => 'required',
+        $data  = $req->validate([
+            'email' => 'required',
             'password' => 'required',
         ]);
 
-        if ($validatedData) {
-            if ($req->username == 'aditya' && $req->password == 'password') {
-                return redirect()->route('manage');
-            } else {
-                return redirect()->route('login');
-            }
-        } else {
-            return $validatedData;
+        $credentials = $req->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            return redirect()->route('manage');
         }
+
+        $req->session()->flash('status', 'Email atau Password tidak cocok dengan data yang kami miliki. Mohon periksa kembali');
+        return redirect()->back();
     }
 }
