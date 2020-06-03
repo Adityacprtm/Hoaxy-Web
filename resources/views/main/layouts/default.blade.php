@@ -59,23 +59,15 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
 
-	{{-- tambahan css --}}
-	@stack('css')
-
-	@if (Route::currentRouteName() == 'contact')
-	{{-- Mapbox--}}
-	{{-- <script src='{{ asset('assets/main/api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js') }}'></script>
-	<link href='{{ asset('assets/main/api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css') }}' rel='stylesheet' /> --}}
-	<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
-	@endif
-
 	{{-- fontawesome icon--}}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+
+	{{-- tambahan css --}}
+	@stack('css')
 </head>
 
-<body class="bg-triangles-dark full-page">
+<body class="bg-triangles full-page">
 	{{-- Preloader --}}
 	<div class="preloader">
 		<div class="preloader__wrap">
@@ -198,11 +190,6 @@
 
 	{{-- tambahan js --}}
 	@stack('js')
-
-	@if (Route::currentRouteName() == 'contact')
-	{{-- Mapbox init --}}
-	<script src="{{ asset('assets/main/js/mapbox.init.js') }}"></script>
-	@endif
 </body>
 
 {{-- Mirrored from netgon.net/artstyles/v-card2/full/one-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 May 2020 05:37:41 GMT --}}
