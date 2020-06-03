@@ -104,7 +104,7 @@
                 <div class="tooltip"><span>Info</span></div>
             </li> --}}
 
-            {{-- <li class="menu">
+            <li id="menu-user" class="menu">
                 <a href="#users" data-active="false" class="menu-toggle">
                     <div class="base-menu">
                         <div class="base-icons">
@@ -118,7 +118,7 @@
                     </div>
                 </a>
                 <div class="tooltip"><span>Users</span></div>
-            </li> --}}
+            </li>
 
             {{-- <li class="menu">
                 <a href="#pages" data-active="false" class="menu-toggle">
@@ -601,23 +601,23 @@
             </ul>
         </div> --}}
 
-        {{-- <div class="submenu" id="users">
+        <div class="submenu" id="users">
             <div class="category-info">
                 <h5>Users</h5>
                 <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <ul class="submenu-list" data-parent-element="#users">
                 <li>
-                    <a href="user_profile.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+                    <a href="{{ route('manage.user.profile') }}"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
                                 <circle cx="12" cy="12" r="10"></circle>
                             </svg></span> Profile </a>
                 </li>
                 <li>
-                    <a href="user_account_setting.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+                    <a href="{{ route('manage.user.setting') }}"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
                                 <circle cx="12" cy="12" r="10"></circle>
                             </svg></span> Account Settings </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="fonticons.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
                                 <circle cx="12" cy="12" r="10"></circle>
                             </svg></span> Font Icons </a>
@@ -626,9 +626,9 @@
                     <a href="widgets.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
                                 <circle cx="12" cy="12" r="10"></circle>
                             </svg></span> Widgets </a>
-                </li>
+                </li> --}}
             </ul>
-        </div> --}}
+        </div>
 
         {{-- <div class="submenu" id="pages">
             <div class="category-info">

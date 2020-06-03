@@ -33,10 +33,17 @@ Route::view('/mbeb', 'mbeb.index')->name('mbeb');
 
 // Route Manage
 Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
-Route::get('/login', 'Manage\LoginController@index')->name('login');
-Route::post('/login', 'Manage\LoginController@login')->name('dologin');
-Route::get('/register', 'Manage\RegisterController@index')->name('register');
-Route::post('/register', 'Manage\RegisterController@register')->name('doregister');
+// Route::get('/login', 'Manage\LoginController@index')->name('login');
+// Route::post('/login', 'Manage\LoginController@login')->name('dologin');
+// Route::get('/register', 'Manage\RegisterController@index')->name('register');
+// Route::post('/register', 'Manage\RegisterController@register')->name('doregister');
+// Route::post('/login', 'Manage\LoginController@login')->name('dologin');
+
+// Route Manage User
+Route::get('/manage/user', 'Manage\UserController@index')->name('manage.user');
+Route::get('/manage/user/profile', 'Manage\UserController@profile')->name('manage.user.profile');
+Route::get('/manage/user/setting', 'Manage\UserController@setting')->name('manage.user.setting');
+
 
 // Route old v1
 Route::get('/old/v1', function () {

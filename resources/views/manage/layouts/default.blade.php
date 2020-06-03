@@ -171,7 +171,7 @@
                                 <div class="media-body">
                                     <h5>{{ $user->name }}</h5>
                                     {{-- <p>Project Leader</p> --}}
-                                    <p>{{ $user->email }}</p>
+                                    <p>{{ $user->role }}</p>
                                 </div>
                             </div>
                         </div>

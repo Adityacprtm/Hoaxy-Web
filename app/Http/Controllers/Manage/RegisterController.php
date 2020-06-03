@@ -19,7 +19,7 @@ class RegisterController extends Controller
 
     public function index()
     {
-        return view('manage.register');
+        return view('manage.auth.register');
     }
 
     public function register(Request $req)
