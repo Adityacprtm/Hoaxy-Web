@@ -75,7 +75,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 </head>
 
-<body class="bg-triangles full-page">
+<body class="bg-triangles-dark full-page">
 	{{-- Preloader --}}
 	<div class="preloader">
 		<div class="preloader__wrap">
