@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
-use App\Models\Info;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use App\Info;
+use App\User;
 use File;
 use Throwable;
 
@@ -19,7 +21,8 @@ class InfoController extends Controller
     public function index()
     {
         $info = Info::all();
-        return view('manage.info.index', compact('info'));
+        $user = User::where('id', Auth::id())->first();
+        return view('manage.info.index', compact('info', 'user'));
     }
 
     public function add(Request $req)
