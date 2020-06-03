@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Auth::routes(['verify' => true]);
+
 Route::get('/welcome', function () {
     return view('welcome');
 });
@@ -33,11 +35,6 @@ Route::view('/mbeb', 'mbeb.index')->name('mbeb');
 
 // Route Manage
 Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
-// Route::get('/login', 'Manage\LoginController@index')->name('login');
-// Route::post('/login', 'Manage\LoginController@login')->name('dologin');
-// Route::get('/register', 'Manage\RegisterController@index')->name('register');
-// Route::post('/register', 'Manage\RegisterController@register')->name('doregister');
-// Route::post('/login', 'Manage\LoginController@login')->name('dologin');
 
 // Route Manage User
 Route::get('/manage/user', 'Manage\UserController@index')->name('manage.user');

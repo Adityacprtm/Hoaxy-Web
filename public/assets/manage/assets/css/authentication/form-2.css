@@ -68,7 +68,7 @@ body {
     font-weight: 700;
     margin-bottom: 15px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .form-form .form-form-wrap p.signup-link.register {
     font-size: 13px;
@@ -80,7 +80,7 @@ body {
 .form-form .form-form-wrap p.signup-link.recovery { margin-top: 0; }
 .form-form .form-form-wrap p.signup-link a { color: #1b55e2; border-bottom: 1px solid; }
 .form-form .form-form-wrap form .field-wrapper.input {
-    padding: 11px 0px 16px 0;
+    padding: 11px 0px 0px 0;
     border-bottom: none;
     position: relative;
 }
