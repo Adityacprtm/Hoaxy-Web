@@ -12,7 +12,7 @@
         <ul class="menu-categories">
 
             <li id="menu-dashboard" class="menu">
-                <a href="#dashboard" data-active="false" class="menu-toggle">
+                <a href="" data-active="false" class="menu-toggle">
                     <div class="base-menu">
                         <div class="base-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
@@ -89,7 +89,7 @@
                 <div class="tooltip"><span>Forms</span></div>
             </li> --}}
 
-            <li id="menu-info" class="menu">
+            {{-- <li id="menu-info" class="menu">
                 <a href="#tables" data-active="false" class="menu-toggle">
                     <div class="base-menu">
                         <div class="base-icons">
@@ -102,7 +102,7 @@
                     </div>
                 </a>
                 <div class="tooltip"><span>Info</span></div>
-            </li>
+            </li> --}}
 
             {{-- <li class="menu">
                 <a href="#users" data-active="false" class="menu-toggle">
@@ -539,7 +539,7 @@
             </ul>
         </div> --}}
 
-        <div class="submenu" id="tables">
+        {{-- <div class="submenu" id="tables">
             <div class="category-info">
                 <h5>Info</h5>
                 <p>Berisi informasi personal pemilik web.</p>
@@ -554,7 +554,7 @@
                         </span>Info
                     </a>
                 </li>
-                {{-- <li class="sub-submenu">
+                <li class="sub-submenu">
                     <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false">
                         <div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
                                     <circle cx="12" cy="12" r="10"></circle>
@@ -597,9 +597,9 @@
                             <a href="table_dt_miscellaneous.html"> Miscellaneous </a>
                         </li>
                     </ul>
-                </li> --}}
+                </li>
             </ul>
-        </div>
+        </div> --}}
 
         {{-- <div class="submenu" id="users">
             <div class="category-info">
