@@ -29,7 +29,7 @@ Route::view('/blog', 'main.blog')->name('blog');
 Route::view('/contact', 'main.contact')->name('contact');
 
 // Route Mbeb
-Route::view('/mbeb', 'main.mbeb')->name('mbeb');
+Route::view('/mbeb', 'mbeb.index')->name('mbeb');
 
 // Route Manage
 Route::get('/manage', 'Manage\DashboardController@index')->name('manage');

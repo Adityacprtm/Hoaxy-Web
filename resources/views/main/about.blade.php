@@ -68,75 +68,75 @@
 					<svg class="avatar avatar--80" viewBox="0 0 84 84">
 						<g class="avatar__hexagon">
 							<image xlink:href="{{ asset('assets/main/img/avatar-2.jpg') }}" height="100%" width="100%" />
-						</g>
-					</svg>
-					<h4 class="title title--h3">Daniel Lewis</h4>
-					<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
-				</div>
+	</g>
+	</svg>
+	<h4 class="title title--h3">Daniel Lewis</h4>
+	<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
+</div>
 
-				<div class="swiper-slide review-item">
-					<svg class="avatar avatar--80" viewBox="0 0 84 84">
-						<g class="avatar__hexagon">
-							<image xlink:href="{{ asset('assets/main/img/avatar-3.jpg') }}" height="100%" width="100%" />
-						</g>
-					</svg>
-					<h4 class="title title--h3">Jessica Miller</h4>
-					<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
-				</div>
+<div class="swiper-slide review-item">
+	<svg class="avatar avatar--80" viewBox="0 0 84 84">
+		<g class="avatar__hexagon">
+			<image xlink:href="{{ asset('assets/main/img/avatar-3.jpg') }}" height="100%" width="100%" />
+		</g>
+	</svg>
+	<h4 class="title title--h3">Jessica Miller</h4>
+	<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
+</div>
 
-				<div class="swiper-slide review-item">
-					<svg class="avatar avatar--80" viewBox="0 0 84 84">
-						<g class="avatar__hexagon">
-							<image xlink:href="{{ asset('assets/main/img/avatar-4.jpg') }}" height="100%" width="100%" />
-						</g>
-					</svg>
-					<h4 class="title title--h3">Tanya Ruiz</h4>
-					<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
-				</div>
+<div class="swiper-slide review-item">
+	<svg class="avatar avatar--80" viewBox="0 0 84 84">
+		<g class="avatar__hexagon">
+			<image xlink:href="{{ asset('assets/main/img/avatar-4.jpg') }}" height="100%" width="100%" />
+		</g>
+	</svg>
+	<h4 class="title title--h3">Tanya Ruiz</h4>
+	<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
+</div>
 
-				<div class="swiper-slide review-item">
-					<svg class="avatar avatar--80" viewBox="0 0 84 84">
-						<g class="avatar__hexagon">
-							<image xlink:href="{{ asset('assets/main/img/avatar-5.jpg') }}" height="100%" width="100%" />
-						</g>
-					</svg>
-					<h4 class="title title--h3">Thomas Castro</h4>
-					<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
-				</div>
+<div class="swiper-slide review-item">
+	<svg class="avatar avatar--80" viewBox="0 0 84 84">
+		<g class="avatar__hexagon">
+			<image xlink:href="{{ asset('assets/main/img/avatar-5.jpg') }}" height="100%" width="100%" />
+		</g>
+	</svg>
+	<h4 class="title title--h3">Thomas Castro</h4>
+	<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
+</div>
+</div>
+
+<div class="swiper-pagination"></div>
+</div>
+</div> --}}
+
+{{-- Clients --}}
+<div class="section">
+	<h2 class="title title--h2">Clients</h2>
+	<div class="swiper-container js-carousel-clients">
+		<div class="swiper-wrapper">
+			{{-- Item client --}}
+			<div class="swiper-slide">
+				<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
 			</div>
 
-			<div class="swiper-pagination"></div>
-		</div>
-	</div> --}}
-
-	{{-- Clients --}}
-	<div class="section">
-		<h2 class="title title--h2">Clients</h2>
-		<div class="swiper-container js-carousel-clients">
-			<div class="swiper-wrapper">
-				{{-- Item client --}}
-				<div class="swiper-slide">
-					<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
-				</div>
-
-				{{-- Item client --}}
-				<div class="swiper-slide">
-					<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
-				</div>
-
-				{{-- Item client --}}
-				<div class="swiper-slide">
-					<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
-				</div>
-
-				{{-- Item client --}}
-				<div class="swiper-slide">
-					<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
-				</div>
+			{{-- Item client --}}
+			<div class="swiper-slide">
+				<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
 			</div>
 
-			<div class="swiper-pagination"></div>
+			{{-- Item client --}}
+			<div class="swiper-slide">
+				<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
+			</div>
+
+			{{-- Item client --}}
+			<div class="swiper-slide">
+				<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
+			</div>
 		</div>
+
+		<div class="swiper-pagination"></div>
 	</div>
+</div>
 </div>{{-- Content End --}}
 @endsection

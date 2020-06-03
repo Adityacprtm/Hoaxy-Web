@@ -165,7 +165,7 @@
 	<div class="btnSlideNav slideOpen"></div>
 	<div class="btnSlideNav slideClose"></div>
 	<ul class="slideNav">
-		<li class="slideNav__item rtl-mode">
+		<li class="slideNav__item">
 			<h4 class="title title--5">More pages</h4>
 		</li>
 		{{-- <li class="slideNav__item"><a href="one-page.html">1. Single page</a><span class="lable-new">NEW</span></li>
