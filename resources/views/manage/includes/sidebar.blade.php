@@ -12,7 +12,7 @@
         <ul class="menu-categories">
 
             <li id="menu-dashboard" class="menu">
-                <a href="" data-active="false" class="menu-toggle">
+                <a href="#dashboard" data-active="false" class="menu-toggle">
                     <div class="base-menu">
                         <div class="base-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
@@ -23,6 +23,22 @@
                     </div>
                 </a>
                 <div class="tooltip"><span>Dashboard</span></div>
+            </li>
+
+            <li id="menu-user" class="menu">
+                <a href="#users" data-active="false" class="menu-toggle">
+                    <div class="base-menu">
+                        <div class="base-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <div class="tooltip"><span>Users</span></div>
             </li>
 
             {{-- <li class="menu">
@@ -104,22 +120,6 @@
                 <div class="tooltip"><span>Info</span></div>
             </li> --}}
 
-            <li id="menu-user" class="menu">
-                <a href="#users" data-active="false" class="menu-toggle">
-                    <div class="base-menu">
-                        <div class="base-icons">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <div class="tooltip"><span>Users</span></div>
-            </li>
-
             {{-- <li class="menu">
                 <a href="#pages" data-active="false" class="menu-toggle">
                     <div class="base-menu">
@@ -161,7 +161,7 @@
     <div id="compact_submenuSidebar" class="submenu-sidebar">
 
         <div class="theme-brand-name">
-            <a href="index-2.html">Adityacprtm</a>
+            <a href="{{ route('manage') }}">Adityacprtm</a>
         </div>
 
         <div class="submenu" id="dashboard">
@@ -169,23 +169,42 @@
                 <h5>Dashboard</h5>
                 <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
             </div>
-
             <ul class="submenu-list" data-parent-element="#dashboard">
-                <li>
+                <li class="">
                     <a href="{{ route('manage') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart">
                             <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
                             <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
-                        </svg>Dashboard
+                        </svg> Dashboard
                     </a>
                 </li>
-                {{-- <li>
-                    <a href="index2.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg> Sales </a>
-                </li> --}}
+            </ul>
+        </div>
+
+        <div class="submenu" id="users">
+            <div class="category-info">
+                <h5>Users</h5>
+                <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <ul class="submenu-list" data-parent-element="#users">
+                <li class="">
+                    <a href="{{ route('manage.user.profile') }}">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                            </svg>
+                        </span> Profile
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('manage.user.setting') }}">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                            </svg>
+                        </span> Account Settings
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -547,90 +566,61 @@
             <ul class="submenu-list" data-parent-element="#tables">
                 <li>
                     <a href="{{ route('manage.info') }}">
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg>
-                        </span>Info
-                    </a>
+        <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+                <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+        </span>Info
+        </a>
+        </li>
+        <li class="sub-submenu">
+            <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false">
+                <div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg></span> Datatables</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </a>
+            <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
+                <li>
+                    <a href="table_dt_basic.html"> Basic </a>
                 </li>
-                <li class="sub-submenu">
-                    <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false">
-                        <div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                </svg></span> Datatables</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-                    <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
-                        <li>
-                            <a href="table_dt_basic.html"> Basic </a>
-                        </li>
-                        <li>
-                            <a href="table_dt_basic-dark.html"> Dark </a>
-                        </li>
-                        <li>
-                            <a href="table_dt_ordering_sorting.html"> Order Sorting </a>
-                        </li>
-                        <li>
-                            <a href="table_dt_multi-column_ordering.html"> Multi-Column </a>
-                        </li>
-                        <li>
-                            <a href="table_dt_multiple_tables.html"> Multiple Tables</a>
-                        </li>
-                        <li>
-                            <a href="table_dt_alternative_pagination.html"> Alt. Pagination</a>
-                        </li>
-                        <li>
-                            <a href="table_dt_custom.html"> Custom </a>
-                        </li>
-                        <li>
-                            <a href="table_dt_range_search.html"> Range Search </a>
-                        </li>
-                        <li>
-                            <a href="table_dt_html5.html"> HTML5 Export </a>
-                        </li>
-                        <li>
-                            <a href="table_dt_live_dom_ordering.html"> Live DOM ordering </a>
-                        </li>
-                        <li>
-                            <a href="table_dt_miscellaneous.html"> Miscellaneous </a>
-                        </li>
-                    </ul>
+                <li>
+                    <a href="table_dt_basic-dark.html"> Dark </a>
+                </li>
+                <li>
+                    <a href="table_dt_ordering_sorting.html"> Order Sorting </a>
+                </li>
+                <li>
+                    <a href="table_dt_multi-column_ordering.html"> Multi-Column </a>
+                </li>
+                <li>
+                    <a href="table_dt_multiple_tables.html"> Multiple Tables</a>
+                </li>
+                <li>
+                    <a href="table_dt_alternative_pagination.html"> Alt. Pagination</a>
+                </li>
+                <li>
+                    <a href="table_dt_custom.html"> Custom </a>
+                </li>
+                <li>
+                    <a href="table_dt_range_search.html"> Range Search </a>
+                </li>
+                <li>
+                    <a href="table_dt_html5.html"> HTML5 Export </a>
+                </li>
+                <li>
+                    <a href="table_dt_live_dom_ordering.html"> Live DOM ordering </a>
+                </li>
+                <li>
+                    <a href="table_dt_miscellaneous.html"> Miscellaneous </a>
                 </li>
             </ul>
-        </div> --}}
+        </li>
+        </ul>
+    </div> --}}
 
-        <div class="submenu" id="users">
-            <div class="category-info">
-                <h5>Users</h5>
-                <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <ul class="submenu-list" data-parent-element="#users">
-                <li>
-                    <a href="{{ route('manage.user.profile') }}"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Profile </a>
-                </li>
-                <li>
-                    <a href="{{ route('manage.user.setting') }}"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Account Settings </a>
-                </li>
-                {{-- <li>
-                    <a href="fonticons.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Font Icons </a>
-                </li>
-                <li>
-                    <a href="widgets.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Widgets </a>
-                </li> --}}
-            </ul>
-        </div>
-
-        {{-- <div class="submenu" id="pages">
+    {{-- <div class="submenu" id="pages">
             <div class="category-info">
                 <h5>Pages</h5>
                 <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
@@ -692,7 +682,7 @@
             </ul>
         </div> --}}
 
-        {{-- <div class="submenu" id="more">
+    {{-- <div class="submenu" id="more">
             <div class="category-info">
                 <h5>Extra Elements</h5>
                 <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
@@ -772,7 +762,7 @@
             </ul>
         </div> --}}
 
-    </div>
+</div>
 
 </div>
 <!--  END SIDEBAR  -->
