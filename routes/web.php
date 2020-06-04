@@ -21,7 +21,24 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/approval', 'Auth\ApprovalController@index')->name('approval');
+    
+    Route::middleware(['verified'])->group(function () {
+
+        Route::middleware(['approved'])->group(function () {
+            Route::get('/home', 'HomeController@index')->name('home');
+
+            // Route Manage
+            Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
+
+            // Route Manage User
+            Route::get('/manage/user', 'Manage\UserController@index')->name('manage.user');
+            Route::get('/manage/user/profile', 'Manage\UserController@profile')->name('manage.user.profile');
+            Route::get('/manage/user/setting', 'Manage\UserController@setting')->name('manage.user.setting');
+        });
+    });
+});
 
 // Route main
 Route::view('/', 'main.about')->name('about');
@@ -32,15 +49,6 @@ Route::view('/contact', 'main.contact')->name('contact');
 
 // Route Mbeb
 Route::view('/mbeb', 'mbeb.index')->name('mbeb');
-
-// Route Manage
-Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
-
-// Route Manage User
-Route::get('/manage/user', 'Manage\UserController@index')->name('manage.user');
-Route::get('/manage/user/profile', 'Manage\UserController@profile')->name('manage.user.profile');
-Route::get('/manage/user/setting', 'Manage\UserController@setting')->name('manage.user.setting');
-
 
 // Route old v1
 Route::get('/old/v1', function () {

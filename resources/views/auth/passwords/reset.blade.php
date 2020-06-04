@@ -21,7 +21,7 @@
                 Please fill the email correctly
             </div>
         </div>
-        <div id="password-field" class="field-wrapper input mb-2">
+        <div id="password-field" class="field-wrapper input">
             <div class="d-flex justify-content-between">
                 <label for="password">PASSWORD</label>
             </div>
@@ -38,7 +38,7 @@
                 Please fill the password
             </div>
         </div>
-        <div id="password-field-confirm" class="field-wrapper input mb-2">
+        <div id="password-field-confirm" class="field-wrapper input">
             <div class="d-flex justify-content-between">
                 <label for="password-confirm">CONFIRM PASSWORD</label>
             </div>
@@ -55,7 +55,8 @@
                 Please fill the password
             </div>
         </div>
-        <div class="d-sm-flex justify-content-between">
+
+        <div class="d-sm-flex justify-content-between mt-3">
             <div class="field-wrapper">
                 <button type="submit" class="btn btn-primary" value="">Reset Password</button>
             </div>

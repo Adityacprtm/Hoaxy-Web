@@ -47,7 +47,7 @@
                                                                 <div class="d-sm-flex d-block">
                                                                     <div class="form-group mr-1">
                                                                         <select class="form-control" id="exampleFormControlSelect1">
-                                                                            <option>Day</option>
+                                                                            <option disabled>Day</option>
                                                                             <option>1</option>
                                                                             <option>2</option>
                                                                             <option>3</option>
@@ -82,7 +82,7 @@
                                                                     </div>
                                                                     <div class="form-group mr-1">
                                                                         <select class="form-control" id="month">
-                                                                            <option>Month</option>
+                                                                            <option disabled>Month</option>
                                                                             <option selected>Jan</option>
                                                                             <option>Feb</option>
                                                                             <option>Mar</option>
@@ -99,7 +99,7 @@
                                                                     </div>
                                                                     <div class="form-group mr-1">
                                                                         <select class="form-control" id="year">
-                                                                            <option>Year</option>
+                                                                            <option disabled>Year</option>
                                                                             <option>2018</option>
                                                                             <option>2017</option>
                                                                             <option>2016</option>
@@ -145,8 +145,12 @@
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
+                                                            <label for="email">Email</label>
+                                                            <input type="email" class="form-control mb-4" id="email" placeholder="Email" value="{{ $user->email }}" readonly>
+                                                        </div>
+                                                        <div class="form-group">
                                                             <label for="profession">Profession / Role</label>
-                                                            <input type="text" class="form-control mb-4" id="profession" placeholder="Designer" value="{{ $user->role }}">
+                                                            <input type="text" class="form-control mb-4" id="profession" placeholder="Role" value="{{ ($user->admin == 1) ? 'Admin' : 'User' }}">
                                                         </div>
                                                     </div>
                                                 </div>

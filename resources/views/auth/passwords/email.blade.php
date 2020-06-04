@@ -28,13 +28,14 @@
             </div>
         </div>
 
-        <div class="d-sm-flex justify-content-between">
-
+        <div class="d-sm-flex justify-content-between mt-3">
             <div class="field-wrapper">
                 <button type="submit" class="btn btn-primary" value="">{{ __('Send Password Reset Link') }}</button>
             </div>
         </div>
+
         <p class="signup-link copyright">Configured with <i style="font-size: 19px; color: #FF5959">&hearts;</i> at 2020 <br> by <a target="_blank" href="https://adityacprtm.com"><strong>Adityacprtm.com</strong></a></p>
+
     </div>
 </form>
 @endsection

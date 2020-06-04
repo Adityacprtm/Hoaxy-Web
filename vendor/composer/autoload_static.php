@@ -460,6 +460,7 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
     );
 
     public static $classMap = array (
+        'AdminSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminSeeder.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -471,9 +472,9 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\Manage\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/DashboardController.php',
-        'App\\Http\\Controllers\\Manage\\InfoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/InfoController.php',
         'App\\Http\\Controllers\\Manage\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/LoginController.php',
         'App\\Http\\Controllers\\Manage\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/RegisterController.php',
+        'App\\Http\\Controllers\\Manage\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -483,7 +484,6 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Models\\Info' => __DIR__ . '/../..' . '/app/Info.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
