@@ -187,6 +187,17 @@
                 <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <ul class="submenu-list" data-parent-element="#users">
+                @if (auth()->user()->admin)
+                <li class="">
+                    <a href="{{ route('admin.manage.users') }}">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                            </svg>
+                        </span> Users List
+                    </a>
+                </li>
+                @endif
                 <li class="">
                     <a href="{{ route('manage.user.profile') }}">
                         <span class="icon">

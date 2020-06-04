@@ -171,7 +171,7 @@
                                 <div class="media-body">
                                     <h5>{{ $user->name }}</h5>
                                     {{-- <p>Project Leader</p> --}}
-                                    <p>{{ ($user->admin == 1) ? 'Admin' : 'User' }}</p>
+                                    <p>{{ (auth()->user()->admin) ? 'Admin' : 'User' }}</p>
                                 </div>
                             </div>
                         </div>

@@ -23,7 +23,7 @@ Route::get('/welcome', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/approval', 'Auth\ApprovalController@index')->name('approval');
-    
+
     Route::middleware(['verified'])->group(function () {
 
         Route::middleware(['approved'])->group(function () {
@@ -33,9 +33,13 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
 
             // Route Manage User
-            Route::get('/manage/user', 'Manage\UserController@index')->name('manage.user');
             Route::get('/manage/user/profile', 'Manage\UserController@profile')->name('manage.user.profile');
             Route::get('/manage/user/setting', 'Manage\UserController@setting')->name('manage.user.setting');
+        });
+
+        Route::middleware(['admin'])->group(function () {
+            Route::get('/manage/users', 'Manage\UserController@index')->name('admin.manage.users');
+            Route::get('/manage/users/{user_id}/approve', 'Manage\UserController@approve')->name('admin.manage.users.approve');
         });
     });
 });
