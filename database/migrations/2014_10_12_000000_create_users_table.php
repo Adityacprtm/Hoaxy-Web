@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->date('birth_date')->nullable();
             $table->string('avatar')->default('assets/manage/images/default-user.png');
             $table->boolean('admin')->default(false);
             $table->timestamp('approved_at')->nullable();
