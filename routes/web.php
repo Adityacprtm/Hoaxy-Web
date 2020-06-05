@@ -55,11 +55,7 @@ Route::view('/contact', 'main.contact')->name('contact');
 Route::view('/mbeb', 'mbeb.index')->name('mbeb');
 
 // Route old v1
-Route::get('/old/v1', function () {
-    return view('old.v1.index');
-})->name('old.v1');
+Route::view('/old/v1', 'old.v1.index')->name('old.v1');
 
 // Route old v2
-Route::get('/old/v2', function () {
-    return view('old.v2.index');
-})->name('old.v2');
+Route::view('/old/v2', 'old.v2.index')->name('old.v2');
