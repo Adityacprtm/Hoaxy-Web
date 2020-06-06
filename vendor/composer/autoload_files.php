@@ -27,4 +27,5 @@ return array(
     'b6ec61354e97f32c0ae683041c78392a' => $vendorDir . '/scrivo/highlight.php/HighlightUtilities/functions.php',
     'ed962a97bd972bc82007176b647d4e36' => $vendorDir . '/facade/ignition/src/helpers.php',
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+    '0b47d6d4a00ca9112ba3953b49e7c9a4' => $vendorDir . '/yajra/laravel-datatables-oracle/src/helper.php',
 );

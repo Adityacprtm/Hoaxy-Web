@@ -40,6 +40,8 @@ Route::middleware(['auth'])->group(function () {
         Route::middleware(['admin'])->group(function () {
             Route::get('/manage/users', 'Manage\UserController@index')->name('admin.manage.users');
             Route::get('/manage/users/{user_id}/approve', 'Manage\UserController@approve')->name('admin.manage.users.approve');
+            Route::post('/manage/users/update', 'Manage\UserController@store')->name('admin.manage.users.update');
+            Route::post('/manage/users/delete', 'Manage\UserController@destroy')->name('admin.manage.users.delete');
         });
     });
 });
