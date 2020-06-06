@@ -12,7 +12,7 @@
 				<p>Above all, think of life as a prototype. We can conduct experiments, make discoveries, and change our perspectives. We can look for opportunities to turn processes into projects that have tangible outcomes.</p>
 			</div>
 			<div class="header-post__image-wrap">
-				<img class="cover lazyload" src="../assets/img/image_02.jpg" alt="" />
+				<img class="cover lazyload" src="{{ asset('assets/main/img/image_02.jpg') }}" alt="" />
 			</div>
 		</header>
 		<div class="caption-post">
@@ -20,8 +20,8 @@
 			<p>It is not enough that we build products that function, that are understandable and usable, we also need to build products that bring joy and excitement, pleasure and fun, and, yes, beauty to people’s lives. Creativity is to discover a question that has never been asked.</p>
 		</div>
 		<div class="gallery-post">
-			<img class="gallery-post__item cover lazyload" src="../assets/img/image_06.jpg" data-zoom alt="" />
-			<img class="gallery-post__item cover lazyload" src="../assets/img/image_08.jpg" data-zoom alt="" />
+			<img class="gallery-post__item cover lazyload" src="{{ asset('assets/main/img/image_06.jpg') }}" data-zoom alt="" />
+			<img class="gallery-post__item cover lazyload" src="{{ asset('assets/main/img/image_08.jpg') }}" data-zoom alt="" />
 			<div class="gallery-post__caption">Work by <a href="#">Colin Adams</a>, <a href="#">Mark Craig</a></div>
 		</div>
 		<div class="caption-post">
@@ -35,9 +35,13 @@
 			<p>We can learn how to take joy in the things we create whether they take the form of a fleeting experience or an heirloom that will last for generations. We can learn that reward comes in creation and re-creation, no just in the consumption of the world around us. Active participation in the process of creation is our right and our privilege. We can learn to measure the success of our ideas not by our bank accounts by their impact on the world.</p>
 		</div>
 		<footer class="footer-post">
-			<a class="footer-post__share" href="http://facebook.com/"><i class="font-icon icon-facebook"></i><span>Facebook</span></a>
+			{{-- <a class="footer-post__share" href="http://facebook.com/"><i class="font-icon icon-facebook"></i><span>Facebook</span></a>
 			<a class="footer-post__share" href="http://twitter.com/"><i class="font-icon icon-twitter"></i><span>Twitter</span></a>
-			<a class="footer-post__share" href="http://linkedin.com/"><i class="font-icon icon-linkedin2"></i><span>Linkedin</span></a>
+			<a class="footer-post__share" href="http://linkedin.com/"><i class="font-icon icon-linkedin2"></i><span>Linkedin</span></a> --}}
+
+			<!-- Go to www.addthis.com/dashboard to customize your tools -->
+			<div class="addthis_inline_share_toolbox"></div>
+
 		</footer>
 	</div>
 
@@ -49,7 +53,7 @@
 			<div class="comment-box__inner">
 				<svg class="avatar avatar--60" viewBox="0 0 84 84">
 					<g class="avatar__hexagon">
-						<image xlink:href="../assets/img/avatar-2.jpg" height="100%" width="100%" />
+						<image xlink:href="{{ asset('assets/main/img/avatar-2.jpg') }}" height="100%" width="100%" />
 					</g>
 				</svg>
 				<div class="comment-box__body">
@@ -68,12 +72,12 @@
 				<div class="comment-box__inner">
 					<svg class="avatar avatar--60" viewBox="0 0 84 84">
 						<g class="avatar__hexagon">
-							<image xlink:href="../assets/img/avatar-3.jpg" height="100%" width="100%" />
+							<image xlink:href="{{ asset('assets/main/img/avatar-3.jpg') }}" height="100%" width="100%" />
 						</g>
 					</svg>
 					<div class="comment-box__body">
 						<h4 class="comment-box__details"><span>Jessica Miller</span><span class="comment-box__details-date">1 min ago</span></h4>
-						<p>I agree, a very interesting article. Thank you very much! <img class="emoji" src="../assets/icons/emoji/emoji-nerd.svg" alt="nerd" /></p>
+						<p>I agree, a very interesting article. Thank you very much! <img class="emoji" src="{{ asset('assets/main/icons/emoji/emoji-nerd.svg') }}" alt="nerd" /></p>
 
 						<ul class="comment-box__footer">
 							<li><i class="font-icon icon-like-fill"></i> <span>35</span></li>
@@ -89,7 +93,7 @@
 			<div class="comment-box__inner">
 				<svg class="avatar avatar--60" viewBox="0 0 84 84">
 					<g class="avatar__hexagon">
-						<image xlink:href="../assets/img/avatar-6.jpg" height="100%" width="100%" />
+						<image xlink:href="{{ asset('assets/main/img/avatar-6.jpg') }}" height="100%" width="100%" />
 					</g>
 				</svg>
 				<div class="comment-box__body">
@@ -144,3 +148,9 @@
 	</div>
 </div>{{-- Content End --}}
 @endsection
+
+@push('js')
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5edb1a20894e63c7"></script>
+
+@endpush

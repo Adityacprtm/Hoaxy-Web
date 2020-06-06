@@ -49,6 +49,7 @@ Route::view('/', 'main.about')->name('about');
 Route::view('/resume', 'main.resume')->name('resume');
 Route::view('/portfolio', 'main.portfolio')->name('portfolio');
 Route::view('/blog', 'main.blog')->name('blog');
+Route::view('/blog/detail', 'main.blog-detail')->name('blog.detail');
 Route::view('/contact', 'main.contact')->name('contact');
 
 // Route Mbeb
