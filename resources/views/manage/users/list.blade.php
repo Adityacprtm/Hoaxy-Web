@@ -29,13 +29,14 @@
                             <table id="style-3" class="table style-3  table-hover">
                                 <thead>
                                     <tr>
-                                        <th class="checkbox-column text-center"> Record Id </th>
+                                        <th class="checkbox-column text-center"> No </th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Birth of Date</th>
                                         <th>Admin</th>
                                         <th>Registered at</th>
                                         <th class="text-center">Image</th>
+                                        <th class="text-center">Verified</th>
                                         <th class="text-center">Status</th>
                                         <th class="text-center">Action</th>
                                     </tr>
@@ -52,6 +53,7 @@
                                         <td class="text-center">
                                             <span><img src="{{ asset($user->avatar) }}" class="profile-img" alt="avatar"></span>
                                         </td>
+                                        <td class="text-center"><span class="shadow-none badge badge-{{ ($user->email_verified_at) ? 'primary' : 'danger' }}">{{ ($user->email_verified_at) ? 'Yes' : 'No' }}</span></td>
                                         <td class="text-center"><span class="shadow-none badge badge-{{ ($user->approved_at) ? 'primary' : 'warning' }}">{{ ($user->approved_at) ? 'Approved' : 'Waiting' }}</span></td>
                                         <td class="text-center">
                                             <ul class="table-controls">
