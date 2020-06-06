@@ -167,11 +167,11 @@
                     <div class="dropdown-menu position-absolute animated fadeInUp" aria-labelledby="userProfileDropdown">
                         <div class="user-profile-section">
                             <div class="media mx-auto">
-                                <img src="{{ asset($user->avatar) }}" class="img-fluid mr-2" alt="avatar">
+                                <img src="{{ asset(Auth::user()->avatar) }}" class="img-fluid mr-2" alt="avatar">
                                 <div class="media-body">
-                                    <h5>{{ $user->name }}</h5>
+                                    <h5>{{ Auth::user()->name }}</h5>
                                     {{-- <p>Project Leader</p> --}}
-                                    <p>{{ (auth()->user()->admin) ? 'Admin' : 'User' }}</p>
+                                    <p>{{ (Auth::user()->admin) ? 'Admin' : 'User' }}</p>
                                 </div>
                             </div>
                         </div>

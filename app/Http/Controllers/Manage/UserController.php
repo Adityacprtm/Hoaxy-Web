@@ -17,22 +17,19 @@ class UserController extends Controller
     public function index()
     {
         // $user_need_approval = User::whereNull('approved_at')->get();
-        $user = User::find(Auth::id());
         $users = User::all();
 
-        return view('manage/users/list', compact('user', 'users'));
+        return view('manage/users/list', compact('users'));
     }
 
     public function profile()
     {
-        $user = User::find(Auth::id());
-        return view('manage/users/profile', compact('user'));
+        return view('manage/users/profile');
     }
 
     public function setting()
     {
-        $user = User::find(Auth::id());
-        return view('manage/users/setting', compact('user'));
+        return view('manage/users/setting');
     }
 
     public function approve($user_id)

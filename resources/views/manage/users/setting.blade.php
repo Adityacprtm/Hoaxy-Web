@@ -29,7 +29,7 @@
                                             <div class="row">
                                                 <div class="col-xl-2 col-lg-12 col-md-4">
                                                     <div class="upload mt-4 pr-md-4">
-                                                        <input type="file" id="input-file-max-fs" class="dropify" data-default-file="{{ asset($user->avatar) }}" data-max-file-size="2M" />
+                                                        <input type="file" id="input-file-max-fs" class="dropify" data-default-file="{{ asset(Auth::user()->avatar) }}" data-max-file-size="2M" />
                                                         <p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i> Upload Picture</p>
                                                     </div>
                                                 </div>
@@ -39,7 +39,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
                                                                     <label for="fullName">Full Name</label>
-                                                                    <input type="text" class="form-control mb-4" id="fullName" placeholder="Full Name" value="{{ $user->name }}">
+                                                                    <input type="text" class="form-control mb-4" id="fullName" placeholder="Full Name" value="{{ Auth::user()->name }}">
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
@@ -146,11 +146,11 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="email">Email</label>
-                                                            <input type="email" class="form-control mb-4" id="email" placeholder="Email" value="{{ $user->email }}" readonly>
+                                                            <input type="email" class="form-control mb-4" id="email" placeholder="Email" value="{{ Auth::user()->email }}" readonly>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="profession">Profession / Role</label>
-                                                            <input type="text" class="form-control mb-4" id="profession" placeholder="Role" value="{{ ($user->admin == 1) ? 'Admin' : 'User' }}">
+                                                            <input type="text" class="form-control mb-4" id="profession" placeholder="Role" value="{{ (Auth::user()->admin == 1) ? 'Admin' : 'User' }}">
                                                         </div>
                                                     </div>
                                                 </div>

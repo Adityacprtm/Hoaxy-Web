@@ -187,7 +187,7 @@
                 <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <ul class="submenu-list" data-parent-element="#users">
-                @if (auth()->user()->admin)
+                @if (Auth::user()->admin)
                 <li class="">
                     <a href="{{ route('admin.manage.users') }}">
                         <span class="icon">
