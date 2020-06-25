@@ -23,6 +23,30 @@
 	{{-- Content --}}
 	<div class="gallery-grid js-grid js-filter-container">
 		<div class="gutter-sizer"></div>
+
+		<figure class="gallery-grid__item category-concept">
+			<div class="gallery-grid__image-wrap">
+				<img class="gallery-grid__image cover lazyload" src="{{ asset('assets/main/img/aws-certified-cloud-practitioner.png') }}" data-zoom alt="TryHackMe">
+			</div>
+			<figcaption class="gallery-grid__caption">
+				<h4 class="title title--h4 gallery-grid__title">AWS Certified Cloud Practitioner</h4>
+				<a target="_blank" href="https://www.youracclaim.com/badges/a7f245c9-1e5d-4b4a-ab6d-b8d49c79c4e0/embedded">Verify</a>
+				<span class="gallery-grid__category">Concept</span>
+			</figcaption>
+		</figure>
+
+		{{-- Item 0 --}}
+		<figure class="gallery-grid__item category-concept">
+			<div class="gallery-grid__image-wrap">
+				<img class="gallery-grid__image cover lazyload" src="https://tryhackme-badges.s3.amazonaws.com/adityacprtm.png" data-zoom alt="TryHackMe">
+			</div>
+			<figcaption class="gallery-grid__caption">
+				<h4 class="title title--h4 gallery-grid__title">TryHackMe Profile</h4>
+				<a target="_blank" href="https://tryhackme.com/p/adityacprtm">My Profile</a>
+				<span class="gallery-grid__category">Concept</span>
+			</figcaption>
+		</figure>
+
 		{{-- Item 1 --}}
 		<figure class="gallery-grid__item category-concept">
 			<div class="gallery-grid__image-wrap">
@@ -124,3 +148,7 @@
 	</div>
 </div>{{-- Content End --}}
 @endsection
+
+@push('js')
+<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+@endpush
