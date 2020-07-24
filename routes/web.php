@@ -18,36 +18,45 @@ Auth::routes();
 Auth::routes(['verify' => true]);
 
 Route::get('/welcome', function () {
-    return view('welcome');
+	return view('welcome');
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/approval', 'Auth\ApprovalController@index')->name('approval');
+	Route::get('/approval', 'Auth\ApprovalController@index')->name('approval');
 
-    Route::middleware(['verified'])->group(function () {
+	Route::middleware(['verified'])->group(function () {
 
-        Route::middleware(['approved'])->group(function () {
-            Route::get('/home', 'HomeController@index')->name('home');
+		Route::middleware(['approved'])->group(function () {
+			Route::get('/home', 'HomeController@index')->name('home');
 
-            // Route Manage
-            Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
+			// Route Manage
+			Route::get('/manage', 'Manage\DashboardController@index')->name('manage');
 
-            // Route Manage User
-            Route::get('/manage/user/profile', 'Manage\UserController@profile')->name('manage.user.profile');
-            Route::get('/manage/user/setting', 'Manage\UserController@setting')->name('manage.user.setting');
-        });
+			// Route Manage User
+			Route::get('/manage/user/profile', 'Manage\UserController@profile')->name('manage.user.profile');
+			Route::get('/manage/user/setting', 'Manage\UserController@setting')->name('manage.user.setting');
+		});
 
-        Route::middleware(['admin'])->group(function () {
-            Route::get('/manage/users', 'Manage\UserController@index')->name('admin.manage.users');
-            Route::get('/manage/users/{user_id}/approve', 'Manage\UserController@approve')->name('admin.manage.users.approve');
-            Route::post('/manage/users/update', 'Manage\UserController@store')->name('admin.manage.users.update');
-            Route::post('/manage/users/delete', 'Manage\UserController@destroy')->name('admin.manage.users.delete');
-        });
-    });
+		Route::middleware(['admin'])->group(function () {
+			Route::get('/manage/users', 'Manage\UserController@index')->name('admin.manage.users');
+			Route::get('/manage/users/{user_id}/approve', 'Manage\UserController@approve')->name('admin.manage.users.approve');
+			Route::post('/manage/users/update', 'Manage\UserController@store')->name('admin.manage.users.update');
+			Route::post('/manage/users/delete', 'Manage\UserController@destroy')->name('admin.manage.users.delete');
+
+			Route::get('/manage/about', 'Manage\AboutController@index')->name('manage.about.me');
+			Route::post('/manage/about/update', 'Manage\AboutController@aboutUpdate')->name('manage.about.me.update');
+
+			Route::get('/manage/about/doing', 'Manage\AboutController@doing')->name('manage.about.doing');
+
+			Route::get('/manage/about/client', 'Manage\AboutController@client')->name('manage.about.client');
+			Route::post('/manage/about/client/update', 'Manage\AboutController@clientStore')->name('manage.about.client.update');
+			Route::post('/manage/about/client/delete', 'Manage\AboutController@clientDestroy')->name('manage.about.client.delete');
+		});
+	});
 });
 
 // Route main
-Route::view('/', 'main.about')->name('about');
+Route::get('/', 'Main\HomeController@about')->name('about');
 Route::view('/resume', 'main.resume')->name('resume');
 Route::view('/portfolio', 'main.portfolio')->name('portfolio');
 Route::view('/blog', 'main.blog')->name('blog');

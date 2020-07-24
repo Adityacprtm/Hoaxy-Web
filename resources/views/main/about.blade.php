@@ -7,8 +7,9 @@
 	<div class="section mt-0">
 		<h1 class="title title--h1 title__separate">About Me</h1>
 		<div class="pt-2 pt-sm-3">
-			<p>I was Born in Pangkalan Bun, June 21, 1997 at 13:00. I live in Banjarbaru, South Kalimantan, Indonesia. Currently pursuing a bachelor's degree at the Faculty of Computer Science, Universitas Brawijaya focuses on Network Based Computing.</p>
-			<p class="mb-0">Become one of the selected participants to take part in the Partner Certification of the DIGITALENT 2019 program implemented by the Ministry of Communication and Information.</p>
+			{!! About::where('id','1')->value('content') !!}
+			{{-- <p>I was Born in Pangkalan Bun, June 21, 1997 at 13:00. I live in Banjarbaru, South Kalimantan, Indonesia. Currently pursuing a bachelor's degree at the Faculty of Computer Science, Universitas Brawijaya focuses on Network Based Computing.</p>
+			<p class="mb-0">Become one of the selected participants to take part in the Partner Certification of the DIGITALENT 2019 program implemented by the Ministry of Communication and Information.</p> --}}
 		</div>
 	</div>
 
@@ -114,25 +115,13 @@
 	<h2 class="title title--h2">Clients</h2>
 	<div class="swiper-container js-carousel-clients">
 		<div class="swiper-wrapper">
-			{{-- Item client --}}
-			<div class="swiper-slide">
-				<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
-			</div>
 
-			{{-- Item client --}}
+			@foreach ($clients as $client)
 			<div class="swiper-slide">
-				<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
+				<a class="contact-block__item" data-toggle="tooltip" data-placement="top" title="{{ $client->title }}" target="_blank" href="{{ $client->url }}"><img src="{{ asset($client->image) }}" alt="Logo" /></a>
 			</div>
+			@endforeach
 
-			{{-- Item client --}}
-			<div class="swiper-slide">
-				<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
-			</div>
-
-			{{-- Item client --}}
-			<div class="swiper-slide">
-				<a href="#"><img src="{{ asset('assets/main/img/logo-partner.svg') }}" alt="Logo" /></a>
-			</div>
 		</div>
 
 		<div class="swiper-pagination"></div>

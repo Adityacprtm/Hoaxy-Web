@@ -30,230 +30,221 @@
 <!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
 
-    <div class="layout-px-spacing">
-        <div class="row layout-spacing">
-            <div class="col-lg-12">
-                <div class="statbox widget box box-shadow">
-                    {{-- <div class="widget-header">
+	<div class="layout-px-spacing">
+		<div class="row layout-spacing">
+			<div class="col-lg-12">
+				<div class="statbox widget box box-shadow">
+					{{-- <div class="widget-header">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                 <h4>Users List</h4>
                             </div>
                         </div>
                     </div> --}}
-                    <div class="widget-content widget-content-area mt-5">
-                        <div class="table-responsive mb-4">
-                            <table id="style-3" class="table style-3  table-hover">
-                                <button id="addUser" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
-                                    Add Info
-                                </button>
-                                <thead>
-                                    <tr>
-                                        <th class="checkbox-column text-center"> ID </th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Birth of Date</th>
-                                        <th>Admin</th>
-                                        <th>Registered at</th>
-                                        <th class="text-center">Image</th>
-                                        <th class="text-center">Verified</th>
-                                        <th class="text-center">Status</th>
-                                        <th class="text-center">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+					<div class="widget-content widget-content-area mt-5">
+						<div class="table-responsive mb-4">
+							<table id="style-3" class="table style-3  table-hover">
+								<button id="addUser" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+									Add Info
+								</button>
+								<thead>
+									<tr>
+										<th class="checkbox-column text-center"> ID </th>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Birth of Date</th>
+										<th>Admin</th>
+										<th>Registered at</th>
+										<th class="text-center">Image</th>
+										<th class="text-center">Verified</th>
+										<th class="text-center">Status</th>
+										<th class="text-center">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- Modal -->
-    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="user-form" class="section general-info" enctype="multipart/form-data">
-                        @csrf
-                        <input type="hidden" name="user_id" id="user_id">
-                        <div class="info">
-                            <h6 class="">General Information</h6>
-                            <div class="row">
-                                <div class="col-lg-11 mx-auto">
-                                    <div class="row">
-                                        <div class="col-xl-2 col-lg-12 col-md-4">
-                                            <div class="upload mt-4 pr-md-4">
-                                                <input type="file" id="input-file-max-fs" class="dropify" data-default-file="" data-max-file-size="2M" />
-                                                <p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i> Upload Picture</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-10 col-lg-12 col-md-8 mt-md-0 mt-4">
-                                            <div class="form">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="fullName">Full Name</label>
-                                                            <input type="text" class="form-control mb-4" id="fullName" placeholder="Full Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <label class="dob-input">Date of Birth</label>
-                                                        <div class="d-sm-flex d-block">
-                                                            <div class="form-group mr-1">
-                                                                <select class="form-control" id="day-select">
-                                                                    <option id="day" disabled>Day</option>
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                    <option value="5">5</option>
-                                                                    <option value="6">6</option>
-                                                                    <option value="7">7</option>
-                                                                    <option value="8">8</option>
-                                                                    <option value="9">9</option>
-                                                                    <option value="10">10</option>
-                                                                    <option value="11">11</option>
-                                                                    <option value="12">12</option>
-                                                                    <option value="13">13</option>
-                                                                    <option value="14">14</option>
-                                                                    <option value="15">15</option>
-                                                                    <option value="16">16</option>
-                                                                    <option value="17">17</option>
-                                                                    <option value="18">18</option>
-                                                                    <option value="19">19</option>
-                                                                    <option value="20">20</option>
-                                                                    <option value="21">21</option>
-                                                                    <option value="22">22</option>
-                                                                    <option value="23">23</option>
-                                                                    <option value="24">24</option>
-                                                                    <option value="25">25</option>
-                                                                    <option value="26">26</option>
-                                                                    <option value="27">27</option>
-                                                                    <option value="28">28</option>
-                                                                    <option value="29">29</option>
-                                                                    <option value="30">30</option>
-                                                                    <option value="31">31</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group mr-1">
-                                                                <select class="form-control" id="month-select">
-                                                                    <option value="month" disabled>Month</option>
-                                                                    <option value="1">January</option>
-                                                                    <option value="2">February</option>
-                                                                    <option value="3">March</option>
-                                                                    <option value="4">April</option>
-                                                                    <option value="5">May</option>
-                                                                    <option value="6">June</option>
-                                                                    <option value="7">July</option>
-                                                                    <option value="8">August</option>
-                                                                    <option value="9">September</option>
-                                                                    <option value="10">October</option>
-                                                                    <option value="11">November</option>
-                                                                    <option value="12">December</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group mr-1">
-                                                                <select class="form-control" id="year-select">
-                                                                    <option id="year" disabled>Year</option>
-                                                                    <option id="year">2018</option>
-                                                                    <option id="year">2017</option>
-                                                                    <option id="year">2016</option>
-                                                                    <option id="year">2015</option>
-                                                                    <option id="year">2014</option>
-                                                                    <option id="year">2013</option>
-                                                                    <option id="year">2012</option>
-                                                                    <option id="year">2011</option>
-                                                                    <option id="year">2010</option>
-                                                                    <option id="year">2009</option>
-                                                                    <option id="year">2008</option>
-                                                                    <option id="year">2007</option>
-                                                                    <option id="year">2006</option>
-                                                                    <option id="year">2005</option>
-                                                                    <option id="year">2004</option>
-                                                                    <option id="year">2003</option>
-                                                                    <option id="year">2002</option>
-                                                                    <option id="year">2001</option>
-                                                                    <option id="year">2000</option>
-                                                                    <option id="year">1999</option>
-                                                                    <option id="year">1998</option>
-                                                                    <option id="year">1997</option>
-                                                                    <option id="year">1996</option>
-                                                                    <option id="year">1995</option>
-                                                                    <option id="year">1994</option>
-                                                                    <option id="year">1993</option>
-                                                                    <option id="year">1992</option>
-                                                                    <option id="year">1991</option>
-                                                                    <option id="year">1990</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="email">Email</label>
-                                                    <input type="email" class="form-control mb-4" id="email" placeholder="Email" readonly>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="role">Role</label>
-                                                            <select class="form-control mb-4" name="role" id="role-select">
-                                                                <option id="admin" value="1">Admin</option>
-                                                                <option id="user" value="0">User</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group n-chk mt-5">
-                                                            <label class="new-control new-checkbox new-checkbox-rounded checkbox-primary">
-                                                                <input id="checkbox-approval" type="checkbox" class="form-control new-control-input">
-                                                                <span class="new-control-indicator"></span> Approved
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="password-form" class="form-group">
-                                                    <label for="password">Password</label>
-                                                    <input type="Password" class="form-control mb-4" id="password" placeholder="Password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-                    <button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- Modal -->
+	<div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+							<line x1="18" y1="6" x2="6" y2="18"></line>
+							<line x1="6" y1="6" x2="18" y2="18"></line>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="user-form" class="section general-info" enctype="multipart/form-data">
+						@csrf
+						<input type="hidden" name="user_id" id="user_id">
+						<div class="info">
+							<h6 class="">General Information</h6>
+							<div class="row">
+								<div class="col-lg-11 mx-auto">
+									<div class="row">
+										<div class="col-xl-2 col-lg-12 col-md-4">
+											<div class="upload mt-4 pr-md-4">
+												<input type="file" id="input-file-max-fs" class="dropify" data-default-file="" data-max-file-size="2M" />
+												<p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i> Upload Picture</p>
+											</div>
+										</div>
+										<div class="col-xl-10 col-lg-12 col-md-8 mt-md-0 mt-4">
+											<div class="form">
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label for="fullName">Full Name</label>
+															<input type="text" class="form-control mb-4" id="fullName" placeholder="Full Name">
+														</div>
+													</div>
+													<div class="col-sm-6">
+														<label class="dob-input">Date of Birth</label>
+														<div class="d-sm-flex d-block">
+															<div class="form-group mr-1">
+																<select class="form-control" id="day-select">
+																	<option id="day" disabled>Day</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																	<option value="11">11</option>
+																	<option value="12">12</option>
+																	<option value="13">13</option>
+																	<option value="14">14</option>
+																	<option value="15">15</option>
+																	<option value="16">16</option>
+																	<option value="17">17</option>
+																	<option value="18">18</option>
+																	<option value="19">19</option>
+																	<option value="20">20</option>
+																	<option value="21">21</option>
+																	<option value="22">22</option>
+																	<option value="23">23</option>
+																	<option value="24">24</option>
+																	<option value="25">25</option>
+																	<option value="26">26</option>
+																	<option value="27">27</option>
+																	<option value="28">28</option>
+																	<option value="29">29</option>
+																	<option value="30">30</option>
+																	<option value="31">31</option>
+																</select>
+															</div>
+															<div class="form-group mr-1">
+																<select class="form-control" id="month-select">
+																	<option value="month" disabled>Month</option>
+																	<option value="1">January</option>
+																	<option value="2">February</option>
+																	<option value="3">March</option>
+																	<option value="4">April</option>
+																	<option value="5">May</option>
+																	<option value="6">June</option>
+																	<option value="7">July</option>
+																	<option value="8">August</option>
+																	<option value="9">September</option>
+																	<option value="10">October</option>
+																	<option value="11">November</option>
+																	<option value="12">December</option>
+																</select>
+															</div>
+															<div class="form-group mr-1">
+																<select class="form-control" id="year-select">
+																	<option id="year" disabled>Year</option>
+																	<option id="year">2018</option>
+																	<option id="year">2017</option>
+																	<option id="year">2016</option>
+																	<option id="year">2015</option>
+																	<option id="year">2014</option>
+																	<option id="year">2013</option>
+																	<option id="year">2012</option>
+																	<option id="year">2011</option>
+																	<option id="year">2010</option>
+																	<option id="year">2009</option>
+																	<option id="year">2008</option>
+																	<option id="year">2007</option>
+																	<option id="year">2006</option>
+																	<option id="year">2005</option>
+																	<option id="year">2004</option>
+																	<option id="year">2003</option>
+																	<option id="year">2002</option>
+																	<option id="year">2001</option>
+																	<option id="year">2000</option>
+																	<option id="year">1999</option>
+																	<option id="year">1998</option>
+																	<option id="year">1997</option>
+																	<option id="year">1996</option>
+																	<option id="year">1995</option>
+																	<option id="year">1994</option>
+																	<option id="year">1993</option>
+																	<option id="year">1992</option>
+																	<option id="year">1991</option>
+																	<option id="year">1990</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="email">Email</label>
+													<input type="email" class="form-control mb-4" id="email" placeholder="Email" readonly>
+												</div>
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label for="role">Role</label>
+															<select class="form-control mb-4" name="role" id="role-select">
+																<option id="admin" value="1">Admin</option>
+																<option id="user" value="0">User</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group n-chk mt-5">
+															<label class="new-control new-checkbox new-checkbox-rounded checkbox-primary">
+																<input id="checkbox-approval" type="checkbox" class="form-control new-control-input">
+																<span class="new-control-indicator"></span> Approved
+															</label>
+														</div>
+													</div>
+												</div>
+												<div id="password-form" class="form-group">
+													<label for="password">Password</label>
+													<input type="Password" class="form-control mb-4" id="password" placeholder="Password">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <div class="footer-wrapper">
-        <div class="footer-section f-section-1">
-            <p class="">Copyright © 2020 <a target="_blank" href="https://designreset.com/">DesignReset</a>, All rights reserved.</p>
-        </div>
-        <div class="footer-section f-section-2">
-            <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg></p>
-        </div>
-    </div>
+	@include('manage.includes.footer')
 
 </div>
 <!--  END CONTENT AREA  -->
@@ -277,7 +268,7 @@
 <!--  END CUSTOM SCRIPTS FILE  -->
 
 <script>
-    $('#menu-user').addClass('active');
+	$('#menu-user').addClass('active');
     $('#menu-user a').attr('data-active','true');
 
     $("#exampleModal").on("hidden.bs.modal", function(){
@@ -407,10 +398,10 @@
                             c3.draw();
                         })
                     },
-                    error: function (data) {
+                    error: function (xhr, ajaxOptions, thrownError) {
                         swal({
                             title: 'Oops!',
-                            text: data,
+                            text: xhr.responseText,
                             type: 'error',
                             padding: '2em',
                             timer: 3000
@@ -441,7 +432,7 @@
 
         var fileInput = document.getElementById('input-file-max-fs');
         if (fileInput) {
-            var file = fileInput.files[0];
+			var file = fileInput.files[0];
             formdata.append('avatar', file);
         }
 
