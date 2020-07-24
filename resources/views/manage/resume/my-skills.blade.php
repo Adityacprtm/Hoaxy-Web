@@ -1,5 +1,5 @@
 @extends('manage.layouts.default')
-@section('title', 'About What I\'m Doing Editor')
+@section('title', 'Resume My Skills Editor')
 
 @push('css')
 
@@ -14,7 +14,7 @@
 
 @push('js')
 <script>
-	$('#menu-about').addClass('active');
-    $('#menu-about a').attr('data-active','true');
+	$('#menu-resume').addClass('active');
+    $('#menu-resume a').attr('data-active','true');
 </script>
 @endpush

@@ -51,6 +51,11 @@ Route::middleware(['auth'])->group(function () {
 			Route::get('/manage/about/client', 'Manage\AboutController@client')->name('manage.about.client');
 			Route::post('/manage/about/client/update', 'Manage\AboutController@clientStore')->name('manage.about.client.update');
 			Route::post('/manage/about/client/delete', 'Manage\AboutController@clientDestroy')->name('manage.about.client.delete');
+
+			Route::get('/manage/resume/education', 'Manage\ResumeController@education')->name('manage.resume.education');
+			Route::get('/manage/resume/experience', 'Manage\ResumeController@experience')->name('manage.resume.experience');
+			Route::get('/manage/resume/myskills', 'Manage\ResumeController@myskills')->name('manage.resume.myskills');
+			Route::get('/manage/resume/codeskills', 'Manage\ResumeController@codeskills')->name('manage.resume.codeskills');
 		});
 	});
 });
