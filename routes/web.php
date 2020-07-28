@@ -38,32 +38,43 @@ Route::middleware(['auth'])->group(function () {
 		});
 
 		Route::middleware(['admin'])->group(function () {
+
+			/* USERS ROUTE */
 			Route::get('/manage/users', 'Manage\UserController@index')->name('admin.manage.users');
 			Route::get('/manage/users/{user_id}/approve', 'Manage\UserController@approve')->name('admin.manage.users.approve');
 			Route::post('/manage/users/update', 'Manage\UserController@store')->name('admin.manage.users.update');
 			Route::post('/manage/users/delete', 'Manage\UserController@destroy')->name('admin.manage.users.delete');
 
+			/* ABOUT ROUTE */
 			Route::get('/manage/about', 'Manage\AboutController@index')->name('manage.about.me');
 			Route::post('/manage/about/update', 'Manage\AboutController@aboutUpdate')->name('manage.about.me.update');
-
 			Route::get('/manage/about/doing', 'Manage\AboutController@doing')->name('manage.about.doing');
-
 			Route::get('/manage/about/client', 'Manage\AboutController@client')->name('manage.about.client');
 			Route::post('/manage/about/client/update', 'Manage\AboutController@clientStore')->name('manage.about.client.update');
 			Route::post('/manage/about/client/delete', 'Manage\AboutController@clientDestroy')->name('manage.about.client.delete');
 
+			/* RESUME ROUTE */
+			Route::get('/manage/resume', 'Manage\ResumeController@index')->name('manage.resume.index');
 			Route::get('/manage/resume/education', 'Manage\ResumeController@education')->name('manage.resume.education');
+			Route::post('/manage/resume/education/update', 'Manage\ResumeController@educationStore')->name('manage.resume.education.update');
+			Route::post('/manage/resume/education/delete', 'Manage\ResumeController@educationDestroy')->name('manage.resume.education.delete');
 			Route::get('/manage/resume/experience', 'Manage\ResumeController@experience')->name('manage.resume.experience');
-			Route::get('/manage/resume/myskills', 'Manage\ResumeController@myskills')->name('manage.resume.myskills');
-			Route::get('/manage/resume/codeskills', 'Manage\ResumeController@codeskills')->name('manage.resume.codeskills');
+			Route::post('/manage/resume/experience/update', 'Manage\ResumeController@experienceStore')->name('manage.resume.experience.update');
+			Route::post('/manage/resume/experience/delete', 'Manage\ResumeController@experienceDestroy')->name('manage.resume.experience.delete');
+			Route::get('/manage/resume/skill', 'Manage\ResumeController@skill')->name('manage.resume.skill');
+			Route::post('/manage/resume/skill/update', 'Manage\ResumeController@skillStore')->name('manage.resume.skill.update');
+			Route::post('/manage/resume/skill/delete', 'Manage\ResumeController@skillDestroy')->name('manage.resume.skill.delete');
+			Route::get('/manage/resume/code-skill', 'Manage\ResumeController@codeSkill')->name('manage.resume.codeskill');
+			Route::post('/manage/resume/code-skill/update', 'Manage\ResumeController@codeSkillStore')->name('manage.resume.codeskill.update');
+			Route::post('/manage/resume/code-skill/delete', 'Manage\ResumeController@codeSkillDestroy')->name('manage.resume.codeskill.delete');
 		});
 	});
 });
 
 // Route main
 Route::get('/', 'Main\HomeController@about')->name('about');
-Route::view('/resume', 'main.resume')->name('resume');
-Route::view('/portfolio', 'main.portfolio')->name('portfolio');
+Route::get('/resume', 'Main\HomeController@resume')->name('resume');
+Route::get('/portfolio', 'Main\HomeController@portfolio')->name('portfolio');
 Route::view('/blog', 'main.blog')->name('blog');
 Route::view('/blog/detail', 'main.blog-detail')->name('blog.detail');
 Route::view('/contact', 'main.contact')->name('contact');

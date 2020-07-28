@@ -8,5 +8,5 @@ class Education extends Model
 {
 	protected $table = 'education';
 
-	protected $fillable = ['institution', 'year', 'description', 'country', 'city'];
+	protected $fillable = ['level', 'sort', 'institution', 'year', 'description', 'country', 'city'];
 }

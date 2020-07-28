@@ -6,15 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Aboutme;
 use App\Models\Client;
+use Illuminate\Support\Facades\File;
 use Yajra\DataTables\Facades\DataTables;
-use File;
+
 
 class AboutController extends Controller
 {
-	public function __construct()
-	{
-		$this->middleware(['auth', 'verified']);
-	}
+	// public function __construct()
+	// {
+	// 	$this->middleware(['auth', 'verified']);
+	// }
 
 	public function index()
 	{

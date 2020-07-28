@@ -132,7 +132,7 @@
 							<i class="font-icon icon-map-pin"></i>Banjarbaru, ID
 						</li>
 						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
-							<a href="mailto:example@mail.com"><i class="font-icon icon-mail"></i>adityacprtm@gmail.com</a>
+							<a href="mailto:adityacprtm@gmail.com"><i class="font-icon icon-mail"></i>adityacprtm@gmail.com</a>
 						</li>
 						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Phone">
 							<i class="font-icon icon-smartphone"></i>+62 81234034511
@@ -142,7 +142,7 @@
                         </li> --}}
 					</ul>
 
-					<a target="_blank" class="btn" href="https://adityacprtm-shared.s3-ap-southeast-1.amazonaws.com/pdf/Aditya_Pratama_CV.pdf"><i class="font-icon icon-download"></i> Download CV</a>
+					<a target="_blank" class="btn" href="https://bit.ly/adityacprtm-cv"><i class="font-icon icon-download"></i> Download CV</a>
 				</div>
 			</aside>
 

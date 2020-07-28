@@ -22,13 +22,13 @@
 	{{-- <div class="container"> --}}
 	<div class="layout-px-spacing">
 		<div class="layout-top-spacing">
-			<div id="tooltip" class="row layout-spacing">
+			<div class="row layout-spacing">
 				<div class="col-xl-12 col-lg-12 col-md-12">
 					<div class="statbox widget box box-shadow">
 						<div class="widget-header">
 							<div class="row">
 								<div class="col-xl-12 col-md-12 col-sm-12 col-12">
-									<h4>About Me</h4>
+									<h6></h6>
 								</div>
 							</div>
 						</div>

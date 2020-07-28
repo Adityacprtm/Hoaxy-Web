@@ -31,39 +31,41 @@
 <div id="content" class="main-content">
 
 	<div class="layout-px-spacing">
-		<div class="row layout-spacing">
-			<div class="col-lg-12">
-				<div class="statbox widget box box-shadow">
-					{{-- <div class="widget-header">
-                        <div class="row">
-                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Users List</h4>
-                            </div>
-                        </div>
-                    </div> --}}
-					<div class="widget-content widget-content-area mt-5">
-						<div class="table-responsive mb-4">
-							<table id="style-3" class="table style-3  table-hover">
-								<button id="addUser" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
-									Add Info
-								</button>
-								<thead>
-									<tr>
-										<th class="checkbox-column text-center"> ID </th>
-										<th>Name</th>
-										<th>Email</th>
-										<th>Birth of Date</th>
-										<th>Admin</th>
-										<th>Registered at</th>
-										<th class="text-center">Image</th>
-										<th class="text-center">Verified</th>
-										<th class="text-center">Status</th>
-										<th class="text-center">Action</th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
+		<div class="layout-top-spacing">
+			<div class="row layout-spacing">
+				<div class="col-lg-12">
+					<div class="statbox widget box box-shadow">
+						<div class="widget-header">
+							<div class="row">
+								<div class="col-xl-12 col-md-12 col-sm-12 col-12">
+									<h6></h6>
+								</div>
+							</div>
+						</div>
+						<div class="widget-content widget-content-area">
+							<div class="table-responsive mb-4">
+								<table id="style-3" class="table style-3  table-hover">
+									<button id="addUser" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+										Add Info
+									</button>
+									<thead>
+										<tr>
+											<th class="checkbox-column text-center"> ID </th>
+											<th>Name</th>
+											<th>Email</th>
+											<th>Birth of Date</th>
+											<th>Admin</th>
+											<th>Registered at</th>
+											<th class="text-center">Image</th>
+											<th class="text-center">Verified</th>
+											<th class="text-center">Status</th>
+											<th class="text-center">Action</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -9,14 +9,14 @@ use App\User;
 
 class DashboardController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(['auth','verified']);
-    }
+	// public function __construct()
+	// {
+	//     $this->middleware(['auth','verified']);
+	// }
 
-    public function index()
-    {
-        $user = User::where('id', Auth::id())->first();
-        return view('manage.index', compact('user'));
-    }
+	public function index()
+	{
+		$user = User::where('id', Auth::id())->first();
+		return view('manage.index', compact('user'));
+	}
 }
