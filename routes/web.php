@@ -67,6 +67,10 @@ Route::middleware(['auth'])->group(function () {
 			Route::get('/manage/resume/code-skill', 'Manage\ResumeController@codeSkill')->name('manage.resume.codeskill');
 			Route::post('/manage/resume/code-skill/update', 'Manage\ResumeController@codeSkillStore')->name('manage.resume.codeskill.update');
 			Route::post('/manage/resume/code-skill/delete', 'Manage\ResumeController@codeSkillDestroy')->name('manage.resume.codeskill.delete');
+
+			/* PORTFOLIO ROUTE */
+			Route::get('/manage/portfolio', 'Manage\PortfolioController@index')->name('manage.portfolio.index');
+			Route::get('/manage/portfolio/category', 'Manage\PortfolioController@category')->name('manage.portfolio.category');
 		});
 	});
 });
