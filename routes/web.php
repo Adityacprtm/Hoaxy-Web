@@ -70,7 +70,12 @@ Route::middleware(['auth'])->group(function () {
 
 			/* PORTFOLIO ROUTE */
 			Route::get('/manage/portfolio', 'Manage\PortfolioController@index')->name('manage.portfolio.index');
+			Route::post('/manage/portfolio/update', 'Manage\PortfolioController@portfolioStore')->name('manage.portfolio.update');
+			Route::post('/manage/portfolio/delete', 'Manage\PortfolioController@portfolioDestroy')->name('manage.portfolio.delete');
 			Route::get('/manage/portfolio/category', 'Manage\PortfolioController@category')->name('manage.portfolio.category');
+			Route::get('/manage/portfolio/getcategory', 'Manage\PortfolioController@getCategory')->name('manage.portfolio.category.get');
+			Route::post('/manage/portfolio/category/update', 'Manage\PortfolioController@categoryStore')->name('manage.portfolio.category.update');
+			Route::post('/manage/portfolio/category/delete', 'Manage\PortfolioController@categoryDestroy')->name('manage.portfolio.category.delete');
 		});
 	});
 });

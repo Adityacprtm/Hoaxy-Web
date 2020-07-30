@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
+use App\Models\CategoryPortfolio;
 use Illuminate\Http\Request;
 use App\Models\Client;
 use App\Models\CodeSkill;
 use App\Models\Education;
 use App\Models\Experience;
+use App\Models\Portfolio;
 use App\Models\Skill;
 
 class HomeController extends Controller
@@ -29,6 +31,8 @@ class HomeController extends Controller
 
 	public function portfolio()
 	{
-		return view('main/portfolio');
+		$portfolio = Portfolio::inRandomorder()->get();
+		$category = CategoryPortfolio::orderBy('category_name', 'asc')->get();
+		return view('main/portfolio', compact('portfolio', 'category'));
 	}
 }

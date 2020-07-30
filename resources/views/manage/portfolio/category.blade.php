@@ -29,14 +29,14 @@
 						<div class="widget-content widget-content-area">
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
-									<button id="addEducation" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+									<button id="addCategory" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
 										Add Category
 									</button>
 									<thead>
 										<tr>
 											<th class="checkbox-column text-center">ID</th>
 											<th>Category</th>
-											<th>Total</th>
+											<th>Portfolio Count</th>
 											<th class="text-center">Action</th>
 										</tr>
 									</thead>
@@ -99,7 +99,6 @@
 
 	$("#exampleModal").on("hidden.bs.modal", function(){
 		$(this).find("input").val('').end();
-		f1.clear();
 	});
 
 	$.ajaxSetup({
@@ -114,7 +113,7 @@
             "ajax": "{{ route('manage.portfolio.category') }}",
             "columns": [
                 {data: 'id', name: 'id', className: "text-center"},
-				{data: 'category', name: 'category'},
+				{data: 'category_name', name: 'category'},
 				{data: 'total', name: 'total'},
                 {data: 'action', name: 'action', className: "text-center"},
             ],
@@ -133,22 +132,17 @@
 
 	multiCheck(c3);
 
-	$('#addExperience').click(function(){
+	$('#addCategory').click(function(){
 		$('#saveBtn').html("Save");
 	});
 
-	$('body').on('click', '.editExperience', function () {
+	$('body').on('click', '.editCategory', function () {
         var data = c3.row( $(this).parents('tr') ).data();
-        $('.modal-title').html("Edit Education");
+        $('.modal-title').html("Edit Category");
         $('#saveBtn').html("Update");
         $('#exampleModal').modal('show');
         $('#user_id').val(data.id);
-		$('#company').val(data.company)
-		$('#position').val(data.position);
-		$('#description').val(data.description);
-		f1.setDate([data.startDate,data.endDate])
-		$('#startDate').val(data.startDate);
-		$('#endDate').val(data.endDate);
+		$('#category').val(data.category_name)
 	});
 	
 	$('#saveBtn').click(function (e) {
@@ -157,14 +151,10 @@
         var formdata = new FormData();
 
         formdata.append('id', $("#user_id").val());
-		formdata.append('company', $("#company").val());
-		formdata.append('position', $("#position").val());
-		formdata.append('description', $("#description").val());
-		formdata.append('startDate', $("#startDate").val());
-		formdata.append('endDate', $("#endDate").val());
+		formdata.append('category', $("#category").val());
 
         $.ajax({
-            url: "{{ route('manage.resume.experience.update') }}",
+            url: "{{ route('manage.portfolio.category.update') }}",
             type: "POST",
             data: formdata,
             processData: false,
@@ -196,7 +186,7 @@
         });
 	});
 
-	$('body').on('click', '.deleteExperience', function () {
+	$('body').on('click', '.deleteCategory', function () {
         var data = c3.row( $(this).parents('tr') ).data();
         var user_id = data.id;
         swal({
@@ -210,18 +200,31 @@
             if (result.value){
                 $.ajax({
                     type: "post",
-                    url: "{{ route('manage.resume.experience.delete') }}",
+                    url: "{{ route('manage.portfolio.category.delete') }}",
                     data: { id: user_id},
                     success: function (data) {
-                        swal({
-                            title: 'Deleted!',
-                            text: 'Experience has been deleted.',
-                            type: 'success',
-                            padding: '2em',
-                            timer: 3000
-                        }).then(function() {
-                            c3.draw();
-                        })
+						console.log(data);
+                        if (data.status == 'error') {
+							swal({
+								title: 'Oops!',
+								text: data.message,
+								type: 'error',
+								padding: '2em',
+								timer: 3000
+							}).then(function() {
+								c3.draw();
+							})
+						} else {
+							swal({
+								title: 'Deleted!',
+								text: data.message,
+								type: 'success',
+								padding: '2em',
+								timer: 3000
+							}).then(function() {
+								c3.draw();
+							})
+						}
                     },
                     error: function (xhr, ajaxOptions, thrownError) {
                         swal({
