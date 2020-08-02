@@ -12,6 +12,11 @@
 		width: 100%;
 		position: relative;
 	}
+
+	pre {
+		background-color: whitesmoke;
+		padding: 10px;
+	}
 </style>
 @endpush
 
@@ -23,17 +28,21 @@
 	@if (!$blog->isEmpty())
 	<div class="pb-3">
 
+		@foreach ($blog as $blog)
+
 		<header class="header-post">
 			<h1 class="title title--h1">{{ $blog->title }}</h1>
-			<div class="caption-post">
+			{{-- <div class="caption-post">
 				<p>Above all, think of life as a prototype. We can conduct experiments, make discoveries, and change our perspectives. We can look for opportunities to turn processes into projects that have tangible outcomes.</p>
-			</div>
+			</div> --}}
 			<div class="header-post__image-wrap">
-				<img class="cover lazyload" src="{{ asset($blog->thumbnail) }}" alt="" />
+				<img class="cover lazyload" data-zoom src="{{ asset($blog->thumbnail) }}" alt="" />
 			</div>
 		</header>
 
 		{!! $blog->content !!}
+
+		@endforeach
 
 		<footer class="footer-post">
 			<!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -55,7 +64,4 @@
 @push('js')
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5edb1a20894e63c7"></script>
-<script>
-	$('.gallery-post__item').data('zoom');
-</script>
 @endpush

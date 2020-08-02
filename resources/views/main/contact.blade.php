@@ -38,7 +38,7 @@
 				<div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-12 col-md-12">
-				<div class="float-right">
+				<div class="float-center">
 					{!! NoCaptcha::renderJs() !!}
 					{!! NoCaptcha::display() !!}
 				</div>

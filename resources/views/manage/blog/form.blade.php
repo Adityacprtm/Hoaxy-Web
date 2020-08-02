@@ -67,7 +67,7 @@
 
 									<div class="mb-4">
 										<label for="editor1">Content</label>
-										{{-- <div class="alert alert-warning" role="alert">Tidak perlu menambahkan heading level 1!</div> --}}
+										<div class="alert alert-warning" role="alert">div: caption-post, gallery-post; img: gallery-post__item lazyload, data-zoom</div>
 										<textarea class="form-control" name="editor">{{ (isset($blog) ? $blog->content : '') }}</textarea>
 									</div>
 
@@ -135,7 +135,18 @@
 		filebrowserUploadUrl: "{{route('manage.blog.upload.image', ['_token' => csrf_token() ])}}",
         filebrowserUploadMethod: 'form',
 		height: "{{ isset($blog) ? 400 : '' }}",
+		extraAllowedContent: '*[*]{*}(*)',
+		entities: false,
+        basicEntities: false,
+		forceSimpleAmpersand: true
 	});
+
+	CKEDITOR.editorConfig = function( config ) {
+    // Define changes to default configuration here. For example:
+    // config.language = 'fr';
+    // config.uiColor = '#AADC6E';
+    	config.extraPlugins = "codesnippet";
+	};
 
 	$('#tags').tagsinput({
 		allowDuplicates: false,
