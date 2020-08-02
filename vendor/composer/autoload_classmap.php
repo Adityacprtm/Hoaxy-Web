@@ -46,6 +46,7 @@ return array(
     'App\\Models\\CategoryPortfolio' => $baseDir . '/app/Models/CategoryPortfolio.php',
     'App\\Models\\Client' => $baseDir . '/app/Models/Client.php',
     'App\\Models\\CodeSkill' => $baseDir . '/app/Models/CodeSkill.php',
+    'App\\Models\\Contact' => $baseDir . '/app/Models/Contact.php',
     'App\\Models\\Education' => $baseDir . '/app/Models/Education.php',
     'App\\Models\\Experience' => $baseDir . '/app/Models/Experience.php',
     'App\\Models\\Portfolio' => $baseDir . '/app/Models/Portfolio.php',

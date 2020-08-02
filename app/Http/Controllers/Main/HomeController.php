@@ -8,6 +8,7 @@ use App\Models\CategoryPortfolio;
 use Illuminate\Http\Request;
 use App\Models\Client;
 use App\Models\CodeSkill;
+use App\Models\Contact;
 use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Portfolio;
@@ -56,5 +57,27 @@ class HomeController extends Controller
 	public function contact()
 	{
 		return view('main/contact');
+	}
+
+	public function contactStore(Request $request)
+	{
+		$this->validate($request, [
+			'name'    => 'required',
+			'email'   => 'required|email',
+			'message' => 'required',
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+
+		$contact = Contact::create([
+			'name' => $request->name,
+			'email' => $request->email,
+			'message' => $request->message
+		]);
+
+		if ($contact) {
+			return response()->json(['status' => 'success', 'message' => 'Portfolio successfully deleted']);
+		} else {
+			return response()->json(['status' => 'error', 'message' => 'Something went wrong, try again later']);
+		}
 	}
 }

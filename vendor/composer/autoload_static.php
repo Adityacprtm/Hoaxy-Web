@@ -524,6 +524,7 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'App\\Models\\CategoryPortfolio' => __DIR__ . '/../..' . '/app/Models/CategoryPortfolio.php',
         'App\\Models\\Client' => __DIR__ . '/../..' . '/app/Models/Client.php',
         'App\\Models\\CodeSkill' => __DIR__ . '/../..' . '/app/Models/CodeSkill.php',
+        'App\\Models\\Contact' => __DIR__ . '/../..' . '/app/Models/Contact.php',
         'App\\Models\\Education' => __DIR__ . '/../..' . '/app/Models/Education.php',
         'App\\Models\\Experience' => __DIR__ . '/../..' . '/app/Models/Experience.php',
         'App\\Models\\Portfolio' => __DIR__ . '/../..' . '/app/Models/Portfolio.php',
