@@ -42,6 +42,7 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         ),
         'Y' => 
         array (
+            'Yajra\\Disqus\\' => 13,
             'Yajra\\DataTables\\' => 17,
         ),
         'X' => 
@@ -153,6 +154,7 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'C' => 
         array (
             'Cron\\' => 5,
+            'Conner\\Tagging\\' => 15,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -163,6 +165,7 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         array (
             'Asm89\\Stack\\' => 12,
             'App\\' => 4,
+            'Anhskohbo\\NoCaptcha\\' => 20,
         ),
     );
 
@@ -176,6 +179,10 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'Yajra\\Disqus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yajra/laravel-disqus/src',
         ),
         'Yajra\\DataTables\\' => 
         array (
@@ -429,6 +436,10 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'Conner\\Tagging\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rtconner/laravel-tagging/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -444,6 +455,10 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'Anhskohbo\\NoCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/anhskohbo/no-captcha/src',
         ),
     );
 
@@ -470,6 +485,9 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
 
     public static $classMap = array (
         'AdminSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminSeeder.php',
+        'Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/Facades/NoCaptcha.php',
+        'Anhskohbo\\NoCaptcha\\NoCaptcha' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/NoCaptcha.php',
+        'Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/NoCaptchaServiceProvider.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ApprovalController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ApprovalController.php',
@@ -483,6 +501,7 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\Main\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Main/HomeController.php',
         'App\\Http\\Controllers\\Manage\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/AboutController.php',
+        'App\\Http\\Controllers\\Manage\\BlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/BlogController.php',
         'App\\Http\\Controllers\\Manage\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/DashboardController.php',
         'App\\Http\\Controllers\\Manage\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/LoginController.php',
         'App\\Http\\Controllers\\Manage\\PortfolioController' => __DIR__ . '/../..' . '/app/Http/Controllers/Manage/PortfolioController.php',
@@ -501,6 +520,7 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Aboutme' => __DIR__ . '/../..' . '/app/Models/Aboutme.php',
+        'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
         'App\\Models\\CategoryPortfolio' => __DIR__ . '/../..' . '/app/Models/CategoryPortfolio.php',
         'App\\Models\\Client' => __DIR__ . '/../..' . '/app/Models/Client.php',
         'App\\Models\\CodeSkill' => __DIR__ . '/../..' . '/app/Models/CodeSkill.php',
@@ -600,6 +620,17 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Conner\\Tagging\\Console\\Commands\\GenerateTagGroup' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Console/Commands/GenerateTagGroup.php',
+        'Conner\\Tagging\\Contracts\\TaggableContract' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Contracts/TaggableContract.php',
+        'Conner\\Tagging\\Events\\TagAdded' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Events/TagAdded.php',
+        'Conner\\Tagging\\Events\\TagRemoved' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Events/TagRemoved.php',
+        'Conner\\Tagging\\Model\\Tag' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Model/Tag.php',
+        'Conner\\Tagging\\Model\\TagGroup' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Model/TagGroup.php',
+        'Conner\\Tagging\\Model\\Tagged' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Model/Tagged.php',
+        'Conner\\Tagging\\Providers\\LumenTaggingServiceProvider' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Providers/LumenTaggingServiceProvider.php',
+        'Conner\\Tagging\\Providers\\TaggingServiceProvider' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Providers/TaggingServiceProvider.php',
+        'Conner\\Tagging\\Taggable' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/Taggable.php',
+        'Conner\\Tagging\\TaggingUtility' => __DIR__ . '/..' . '/rtconner/laravel-tagging/src/TaggingUtility.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -4767,6 +4798,8 @@ class ComposerStaticInit9133ac912e1e2518be38ba1bdf7eef13
         'Yajra\\DataTables\\Utilities\\Config' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Config.php',
         'Yajra\\DataTables\\Utilities\\Helper' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Helper.php',
         'Yajra\\DataTables\\Utilities\\Request' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Request.php',
+        'Yajra\\Disqus\\DisqusMiddleware' => __DIR__ . '/..' . '/yajra/laravel-disqus/src/DisqusMiddleware.php',
+        'Yajra\\Disqus\\DisqusServiceProvider' => __DIR__ . '/..' . '/yajra/laravel-disqus/src/DisqusServiceProvider.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

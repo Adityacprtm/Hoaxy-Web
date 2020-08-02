@@ -37,6 +37,12 @@
 				<textarea class="textarea form-control" id="messageContact" name="messageContact" placeholder="Your Message" rows="9" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')"></textarea>
 				<div class="help-block with-errors"></div>
 			</div>
+			<div class="form-group col-12 col-md-12">
+				<div class="float-right">
+					{!! NoCaptcha::renderJs() !!}
+					{!! NoCaptcha::display() !!}
+				</div>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-12 col-md-6 order-2 order-md-1 text-center text-md-left">

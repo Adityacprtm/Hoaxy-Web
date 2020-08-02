@@ -91,21 +91,21 @@
 				</a>
 				<div class="tooltip"><span>Portfolio</span></div>
 			</li>
-			@endif
 
-			{{-- <li class="menu">
-                <a href="#forms" data-active="false" class="menu-toggle">
-                    <div class="base-menu">
-                        <div class="base-icons">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard">
-                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <div class="tooltip"><span>Forms</span></div>
-            </li> --}}
+			<li id="menu-blog" class="menu">
+				<a href="#blog" data-active="false" class="menu-toggle">
+					<div class="base-menu">
+						<div class="base-icons">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard">
+								<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+								<rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+							</svg>
+						</div>
+					</div>
+				</a>
+				<div class="tooltip"><span>Blog</span></div>
+			</li>
+			@endif
 
 			{{-- <li id="menu-info" class="menu">
                 <a href="#tables" data-active="false" class="menu-toggle">
@@ -329,104 +329,23 @@
 			</ul>
 		</div>
 
-		{{-- <div class="submenu" id="forms">
-            <div class="category-info">
-                <h5>Forms</h5>
-                <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <ul class="submenu-list" data-parent-element="#forms">
-                <li>
-                    <a href="form_bootstrap_basic.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Basic </a>
-                </li>
-                <li>
-                    <a href="form_input_group_basic.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Input Group </a>
-                </li>
-                <li>
-                    <a href="form_layouts.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Layouts </a>
-                </li>
-                <li>
-                    <a href="form_validation.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Validation </a>
-                </li>
-                <li>
-                    <a href="form_input_mask.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Input Mask </a>
-                </li>
-                <li>
-                    <a href="form_bootstrap_select.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Bootstrap Select </a>
-                </li>
-                <li>
-                    <a href="form_select2.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Select2 </a>
-                </li>
-                <li>
-                    <a href="form_bootstrap_touchspin.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> TouchSpin </a>
-                </li>
-                <li>
-                    <a href="form_maxlength.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Maxlength </a>
-                </li>
-                <li>
-                    <a href="form_checkbox_radio.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Checkbox &amp; Radio </a>
-                </li>
-                <li>
-                    <a href="form_switches.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Switches </a>
-                </li>
-                <li>
-                    <a href="form_wizard.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Wizards </a>
-                </li>
-                <li>
-                    <a href="form_fileupload.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> File Upload </a>
-                </li>
-                <li>
-                    <a href="form_quill.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Quill Editor </a>
-                </li>
-                <li>
-                    <a href="form_markdown.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Markdown Editor </a>
-                </li>
-                <li>
-                    <a href="form_date_range_picker.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Date &amp; Range Picker </a>
-                </li>
-                <li>
-                    <a href="form_clipboard.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Clipboard </a>
-                </li>
-                <li>
-                    <a href="form_typeahead.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Typeahead </a>
-                </li>
-            </ul>
-        </div> --}}
+		<div class="submenu" id="blog">
+			<div class="category-info">
+				<h5>Forms</h5>
+				<p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<ul class="submenu-list" data-parent-element="#blog">
+				<li>
+					<a href="{{ route('manage.blog') }}">
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+								<circle cx="12" cy="12" r="10"></circle>
+							</svg>
+						</span> Blog
+					</a>
+				</li>
+			</ul>
+		</div>
 
 		{{-- <div class="submenu" id="tables">
             <div class="category-info">

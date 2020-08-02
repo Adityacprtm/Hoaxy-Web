@@ -1,156 +1,61 @@
 @extends('main.layouts.default')
 @section('title', 'Blog Detail')
+
+@push('css')
+<style>
+	.content {
+		max-height: 680px;
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+		padding-left: 7rem;
+		padding-right: 7rem;
+		width: 100%;
+		position: relative;
+	}
+</style>
+@endpush
+
 @section('content')
 
 {{-- Content --}}
-<div class="content">
+<div class="content ">
 	{{-- Post --}}
+	@if (!$blog->isEmpty())
 	<div class="pb-3">
+
 		<header class="header-post">
-			<h1 class="title title--h1">Design Conferences in 2019</h1>
+			<h1 class="title title--h1">{{ $blog->title }}</h1>
 			<div class="caption-post">
 				<p>Above all, think of life as a prototype. We can conduct experiments, make discoveries, and change our perspectives. We can look for opportunities to turn processes into projects that have tangible outcomes.</p>
 			</div>
 			<div class="header-post__image-wrap">
-				<img class="cover lazyload" src="{{ asset('assets/main/img/image_02.jpg') }}" alt="" />
+				<img class="cover lazyload" src="{{ asset($blog->thumbnail) }}" alt="" />
 			</div>
 		</header>
-		<div class="caption-post">
-			<p>Above all, think of life as a prototype. We can conduct experiments, make discoveries, and change our perspectives. We can look for opportunities to turn processes into projects that have tangible outcomes. We can learn how to take joy in the things we create whether they take the form of a fleeting experience or an heirloom that will last for generations. We can learn that reward comes in creation and re-creation.</p>
-			<p>It is not enough that we build products that function, that are understandable and usable, we also need to build products that bring joy and excitement, pleasure and fun, and, yes, beauty to people’s lives. Creativity is to discover a question that has never been asked.</p>
-		</div>
-		<div class="gallery-post">
-			<img class="gallery-post__item cover lazyload" src="{{ asset('assets/main/img/image_06.jpg') }}" data-zoom alt="" />
-			<img class="gallery-post__item cover lazyload" src="{{ asset('assets/main/img/image_08.jpg') }}" data-zoom alt="" />
-			<div class="gallery-post__caption">Work by <a href="#">Colin Adams</a>, <a href="#">Mark Craig</a></div>
-		</div>
-		<div class="caption-post">
-			<h2 class="title title--h2">If you’re not prepared to be wrong, you’ll never come up with anything original.</h2>
-			<p>Here is one of the few effective keys to the design problem: the ability of the designer to recognize as many of the constraints as possible his willingness and enthusiasm for working within these constraints. The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it.</p>
-			<blockquote class="block-quote">
-				<p>The alternative to good design is always bad design. There is no such thing as no design.</p>
-				<span class="block-quote__author">Adam Judge</span>
-			</blockquote>
-			<p>Above all, think of life as a prototype. We can conduct experiments, make discoveries, and change our perspectives. We can look for opportunities to turn processes into projects that have tangible outcomes.</p>
-			<p>We can learn how to take joy in the things we create whether they take the form of a fleeting experience or an heirloom that will last for generations. We can learn that reward comes in creation and re-creation, no just in the consumption of the world around us. Active participation in the process of creation is our right and our privilege. We can learn to measure the success of our ideas not by our bank accounts by their impact on the world.</p>
-		</div>
-		<footer class="footer-post">
-			{{-- <a class="footer-post__share" href="http://facebook.com/"><i class="font-icon icon-facebook"></i><span>Facebook</span></a>
-			<a class="footer-post__share" href="http://twitter.com/"><i class="font-icon icon-twitter"></i><span>Twitter</span></a>
-			<a class="footer-post__share" href="http://linkedin.com/"><i class="font-icon icon-linkedin2"></i><span>Linkedin</span></a> --}}
 
+		{!! $blog->content !!}
+
+		<footer class="footer-post">
 			<!-- Go to www.addthis.com/dashboard to customize your tools -->
 			<div class="addthis_inline_share_toolbox"></div>
-
 		</footer>
+
+		<hr>
+
+		<div id="disqus_thread"></div>
+
 	</div>
+	@else
+	<p>Not Available</p>
+	@endif
 
-	<div class="">
-		<h2 class="title title--h2">Comments <span class="color--light">(3)</span></h2>
-
-		{{-- Comment --}}
-		<div class="comment-box">
-			<div class="comment-box__inner">
-				<svg class="avatar avatar--60" viewBox="0 0 84 84">
-					<g class="avatar__hexagon">
-						<image xlink:href="{{ asset('assets/main/img/avatar-2.jpg') }}" height="100%" width="100%" />
-					</g>
-				</svg>
-				<div class="comment-box__body">
-					<h4 class="comment-box__details"><span>Daniel Lewi</span><span class="comment-box__details-date">5 min ago</span></h4>
-					<p>Very interesting and informative article on design. I learned a lot of new and interesting.</p>
-
-					<ul class="comment-box__footer">
-						<li><i class="font-icon icon-like-fill"></i> <span>80</span></li>
-						<li><i class="font-icon icon-reply"></i> <span>Reply</span></li>
-					</ul>
-				</div>
-			</div>
-
-			{{-- Comment --}}
-			<div class="comment-box">
-				<div class="comment-box__inner">
-					<svg class="avatar avatar--60" viewBox="0 0 84 84">
-						<g class="avatar__hexagon">
-							<image xlink:href="{{ asset('assets/main/img/avatar-3.jpg') }}" height="100%" width="100%" />
-						</g>
-					</svg>
-					<div class="comment-box__body">
-						<h4 class="comment-box__details"><span>Jessica Miller</span><span class="comment-box__details-date">1 min ago</span></h4>
-						<p>I agree, a very interesting article. Thank you very much! <img class="emoji" src="{{ asset('assets/main/icons/emoji/emoji-nerd.svg') }}" alt="nerd" /></p>
-
-						<ul class="comment-box__footer">
-							<li><i class="font-icon icon-like-fill"></i> <span>35</span></li>
-							<li><i class="font-icon icon-reply"></i> <span>Reply</span></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		{{-- Comment --}}
-		<div class="comment-box">
-			<div class="comment-box__inner">
-				<svg class="avatar avatar--60" viewBox="0 0 84 84">
-					<g class="avatar__hexagon">
-						<image xlink:href="{{ asset('assets/main/img/avatar-6.jpg') }}" height="100%" width="100%" />
-					</g>
-				</svg>
-				<div class="comment-box__body">
-					<h4 class="comment-box__details"><span>Henry William</span><span class="comment-box__details-date">15 min ago</span></h4>
-					<p>Thanks for the good article. Looking forward to new ones.</p>
-
-					<ul class="comment-box__footer">
-						<li><i class="font-icon icon-like-fill"></i> <span>15</span></li>
-						<li><i class="font-icon icon-reply"></i> <span>Reply</span></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		{{-- Comment form --}}
-		<ul class="social-auth">
-			<li class="social-auth__item">Login with:</li>
-			<li class="social-auth__item"><a class="social-auth__link" href="#"><i class="font-icon icon-facebook"></i></a></li>
-			<li class="social-auth__item"><a class="social-auth__link" href="#"><i class="font-icon icon-twitter"></i></a></li>
-			<li class="social-auth__item"><a class="social-auth__link" href="#"><i class="font-icon icon-dribbble"></i></a></li>
-			<li class="social-auth__item"><a class="social-auth__link" href="#"><i class="font-icon icon-behance"></i></a></li>
-		</ul>
-		<form class="comment-form">
-			<textarea id="commentForm" class="textarea textarea--white form-control js-scrol-textarea" required="required" placeholder="Write a Comment..." rows="1"></textarea>
-			<button type="submit" class="btn"><i class="font-icon icon-send"></i></button>
-			<div class="dropdown dropup">
-				<i class="font-icon icon-smile" id="dropdownEmoji" data-toggle="dropdown" aria-haspopup="true"></i>
-				<div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownEmoji">
-					<div class="emoji-wrap">
-						<img class="emoji" src="../assets/icons/emoji/emoji-laughing.svg" title=":laughing:" alt="laughing" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-happy-2.svg" title=":happy 2:" alt="happy 2" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-crazy.svg" title=":crazy:" alt="crazy" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-bad.svg" title=":bad:" alt="bad" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-angry.svg" title=":angry:" alt="angry" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-happy.svg" title="happy" alt="happy" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-thinking.svg" title=":thinking:" alt="thinking" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-sad.svg" title=":sad:" alt="sad" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-pressure.svg" title=":pressure:" alt="pressure" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-in-love.svg" title=":in love:" alt="in love" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-nerd.svg" title=":laughing:" alt="nerd" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-happy-3.svg" title=":happy 3:" alt="happy 3" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-shocked.svg" title=":shocked:" alt="shocked" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-wink.svg" title=":wink:" alt="wink" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-sweating.svg" title=":sweating:" alt="sweating" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-shocked-2.svg" title=":shocked 2:" alt="shocked 2" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-shocked-3.svg" title=":shocked 3:" alt="shocked 3" />
-						<img class="emoji" src="../assets/icons/emoji/emoji-sad-2.svg" title=":sad 2:" alt="sad 2" />
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
 </div>{{-- Content End --}}
 @endsection
 
 @push('js')
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5edb1a20894e63c7"></script>
-
+<script>
+	$('.gallery-post__item').data('zoom');
+</script>
 @endpush

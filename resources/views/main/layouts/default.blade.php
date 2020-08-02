@@ -94,12 +94,13 @@
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'about') ? "active" : "" }}" href="{{ route('about') }}">About</a></li>
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'resume') ? "active" : "" }}" href="{{ route('resume') }}">Resume</a></li>
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'portfolio') ? "active" : "" }}" href="{{ route('portfolio') }}">Portfolio</a></li>
-				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'blog') ? "active" : "" }}" href="{{ route('blog') }}">Blog</a></li>
+				<li class="nav__item"><a class="{{ (Request::is('blog') || Request::is('blog/*')) ? "active" : "" }}" href="{{ route('blog') }}">Blog</a></li>
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'contact') ? "active" : "" }}" href="{{ route('contact') }}">Contact</a></li>
 			</ul>
 		</div>
 
 		<div class="wrapper sticky-parent">
+			@if (!Request::is('blog/*'))
 			{{-- Sidebar --}}
 			<aside class="sidebar">
 				<div class="sticky-column">
@@ -138,13 +139,14 @@
 							<i class="font-icon icon-smartphone"></i>+62 81234034511
 						</li>
 						{{-- <li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Skype">
-                            <a href="skype:skype-example"><i class="font-icon icon-skype"></i>Felecia_Brown</a>
-                        </li> --}}
+				<a href="skype:skype-example"><i class="font-icon icon-skype"></i>Felecia_Brown</a>
+			</li> --}}
 					</ul>
 
 					<a target="_blank" class="btn" href="https://bit.ly/adityacprtm-cv"><i class="font-icon icon-download"></i> Download CV</a>
 				</div>
 			</aside>
+			@endif
 
 			@yield('content')
 

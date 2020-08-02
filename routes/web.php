@@ -76,6 +76,14 @@ Route::middleware(['auth'])->group(function () {
 			Route::get('/manage/portfolio/getcategory', 'Manage\PortfolioController@getCategory')->name('manage.portfolio.category.get');
 			Route::post('/manage/portfolio/category/update', 'Manage\PortfolioController@categoryStore')->name('manage.portfolio.category.update');
 			Route::post('/manage/portfolio/category/delete', 'Manage\PortfolioController@categoryDestroy')->name('manage.portfolio.category.delete');
+
+			/* BLOG ROUTE */
+			Route::get('/manage/blog', 'Manage\BlogController@index')->name('manage.blog');
+			Route::get('/manage/blog/add', 'Manage\BlogController@blogAdd')->name('manage.blog.add');
+			Route::post('/manage/blog/add/image', 'Manage\BlogController@blogUploadImage')->name('manage.blog.upload.image');
+			Route::get('/manage/blog/edit/{id}', 'Manage\BlogController@blogEdit')->name('manage.blog.edit');
+			Route::post('/manage/blog/update', 'Manage\BlogController@blogStore')->name('manage.blog.update');
+			Route::post('/manage/blog/delete', 'Manage\BlogController@blogDestroy')->name('manage.blog.delete');
 		});
 	});
 });
@@ -84,9 +92,9 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/', 'Main\HomeController@about')->name('about');
 Route::get('/resume', 'Main\HomeController@resume')->name('resume');
 Route::get('/portfolio', 'Main\HomeController@portfolio')->name('portfolio');
-Route::view('/blog', 'main.blog')->name('blog');
-Route::view('/blog/detail', 'main.blog-detail')->name('blog.detail');
-Route::view('/contact', 'main.contact')->name('contact');
+Route::get('/blog', 'Main\HomeController@blog')->name('blog');
+Route::get('/blog/{slug}', 'Main\HomeController@blogDetail')->name('blog.detail');
+Route::get('/contact', 'Main\HomeController@contact')->name('contact');
 
 // Route Mbeb
 Route::view('/mbeb', 'mbeb.index')->name('mbeb');
