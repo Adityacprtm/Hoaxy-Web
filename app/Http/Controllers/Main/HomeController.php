@@ -48,8 +48,13 @@ class HomeController extends Controller
 
 	public function blogDetail($slug)
 	{
-		$blog = Blog::where('slug', $slug)->where('activated', 1)->get();
-		if ($blog->isEmpty()) {
+		// $blog = Blog::where('slug', $slug)->where('activated', 1)->get();
+		$blog = Blog::where([
+			['slug', '=', $slug],
+			['activated', '=', 1]
+		])->first();
+
+		if (!$blog) {
 			return abort(404);
 		} else {
 			return view('main/blog-detail', compact('blog'));

@@ -1,5 +1,5 @@
 @extends('main.layouts.default')
-@section('title', 'Blog Detail')
+@section('title', $blog->title)
 
 @push('css')
 <style>
@@ -21,15 +21,11 @@
 @endpush
 
 @section('content')
-
 {{-- Content --}}
 <div class="content ">
 	{{-- Post --}}
-	@if (!$blog->isEmpty())
+	@if ($blog)
 	<div class="pb-3">
-
-		@foreach ($blog as $blog)
-
 		<header class="header-post">
 			<h1 class="title title--h1">{{ $blog->title }}</h1>
 			{{-- <div class="caption-post">
@@ -41,8 +37,6 @@
 		</header>
 
 		{!! $blog->content !!}
-
-		@endforeach
 
 		<footer class="footer-post">
 			<!-- Go to www.addthis.com/dashboard to customize your tools -->
