@@ -39,7 +39,6 @@
 		{!! $blog->content !!}
 
 		<footer class="footer-post">
-			<!-- Go to www.addthis.com/dashboard to customize your tools -->
 			<div class="addthis_inline_share_toolbox"></div>
 		</footer>
 
@@ -52,10 +51,10 @@
 	<p>Not Available</p>
 	@endif
 
-</div>{{-- Content End --}}
+</div>
+{{-- Content End --}}
 @endsection
 
 @push('js')
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5edb1a20894e63c7"></script>
 @endpush

@@ -5,10 +5,8 @@
 <link href="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" />
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
-
 <style>
 	.bootstrap-tagsinput {
 		width: 100% !important;
@@ -122,13 +120,10 @@
 @push('js')
 <script src="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
-
-{{-- <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script> --}}
 <script src="{{ asset('assets/manage/plugins/ckeditor/ckeditor.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
 
 <script>
-	//First upload
 	var firstUpload = new FileUploadWithPreview('myFirstImage');
 
 	CKEDITOR.replace('editor', {
@@ -142,16 +137,11 @@
 	});
 
 	CKEDITOR.editorConfig = function( config ) {
-    // Define changes to default configuration here. For example:
-    // config.language = 'fr';
-    // config.uiColor = '#AADC6E';
     	config.extraPlugins = "codesnippet";
 	};
 
 	$('#tags').tagsinput({
 		allowDuplicates: false,
-		// itemValue: 'id',  // this will be used to set id of tag
-		// itemText: 'label' // this will be used to set text of tag
 	});
 
 	@if (isset($blog))

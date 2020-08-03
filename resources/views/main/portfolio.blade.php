@@ -42,5 +42,4 @@
 @endsection
 
 @push('js')
-<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
 @endpush

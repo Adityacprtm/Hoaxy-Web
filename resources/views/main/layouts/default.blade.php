@@ -163,25 +163,19 @@
 		</clipPath>
 	</svg>
 
-	{{-- Demo Menu --}}
+	{{-- Menu --}}
 	<div class="btnSlideNav slideOpen"></div>
 	<div class="btnSlideNav slideClose"></div>
 	<ul class="slideNav">
 		<li class="slideNav__item">
 			<h4 class="title title--5">More pages</h4>
 		</li>
-		{{-- <li class="slideNav__item"><a href="one-page.html">1. Single page</a><span class="lable-new">NEW</span></li>
-        <li class="slideNav__item"><a href="background-2.html">2. Background 2</a></li>
-        <li class="slideNav__item"><a href="background-3.html">3. Background 3</a></li>
-		<li class="slideNav__item"><a href="background-4.html">4. Background 4</a></li>
-		<li class="slideNav__item"><a href="background-5.html">5. Background 5</a></li>
-		<li class="slideNav__item"><a href="background-6.html">6. Background 6</a></li> --}}
 		<li class="slideNav__item"><a href="{{ route('manage') }}">Manage</a></li>
 		<li class="slideNav__item"><a href="{{ route('old.v1') }}">Old Version 1</a></li>
 		<li class="slideNav__item"><a href="{{ route('old.v2') }}">Old Version 2</a></li>
 	</ul>
 	<div class="overlay-slideNav"></div>
-	{{-- Demo Menu --}}
+	{{-- Menu --}}
 
 	{{-- JavaScripts --}}
 	<script src="{{ asset('assets/main/js/jquery-3.4.1.min.js') }}"></script>
@@ -190,10 +184,7 @@
 
 	<script src="{{ asset('assets/main/demo/plugins-demo.js') }}"></script>
 
-	{{-- tambahan js --}}
 	@stack('js')
 </body>
-
-{{-- Mirrored from netgon.net/artstyles/v-card2/full/one-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 May 2020 05:37:41 GMT --}}
 
 </html>

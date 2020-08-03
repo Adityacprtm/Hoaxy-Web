@@ -112,7 +112,6 @@
 @endsection
 
 @push('js')
-<!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="{{ asset('assets/manage/plugins/table/datatable/datatables.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.js') }}"></script>

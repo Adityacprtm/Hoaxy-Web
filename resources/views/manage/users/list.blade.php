@@ -1,29 +1,16 @@
 @extends('manage.layouts.default')
 @section('title', 'Users List')
 @push('css')
-<!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/datatables.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/dt-global_style.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/custom_dt_custom.css') }}">
-<!-- END PAGE LEVEL CUSTOM STYLES -->
-
-<!--  BEGIN CUSTOM STYLE FILE  -->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/dropify/dropify.min.css') }}">
 <link href="{{ asset('assets/manage/assets/css/users/account-setting.css" rel="stylesheet" type="text/css') }}" />
-<!--  END CUSTOM STYLE FILE  -->
-
-<link href="{{ asset('assets/manage/assets/css/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
-
-<!-- BEGIN THEME GLOBAL STYLES -->
-<link href="{{ asset('assets/manage/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
-<script src="{{ asset('assets/manage/plugins/sweetalerts/promise-polyfill.js') }}"></script>
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
-<!-- END THEME GLOBAL STYLES -->
-
 @endpush
 
 @section('content')
@@ -253,22 +240,12 @@
 @endsection
 
 @push('js')
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="{{ asset('assets/manage/plugins/table/datatable/datatables.js') }}"></script>
-
-<!--  BEGIN CUSTOM SCRIPTS FILE  -->
 <script src="{{ asset('assets/manage/plugins/dropify/dropify.min.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/blockui/jquery.blockUI.min.js') }}"></script>
-<!-- <script src="plugins/tagInput/tags-input.js"></script> -->
 <script src="{{ asset('assets/manage/assets/js/users/account-settings.js') }}"></script>
-<!--  END CUSTOM SCRIPTS FILE  -->
-
-<!--  BEGIN CUSTOM SCRIPTS FILE  -->
-<script src="{{ asset('assets/manage/assets/js/scrollspyNav.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/sweetalerts/custom-sweetalert.js') }}"></script>
-<!--  END CUSTOM SCRIPTS FILE  -->
-
 <script>
 	$('#menu-user').addClass('active');
     $('#menu-user a').attr('data-active','true');

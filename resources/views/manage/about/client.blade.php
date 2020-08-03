@@ -2,25 +2,14 @@
 @section('title', 'About Client Editor')
 
 @push('css')
-<!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/datatables.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/dt-global_style.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/custom_dt_custom.css') }}">
-<!-- END PAGE LEVEL CUSTOM STYLES -->
-
-<!-- BEGIN PAGE LEVEL STYLES -->
 <link href="{{ asset('assets/manage/assets/css/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.css') }}" rel="stylesheet" type="text/css" />
-<!-- END PAGE LEVEL STYLES -->
-
-<!-- BEGIN THEME GLOBAL STYLES -->
-{{-- <link href="{{ asset('assets/manage/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" /> --}}
-{{-- <script src="{{ asset('assets/manage/plugins/sweetalerts/promise-polyfill.js') }}"></script> --}}
-{{-- <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" /> --}}
+<link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
-<!-- END THEME GLOBAL STYLES -->
-
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 @endpush
 
@@ -126,21 +115,15 @@
 @endsection
 
 @push('js')
-<!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="{{ asset('assets/manage/plugins/table/datatable/datatables.js') }}"></script>
 <script src="{{ asset('assets/manage/assets/js/scrollspyNav.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
-
-<script>
-	//First upload
-	var firstUpload = new FileUploadWithPreview('myFirstImage')
-</script>
-<!-- END PAGE LEVEL PLUGINS -->
-
 <script>
 	$('#menu-about').addClass('active');
-    $('#menu-about a').attr('data-active','true');
+	$('#menu-about a').attr('data-active','true');
+	
+	var firstUpload = new FileUploadWithPreview('myFirstImage')
 
 	$("#exampleModal").on("hidden.bs.modal", function(){
         $(this).find("input").val('').end();

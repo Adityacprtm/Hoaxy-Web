@@ -2,24 +2,16 @@
 @section('title', 'About Me Editor')
 
 @push('css')
-<!--  BEGIN CUSTOM STYLE FILE  -->
 <link href="{{ asset('assets/manage/assets/css/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/editors/quill/quill.snow.css') }}">
-<!--  END CUSTOM STYLE FILE  -->
-
-<!-- BEGIN THEME GLOBAL STYLES -->
-{{-- <link href="{{ asset('assets/manage/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" /> --}}
-{{-- <script src="{{ asset('assets/manage/plugins/sweetalerts/promise-polyfill.js') }}"></script> --}}
-{{-- <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" /> --}}
+<link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
-{{-- <link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" /> --}}
-<!-- END THEME GLOBAL STYLES -->
+<link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
 @endpush
 
 @section('content')
 <!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
-	{{-- <div class="container"> --}}
 	<div class="layout-px-spacing">
 		<div class="layout-top-spacing">
 			<div class="row layout-spacing">
@@ -58,7 +50,6 @@
 			</div>
 		</div>
 	</div>
-	{{-- </div> --}}
 
 	@include('manage.includes.footer')
 
@@ -66,14 +57,10 @@
 @endsection
 
 @push('js')
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="{{ asset('assets/manage/assets/js/scrollspyNav.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/editors/quill/quill.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/editors/quill/custom-quill.js') }}"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
-
 <script src="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
-
 <script>
 	$('#menu-about').addClass('active');
 	$('#menu-about a').attr('data-active','true');
