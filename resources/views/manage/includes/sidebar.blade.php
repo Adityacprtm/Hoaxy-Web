@@ -122,19 +122,19 @@
                 <div class="tooltip"><span>Info</span></div>
             </li> --}}
 
-			{{-- <li class="menu">
-                <a href="#pages" data-active="false" class="menu-toggle">
-                    <div class="base-menu">
-                        <div class="base-icons">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
-                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                                <polyline points="13 2 13 9 20 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <div class="tooltip"><span>Pages</span></div>
-            </li> --}}
+			<li id="menu-contact" class="menu">
+				<a href="#contact" data-active="false" class="menu-toggle">
+					<div class="base-menu">
+						<div class="base-icons">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+								<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+								<polyline points="13 2 13 9 20 9"></polyline>
+							</svg>
+						</div>
+					</div>
+				</a>
+				<div class="tooltip"><span>Contact</span></div>
+			</li>
 
 			{{-- <li class="menu">
                 <a href="#more" data-active="false" class="menu-toggle">
@@ -331,7 +331,7 @@
 
 		<div class="submenu" id="blog">
 			<div class="category-info">
-				<h5>Forms</h5>
+				<h5>Blog</h5>
 				<p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 			<ul class="submenu-list" data-parent-element="#blog">
@@ -409,67 +409,23 @@
 		</ul>
 	</div> --}}
 
-	{{-- <div class="submenu" id="pages">
-            <div class="category-info">
-                <h5>Pages</h5>
-                <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <ul class="submenu-list" data-parent-element="#pages">
-                <li>
-                    <a href="pages_helpdesk.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Helpdesk </a>
-                </li>
-                <li>
-                    <a href="pages_contact_us.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Contact Form </a>
-                </li>
-                <li>
-                    <a href="pages_faq.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> FAQ </a>
-                </li>
-                <li>
-                    <a href="pages_faq2.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> FAQ 2 </a>
-                </li>
-                <li>
-                    <a href="pages_privacy.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Privacy Policy </a>
-                </li>
-                <li>
-                    <a href="pages_coming_soon.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg></span> Coming Soon </a>
-                </li>
-                <li class="sub-submenu">
-                    <a role="menu" class="collapsed" data-toggle="collapse" data-target="#error" aria-expanded="false">
-                        <div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                </svg></span> Error</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-                    <ul id="error" class="collapse" data-parent="#compact_submenuSidebar">
-                        <li>
-                            <a href="pages_error404.html"> 404 </a>
-                        </li>
-                        <li>
-                            <a href="pages_error500.html"> 500 </a>
-                        </li>
-                        <li>
-                            <a href="pages_error503.html"> 503 </a>
-                        </li>
-                        <li>
-                            <a href="pages_maintenence.html"> Maintanence </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div> --}}
+	<div class="submenu" id="contact">
+		<div class="category-info">
+			<h5>Contact</h5>
+			<p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+		<ul class="submenu-list" data-parent-element="#contact">
+			<li>
+				<a href="{{route('manage.contact')}}">
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<circle cx="12" cy="12" r="10"></circle>
+						</svg>
+					</span> Contact List
+				</a>
+			</li>
+		</ul>
+	</div>
 
 	{{-- <div class="submenu" id="more">
             <div class="category-info">

@@ -84,6 +84,11 @@ Route::middleware(['auth'])->group(function () {
 			Route::get('/manage/blog/edit/{id}', 'Manage\BlogController@blogEdit')->name('manage.blog.edit');
 			Route::post('/manage/blog/update', 'Manage\BlogController@blogStore')->name('manage.blog.update');
 			Route::post('/manage/blog/delete', 'Manage\BlogController@blogDestroy')->name('manage.blog.delete');
+
+			/* CONTACT ROUTE */
+			Route::get('/manage/contact', 'Manage\ContactController@index')->name('manage.contact');
+			Route::post('/manage/contact/update', 'Manage\ContactController@contactStore')->name('manage.contact.update');
+			Route::post('/manage/contact/delete', 'Manage\ContactController@contactDestroy')->name('manage.contact.delete');
 		});
 	});
 });

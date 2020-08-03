@@ -13,6 +13,8 @@ use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Portfolio;
 use App\Models\Skill;
+use App\Notifications\ContactMessage;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -73,6 +75,11 @@ class HomeController extends Controller
 			'email' => $request->email,
 			'message' => $request->message
 		]);
+
+		$admin = User::firstWhere('admin', 1);
+		if ($admin) {
+			$admin->notify(new ContactMessage($contact));
+		}
 
 		if ($contact) {
 			return response()->json(['status' => 'success', 'message' => 'Portfolio successfully deleted']);

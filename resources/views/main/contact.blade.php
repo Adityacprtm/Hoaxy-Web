@@ -116,7 +116,7 @@
 						text: xhr.statusText + xhr.responseText,
 						icon: 'error',
 						padding: '2em',
-						timer: 3000
+						// timer: 3000
 					}).then(function() {
 						window.location.reload()
 					})
