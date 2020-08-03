@@ -54,4 +54,22 @@ class ContactController extends Controller
 		}
 		return view('manage/contact/list', compact('contact'));
 	}
+
+	public function contactStore(Request $request)
+	{
+		Contact::updateOrCreate(
+			['id' => $request->id],
+			['name' => $request->name, 'email' => $request->email, 'message' => $request->message]
+		);
+
+		return response()->json(['success' => 'Contact saved successfully.']);
+	}
+
+	public function educationDestroy(Request $request)
+	{
+		$edu = Contact::find($request->id);
+		$edu->delete();
+
+		return response()->json(['success' => 'Contact deleted successfully.']);
+	}
 }
