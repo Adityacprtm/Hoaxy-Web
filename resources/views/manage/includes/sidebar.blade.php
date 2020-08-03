@@ -107,20 +107,20 @@
 			</li>
 			@endif
 
-			{{-- <li id="menu-info" class="menu">
-                <a href="#tables" data-active="false" class="menu-toggle">
-                    <div class="base-menu">
-                        <div class="base-icons">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                <line x1="9" y1="21" x2="9" y2="9"></line>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <div class="tooltip"><span>Info</span></div>
-            </li> --}}
+			<li id="menu-info" class="menu">
+				<a href="#info" data-active="false" class="menu-toggle">
+					<div class="base-menu">
+						<div class="base-icons">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout">
+								<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+								<line x1="3" y1="9" x2="21" y2="9"></line>
+								<line x1="9" y1="21" x2="9" y2="9"></line>
+							</svg>
+						</div>
+					</div>
+				</a>
+				<div class="tooltip"><span>Info</span></div>
+			</li>
 
 			<li id="menu-contact" class="menu">
 				<a href="#contact" data-active="false" class="menu-toggle">
@@ -347,87 +347,43 @@
 			</ul>
 		</div>
 
-		{{-- <div class="submenu" id="tables">
-            <div class="category-info">
-                <h5>Info</h5>
-                <p>Berisi informasi personal pemilik web.</p>
-            </div>
-            <ul class="submenu-list" data-parent-element="#tables">
-                <li>
-                    <a href="{{ route('manage.info') }}">
-		<span class="icon">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-				<circle cx="12" cy="12" r="10"></circle>
-			</svg>
-		</span>Info
-		</a>
-		</li>
-		<li class="sub-submenu">
-			<a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false">
-				<div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-							<circle cx="12" cy="12" r="10"></circle>
-						</svg></span> Datatables</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-					<polyline points="9 18 15 12 9 6"></polyline>
-				</svg>
-			</a>
-			<ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
+		<div class="submenu" id="info">
+			<div class="category-info">
+				<h5>Info</h5>
+				<p>Berisi informasi personal pemilik web.</p>
+			</div>
+			<ul class="submenu-list" data-parent-element="#info">
 				<li>
-					<a href="table_dt_basic.html"> Basic </a>
-				</li>
-				<li>
-					<a href="table_dt_basic-dark.html"> Dark </a>
-				</li>
-				<li>
-					<a href="table_dt_ordering_sorting.html"> Order Sorting </a>
-				</li>
-				<li>
-					<a href="table_dt_multi-column_ordering.html"> Multi-Column </a>
-				</li>
-				<li>
-					<a href="table_dt_multiple_tables.html"> Multiple Tables</a>
-				</li>
-				<li>
-					<a href="table_dt_alternative_pagination.html"> Alt. Pagination</a>
-				</li>
-				<li>
-					<a href="table_dt_custom.html"> Custom </a>
-				</li>
-				<li>
-					<a href="table_dt_range_search.html"> Range Search </a>
-				</li>
-				<li>
-					<a href="table_dt_html5.html"> HTML5 Export </a>
-				</li>
-				<li>
-					<a href="table_dt_live_dom_ordering.html"> Live DOM ordering </a>
-				</li>
-				<li>
-					<a href="table_dt_miscellaneous.html"> Miscellaneous </a>
+					<a href="{{ route('manage.info') }}">
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+								<circle cx="12" cy="12" r="10"></circle>
+							</svg>
+						</span>Info
+					</a>
 				</li>
 			</ul>
-		</li>
-		</ul>
-	</div> --}}
-
-	<div class="submenu" id="contact">
-		<div class="category-info">
-			<h5>Contact</h5>
-			<p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
 		</div>
-		<ul class="submenu-list" data-parent-element="#contact">
-			<li>
-				<a href="{{route('manage.contact')}}">
-					<span class="icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
-							<circle cx="12" cy="12" r="10"></circle>
-						</svg>
-					</span> Contact List
-				</a>
-			</li>
-		</ul>
-	</div>
 
-	{{-- <div class="submenu" id="more">
+		<div class="submenu" id="contact">
+			<div class="category-info">
+				<h5>Contact</h5>
+				<p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<ul class="submenu-list" data-parent-element="#contact">
+				<li>
+					<a href="{{route('manage.contact')}}">
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+								<circle cx="12" cy="12" r="10"></circle>
+							</svg>
+						</span> Contact List
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		{{-- <div class="submenu" id="more">
             <div class="category-info">
                 <h5>Extra Elements</h5>
                 <p>Lorem ipsum dolor sit amet sed incididunt ut labore et dolore magna aliqua.</p>
@@ -507,7 +463,7 @@
             </ul>
         </div> --}}
 
-</div>
+	</div>
 
 </div>
 <!--  END SIDEBAR  -->

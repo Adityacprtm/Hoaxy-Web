@@ -237,6 +237,7 @@ return [
 		'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 
 		'About' => App\Models\Aboutme::class,
+		'Info' => App\Models\Info::class,
 	],
 
 ];

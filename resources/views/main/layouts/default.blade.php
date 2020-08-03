@@ -107,43 +107,43 @@
 					<div class="avatar-wrap">
 						<svg class="avatar avatar--180" viewBox="0 0 188 188">
 							<g class="avatar__box">
-								<image xlink:href="{{ asset('assets/main/img/avatar-1.jpg') }}" height="100%" width="100%" />
+								<image xlink:href="{!! Info::where('key','PROFILE_IMAGE')->value('value') !!}" height="100%" width="100%" />
 							</g>
 						</svg>
 					</div>
 					<div class="text-center">
-						<h3 class="title sidebar__user-name">Aditya <span class="weight--500">Pratama</span></h3>
-						<div class="badge badge--gray">Tech Enthusiast</div>
+						<h3 class="title sidebar__user-name">{!! Info::where('key','FIRST_NAME')->value('value') !!} <span class="weight--500">{!! Info::where('key','LAST_NAME')->value('value') !!}</span></h3>
+						<div class="badge badge--gray">{!! Info::where('key','HEADLINE')->value('value') !!}</div>
 
 						{{-- Social --}}
 						<div class="social">
-							<a target="_blank" class="social__link" href="https://www.facebook.com/adityacprtm"><i class="font-icon icon-facebook"></i></a>
-							<a target="_blank" class="social__link" href="https://www.twitter.com/adityacprtm"><i class="font-icon icon-twitter"></i></a>
-							<a target="_blank" class="social__link" href="https://www.instagram.com/adityacprtm"><i class="font-icon icon-instagram"></i></a>
-							<a target="_blank" class="social__link" href="https://www.linkedin.com/in/adityacprtm"><i class="font-icon icon-linkedin2"></i></a>
-							<a target="_blank" class="social__link" href="https://www.github.com/adityacprtm"><i class="font-icon icon-github"></i></a>
+							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_FACEBOOK')->value('value') !!}"><i class="font-icon icon-facebook"></i></a>
+							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_TWITTER')->value('value') !!}"><i class="font-icon icon-twitter"></i></a>
+							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_INSTAGRAM')->value('value') !!}"><i class="font-icon icon-instagram"></i></a>
+							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_LINKEDIN')->value('value') !!}"><i class="font-icon icon-linkedin2"></i></a>
+							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_GITHUB')->value('value') !!}"><i class="font-icon icon-github"></i></a>
 						</div>
 					</div>
 
 					<ul class="contact-block">
 						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Birthday">
-							<i class="font-icon icon-calendar2"></i>June 21, 1997
+							<i class="font-icon icon-calendar2"></i>{!! Info::where('key','BIRTHDAY')->value('value') !!}
 						</li>
 						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Address">
-							<i class="font-icon icon-map-pin"></i>Banjarbaru, ID
+							<i class="font-icon icon-map-pin"></i>{!! Info::where('key','ADDRESS')->value('value') !!}
 						</li>
 						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
-							<a href="mailto:adityacprtm@gmail.com"><i class="font-icon icon-mail"></i>adityacprtm@gmail.com</a>
+							<a href="mailto:{!! Info::where('key','EMAIL')->value('value') !!}"><i class="font-icon icon-mail"></i>{!! Info::where('key','EMAIL')->value('value') !!}</a>
 						</li>
 						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Phone">
-							<i class="font-icon icon-smartphone"></i>+62 81234034511
+							<i class="font-icon icon-smartphone"></i>{!! Info::where('key','PHONE_NUMBER')->value('value') !!}
 						</li>
 						{{-- <li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Skype">
 				<a href="skype:skype-example"><i class="font-icon icon-skype"></i>Felecia_Brown</a>
 			</li> --}}
 					</ul>
 
-					<a target="_blank" class="btn" href="https://bit.ly/adityacprtm-cv"><i class="font-icon icon-download"></i> Download CV</a>
+					<a target="_blank" class="btn" href="{!! Info::where('key','LINK_CV')->value('value') !!}"><i class="font-icon icon-download"></i> Download CV</a>
 				</div>
 			</aside>
 			@endif

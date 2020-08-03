@@ -89,6 +89,11 @@ Route::middleware(['auth'])->group(function () {
 			Route::get('/manage/contact', 'Manage\ContactController@index')->name('manage.contact');
 			Route::post('/manage/contact/update', 'Manage\ContactController@contactStore')->name('manage.contact.update');
 			Route::post('/manage/contact/delete', 'Manage\ContactController@contactDestroy')->name('manage.contact.delete');
+
+			/* INFO ROUTE */
+			Route::get('/manage/info', 'Manage\InfoController@index')->name('manage.info');
+			Route::post('/manage/info/update', 'Manage\InfoController@infoStore')->name('manage.info.update');
+			Route::post('/manage/info/delete', 'Manage\InfoController@infoDestroy')->name('manage.info.delete');
 		});
 	});
 });
