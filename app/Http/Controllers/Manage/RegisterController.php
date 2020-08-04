@@ -12,36 +12,36 @@ use App\User;
 class RegisterController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
+	// public function __construct()
+	// {
+	//     $this->middleware('guest');
+	// }
 
-    public function index()
-    {
-        return view('manage.auth.register');
-    }
+	public function index()
+	{
+		return view('manage.auth.register');
+	}
 
-    public function register(Request $req)
-    {
-        $validator = Validator::make($req->all(), [
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-        ]);
+	public function register(Request $req)
+	{
+		$validator = Validator::make($req->all(), [
+			'name' => 'required',
+			'email' => 'required|email|unique:users',
+			'password' => 'required|min:6',
+		]);
 
-        if ($validator->fails()) {
-            return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-        } else {
-            User::create([
-                'name' => $req->name,
-                'email' => $req->email,
-                'password' => Hash::make($req->password),
-            ]);
+		if ($validator->fails()) {
+			return redirect()->back()
+				->withErrors($validator)
+				->withInput();
+		} else {
+			User::create([
+				'name' => $req->name,
+				'email' => $req->email,
+				'password' => Hash::make($req->password),
+			]);
 
-            return redirect()->intended('login');
-        }
-    }
+			return redirect()->intended('login');
+		}
+	}
 }

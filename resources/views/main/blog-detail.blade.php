@@ -4,13 +4,34 @@
 @push('css')
 <style>
 	.content {
-		max-height: 680px;
 		margin-top: 2.5rem;
 		margin-bottom: 2.5rem;
-		padding-left: 7rem;
-		padding-right: 7rem;
+		padding-left: 6rem;
+		padding-right: 6rem;
 		width: 100%;
-		position: relative;
+		/* position: relative; */
+	}
+
+	@media only screen and (max-width: 992px) {
+		.content {
+			margin-top: 2.5rem;
+			margin-bottom: 2.5rem;
+			padding-left: 4rem;
+			padding-right: 4rem;
+			width: 100%;
+			/* position: relative; */
+		}
+	}
+
+	@media only screen and (max-width: 450px) {
+		.content {
+			margin-top: 2.5rem;
+			margin-bottom: 2.5rem;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			width: 100%;
+			/* position: relative; */
+		}
 	}
 
 	pre {

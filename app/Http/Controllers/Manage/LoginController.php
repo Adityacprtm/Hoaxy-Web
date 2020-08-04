@@ -11,35 +11,35 @@ use App\User;
 class LoginController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
+	// public function __construct()
+	// {
+	//     $this->middleware('guest');
+	// }
 
-    public function index()
-    {
-        return view('manage.auth.login');
-    }
+	public function index()
+	{
+		return view('manage.auth.login');
+	}
 
-    public function login(Request $req)
-    {
-        $validator = Validator::make($req->all(), [
-            'email' => 'required',
-            'password' => 'required',
-        ]);
+	public function login(Request $req)
+	{
+		$validator = Validator::make($req->all(), [
+			'email' => 'required',
+			'password' => 'required',
+		]);
 
-        if ($validator->fails()) {
-            return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-        } else {
-            $credentials = $req->only('email', 'password');
-            if (Auth::attempt($credentials)) {
-                return redirect()->route('manage');
-            } else {
-                $req->session()->flash('status', 'Email atau Password tidak terdaftar di data');
-                return redirect()->back();
-            }
-        }
-    }
+		if ($validator->fails()) {
+			return redirect()->back()
+				->withErrors($validator)
+				->withInput();
+		} else {
+			$credentials = $req->only('email', 'password');
+			if (Auth::attempt($credentials)) {
+				return redirect()->route('manage');
+			} else {
+				$req->session()->flash('status', 'Email atau Password tidak terdaftar di data');
+				return redirect()->back();
+			}
+		}
+	}
 }

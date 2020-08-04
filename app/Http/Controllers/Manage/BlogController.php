@@ -75,11 +75,17 @@ class BlogController extends Controller
 		$tags = explode(",", $request->tags);
 
 		if ($request->hasFile('thumbnail')) {
+
+			if ($request->id) {
+				$blog = Blog::find($request->id);
+				File::delete($blog->thumbnail);
+			}
+
 			$file = $request->file('thumbnail');
-			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->title;
+			$filename = \Carbon\Carbon::now()->timestamp . '-' . substr($slug, 0, 9);
 			$extension = '.' . $request->thumbnail->getClientOriginalExtension();
 			$name = $filename . $extension;
-			$dir = "assets/main/images/portfolio";
+			$dir = "assets/main/images/blog/thumbnail";
 			$file->move($dir, $name);
 			$file_path = $dir . '/' . $name;
 

@@ -81,6 +81,12 @@ class AboutController extends Controller
 	public function clientStore(Request $request)
 	{
 		if ($request->hasFile('image')) {
+
+			if ($request->id) {
+				$client_data = Client::find($request->id);
+				File::delete($client_data->image);
+			}
+
 			$file = $request->file('image');
 
 			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->title;

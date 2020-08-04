@@ -58,9 +58,16 @@ class InfoController extends Controller
 	public function infoStore(Request $request)
 	{
 		if ($request->hasFile('value_image')) {
+
+			if ($request->id) {
+				$info = Info::find($request->id);
+				if ($info->type == 1) {
+					File::delete($info->value);
+				}
+			}
 			$file = $request->file('value_image');
 
-			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->title;
+			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->key;
 			$extension = '.' . $request->value_image->getClientOriginalExtension();
 			$name = $filename . $extension;
 

@@ -35,6 +35,14 @@ Route::middleware(['auth'])->group(function () {
 			// Route Manage User
 			Route::get('/manage/user/profile', 'Manage\UserController@profile')->name('manage.user.profile');
 			Route::get('/manage/user/setting', 'Manage\UserController@setting')->name('manage.user.setting');
+
+			/* BLOG ROUTE */
+			Route::get('/manage/blog', 'Manage\BlogController@index')->name('manage.blog');
+			Route::get('/manage/blog/add', 'Manage\BlogController@blogAdd')->name('manage.blog.add');
+			Route::post('/manage/blog/add/image', 'Manage\BlogController@blogUploadImage')->name('manage.blog.upload.image');
+			Route::get('/manage/blog/edit/{id}', 'Manage\BlogController@blogEdit')->name('manage.blog.edit');
+			Route::post('/manage/blog/update', 'Manage\BlogController@blogStore')->name('manage.blog.update');
+			Route::post('/manage/blog/delete', 'Manage\BlogController@blogDestroy')->name('manage.blog.delete');
 		});
 
 		Route::middleware(['admin'])->group(function () {
@@ -77,14 +85,6 @@ Route::middleware(['auth'])->group(function () {
 			Route::post('/manage/portfolio/category/update', 'Manage\PortfolioController@categoryStore')->name('manage.portfolio.category.update');
 			Route::post('/manage/portfolio/category/delete', 'Manage\PortfolioController@categoryDestroy')->name('manage.portfolio.category.delete');
 
-			/* BLOG ROUTE */
-			Route::get('/manage/blog', 'Manage\BlogController@index')->name('manage.blog');
-			Route::get('/manage/blog/add', 'Manage\BlogController@blogAdd')->name('manage.blog.add');
-			Route::post('/manage/blog/add/image', 'Manage\BlogController@blogUploadImage')->name('manage.blog.upload.image');
-			Route::get('/manage/blog/edit/{id}', 'Manage\BlogController@blogEdit')->name('manage.blog.edit');
-			Route::post('/manage/blog/update', 'Manage\BlogController@blogStore')->name('manage.blog.update');
-			Route::post('/manage/blog/delete', 'Manage\BlogController@blogDestroy')->name('manage.blog.delete');
-
 			/* CONTACT ROUTE */
 			Route::get('/manage/contact', 'Manage\ContactController@index')->name('manage.contact');
 			Route::post('/manage/contact/update', 'Manage\ContactController@contactStore')->name('manage.contact.update');
@@ -99,7 +99,8 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Route main
-Route::get('/', 'Main\HomeController@about')->name('about');
+Route::get('/', 'Main\HomeController@about')->name('home');
+Route::get('/about', 'Main\HomeController@about')->name('about');
 Route::get('/resume', 'Main\HomeController@resume')->name('resume');
 Route::get('/portfolio', 'Main\HomeController@portfolio')->name('portfolio');
 Route::get('/blog', 'Main\HomeController@blog')->name('blog');

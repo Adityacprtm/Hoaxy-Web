@@ -91,7 +91,7 @@
 
 		<div class="nav-wrap">
 			<ul class="nav">
-				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'about') ? "active" : "" }}" href="{{ route('about') }}">About</a></li>
+				<li class="nav__item"><a class="{{ (Request::is('/') || Request::is('about')) ? "active" : "" }}" href="{{ route('about') }}">About</a></li>
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'resume') ? "active" : "" }}" href="{{ route('resume') }}">Resume</a></li>
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'portfolio') ? "active" : "" }}" href="{{ route('portfolio') }}">Portfolio</a></li>
 				<li class="nav__item"><a class="{{ (Request::is('blog') || Request::is('blog/*')) ? "active" : "" }}" href="{{ route('blog') }}">Blog</a></li>
@@ -107,7 +107,7 @@
 					<div class="avatar-wrap">
 						<svg class="avatar avatar--180" viewBox="0 0 188 188">
 							<g class="avatar__box">
-								<image xlink:href="{!! Info::where('key','PROFILE_IMAGE')->value('value') !!}" height="100%" width="100%" />
+								<image xlink:href="{!! asset(Info::where('key','PROFILE_IMAGE')->value('value')) !!}" height="100%" width="100%" />
 							</g>
 						</svg>
 					</div>

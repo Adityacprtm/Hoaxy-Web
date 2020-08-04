@@ -56,6 +56,12 @@ class PortfolioController extends Controller
 	public function portfolioStore(Request $request)
 	{
 		if ($request->hasFile('media')) {
+
+			if ($request->id) {
+				$portfolio = Portfolio::find($request->id);
+				File::delete($portfolio->media);
+			}
+
 			$file = $request->file('media');
 
 			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->title;
