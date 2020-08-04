@@ -58,6 +58,7 @@
 	{{-- Styles --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 
 	{{-- fontawesome icon--}}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
@@ -139,11 +140,20 @@
 							<i class="font-icon icon-smartphone"></i>{!! Info::where('key','PHONE_NUMBER')->value('value') !!}
 						</li>
 						{{-- <li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Skype">
-				<a href="skype:skype-example"><i class="font-icon icon-skype"></i>Felecia_Brown</a>
-			</li> --}}
+							<a href="skype:skype-example"><i class="font-icon icon-skype"></i>Felecia_Brown</a>
+						</li> --}}
+						<li>
+
+						</li>
 					</ul>
 
 					<a target="_blank" class="btn" href="{!! Info::where('key','LINK_CV')->value('value') !!}"><i class="font-icon icon-download"></i> Download CV</a>
+					<div class="n-chk mt-3 float-left">
+						<label class="new-control new-checkbox checkbox-dark">
+							<input type="checkbox" class="new-control-input">
+							<span class="new-control-indicator"></span><span class="weight--500 font-italic ml-2"> Enable Dark mode! </span>
+						</label>
+					</div>
 				</div>
 			</aside>
 			@endif
@@ -183,6 +193,28 @@
 	<script src="{{ asset('assets/main/js/common.js') }}"></script>
 
 	<script src="{{ asset('assets/main/demo/plugins-demo.js') }}"></script>
+
+	<script>
+		const toggleSwitch = document.querySelector('.checkbox-dark input[type="checkbox"]');
+		const currentTheme = localStorage.getItem('theme');
+		if (currentTheme) {
+			document.documentElement.setAttribute('data-theme', currentTheme);
+			if (currentTheme === 'dark') {
+				toggleSwitch.checked = true;
+			}
+		}
+
+		function switchTheme(e) {
+			if (e.target.checked) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+				localStorage.setItem('theme', 'dark');
+			} else {
+				document.documentElement.setAttribute('data-theme', 'light');
+				localStorage.setItem('theme', 'light');
+			}
+		}
+		toggleSwitch.addEventListener('change', switchTheme, false);
+	</script>
 
 	@stack('js')
 </body>

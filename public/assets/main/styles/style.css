@@ -134,6 +134,33 @@
     background-image: url(../icons/icon-skype.svg);
 }
 
+/* DARK MODE */
+:root {
+    --bg-color-sidebar: #f5f8f9;
+    --text-color-sidebar: #44566c;
+    --bg-color-main: #fff;
+    --text-color-main: #5f6f81;
+    --text-color-heading: #44566c;
+    /* --text-color-link: #304cfd; */
+    --bg-triangles: url(../images/triangle-top.svg),
+        url(../images/triangle-bottom.svg);
+    --border-color: 3px solid #f5f8f9;
+    --nav-svg: url(../images/nav-edge.svg);
+}
+
+[data-theme="dark"] {
+    --bg-color-sidebar: #1c1c1e;
+    --text-color-sidebar: #fefefe;
+    --bg-color-main: #121212;
+    --text-color-main: #fefefe;
+    --text-color-heading: #fefefe;
+    /* --text-color-link: #fefefe; */
+    --bg-triangles: url(../images/triangle-top-dark.svg),
+        url(../images/triangle-bottom-dark.svg);
+    --border-color: 3px solid #1c1c1e;
+    --nav-svg: url(../images/nav-edge-dark.svg);
+}
+
 /* -----------------------------------------------------------------
     - General Styles
 ----------------------------------------------------------------- */
@@ -168,7 +195,7 @@ html {
 
 body {
     background-color: #f0f0f6;
-    color: #5f6f81;
+    color: var(--text-color-main);
     font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 1.65;
@@ -190,12 +217,12 @@ html.is-scroll-disabled body {
 }
 
 .bg-triangles {
-    background-image: url(../images/triangle-top.svg),
-        url(../images/triangle-bottom.svg);
+    background-image: var(--bg-triangles);
     background-position: right top, left bottom;
     background-repeat: no-repeat;
     background-size: inherit;
     background-attachment: fixed;
+    background-color: var(--bg-color-main);
 }
 
 @media only screen and (max-width: 992px) {
@@ -259,7 +286,7 @@ html.is-scroll-disabled body {
 }
 
 .bg-dark {
-    background-image: linear-gradient(128.99deg, #000000 0%, #121212 100%);
+    background-image: linear-gradient(128.99deg, #000000 0%, #ffff 100%);
     background-attachment: fixed;
 }
 
@@ -267,8 +294,8 @@ html.is-scroll-disabled body {
 .textarea,
 select,
 .custom-select {
-    background-color: #f5f8f9;
-    border: 1px solid #f5f8f9;
+    background-color: var(--bg-color-sidebar);
+    border: var(--border-color);
     border-radius: 1.25rem;
     box-shadow: none;
     color: #44566c;
@@ -571,7 +598,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #44566c;
+    color: var(--text-color-heading);
     font-family: "Inter", sans-serif;
     font-weight: 600;
     line-height: 1.3;
@@ -872,7 +899,8 @@ iframe {
     -ms-flex-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: var(--bg-color-main);
     position: fixed;
     top: 0;
     left: 0;
@@ -1108,9 +1136,9 @@ iframe {
 }
 
 .nav {
-    background-color: #fff;
+    background-color: var(--bg-color-main);
     border-radius: 0 3rem 0 0;
-    color: #5f6f81;
+    color: var(--text-color-main);
     display: -webkit-flex;
     display: -ms-flexbox;
     display: -moz-box;
@@ -1132,7 +1160,7 @@ iframe {
 
 .nav::before {
     content: "";
-    background-image: url(../images/nav-edge.svg);
+    background-image: var(--nav-svg);
     height: 101.1%;
     position: absolute;
     top: 0;
@@ -1203,7 +1231,8 @@ iframe {
 
 @media only screen and (max-width: 768px) {
     .nav__item a {
-        color: rgba(255, 255, 255, 0.7);
+        /* color: rgba(255, 255, 255, 0.7); */
+        color: var(--text-color-main);
         padding: 0;
     }
 
@@ -1268,7 +1297,7 @@ iframe {
 }
 
 .wrapper {
-    background-color: #fff;
+    background-color: var(--bg-color-main);
     border-radius: 3rem 0 3rem 3rem;
     box-shadow: 0px 40px 50px rgba(134, 151, 168, 0.1);
     display: -webkit-flex;
@@ -1398,7 +1427,7 @@ iframe {
 }
 
 .box-gray {
-    background-color: #f5f8f9;
+    background-color: var(--bg-color-sidebar);
     border-radius: 1.875rem;
     padding: 2rem 1.875rem;
 }
@@ -1526,7 +1555,7 @@ iframe {
 }
 
 .social__link {
-    color: #44566c;
+    color: var(--text-color-sidebar);
     display: inline-block;
     font-size: 0.875rem;
     margin-left: 0.8rem;
@@ -1641,7 +1670,7 @@ iframe {
     -ms-flex-direction: column;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #f5f8f9;
+    background-color: var(--bg-color-sidebar);
     border-radius: 3rem;
     overflow: hidden;
     padding: 2.5rem;
@@ -1716,7 +1745,7 @@ iframe {
 }
 
 .contact-block {
-    color: #44566c;
+    color: var(--text-color-sidebar);
     font-size: 0.937rem;
     list-style: none;
     padding-left: 0;
@@ -1747,7 +1776,7 @@ iframe {
 }
 
 .contact-block__item a {
-    color: #44566c;
+    color: var(--text-color-sidebar);
     text-decoration: none;
 }
 
@@ -1805,7 +1834,7 @@ iframe {
 }
 
 .case-item {
-    border: 3px solid #f5f8f9;
+    border: var(--border-color);
     border-radius: 1.875rem;
     padding: 1.5rem;
     position: relative;
@@ -2340,7 +2369,7 @@ iframe {
 }
 
 .news-item {
-    background-color: #f5f8f9;
+    background-color: var(--bg-color-sidebar);
     border-radius: 1.25rem;
     margin-bottom: 1.875rem;
     margin-left: 15px;
@@ -2567,7 +2596,7 @@ iframe {
 }
 
 .caption-post p {
-    color: #5f6f81;
+    color: var(--text-color-main);
 }
 
 .gallery-post {
@@ -3156,7 +3185,7 @@ iframe {
 }
 
 .medium-zoom-overlay {
-    background: #fff !important;
+    background: var(--bg-color-main) !important;
     z-index: 1104;
 }
 
@@ -3174,4 +3203,96 @@ iframe {
     overflow: hidden;
 }
 
+.caption-post pre {
+    background-color: var(--bg-color-sidebar);
+    padding: 10px;
+    color: var(--text-color-main);
+}
+
 /*# sourceMappingURL=style.css.map */
+
+/* DARK MODE */
+/* @media (prefers-color-scheme: dark) {
+    body {
+        color: #fefefe;
+    }
+
+    .preloader {
+        background-color: #121212;
+    }
+
+    .sidebar {
+        background-color: #1c1c1e;
+    }
+
+    .wrapper {
+        background-color: #121212;
+    }
+
+    .nav {
+        background-color: #121212;
+        color: #fefefe;
+    }
+
+    .nav::before {
+        background-image: url(../images/nav-edge-dark.svg);
+    }
+
+    .nav__item a {
+        color: #fefefe;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fefefe;
+    }
+
+    .contact-block {
+        color: #fefefe;
+    }
+
+    .contact-block__item a {
+        color: #fefefe;
+    }
+
+    .social__link {
+        color: #fefefe;
+    }
+
+    .case-item {
+        border: 3px solid #1c1c1e;
+    }
+
+    .box-gray {
+        background-color: #1c1c1e;
+    }
+
+    .news-item {
+        background-color: #1c1c1e;
+    }
+
+    .caption-post p {
+        color: #fefefe;
+    }
+
+    .caption-post a {
+        color: #5fa9ee;
+    }
+
+    .caption-post pre {
+        background-color: #1c1c1e;
+        color: #fefefe;
+    }
+
+    .input,
+    .textarea,
+    select,
+    .custom-select {
+        background-color: #1c1c1e;
+        border: 1px solid #1c1c1e;
+    }
+} */

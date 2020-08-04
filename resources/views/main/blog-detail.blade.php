@@ -33,11 +33,6 @@
 			/* position: relative; */
 		}
 	}
-
-	pre {
-		background-color: whitesmoke;
-		padding: 10px;
-	}
 </style>
 @endpush
 
