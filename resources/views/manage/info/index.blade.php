@@ -5,9 +5,9 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/datatables.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/dt-global_style.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/custom_dt_custom.css') }}">
-<link href="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 @endpush
 
@@ -79,27 +79,27 @@
 							</div>
 							<div class="mb-4">
 								<label for="key">Key</label>
-								<input type="text" class="form-control" id="key" placeholder="Key">
+								<input type="text" class="form-control" id="key" placeholder="Key" required>
 							</div>
 							<div class="mb-4" id="div_value_text">
 								<label for="value_text">Value text</label>
-								<input type="text" class="form-control" id="value_text" placeholder="Link or Text">
+								<input type="text" class="form-control" id="value_text" placeholder="Link or Text" required>
 							</div>
 							<div class="custom-file-container" data-upload-id="myFirstImage" id="div_value_image">
 								<label>Value Image <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
 								<label class="custom-file-container__custom-file">
-									<input type="file" id="value_image" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M">
+									<input type="file" id="value_image" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M" required>
 									<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 									<span class="custom-file-container__custom-file__custom-file-control"></span>
 								</label>
 								<div class="custom-file-container__image-preview"></div>
 							</div>
 						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal">Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Uplaod</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Uplaod</button>
 				</div>
 			</div>
 		</div>
@@ -123,8 +123,12 @@
 	var firstUpload = new FileUploadWithPreview('myFirstImage')
 
 	$("#exampleModal").on("hidden.bs.modal", function(){
-        $(this).find("input").val('').end();
+        // $(this).find("input").val('').end();
+		// $('#info-form').trigger('reset');
+		$(this).find("form")[0].reset();
 		$('#checkbox-image').prop('checked', false);
+		$('#div_value_text').show();
+		$('#div_value_image').hide();
 	});
 	
 	c3 = $('#style-3').DataTable({
@@ -230,7 +234,7 @@
         })
 	});
 	
-	$('#saveBtn').click(function (e) {
+	$('#info-form').submit(function (e) {
         e.preventDefault();
 
         var formdata = new FormData();
