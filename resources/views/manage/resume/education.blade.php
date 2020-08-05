@@ -76,8 +76,8 @@
 						<div class="widget-content widget-content-area">
 							<div class="row">
 								<div class="col mb-4">
-									<label for="client_title">Level of Education</label>
-									<select name="level" id="level" class="form-control">
+									<label for="level">Level of Education</label>
+									<select name="level" id="level" class="form-control" required>
 										<option value="" disabled selected>-Level-</option>
 										<option value="tk">TK</option>
 										<option value="sd">SD</option>
@@ -89,34 +89,34 @@
 									</select>
 								</div>
 								<div class="col">
-									<label for="client_url">Year</label>
-									<input type="text" class="form-control mb-4" name="year" id="year" placeholder="YYYY - YYYY">
+									<label for="year">Year</label>
+									<input type="text" class="form-control mb-4" name="year" id="year" placeholder="YYYY - YYYY" required>
 								</div>
 							</div>
 							<div>
-								<label for="client_url">Institution</label>
-								<input type="text" class="form-control mb-4" name="institution" id="institution" placeholder="Institution">
+								<label for="institution">Institution</label>
+								<input type="text" class="form-control mb-4" name="institution" id="institution" placeholder="Institution" required>
 							</div>
 							<div>
-								<label for="client_url">Description</label>
+								<label for="description">Description</label>
 								<input type="text" class="form-control mb-4" name="description" id="description" placeholder="Description">
 							</div>
 							<div class="row">
 								<div class="col">
-									<label for="client_url">Country</label>
-									<input type="text" class="form-control mb-4" name="country" id="country" placeholder="Country">
+									<label for="country">Country</label>
+									<input type="text" class="form-control mb-4" name="country" id="country" placeholder="Country" required>
 								</div>
 								<div class="col">
-									<label for="client_url">City</label>
-									<input type="text" class="form-control mb-4" name="city" id="city" placeholder="City">
+									<label for="city">City</label>
+									<input type="text" class="form-control mb-4" name="city" id="city" placeholder="City" required>
 								</div>
 							</div>
 						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal">Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
 				</div>
 			</div>
 		</div>
@@ -136,7 +136,8 @@
     $('#menu-resume a').attr('data-active','true');
 
 	$("#exampleModal").on("hidden.bs.modal", function(){
-        $(this).find("input").val('').end();
+		// $(this).find("input").val('').end();
+		$(this).find("form")[0].reset();
 	});
 
 	$.ajaxSetup({
@@ -177,7 +178,7 @@
 
 	$('#addEducation').click(function(){
 		$('#saveBtn').html("Save");
-		$('#level option:contains("-Level-")').prop('selected', true);
+		// $('#level option:contains("-Level-")').prop('selected', true);
 	})
 
 	$('body').on('click', '.editEducation', function () {
@@ -196,7 +197,7 @@
 
     });
 
-	$('#saveBtn').click(function (e) {
+	$('#education-form').submit(function (e) {
         e.preventDefault();
 
         var formdata = new FormData();
