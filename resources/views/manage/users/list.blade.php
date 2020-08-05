@@ -1,16 +1,17 @@
 @extends('manage.layouts.default')
 @section('title', 'Users List')
+
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/datatables.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/dt-global_style.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/custom_dt_custom.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/dropify/dropify.min.css') }}">
-<link href="{{ asset('assets/manage/assets/css/users/account-setting.css" rel="stylesheet" type="text/css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
-<link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/dropify/dropify.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/users/account-setting.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" />
 @endpush
 
 @section('content')
@@ -33,7 +34,7 @@
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
 									<button id="addUser" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
-										Add Info
+										Add User
 									</button>
 									<thead>
 										<tr>
@@ -78,7 +79,7 @@
 						@csrf
 						<input type="hidden" name="user_id" id="user_id">
 						<div class="info">
-							<h6 class="">General Information</h6>
+							{{-- <h6 class="">General Information</h6> --}}
 							<div class="row">
 								<div class="col-lg-11 mx-auto">
 									<div class="row">
@@ -94,14 +95,14 @@
 													<div class="col-sm-6">
 														<div class="form-group">
 															<label for="fullName">Full Name</label>
-															<input type="text" class="form-control mb-4" id="fullName" placeholder="Full Name">
+															<input type="text" class="form-control mb-4" id="fullName" placeholder="Full Name" required />
 														</div>
 													</div>
 													<div class="col-sm-6">
 														<label class="dob-input">Date of Birth</label>
 														<div class="d-sm-flex d-block">
 															<div class="form-group mr-1">
-																<select class="form-control" id="day-select">
+																<select class="form-control" id="day-select" required>
 																	<option id="day" disabled>Day</option>
 																	<option value="1">1</option>
 																	<option value="2">2</option>
@@ -137,7 +138,7 @@
 																</select>
 															</div>
 															<div class="form-group mr-1">
-																<select class="form-control" id="month-select">
+																<select class="form-control" id="month-select" required>
 																	<option value="month" disabled>Month</option>
 																	<option value="1">January</option>
 																	<option value="2">February</option>
@@ -154,7 +155,7 @@
 																</select>
 															</div>
 															<div class="form-group mr-1">
-																<select class="form-control" id="year-select">
+																<select class="form-control" id="year-select" required>
 																	<option id="year" disabled>Year</option>
 																	<option id="year">2018</option>
 																	<option id="year">2017</option>
@@ -192,13 +193,13 @@
 												</div>
 												<div class="form-group">
 													<label for="email">Email</label>
-													<input type="email" class="form-control mb-4" id="email" placeholder="Email" readonly>
+													<input type="email" class="form-control mb-4" id="email" name="email" placeholder="Email" readonly required />
 												</div>
 												<div class="row">
 													<div class="col-sm-6">
 														<div class="form-group">
 															<label for="role">Role</label>
-															<select class="form-control mb-4" name="role" id="role-select">
+															<select class="form-control mb-4" name="role" id="role-select" required>
 																<option id="admin" value="1">Admin</option>
 																<option id="user" value="0">User</option>
 															</select>
@@ -223,11 +224,11 @@
 								</div>
 							</div>
 						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
 				</div>
 			</div>
 		</div>
@@ -251,7 +252,8 @@
     $('#menu-user a').attr('data-active','true');
 
     $("#exampleModal").on("hidden.bs.modal", function(){
-        $(this).find("input,textarea").val('').end();
+		$(this).find("form")[0].reset();
+		$('#input-file-max-fs').val(null);
     });
 
     c3 = $('#style-3').DataTable({
@@ -394,7 +396,7 @@
     });
 
 
-    $('#saveBtn').click(function (e) {
+    $('#user-form').submit(function (e) {
         e.preventDefault();
 
         var dob
