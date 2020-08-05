@@ -57,13 +57,9 @@
 
 	{{-- Styles --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
-	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" /> --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/prism.css') }}" />
-
-	{{-- fontawesome icon--}}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 
 	{{-- tambahan css --}}
 	@stack('css')
@@ -194,29 +190,7 @@
 	<script src="{{ asset('assets/main/js/common.js') }}"></script>
 	<script src="{{ asset('assets/main/js/plugins-demo.js') }}"></script>
 	<script src="{{ asset('assets/main/js/prism.js') }}"></script>
-
-	<script>
-		const toggleSwitch = document.querySelector('.checkbox-dark input[type="checkbox"]');
-		const currentTheme = localStorage.getItem('theme');
-		if (currentTheme) {
-			document.documentElement.setAttribute('data-theme', currentTheme);
-			if (currentTheme === 'dark') {
-				toggleSwitch.checked = true;
-			}
-		}
-
-		function switchTheme(e) {
-			if (e.target.checked) {
-				document.documentElement.setAttribute('data-theme', 'dark');
-				localStorage.setItem('theme', 'dark');
-			} else {
-				document.documentElement.setAttribute('data-theme', 'light');
-				localStorage.setItem('theme', 'light');
-			}
-		}
-		toggleSwitch.addEventListener('change', switchTheme, false);
-	</script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 	@stack('js')
 </body>
 

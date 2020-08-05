@@ -1,5 +1,6 @@
 @extends('main.layouts.default')
 @section('title', 'About')
+
 @section('content')
 {{-- Content --}}
 <div class="content">
@@ -57,73 +58,21 @@
 		</div>
 	</div>
 
-	{{-- Testimonials --}}
-	{{-- <div class="section">
-		<h2 class="title title--h2">Testimonials</h2>
-		<div class="swiper-container js-carousel-review">
+	{{-- Clients --}}
+	<div class="section">
+		<h2 class="title title--h2">Clients</h2>
+		<div class="swiper-container js-carousel-clients">
 			<div class="swiper-wrapper">
-				
-				<div class="swiper-slide review-item">
-					<svg class="avatar avatar--80" viewBox="0 0 84 84">
-						<g class="avatar__hexagon">
-							<image xlink:href="{{ asset('assets/main/img/avatar-2.jpg') }}" height="100%" width="100%" />
-	</g>
-	</svg>
-	<h4 class="title title--h3">Daniel Lewis</h4>
-	<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
-</div>
 
-<div class="swiper-slide review-item">
-	<svg class="avatar avatar--80" viewBox="0 0 84 84">
-		<g class="avatar__hexagon">
-			<image xlink:href="{{ asset('assets/main/img/avatar-3.jpg') }}" height="100%" width="100%" />
-		</g>
-	</svg>
-	<h4 class="title title--h3">Jessica Miller</h4>
-	<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
-</div>
+				@foreach ($clients as $client)
+				<div class="swiper-slide">
+					<a class="contact-block__item" data-toggle="tooltip" data-placement="top" title="{{ $client->title }}" target="_blank" href="{{ $client->url }}"><img src="{{ asset($client->image) }}" alt="Logo" /></a>
+				</div>
+				@endforeach
 
-<div class="swiper-slide review-item">
-	<svg class="avatar avatar--80" viewBox="0 0 84 84">
-		<g class="avatar__hexagon">
-			<image xlink:href="{{ asset('assets/main/img/avatar-4.jpg') }}" height="100%" width="100%" />
-		</g>
-	</svg>
-	<h4 class="title title--h3">Tanya Ruiz</h4>
-	<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
-</div>
-
-<div class="swiper-slide review-item">
-	<svg class="avatar avatar--80" viewBox="0 0 84 84">
-		<g class="avatar__hexagon">
-			<image xlink:href="{{ asset('assets/main/img/avatar-5.jpg') }}" height="100%" width="100%" />
-		</g>
-	</svg>
-	<h4 class="title title--h3">Thomas Castro</h4>
-	<p class="review-item__caption">Felicia was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
-</div>
-</div>
-
-<div class="swiper-pagination"></div>
-</div>
-</div> --}}
-
-{{-- Clients --}}
-<div class="section">
-	<h2 class="title title--h2">Clients</h2>
-	<div class="swiper-container js-carousel-clients">
-		<div class="swiper-wrapper">
-
-			@foreach ($clients as $client)
-			<div class="swiper-slide">
-				<a class="contact-block__item" data-toggle="tooltip" data-placement="top" title="{{ $client->title }}" target="_blank" href="{{ $client->url }}"><img src="{{ asset($client->image) }}" alt="Logo" /></a>
 			</div>
-			@endforeach
-
+			<div class="swiper-pagination"></div>
 		</div>
-
-		<div class="swiper-pagination"></div>
 	</div>
-</div>
 </div>{{-- Content End --}}
 @endsection

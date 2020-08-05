@@ -1,7 +1,7 @@
 @extends('main.layouts.default')
 @section('title', 'Portfolio')
-@section('content')
 
+@section('content')
 {{-- Content --}}
 <div class="content">
 	<div class="section mt-0">
@@ -40,6 +40,3 @@
 	</div>
 </div>{{-- Content End --}}
 @endsection
-
-@push('js')
-@endpush

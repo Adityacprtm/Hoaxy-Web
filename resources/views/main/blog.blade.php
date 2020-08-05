@@ -7,9 +7,6 @@
 	<div class="section mt-0">
 		<h1 class="title title--h1 title__separate">Blog</h1>
 	</div>
-
-
-
 	<div class="news-grid section">
 		@forelse ($blog as $b)
 		<article class="news-item box">
@@ -25,13 +22,7 @@
 		</article>
 		@empty
 	</div>
-	<p class="text-center mt-5">Not Available</p>
+	<p class="text-center mt-5">Oops, not available at this time</p>
 	@endforelse
-</div>{{-- Content End --}}
+</div>
 @endsection
-
-@push('js')
-<script>
-	$('.news-item__caption').children('div').removeClass('caption-post');
-</script>
-@endpush

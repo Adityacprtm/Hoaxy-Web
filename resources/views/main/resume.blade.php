@@ -1,7 +1,7 @@
 @extends('main.layouts.default')
 @section('title', 'Resume')
-@section('content')
 
+@section('content')
 {{-- Content --}}
 <div class="content">
 	<div class="section mt-0">

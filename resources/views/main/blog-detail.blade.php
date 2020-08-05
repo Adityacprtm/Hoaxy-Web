@@ -9,7 +9,7 @@
 		padding-left: 6rem;
 		padding-right: 6rem;
 		width: 100%;
-		/* position: relative; */
+		position: relative;
 	}
 
 	@media only screen and (max-width: 992px) {
@@ -19,7 +19,7 @@
 			padding-left: 4rem;
 			padding-right: 4rem;
 			width: 100%;
-			/* position: relative; */
+			position: relative;
 		}
 	}
 
@@ -30,16 +30,14 @@
 			padding-left: 2rem;
 			padding-right: 2rem;
 			width: 100%;
-			/* position: relative; */
+			position: relative;
 		}
 	}
 </style>
 @endpush
 
 @section('content')
-{{-- Content --}}
 <div class="content ">
-	{{-- Post --}}
 	@if ($blog)
 	<div class="pb-3">
 		<header class="header-post">
@@ -51,9 +49,7 @@
 				<img class="cover lazyload" data-zoom src="{{ asset($blog->thumbnail) }}" alt="" />
 			</div>
 		</header>
-
 		{!! $blog->content !!}
-
 		<footer class="footer-post">
 			<div class="addthis_inline_share_toolbox"></div>
 		</footer>
@@ -61,14 +57,11 @@
 		<hr>
 
 		<div id="disqus_thread"></div>
-
 	</div>
 	@else
-	<p>Not Available</p>
+	<p>Oops, not available at this time</p>
 	@endif
-
 </div>
-{{-- Content End --}}
 @endsection
 
 @push('js')
