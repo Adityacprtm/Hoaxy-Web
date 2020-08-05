@@ -8,9 +8,10 @@
 		<h1 class="title title--h1 title__separate">Blog</h1>
 	</div>
 
-	@forelse ($blog as $b)
+
 
 	<div class="news-grid section">
+		@forelse ($blog as $b)
 		<article class="news-item box">
 			<div class="news-item__image-wrap overlay overlay--45">
 				<div class="news-item__date">{{ date('d', strtotime($b->created_at)) }}<span>{{ date('M', strtotime($b->created_at)) }}</span></div>
@@ -19,12 +20,11 @@
 			</div>
 			<div class="news-item__caption">
 				<h3 class="title title--h3">{{ $b->title }}</h3>
-				{!! substr($b->content,0,100).'....' !!}
+				{!! substr($b->content,0,90) !!} ....
 			</div>
 		</article>
-
+		@empty
 	</div>
-	@empty
 	<p class="text-center mt-5">Not Available</p>
 	@endforelse
 </div>{{-- Content End --}}

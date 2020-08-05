@@ -65,7 +65,7 @@
 
 									<div class="mb-4">
 										<label for="editor1">Content</label>
-										<div class="alert alert-warning" role="alert">div: caption-post, gallery-post; img: gallery-post__item lazyload, data-zoom</div>
+										<div class="alert alert-warning" role="alert">div: caption-post, gallery-post; img (without tag p): gallery-post__item cover lazyload, data-zoom</div>
 										<textarea class="form-control" name="editor">{{ (isset($blog) ? $blog->content : '') }}</textarea>
 									</div>
 
