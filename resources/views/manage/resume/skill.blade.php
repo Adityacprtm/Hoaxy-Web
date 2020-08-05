@@ -49,7 +49,7 @@
 						<div class="widget-content widget-content-area">
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
-									<button id="addEducation" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+									<button id="addSkill" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
 										Add Skill
 									</button>
 									<thead>
@@ -86,17 +86,17 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="education-form" class="section general-info">
+					<form id="skill-form" class="section general-info">
 						@csrf
 						<input type="hidden" name="user_id" id="user_id">
 						<div class="widget-content widget-content-area">
 							<div class="mb-4">
 								<label for="title">Skill Name</label>
-								<input type="text" class="form-control" name="title" id="title" placeholder="Skill name">
+								<input type="text" class="form-control" name="title" id="title" placeholder="Skill name" required>
 							</div>
 							<div class="mb-4">
-								<label for="position">level</label>
-								<input type="range" class="form-control " min="1" max="3" value="1" step="1" id="level" list="scale">
+								<label for="level">level</label>
+								<input type="range" class="form-control " min="1" max="3" value="1" step="1" id="level" list="scale" required>
 								<datalist id="scale">
 									{{-- <option value="0" label="none"></option> --}}
 									<option value="1" label="Beginner"></option>
@@ -106,7 +106,7 @@
 							</div>
 							<div class="row mb-4">
 								<div class="col-2">
-									<label for="position">Activate</label>
+									<label for="checkbox-activated">Activate</label>
 								</div>
 								<div class="col-10">
 									<label class="switch s-icons s-outline s-outline-primary mr-2">
@@ -116,11 +116,11 @@
 								</div>
 							</div>
 						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal">Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
 				</div>
 			</div>
 		</div>
@@ -140,9 +140,7 @@
 	$('#menu-resume a').attr('data-active','true');
 	
 	$("#exampleModal").on("hidden.bs.modal", function(){
-		$(this).find("input").val('').end();
-		$('#level').val('0');
-		$('#checkbox-activated').prop('checked', false);
+		$(this).find("form")[0].reset();
 	});
 
 	$.ajaxSetup({
@@ -201,10 +199,6 @@
 
 	multiCheck(c3);
 
-	$('#addSkill').click(function(){
-		$('#saveBtn').html("Save");
-	});
-
 	$('body').on('click', '.editSkill', function () {
         var data = c3.row( $(this).parents('tr') ).data();
         $('.modal-title').html("Edit Skill");
@@ -221,7 +215,7 @@
         }
 	});
 	
-	$('#saveBtn').click(function (e) {
+	$('#skill-form').submit(function (e) {
         e.preventDefault();
 
         var formdata = new FormData();
