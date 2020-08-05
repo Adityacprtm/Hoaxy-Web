@@ -10,7 +10,7 @@ var map = new mapboxgl.Map({
 // create the popup
 var popup = new mapboxgl.Popup({
     offset: 40
-}).setText("756 Livingston Street, Brooklyn, NY 11201");
+}).setText("Banjarbaru, Indonesia");
 
 // create DOM element for the marker
 var el = document.createElement("div");

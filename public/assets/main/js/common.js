@@ -531,30 +531,37 @@ $(document).ready(function() {
     });
 
     function submitForm() {
-        var formdata = new FormData();
+        if (!grecaptcha.getResponse()) {
+            submitMSG(false, "Please fill in the Recaptcha form...");
+        } else {
+            var formdata = new FormData();
 
-        formdata.append("name", $("#name").val());
-        formdata.append("email", $("#email").val());
-        formdata.append("message", $("#message").val());
-        formdata.append("g-recaptcha-response", grecaptcha.getResponse());
+            formdata.append("name", $("#name").val());
+            formdata.append("email", $("#email").val());
+            formdata.append("message", $("#message").val());
+            formdata.append("g-recaptcha-response", grecaptcha.getResponse());
 
-        var url = "contact";
+            var url = "contact";
 
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: formdata,
-            processData: false,
-            contentType: false,
-            success: function(text) {
-                if (text.status == "success") {
-                    formSuccess();
-                } else {
-                    formError();
-                    submitMSG(false, text.message);
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: formdata,
+                processData: false,
+                contentType: false,
+                success: function(text) {
+                    if (text.status == "success") {
+                        formSuccess();
+                    } else {
+                        formError();
+                        submitMSG(false, text.message);
+                    }
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    submitMSG(false, xhr.responseText);
                 }
-            }
-        });
+            });
+        }
     }
 
     function formSuccess() {
@@ -564,7 +571,7 @@ $(document).ready(function() {
     }
 
     function formError() {
-        $("#contactForm")
+        $("#contact-form")
             .removeClass()
             .addClass("shake animated")
             .one(

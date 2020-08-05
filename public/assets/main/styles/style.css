@@ -298,7 +298,7 @@ select,
     border: var(--border-color);
     border-radius: 1.25rem;
     box-shadow: none;
-    color: #44566c;
+    color: var(--text-color-sidebar);
     height: auto;
     padding: 1rem 1.4rem;
     position: relative;
@@ -322,7 +322,7 @@ select,
 select:focus,
 .custom-select:focus {
     background-color: var(--bg-color-main);
-    color: #44566c;
+    color: var(--text-color-sidebar);
     box-shadow: none;
     outline: none;
 }
@@ -3454,3 +3454,21 @@ a.underlineNone {
 }
 
 /*# sourceMappingURL=style-demo.css.map */
+
+/* MAPBOX ADDITIONAL */
+.mapboxgl-popup-content {
+    background: var(--bg-color-main) !important;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: var(--bg-color-main) !important;
+}
+
+/* Contact validation */
+.validation-success {
+    color: green;
+}
+
+.validation-danger {
+    color: red;
+}

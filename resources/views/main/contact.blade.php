@@ -2,7 +2,7 @@
 @section('title', 'Contact')
 
 @push('css')
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+<link rel="stylesheet" href="{{ asset('assets/main/api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css') }}">
 @endpush
 
 @section('content')
@@ -25,14 +25,13 @@
 				<div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-12 col-md-12">
-				<textarea class="textarea form-control" id="message" name="message" placeholder="Your Message" rows="9" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')"></textarea>
+				<textarea class="textarea form-control" id="message" name="message" placeholder="Your Message" rows="6" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')"></textarea>
 				<div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-12 col-md-12">
-				<div class="float-center">
-					{!! NoCaptcha::renderJs() !!}
-					{!! NoCaptcha::display() !!}
-				</div>
+				{!! NoCaptcha::renderJs() !!}
+				{!! NoCaptcha::display() !!}
+				<div class="help-block with-errors"></div>
 			</div>
 		</div>
 		<div class="row">
@@ -48,6 +47,6 @@
 @endsection
 
 @push('js')
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script src="{{ asset('assets/main/api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js') }}"></script>
 <script src="{{ asset('assets/main/js/mapbox.init.js') }}"></script>
 @endpush
