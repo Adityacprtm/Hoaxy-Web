@@ -30,7 +30,7 @@
 						<div class="widget-content widget-content-area">
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
-									<button id="addEducation" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+									<button id="addExperience" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
 										Add Experience
 									</button>
 									<thead>
@@ -69,34 +69,34 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="education-form" class="section general-info">
+					<form id="experience-form" class="section general-info">
 						@csrf
 						<input type="hidden" name="user_id" id="user_id">
 						<div class="widget-content widget-content-area">
 							<div>
 								<label for="company">Company Name</label>
-								<input type="text" class="form-control mb-4" name="company" id="company" placeholder="company name">
+								<input type="text" class="form-control mb-4" name="company" id="company" placeholder="company name" required>
 							</div>
 							<div>
 								<label for="position">Position</label>
-								<input type="text" class="form-control mb-4" name="position" id="position" placeholder="Position">
+								<input type="text" class="form-control mb-4" name="position" id="position" placeholder="Position" required>
 							</div>
 							<div>
 								<label for="description">Description</label>
-								<input type="text" class="form-control mb-4" name="description" id="description" placeholder="Description">
+								<input type="text" class="form-control mb-4" name="description" id="description" placeholder="Description" required>
 							</div>
 							<div>
 								<label>Date</label>
-								<input id="basicFlatpickr" class="form-control mb-4" type="text" placeholder="Select Date..">
+								<input id="basicFlatpickr" class="form-control mb-4" type="text" placeholder="Select Date.." required>
 							</div>
 							<input type="hidden" name="startDate" id="startDate">
 							<input type="hidden" name="endDate" id="endDate">
 						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal">Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
 				</div>
 			</div>
 		</div>
@@ -127,7 +127,7 @@
 	});
 
 	$("#exampleModal").on("hidden.bs.modal", function(){
-		$(this).find("input").val('').end();
+		$(this).find("form")[0].reset();
 		f1.clear();
 	});
 
@@ -183,7 +183,7 @@
 		$('#endDate').val(data.endDate);
 	});
 	
-	$('#saveBtn').click(function (e) {
+	$('#experience-form').submit(function (e) {
         e.preventDefault();
 
         var formdata = new FormData();
