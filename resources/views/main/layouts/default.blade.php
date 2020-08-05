@@ -57,7 +57,7 @@
 
 	{{-- Styles --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
+	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" /> --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/prism.css') }}" />
 
@@ -192,7 +192,7 @@
 	<script src="{{ asset('assets/main/js/jquery-3.4.1.min.js') }}"></script>
 	<script src="{{ asset('assets/main/js/plugins.min.js') }}"></script>
 	<script src="{{ asset('assets/main/js/common.js') }}"></script>
-	<script src="{{ asset('assets/main/demo/plugins-demo.js') }}"></script>
+	<script src="{{ asset('assets/main/js/plugins-demo.js') }}"></script>
 	<script src="{{ asset('assets/main/js/prism.js') }}"></script>
 
 	<script>
