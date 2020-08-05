@@ -62,14 +62,14 @@ class ContactController extends Controller
 			['name' => $request->name, 'email' => $request->email, 'message' => $request->message]
 		);
 
-		return response()->json(['success' => 'Contact saved successfully.']);
+		return response()->json(['status' => 'success', 'message' => 'Contact saved successfully.']);
 	}
 
-	public function educationDestroy(Request $request)
+	public function contactDestroy(Request $request)
 	{
 		$edu = Contact::find($request->id);
 		$edu->delete();
 
-		return response()->json(['success' => 'Contact deleted successfully.']);
+		return response()->json(['status' => 'success', 'message' => 'Contact successfully deleted.']);
 	}
 }

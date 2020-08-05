@@ -592,7 +592,10 @@ $(document).ready(function() {
         $("#validator-contact")
             .removeClass()
             .addClass(msgClasses)
-            .text(msg);
+            .text(msg)
+            .show(0)
+            .delay(5000)
+            .hide(0);
     }
 
     /*-----------------------------------------------------------------
