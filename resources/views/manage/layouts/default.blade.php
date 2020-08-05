@@ -110,7 +110,7 @@
 	<div class="main-container" id="container">
 
 		<div class="overlay"></div>
-		<div class="search-overlay"></div>
+		{{-- <div class="search-overlay"></div> --}}
 
 		@include('manage.includes.sidebar')
 
@@ -125,15 +125,14 @@
 	<script src="{{ asset('assets/manage/bootstrap/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('assets/manage/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
 	<script src="{{ asset('assets/manage/assets/js/app.js') }}"></script>
+	<script src="{{ asset('assets/manage/assets/js/custom.js') }}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 	<script>
 		$(document).ready(function() {
             App.init();
         });
 	</script>
-	<script src="{{ asset('assets/manage/assets/js/custom.js') }}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 	@stack('js')
-
 </body>
 
 </html>

@@ -27,7 +27,17 @@
 				</a>
 				<div class="tooltip"><span>Users</span></div>
 			</li>
-			@if (Auth::user()->admin)
+			{{-- @if (Auth::user()->admin) --}}
+			<li id="menu-info" class="menu">
+				<a href="#info" data-active="false" class="menu-toggle">
+					<div class="base-menu">
+						<div class="base-icons">
+							<i class="far fa-id-badge"></i>
+						</div>
+					</div>
+				</a>
+				<div class="tooltip"><span>Info</span></div>
+			</li>
 			<li id="menu-about" class="menu">
 				<a href="#about" data-active="false" class="menu-toggle">
 					<div class="base-menu">
@@ -58,15 +68,15 @@
 				</a>
 				<div class="tooltip"><span>Portfolio</span></div>
 			</li>
-			<li id="menu-info" class="menu">
-				<a href="#info" data-active="false" class="menu-toggle">
+			<li id="menu-blog" class="menu">
+				<a href="#blog" data-active="false" class="menu-toggle">
 					<div class="base-menu">
 						<div class="base-icons">
-							<i class="far fa-id-badge"></i>
+							<i class="far fa-newspaper"></i>
 						</div>
 					</div>
 				</a>
-				<div class="tooltip"><span>Info</span></div>
+				<div class="tooltip"><span>Blog</span></div>
 			</li>
 			<li id="menu-contact" class="menu">
 				<a href="#contact" data-active="false" class="menu-toggle">
@@ -78,17 +88,7 @@
 				</a>
 				<div class="tooltip"><span>Contact</span></div>
 			</li>
-			@endif
-			<li id="menu-blog" class="menu">
-				<a href="#blog" data-active="false" class="menu-toggle">
-					<div class="base-menu">
-						<div class="base-icons">
-							<i class="far fa-newspaper"></i>
-						</div>
-					</div>
-				</a>
-				<div class="tooltip"><span>Blog</span></div>
-			</li>
+			{{-- @endif --}}
 		</ul>
 		<div class="external-links">
 			<a href="{{ route('about') }}">
