@@ -59,6 +59,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/prism.css') }}" />
 
 	{{-- fontawesome icon--}}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
@@ -191,8 +192,8 @@
 	<script src="{{ asset('assets/main/js/jquery-3.4.1.min.js') }}"></script>
 	<script src="{{ asset('assets/main/js/plugins.min.js') }}"></script>
 	<script src="{{ asset('assets/main/js/common.js') }}"></script>
-
 	<script src="{{ asset('assets/main/demo/plugins-demo.js') }}"></script>
+	<script src="{{ asset('assets/main/js/prism.js') }}"></script>
 
 	<script>
 		const toggleSwitch = document.querySelector('.checkbox-dark input[type="checkbox"]');
