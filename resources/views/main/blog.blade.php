@@ -1,7 +1,7 @@
 @extends('main.layouts.default')
 @section('title', 'Blog')
-@section('content')
 
+@section('content')
 {{-- Content --}}
 <div class="content">
 	<div class="section mt-0">
@@ -29,3 +29,9 @@
 	@endforelse
 </div>{{-- Content End --}}
 @endsection
+
+@push('js')
+<script>
+	$('.news-item__caption').children('div').removeClass('caption-post');
+</script>
+@endpush
