@@ -4,6 +4,7 @@
 @push('css')
 <link href="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" />
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
@@ -60,13 +61,13 @@
 
 									<div class="mb-4">
 										<label for="title">Title</label>
-										<input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ (isset($blog) ? $blog->title : '') }}">
+										<input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ (isset($blog) ? $blog->title : '') }}" required>
 									</div>
 
 									<div class="mb-4">
 										<label for="editor1">Content</label>
 										<div class="alert alert-warning" role="alert">div: caption-post, gallery-post; img (without tag p): gallery-post__item cover lazyload, data-zoom</div>
-										<textarea class="form-control" name="editor">{{ (isset($blog) ? $blog->content : '') }}</textarea>
+										<textarea class="form-control" name="editor" required>{{ (isset($blog) ? $blog->content : '') }}</textarea>
 									</div>
 
 									<div class="row mb-4">
@@ -80,7 +81,7 @@
 											<div class="custom-file-container" data-upload-id="myFirstImage">
 												<label>Upload Thumbnail <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
 												<label class="custom-file-container__custom-file">
-													<input type="file" id="thumbnail" name="thumbnail" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M">
+													<input type="file" id="thumbnail" name="thumbnail" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M" required>
 													<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 													<span class="custom-file-container__custom-file__custom-file-control"></span>
 												</label>
@@ -91,7 +92,7 @@
 
 									<div class="mb-4">
 										<label for="tags">Tags</label>
-										<input type="text" data-role="tagsinput" class="form-control" id="tags" name="tags">
+										<input type="text" data-role="tagsinput" class="form-control" id="tags" name="tags" required>
 									</div>
 
 									<div class="mb-4">
@@ -102,7 +103,7 @@
 									</div>
 
 									<a class="btn" role="button" href="{{ route('manage.blog') }}">Cancel</a>
-									<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
+									<button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
 								</div>
 							</form>
 						</div>
@@ -159,7 +160,7 @@
         }
 	});
 	
-	$('#saveBtn').click(function (e) {
+	$('#blog-form').submit(function (e) {
 
         e.preventDefault();
 
