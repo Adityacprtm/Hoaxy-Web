@@ -9,7 +9,7 @@
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}"> --}}
 @endpush
 
 @section('content')
@@ -70,21 +70,21 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="user-form" class="section general-info" enctype="multipart/form-data">
+					<form id="portfolio-form" class="section general-info" enctype="multipart/form-data">
 						@csrf
 						<input type="hidden" name="user_id" id="user_id">
 						<div class="widget-content widget-content-area">
 							<div class="row mb-4">
 								<div class="col">
 									<label for="category">Category</label>
-									<select class="form-control" name="category" id="category" disabled>
+									<select class="form-control" name="category" id="category" disabled required>
 										<option selected disabled>-Select-</option>
 									</select>
 								</div>
 								<div class="col">
 									<div class="mb-4">
 										<label for="title">Title</label>
-										<input type="text" class="form-control" id="title" placeholder="Title">
+										<input type="text" class="form-control" id="title" placeholder="Title" required>
 									</div>
 								</div>
 							</div>
@@ -102,18 +102,18 @@
 							<div class="custom-file-container" data-upload-id="myFirstImage">
 								<label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
 								<label class="custom-file-container__custom-file">
-									<input type="file" id="media" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M">
+									<input type="file" id="media" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M" required>
 									<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 									<span class="custom-file-container__custom-file__custom-file-control"></span>
 								</label>
 								<div class="custom-file-container__image-preview"></div>
 							</div>
 						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal">Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Uplaod</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Uplaod</button>
 				</div>
 			</div>
 		</div>
@@ -127,7 +127,6 @@
 
 @push('js')
 <script src="{{ asset('assets/manage/plugins/table/datatable/datatables.js') }}"></script>
-<script src="{{ asset('assets/manage/assets/js/scrollspyNav.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/file-upload/file-upload-with-preview.min.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
 <script>
@@ -137,7 +136,7 @@
 	var firstUpload = new FileUploadWithPreview('myFirstImage')
 
 	$("#exampleModal").on("hidden.bs.modal", function(){
-        $(this).find("input").val('').end();
+        $(this).find("form")[0].reset();
 		$('#category').empty().append('<option selected disabled>-Select-</option>');
 		$('#media').val('');
 	});
@@ -185,7 +184,7 @@
 	multiCheck(c3);
 
 	$('#addPortfolio').click(function(){
-		$('#saveBtn').html("Save");
+		// $('#saveBtn').html("Save");
 		getAjaxCategory();
 	});
 	
@@ -246,7 +245,7 @@
         })
 	});
 	
-	$('#saveBtn').click(function (e) {
+	$('#portfolio-form').submit(function (e) {
         e.preventDefault();
 
         var formdata = new FormData();

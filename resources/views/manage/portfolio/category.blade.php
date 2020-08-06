@@ -65,20 +65,20 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="education-form" class="section general-info">
+					<form id="category-form" class="section general-info">
 						@csrf
 						<input type="hidden" name="user_id" id="user_id">
 						<div class="widget-content widget-content-area">
 							<div class="mb-4">
-								<label for="company">Category Name</label>
-								<input type="text" class="form-control" name="category" id="category" placeholder="Category name">
+								<label for="category">Category Name</label>
+								<input type="text" class="form-control" name="category" id="category" placeholder="Category name" required>
 							</div>
 						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal">Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
 				</div>
 			</div>
 		</div>
@@ -98,7 +98,8 @@
 	$('#menu-portfolio a').attr('data-active','true');
 
 	$("#exampleModal").on("hidden.bs.modal", function(){
-		$(this).find("input").val('').end();
+		// $(this).find("input").val('').end();
+		$(this).find("form")[0].reset();
 	});
 
 	$.ajaxSetup({
@@ -132,10 +133,6 @@
 
 	multiCheck(c3);
 
-	$('#addCategory').click(function(){
-		$('#saveBtn').html("Save");
-	});
-
 	$('body').on('click', '.editCategory', function () {
         var data = c3.row( $(this).parents('tr') ).data();
         $('.modal-title').html("Edit Category");
@@ -145,7 +142,7 @@
 		$('#category').val(data.category_name)
 	});
 	
-	$('#saveBtn').click(function (e) {
+	$('#category-form').submit(function (e) {
         e.preventDefault();
 
         var formdata = new FormData();
