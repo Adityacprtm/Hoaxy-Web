@@ -1,5 +1,6 @@
 @extends('auth.layouts.app')
 @section('title', 'Waiting for Approval')
+
 @section('content')
 <img src="{{ asset('assets/manage/assets/img/logo.png') }}" width="100" height="100" alt="">
 <h1 class="">{{ __('Waiting for Approval') }}</h1>

@@ -1,11 +1,10 @@
 @extends('auth.layouts.app')
 @section('title', 'Login')
+
 @section('content')
 <img src="{{ asset('assets/manage/assets/img/logo.png') }}" width="100" height="100" alt="">
 <h1 class="">Sign In</h1>
-{{-- <p class="">Log in to your account to <a href="https://adityacprtm.com"><span class="brand-name">Adityacprtm Core</span></a>.</p> --}}
 <p class="signup-link register">Not registered ? <a href="{{ route('register') }}">Create an account</a></p>
-
 <form class="needs-validation text-left" method="post" action="{{ route('login') }}" novalidate>
 	@csrf
 
@@ -24,7 +23,6 @@
 	@endif
 
 	<div class="form">
-
 		<div id="email-field" class="field-wrapper input">
 			<label for="email">EMAIL</label>
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
@@ -62,6 +60,7 @@
 			</div>
 		</div>
 	</div>
+
 	<p class="signup-link copyright">Configured with <i style="font-size: 19px; color: #FF5959">&hearts;</i> at 2020 <br> by <a target="_blank" href="https://adityacprtm.com"><strong>Adityacprtm.com</strong></a></p>
 </form>
 @endsection

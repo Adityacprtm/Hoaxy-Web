@@ -1,5 +1,6 @@
 @extends('auth.layouts.app')
 @section('title', 'Register')
+
 @section('content')
 <img src="{{ asset('assets/manage/assets/img/logo.png') }}" width="100" height="100" alt="">
 <h1 class="">Register</h1>
@@ -90,7 +91,9 @@
 				<a href="{{ route('about') }}" class="btn btn-dark btn-block btn-lg mt-2" value="">Cancel</a>
 			</div>
 		</div>
+
 	</div>
+
 	<p class="signup-link">Configured with <i style="font-size: 19px; color: #FF5959">&hearts;</i> at 2020 <br> by <a target="_blank" href="https://adityacprtm.com"><strong>Adityacprtm.com</strong></a></p>
 </form>
 @endsection
