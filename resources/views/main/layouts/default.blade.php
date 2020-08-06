@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>@yield('title') - Adityacprtm</title>
+	<title>@yield('title') | Adityacprtm</title>
 
 	{{-- Meta Data --}}
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

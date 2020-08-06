@@ -22,7 +22,7 @@
 					{{-- <img class="case-item__icon" src="{{ asset('assets/main/icons/icon-design.svg') }}" alt="" /> --}}
 					<i style="color: #0045FF; opacity: 0.7;" class="case-item__icon fas fa-cloud fa-5x"></i>
 					<h3 class="title title--h3">Cloud Computing</h3>
-					<p class="case-item__caption">NA</p>
+					<p class="case-item__caption">I build many things using cloud computing including IoT, applications and websites</p>
 				</div>
 			</div>
 
@@ -32,7 +32,7 @@
 					{{-- <img class="case-item__icon" src="{{ asset('assets/main/icons/icon-dev.svg') }}" alt="" /> --}}
 					<i style="color: #0045FF; opacity: 0.7;" class="case-item__icon fas fa-laptop-code fa-5x"></i>
 					<h3 class="title title--h3">Web Development</h3>
-					<p class="case-item__caption">NA</p>
+					<p class="case-item__caption">I enjoy developing and managing websites either for personal or specific purposes</p>
 				</div>
 			</div>
 
@@ -42,7 +42,7 @@
 					{{-- <img class="case-item__icon" src="{{ asset('assets/main/icons/icon-app.svg') }}" alt="" /> --}}
 					<i style="color: #0045FF; opacity: 0.7;" class="case-item__icon fas fa-network-wired fa-5x"></i>
 					<h3 class="title title--h3">Networking</h3>
-					<p class="case-item__caption">NA</p>
+					<p class="case-item__caption">I love to make everything connected to communicate with each other, such as computing devices and now the IoT</p>
 				</div>
 			</div>
 
@@ -50,9 +50,9 @@
 			<div class="col-12 col-lg-6 case-item-wrap">
 				<div class="case-item">
 					{{-- <img class="case-item__icon" src="{{ asset('assets/main/icons/icon-photo.svg') }}" alt="" /> --}}
-					<i style="color: #0045FF; opacity: 0.7;" class="case-item__icon fas fa-microchip fa-5x"></i>
-					<h3 class="title title--h3">Internet of Things</h3>
-					<p class="case-item__caption">NA</p>
+					<i style="color: #0045FF; opacity: 0.7;" class="case-item__icon fas fa-shield-alt fa-5x"></i>
+					<h3 class="title title--h3">Cybersecurity</h3>
+					<p class="case-item__caption">I'm also in practice to protect systems, networks, and programs from digital attacks.</p>
 				</div>
 			</div>
 		</div>
