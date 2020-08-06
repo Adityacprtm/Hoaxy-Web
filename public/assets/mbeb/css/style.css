@@ -13,7 +13,6 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .bgimg {
@@ -45,7 +44,7 @@ html {
     bottom: 100px;
     right: 25px;
     background-color: rgb(0, 0, 0);
-    color: #FFF;
+    color: #fff;
     border-radius: 50px;
     text-align: center;
 }
