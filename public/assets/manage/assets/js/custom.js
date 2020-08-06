@@ -4,13 +4,15 @@
 |           Scroll To Top               |
 |                                       |
 =========================================
-*/ 
-$('.scrollTop').click(function() {
-    $("html, body").animate({scrollTop: 0});
+*/
+
+$(".scrollTop").click(function() {
+    $("html, body").animate({ scrollTop: 0 });
 });
 
-
-$('.navbar .dropdown.notification-dropdown > .dropdown-menu, .navbar .dropdown.message-dropdown > .dropdown-menu ').click(function(e) {
+$(
+    ".navbar .dropdown.notification-dropdown > .dropdown-menu, .navbar .dropdown.message-dropdown > .dropdown-menu "
+).click(function(e) {
     e.stopPropagation();
 });
 
@@ -23,16 +25,13 @@ $('.navbar .dropdown.notification-dropdown > .dropdown-menu, .navbar .dropdown.m
 */
 
 function checkall(clickchk, relChkbox) {
+    var checker = $("#" + clickchk);
+    var multichk = $("." + relChkbox);
 
-    var checker = $('#' + clickchk);
-    var multichk = $('.' + relChkbox);
-
-
-    checker.click(function () {
-        multichk.prop('checked', $(this).prop('checked'));
-    });    
+    checker.click(function() {
+        multichk.prop("checked", $(this).prop("checked"));
+    });
 }
-
 
 /*
 =========================================
@@ -48,14 +47,27 @@ function checkall(clickchk, relChkbox) {
 
 function multiCheck(tb_var) {
     tb_var.on("change", ".chk-parent", function() {
-        var e=$(this).closest("table").find("td:first-child .child-chk"), a=$(this).is(":checked");
+        var e = $(this)
+                .closest("table")
+                .find("td:first-child .child-chk"),
+            a = $(this).is(":checked");
         $(e).each(function() {
-            a?($(this).prop("checked", !0), $(this).closest("tr").addClass("active")): ($(this).prop("checked", !1), $(this).closest("tr").removeClass("active"))
-        })
+            a
+                ? ($(this).prop("checked", !0),
+                  $(this)
+                      .closest("tr")
+                      .addClass("active"))
+                : ($(this).prop("checked", !1),
+                  $(this)
+                      .closest("tr")
+                      .removeClass("active"));
+        });
     }),
-    tb_var.on("change", "tbody tr .new-control", function() {
-        $(this).parents("tr").toggleClass("active")
-    })
+        tb_var.on("change", "tbody tr .new-control", function() {
+            $(this)
+                .parents("tr")
+                .toggleClass("active");
+        });
 }
 
 /*
@@ -67,14 +79,12 @@ function multiCheck(tb_var) {
 */
 
 function checkall(clickchk, relChkbox) {
+    var checker = $("#" + clickchk);
+    var multichk = $("." + relChkbox);
 
-    var checker = $('#' + clickchk);
-    var multichk = $('.' + relChkbox);
-
-
-    checker.click(function () {
-        multichk.prop('checked', $(this).prop('checked'));
-    });    
+    checker.click(function() {
+        multichk.prop("checked", $(this).prop("checked"));
+    });
 }
 
 /*
@@ -85,7 +95,7 @@ function checkall(clickchk, relChkbox) {
 =========================================
 */
 
-$('.bs-tooltip').tooltip();
+$(".bs-tooltip").tooltip();
 
 /*
 =========================================
@@ -95,8 +105,7 @@ $('.bs-tooltip').tooltip();
 =========================================
 */
 
-$('.bs-popover').popover();
-
+$(".bs-popover").popover();
 
 /*
 ================================================
@@ -106,10 +115,10 @@ $('.bs-popover').popover();
 ================================================
 */
 
-$('.t-dot').tooltip({
-    template: '<div class="tooltip status rounded-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
-})
-
+$(".t-dot").tooltip({
+    template:
+        '<div class="tooltip status rounded-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+});
 
 /*
 ================================================
@@ -118,17 +127,13 @@ $('.t-dot').tooltip({
 */
 
 function GetIEVersion() {
-  var sAgent = window.navigator.userAgent;
-  var Idx = sAgent.indexOf("MSIE");
+    var sAgent = window.navigator.userAgent;
+    var Idx = sAgent.indexOf("MSIE");
 
-  // If IE, return version number.
-  if (Idx > 0) 
-    return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
-
-  // If IE 11 then look for Updated user agent string.
-  else if (!!navigator.userAgent.match(/Trident\/7\./)) 
-    return 11;
-
-  else
-    return 0; //It is not IE
+    // If IE, return version number.
+    if (Idx > 0)
+        return parseInt(sAgent.substring(Idx + 5, sAgent.indexOf(".", Idx)));
+    // If IE 11 then look for Updated user agent string.
+    else if (!!navigator.userAgent.match(/Trident\/7\./)) return 11;
+    else return 0; //It is not IE
 }
