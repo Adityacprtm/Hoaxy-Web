@@ -110,6 +110,7 @@ Route::post('/contact', 'Main\HomeController@contactStore')->name('contact.store
 
 // Route Mbeb
 Route::view('/mbeb', 'mbeb.index')->name('mbeb');
+Route::view('/mbeb/bday', 'mbeb.bday')->name('mbeb.bday');
 
 // Route old v1
 Route::view('/old/v1', 'old.v1.index')->name('old.v1');
