@@ -165,7 +165,6 @@
 		</div>
 
 		<div class="navbar navbar-fixed-bottom">
-			<a href="logout">logout</a>
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
 					<button class="btn btn-primary" id="turn_on">Turn On Lights</button>
