@@ -1,6 +1,11 @@
-.widget-content-area { -webkit-box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.09019607843137255), 0 1px 20px 0 rgba(0, 0, 0, 0.08), 0px 1px 11px 0px rgba(0, 0, 0, 0.06);
-    -moz-box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.09019607843137255), 0 1px 20px 0 rgba(0, 0, 0, 0.08), 0px 1px 11px 0px rgba(0, 0, 0, 0.06);
-    box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.09019607843137255), 0 1px 20px 0 rgba(0, 0, 0, 0.08), 0px 1px 11px 0px rgba(0, 0, 0, 0.06); }
+.widget-content-area {
+    -webkit-box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.09019607843137255),
+        0 1px 20px 0 rgba(0, 0, 0, 0.08), 0px 1px 11px 0px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.09019607843137255),
+        0 1px 20px 0 rgba(0, 0, 0, 0.08), 0px 1px 11px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.09019607843137255),
+        0 1px 20px 0 rgba(0, 0, 0, 0.08), 0px 1px 11px 0px rgba(0, 0, 0, 0.06);
+}
 .layout-spacing {
     padding-bottom: 25px;
 }
@@ -12,7 +17,9 @@ body.minimal .widget-content-area {
     User Profile
 ===================
 */
-.user-profile .widget-content-area { border-radius: 6px; }
+.user-profile .widget-content-area {
+    border-radius: 6px;
+}
 .user-profile .widget-content-area .edit-profile {
     height: 35px;
     width: 35px;
@@ -20,7 +27,7 @@ body.minimal .widget-content-area {
     justify-content: center;
     align-self: center;
     background-color: #1b55e2;
-    background: linear-gradient(to right, #0081ff 0%, #0045ff 100%);;
+    background: linear-gradient(to right, #0081ff 0%, #0045ff 100%);
     border-radius: 50%;
     box-shadow: 0 10px 15px rgba(0, 69, 255, 0.2);
 }
@@ -49,10 +56,13 @@ body.minimal .widget-content-area {
     bottom: 9px;
     left: 9px;
 }
-.user-profile .widget-content-area .user-info { margin-top: 40px; }
+.user-profile .widget-content-area .user-info {
+    margin-top: 40px;
+}
 .user-profile .widget-content-area .user-info img {
     border-radius: 9px;
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+        0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 }
 .user-profile .widget-content-area .user-info p {
     font-size: 20px;
@@ -82,14 +92,28 @@ body.minimal .widget-content-area {
     vertical-align: middle;
     fill: rgba(0, 23, 55, 0.08);
 }
-.user-profile .widget-content-area .user-info-list ul.contacts-block li:hover svg {
+.user-profile
+    .widget-content-area
+    .user-info-list
+    ul.contacts-block
+    li:hover
+    svg {
     color: #1b55e2;
     fill: rgba(27, 85, 226, 0.23921568627450981);
 }
-.user-profile .widget-content-area .user-info-list ul.contacts-block ul.list-inline  {
+.user-profile
+    .widget-content-area
+    .user-info-list
+    ul.contacts-block
+    ul.list-inline {
     margin: 27px auto;
 }
-.user-profile .widget-content-area .user-info-list ul.contacts-block ul.list-inline div.social-icon {
+.user-profile
+    .widget-content-area
+    .user-info-list
+    ul.contacts-block
+    ul.list-inline
+    div.social-icon {
     border: 2px solid #e0e6ed;
     border-radius: 50%;
     height: 35px;
@@ -98,20 +122,26 @@ body.minimal .widget-content-area {
     justify-content: center;
     align-self: center;
 }
-.user-profile .widget-content-area .user-info-list ul.contacts-block ul.list-inline svg {
+.user-profile
+    .widget-content-area
+    .user-info-list
+    ul.contacts-block
+    ul.list-inline
+    svg {
     margin-right: 0;
     color: #1b55e2;
     width: 19px;
     align-self: center;
 }
 
-
 /* 
 ==============
     Skills
 ==============
 */
-.skills .widget-content-area { border-radius: 6px; }
+.skills .widget-content-area {
+    border-radius: 6px;
+}
 .skills .widget-content-area h3 {
     position: relative;
     font-size: 21px;
@@ -144,7 +174,8 @@ body.minimal .widget-content-area {
     background-color: #1b55e2;
     background: linear-gradient(to right, #0081ff 0%, #0045ff 100%);
     border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 69, 255, 0.15), 0 8px 16px rgba(0, 69, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 69, 255, 0.15),
+        0 8px 16px rgba(0, 69, 255, 0.2);
     font-size: 12px;
     letter-spacing: 1px;
     font-weight: 100;
@@ -154,7 +185,9 @@ body.minimal .widget-content-area {
     justify-content: space-between;
     padding: 15px;
 }
-.skills .widget-content-area .progress .progress-title span { align-self: center; }
+.skills .widget-content-area .progress .progress-title span {
+    align-self: center;
+}
 
 /* 
 ==============
@@ -197,7 +230,7 @@ body.minimal .widget-content-area {
 }
 .bio .widget-content-area .b-skills {
     padding: 22px 16px;
-    box-shadow: 2px 5px 17px 0 rgba(31,45,61,.17);
+    box-shadow: 2px 5px 17px 0 rgba(31, 45, 61, 0.17);
     background: #fff;
     border-radius: 10px;
     padding: 30px 30px 24px;
@@ -212,14 +245,18 @@ body.minimal .widget-content-area {
     margin-bottom: 10px;
     font-size: 16px;
 }
-.bio .widget-content-area .b-skills p { font-size: 13px; }
+.bio .widget-content-area .b-skills p {
+    font-size: 13px;
+}
 
 /* 
 ================
     Education
 ================
 */
-.education .widget-content-area { border-radius: 6px; }
+.education .widget-content-area {
+    border-radius: 6px;
+}
 .education .widget-content-area h3 {
     position: relative;
     font-size: 21px;
@@ -237,14 +274,16 @@ body.minimal .widget-content-area {
     bottom: -2px;
     left: 15px;
 }
-.education .widget-content-area .timeline-alter .item-timeline { display: flex; }
+.education .widget-content-area .timeline-alter .item-timeline {
+    display: flex;
+}
 .education .widget-content-area .timeline-alter .item-timeline .t-dot {
     position: relative;
     border-color: #1b55e2;
     padding: 10px;
 }
 .education .widget-content-area .timeline-alter .item-timeline .t-dot:before {
-    content: '';
+    content: "";
     position: absolute;
     border-color: inherit;
     border-width: 2px;
@@ -256,8 +295,12 @@ body.minimal .widget-content-area {
     left: 50%;
     transform: translateX(-50%);
 }
-.education .widget-content-area .timeline-alter .item-timeline:not(:last-child) .t-dot:after {
-    content: '';
+.education
+    .widget-content-area
+    .timeline-alter
+    .item-timeline:not(:last-child)
+    .t-dot:after {
+    content: "";
     position: absolute;
     border-color: inherit;
     border-width: 2px;
@@ -285,7 +328,9 @@ body.minimal .widget-content-area {
     z-index: 7;
     position: relative;
 }
-.education .widget-content-area .timeline-alter .item-timeline .t-meta-date { padding: 10px; }
+.education .widget-content-area .timeline-alter .item-timeline .t-meta-date {
+    padding: 10px;
+}
 .education .widget-content-area .timeline-alter .item-timeline .t-meta-date p {
     margin: 0;
     min-width: 100px;
@@ -310,20 +355,35 @@ body.minimal .widget-content-area {
 }
 @media (max-width: 575px) {
     .education .widget-content-area .timeline-alter .item-timeline {
-        display: block; 
+        display: block;
         text-align: center;
     }
-    .education .widget-content-area .timeline-alter .item-timeline .t-meta-date p { margin: 0 auto; }
-    .education .widget-content-area .timeline-alter .item-timeline .t-usr-txt p { margin: 0 auto; }
+    .education
+        .widget-content-area
+        .timeline-alter
+        .item-timeline
+        .t-meta-date
+        p {
+        margin: 0 auto;
+    }
+    .education
+        .widget-content-area
+        .timeline-alter
+        .item-timeline
+        .t-usr-txt
+        p {
+        margin: 0 auto;
+    }
 }
-
 
 /* 
 =======================
     Work Experience
 =======================
 */
-.work-experience .widget-content-area { border-radius: 6px; }
+.work-experience .widget-content-area {
+    border-radius: 6px;
+}
 .work-experience .widget-content-area h3 {
     position: relative;
     font-size: 21px;
@@ -341,14 +401,20 @@ body.minimal .widget-content-area {
     bottom: -2px;
     left: 15px;
 }
-.work-experience .widget-content-area .timeline-alter .item-timeline { display: flex; }
+.work-experience .widget-content-area .timeline-alter .item-timeline {
+    display: flex;
+}
 .work-experience .widget-content-area .timeline-alter .item-timeline .t-dot {
     position: relative;
     border-color: #1b55e2;
     padding: 10px;
 }
-.work-experience .widget-content-area .timeline-alter .item-timeline .t-dot:before {
-    content: '';
+.work-experience
+    .widget-content-area
+    .timeline-alter
+    .item-timeline
+    .t-dot:before {
+    content: "";
     position: absolute;
     border-color: inherit;
     border-width: 2px;
@@ -360,8 +426,12 @@ body.minimal .widget-content-area {
     left: 50%;
     transform: translateX(-50%);
 }
-.work-experience .widget-content-area .timeline-alter .item-timeline:not(:last-child) .t-dot:after {
-    content: '';
+.work-experience
+    .widget-content-area
+    .timeline-alter
+    .item-timeline:not(:last-child)
+    .t-dot:after {
+    content: "";
     position: absolute;
     border-color: inherit;
     border-width: 2px;
@@ -382,15 +452,31 @@ body.minimal .widget-content-area {
     border-radius: 0;
     border-color: #ebedf2;
 }
-.work-experience .widget-content-area .timeline-alter .item-timeline .t-dot img {
+.work-experience
+    .widget-content-area
+    .timeline-alter
+    .item-timeline
+    .t-dot
+    img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     z-index: 7;
     position: relative;
 }
-.work-experience .widget-content-area .timeline-alter .item-timeline .t-meta-date { padding: 10px; }
-.work-experience .widget-content-area .timeline-alter .item-timeline .t-meta-date p {
+.work-experience
+    .widget-content-area
+    .timeline-alter
+    .item-timeline
+    .t-meta-date {
+    padding: 10px;
+}
+.work-experience
+    .widget-content-area
+    .timeline-alter
+    .item-timeline
+    .t-meta-date
+    p {
     margin: 0;
     min-width: 100px;
     max-width: 100px;
@@ -408,15 +494,35 @@ body.minimal .widget-content-area {
     color: #515365;
     font-weight: 600;
 }
-.work-experience .widget-content-area .timeline-alter .item-timeline .t-text p a {
+.work-experience
+    .widget-content-area
+    .timeline-alter
+    .item-timeline
+    .t-text
+    p
+    a {
     color: #2196f3;
     font-weight: 600;
 }
 @media (max-width: 575px) {
     .work-experience .widget-content-area .timeline-alter .item-timeline {
-        display: block; 
+        display: block;
         text-align: center;
     }
-    .work-experience .widget-content-area .timeline-alter .item-timeline .t-meta-date p { margin: 0 auto; }
-    .work-experience .widget-content-area .timeline-alter .item-timeline .t-usr-txt p { margin: 0 auto; }
+    .work-experience
+        .widget-content-area
+        .timeline-alter
+        .item-timeline
+        .t-meta-date
+        p {
+        margin: 0 auto;
+    }
+    .work-experience
+        .widget-content-area
+        .timeline-alter
+        .item-timeline
+        .t-usr-txt
+        p {
+        margin: 0 auto;
+    }
 }

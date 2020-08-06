@@ -1,13 +1,13 @@
-div#load_screen{
-      background: rgb(236, 239, 255);
-      opacity: 1;
-      position: fixed;
-      z-index:999999;
-      top: 0px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
+div#load_screen {
+    background: rgb(236, 239, 255);
+    opacity: 1;
+    position: fixed;
+    z-index: 999999;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 div#load_screen .loader {
     display: flex;
