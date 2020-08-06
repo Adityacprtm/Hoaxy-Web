@@ -2,7 +2,6 @@
 @section('title', 'About Me Editor')
 
 @push('css')
-<link href="{{ asset('assets/manage/assets/css/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/editors/quill/quill.snow.css') }}">
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
@@ -57,7 +56,6 @@
 @endsection
 
 @push('js')
-<script src="{{ asset('assets/manage/assets/js/scrollspyNav.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/editors/quill/quill.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/editors/quill/custom-quill.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
