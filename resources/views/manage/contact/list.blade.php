@@ -30,7 +30,7 @@
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
 									<button id="addContact" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
-										Add Category
+										Add Contact
 									</button>
 									<thead>
 										<tr>
@@ -67,30 +67,30 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="education-form" class="section general-info">
+					<form id="contact-form" class="section general-info">
 						@csrf
 						<input type="hidden" name="user_id" id="user_id">
 						<div class="widget-content widget-content-area">
 							<div class="row mb-4">
 								<div class="col">
 									<label for="name">Name</label>
-									<input type="text" class="form-control" name="name" id="name">
+									<input type="text" class="form-control" name="name" id="name" required>
 								</div>
 								<div class="col">
 									<label for="email">Email</label>
-									<input type="text" class="form-control" name="email" id="email">
+									<input type="text" class="form-control" name="email" id="email" required>
 								</div>
 							</div>
 							<div class="mb-4">
 								<label for="message">Message</label>
-								<textarea class="form-control" name="message" id="message" rows="10"></textarea>
+								<textarea class="form-control" name="message" id="message" rows="10" required></textarea>
 							</div>
 						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal">Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-					<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
 				</div>
 			</div>
 		</div>
@@ -110,7 +110,8 @@
 	$('#menu-contact a').attr('data-active','true');
 
 	$("#exampleModal").on("hidden.bs.modal", function(){
-		$(this).find("input").val('').end();
+		// $(this).find("input").val('').end();
+		$(this).find("form")[0].reset();
 	});
 
 	$.ajaxSetup({
@@ -146,10 +147,6 @@
 
 	multiCheck(c3);
 
-	$('#addContact').click(function(){
-		$('#saveBtn').html("Save");
-	});
-
 	$('body').on('click', '.editContact', function () {
         var data = c3.row( $(this).parents('tr') ).data();
         $('.modal-title').html("Edit Contact");
@@ -161,7 +158,7 @@
 		$('#message').val(data.message);
 	});
 	
-	$('#saveBtn').click(function (e) {
+	$('#contact-form').submit(function (e) {
         e.preventDefault();
 
         var formdata = new FormData();
