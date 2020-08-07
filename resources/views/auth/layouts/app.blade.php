@@ -40,6 +40,7 @@
 	<script src="{{ asset('assets/manage/bootstrap/js/popper.min.js') }}"></script>
 	<script src="{{ asset('assets/manage/bootstrap/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('assets/manage/assets/js/forms/bootstrap_validation/bs_validation_script.js') }}"></script>
+	<script src="{{ asset('assets/manage/assets/js/authentication/form-2.js') }}"></script>
 	@stack('js')
 </body>
 
