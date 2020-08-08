@@ -2,9 +2,7 @@
 @section('title', 'About')
 
 @section('content')
-{{-- Content --}}
 <div class="content">
-	{{-- About --}}
 	<div class="section mt-0">
 		<h1 class="title title--h1 title__separate">About Me</h1>
 		<div class="pt-2 pt-sm-3">
@@ -12,11 +10,9 @@
 		</div>
 	</div>
 
-	{{-- What --}}
 	<div class="section">
 		<h2 class="title title--h2">What I'm Doing</h2>
 		<div class="row">
-			{{-- Case Item --}}
 			<div class="col-12 col-lg-6 case-item-wrap">
 				<div class="case-item">
 					{{-- <img class="case-item__icon" src="{{ asset('assets/main/icons/icon-design.svg') }}" alt="" /> --}}
@@ -26,7 +22,6 @@
 				</div>
 			</div>
 
-			{{-- Case Item --}}
 			<div class="col-12 col-lg-6 case-item-wrap">
 				<div class="case-item">
 					{{-- <img class="case-item__icon" src="{{ asset('assets/main/icons/icon-dev.svg') }}" alt="" /> --}}
@@ -36,7 +31,6 @@
 				</div>
 			</div>
 
-			{{-- Case Item --}}
 			<div class="col-12 col-lg-6 case-item-wrap">
 				<div class="case-item">
 					{{-- <img class="case-item__icon" src="{{ asset('assets/main/icons/icon-app.svg') }}" alt="" /> --}}
@@ -46,7 +40,6 @@
 				</div>
 			</div>
 
-			{{-- Case Item --}}
 			<div class="col-12 col-lg-6 case-item-wrap">
 				<div class="case-item">
 					{{-- <img class="case-item__icon" src="{{ asset('assets/main/icons/icon-photo.svg') }}" alt="" /> --}}
@@ -58,7 +51,6 @@
 		</div>
 	</div>
 
-	{{-- Clients --}}
 	<div class="section">
 		<h2 class="title title--h2">Clients</h2>
 		<div class="swiper-container js-carousel-clients">
@@ -74,5 +66,5 @@
 			<div class="swiper-pagination"></div>
 		</div>
 	</div>
-</div>{{-- Content End --}}
+</div>
 @endsection

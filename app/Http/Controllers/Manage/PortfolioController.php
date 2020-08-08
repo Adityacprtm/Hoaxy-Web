@@ -64,7 +64,7 @@ class PortfolioController extends Controller
 
 			$file = $request->file('media');
 
-			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->title;
+			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->media->getClientOriginalName();
 			$extension = '.' . $request->media->getClientOriginalExtension();
 			$name = $filename . $extension;
 

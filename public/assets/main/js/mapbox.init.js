@@ -1,4 +1,4 @@
-var currentTheme = localStorage.getItem("theme") || 'light';
+var currentTheme = localStorage.getItem("theme") || "light";
 
 mapboxgl.accessToken =
     "pk.eyJ1IjoiYWRpdHlhY3BydG0iLCJhIjoiY2thd2JvcWxnMjJuODJxbXh2cWY5dHl3ayJ9.Wnk9lMcXHr09UdQ-Iicp9Q";

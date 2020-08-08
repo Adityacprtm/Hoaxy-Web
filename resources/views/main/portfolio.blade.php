@@ -2,12 +2,11 @@
 @section('title', 'Portfolio')
 
 @section('content')
-{{-- Content --}}
 <div class="content">
 	<div class="section mt-0">
 		<h1 class="title title--h1 title__separate">Portfolio</h1>
 	</div>
-	{{-- Filter --}}
+
 	<div class="select section">
 		<span class="placeholder">Select category</span>
 		<ul class="filter">
@@ -20,23 +19,20 @@
 		<input type="hidden" name="changemetoo" />
 	</div>
 
-	{{-- Content --}}
 	<div class="gallery-grid js-grid js-filter-container">
 		<div class="gutter-sizer"></div>
-
 		@foreach ($portfolio as $p)
-		<figure class="gallery-grid__item category-{{ $p->categoryPortfolio->category_name ?? 'WTF' }}">
+		<figure class="gallery-grid__item category-{{ $p->categoryPortfolio->category_name ?? '' }}">
 			<div class="gallery-grid__image-wrap">
 				<img class="gallery-grid__image cover lazyload" src="{{ asset($p->media) }}" data-zoom alt="TryHackMe">
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">{{ $p->title }}</h4>
 				<a target="_blank" href="{{ $p->link }}">{{ $p->text_link }}</a>
-				<span class="gallery-grid__category">{{ $p->categoryPortfolio->category_name ?? 'WTF' }}</span>
+				<span class="gallery-grid__category">{{ $p->categoryPortfolio->category_name ?? '' }}</span>
 			</figcaption>
 		</figure>
 		@endforeach
-
 	</div>
-</div>{{-- Content End --}}
+</div>
 @endsection

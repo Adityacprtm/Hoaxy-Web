@@ -5,7 +5,6 @@
 	<meta charset="utf-8" />
 	<title>@yield('title') | Adityacprtm</title>
 
-	{{-- Meta Data --}}
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="format-detection" content="telephone=no" />
@@ -14,7 +13,6 @@
 	<meta name="description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information." />
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-	{{-- Twitter data --}}
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="https://adityacprtm.com/">
 	<meta property="twitter:site" content="@adityacprtm">
@@ -22,7 +20,6 @@
 	<meta property="twitter:description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information.">
 	<meta property="twitter:image" content="{{ asset('assets/main/images/social.png') }}">
 
-	{{-- Open Graph data --}}
 	<meta property="og:title" content="Adityacprtm." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://adityacprtm.com" />
@@ -30,7 +27,6 @@
 	<meta property="og:description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information." />
 	<meta property="og:site_name" content="adityacprtm.com" />
 
-	<!-- ****** faviconit.com favicons ****** -->
 	<link rel="shortcut icon" href="{{ asset('assets/main/images/favicons/favicon.ico') }}">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="{{ asset('assets/main/images/favicons/favicon.ico') }}">
 	<link rel="icon" type="image/png" sizes="196x196" href="{{ asset('assets/main/images/favicons/favicon-192.png') }}">
@@ -51,20 +47,16 @@
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="msapplication-TileImage" content="{{ asset('assets/main/images/favicons/favicon-144.png') }}">
 	<meta name="msapplication-config" content="{{ asset('assets/main/images/favicons/browserconfig.xml') }}">
-	<!-- ****** faviconit.com favicons ****** -->
 
-	{{-- Styles --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/prism.css') }}" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 
-	{{-- tambahan css --}}
 	@stack('css')
 </head>
 
 <body class="bg-triangles full-page">
-	{{-- Preloader --}}
 	<div class="preloader">
 		<div class="preloader__wrap">
 			<svg class="spinner-container" viewBox="0 0 52 52">
@@ -75,7 +67,6 @@
 	</div>
 
 	<main class="main">
-		{{-- Menu --}}
 		<div class="circle-menu">
 			<div class="hamburger">
 				<div class="line"></div>
@@ -97,7 +88,6 @@
 
 		<div class="wrapper sticky-parent">
 			@if (!Request::is('blog/*'))
-			{{-- Sidebar --}}
 			<aside class="sidebar">
 				<div class="sticky-column">
 					<div class="avatar-wrap">
@@ -111,7 +101,6 @@
 						<h3 class="title sidebar__user-name">{!! Info::where('key','FIRST_NAME')->value('value') !!} <span class="weight--500">{!! Info::where('key','LAST_NAME')->value('value') !!}</span></h3>
 						<div class="badge badge--gray">{!! Info::where('key','HEADLINE')->value('value') !!}</div>
 
-						{{-- Social --}}
 						<div class="social">
 							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_FACEBOOK')->value('value') !!}"><i class="font-icon icon-facebook"></i></a>
 							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_TWITTER')->value('value') !!}"><i class="font-icon icon-twitter"></i></a>
@@ -134,12 +123,6 @@
 						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Phone">
 							<i class="font-icon icon-smartphone"></i>{!! Info::where('key','PHONE_NUMBER')->value('value') !!}
 						</li>
-						{{-- <li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Skype">
-							<a href="skype:skype-example"><i class="font-icon icon-skype"></i>Felecia_Brown</a>
-						</li> --}}
-						<li>
-
-						</li>
 					</ul>
 
 					<a target="_blank" class="btn" href="{!! Info::where('key','LINK_CV')->value('value') !!}"><i class="font-icon icon-download"></i> Download CV</a>
@@ -155,10 +138,9 @@
 
 			@yield('content')
 
-		</div>{{-- Wrapper End --}}
+		</div>
 	</main>
 
-	{{-- SVG masks --}}
 	<svg class="svg-defs">
 		<clipPath id="avatar-box">
 			<path d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z" />
@@ -168,7 +150,6 @@
 		</clipPath>
 	</svg>
 
-	{{-- Menu --}}
 	<div class="btnSlideNav slideOpen"></div>
 	<div class="btnSlideNav slideClose"></div>
 	<ul class="slideNav">
@@ -180,15 +161,14 @@
 		<li class="slideNav__item"><a href="{{ route('old.v2') }}">Old Version 2</a></li>
 	</ul>
 	<div class="overlay-slideNav"></div>
-	{{-- Menu --}}
 
-	{{-- JavaScripts --}}
 	<script src="{{ asset('assets/main/js/jquery-3.4.1.min.js') }}"></script>
 	<script src="{{ asset('assets/main/js/plugins.min.js') }}"></script>
 	<script src="{{ asset('assets/main/js/common.js') }}"></script>
 	<script src="{{ asset('assets/main/js/plugins-demo.js') }}"></script>
 	<script src="{{ asset('assets/main/js/prism.js') }}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+	
 	@stack('js')
 </body>
 

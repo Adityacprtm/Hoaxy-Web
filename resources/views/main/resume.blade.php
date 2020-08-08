@@ -2,19 +2,16 @@
 @section('title', 'Resume')
 
 @section('content')
-{{-- Content --}}
 <div class="content">
 	<div class="section mt-0">
 		<h1 class="title title--h1 title__separate">Resume</h1>
 	</div>
 
-	{{-- Experience --}}
 	<div class="section">
 		<h2 class="title title--h2"><img class="title-icon" src="{{ asset('assets/main/icons/icon-education.svg') }}" alt="" /> Education</h2>
 		<div class="timeline">
 
 			@foreach ($education as $edu)
-			{{-- Item --}}
 			<article class="timeline__item">
 				<h5 class="title title--h3 timeline__title">{{ $edu->institution }}</h5>
 				<span class="timeline__period">{{ $edu->year }}</span>
@@ -30,7 +27,6 @@
 		<div class="timeline">
 
 			@foreach ($experience as $exp)
-			{{-- Item --}}
 			<article class="timeline__item">
 				<h5 class="title title--h3 timeline__title">{{ $exp->company }} <small>as</small> {{ $exp->position }}</h5>
 				<span class="timeline__period">{{ $exp->startDate }} - {{ $exp->endDate }}</span>
@@ -41,7 +37,6 @@
 		</div>
 	</div>
 
-	{{-- Skills --}}
 	<div class="section">
 		<h2 class="title title--h2">My Skills</h2>
 		<div class="box-gray">
@@ -56,7 +51,6 @@
 			@php $value = '100'; $text = 'Expert' @endphp
 			@endif
 
-			{{-- Progress --}}
 			<div class="progress">
 				<div class="progress-bar" role="progressbar" aria-valuenow="{{ $value }}" aria-valuemin="0" aria-valuemax="100">
 					<div class="progress-text"><span>{{ $skill->title }}</span><span>{{$text}}</span></div>
@@ -68,7 +62,6 @@
 		</div>
 	</div>
 
-	{{-- Code Skills --}}
 	<div class="section">
 		<h2 class="title title--h2">Code Skills</h2>
 		<div class="box-gray">
@@ -83,7 +76,6 @@
 			@php $value = '100'; $text = 'Expert' @endphp
 			@endif
 
-			{{-- Progress --}}
 			<div class="progress">
 				<div class="progress-bar" role="progressbar" aria-valuenow="{{ $value }}" aria-valuemin="0" aria-valuemax="100">
 					<div class="progress-text"><span>{{ $skill->title }}</span><span>{{$text}}</span></div>
@@ -94,5 +86,5 @@
 
 		</div>
 	</div>
-</div>{{-- Content End --}}
+</div>
 @endsection

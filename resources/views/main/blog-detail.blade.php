@@ -2,38 +2,7 @@
 @section('title', $blog->title)
 
 @push('css')
-<style>
-	.content {
-		margin-top: 2.5rem;
-		margin-bottom: 2.5rem;
-		padding-left: 6rem;
-		padding-right: 6rem;
-		width: 100%;
-		position: relative;
-	}
-
-	@media only screen and (max-width: 992px) {
-		.content {
-			margin-top: 2.5rem;
-			margin-bottom: 2.5rem;
-			padding-left: 4rem;
-			padding-right: 4rem;
-			width: 100%;
-			position: relative;
-		}
-	}
-
-	@media only screen and (max-width: 450px) {
-		.content {
-			margin-top: 2.5rem;
-			margin-bottom: 2.5rem;
-			padding-left: 2rem;
-			padding-right: 2rem;
-			width: 100%;
-			position: relative;
-		}
-	}
-</style>
+<link rel="stylesheet" href="{{ asset('assets/main/styles/custom-blog-detail.css')}}">
 @endpush
 
 @section('content')
@@ -53,9 +22,7 @@
 		<footer class="footer-post">
 			<div class="addthis_inline_share_toolbox"></div>
 		</footer>
-
 		<hr>
-
 		<div id="disqus_thread"></div>
 	</div>
 	@else
