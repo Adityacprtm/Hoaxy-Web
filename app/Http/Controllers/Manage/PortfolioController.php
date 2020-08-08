@@ -15,7 +15,6 @@ class PortfolioController extends Controller
 	{
 		$portfolio = Portfolio::all();
 		if ($request->ajax()) {
-			// $portfolio = Portfolio::all();
 			return DataTables::of($portfolio)
 				->addIndexColumn()
 				->editColumn('category_name', function ($row) {
@@ -44,7 +43,6 @@ class PortfolioController extends Controller
 					</li>
 					</ul>
 					';
-					// $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
 					return $btn;
 				})
 				->rawColumns(['media', 'action'])
@@ -78,14 +76,27 @@ class PortfolioController extends Controller
 				['id' => $request->id],
 				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link, 'media' => $file_path]
 			);
+
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Portfolio data saved successfully'
+			]);
 		} else {
 			Portfolio::updateOrCreate(
 				['id' => $request->id],
 				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link,]
 			);
+
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Portfolio data saved successfully'
+			]);
 		}
 
-		return response()->json(['success' => 'Experience saved successfully.']);
+		return response()->json([
+			'status' => 'error',
+			'message' => 'Something went wrong, try again later'
+		]);
 	}
 
 	public function portfolioDestroy(Request $request)
@@ -93,14 +104,17 @@ class PortfolioController extends Controller
 		$portfolio = Portfolio::find($request->id);
 		File::delete($portfolio->media);
 		$portfolio->delete();
-		return response()->json(['success' => 'Experience deleted successfully.']);
+
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Portfolio data deleted successfully'
+		]);
 	}
 
 	public function category(Request $request)
 	{
 		$category = CategoryPortfolio::all();
 		if ($request->ajax()) {
-			// $cat = CategoryPortfolio::all();
 			return DataTables::of($category)
 				->addIndexColumn()
 				->editColumn('total', function ($row) {
@@ -126,7 +140,6 @@ class PortfolioController extends Controller
 					</li>
 					</ul>
 					';
-					// $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
 					return $btn;
 				})
 				->rawColumns(['action'])
@@ -142,17 +155,27 @@ class PortfolioController extends Controller
 			['category_name' => $request->category]
 		);
 
-		return response()->json(['success' => 'Experience saved successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Category portfolio saved successfully'
+		]);
 	}
 
 	public function categoryDestroy(Request $request)
 	{
 		$category = CategoryPortfolio::find($request->id);
 		if ($category->portfolio->count() > 0) {
-			return response()->json(['status' => 'error', 'message' => 'The selected category still has a portfolio']);
+			return response()->json([
+				'status' => 'error',
+				'message' => 'The selected category still has a portfolio'
+			]);
 		} else {
 			$category->delete();
-			return response()->json(['status' => 'success', 'message' => 'Portfolio successfully deleted']);
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Portfolio successfully deleted
+				'
+			]);
 		}
 	}
 

@@ -9,13 +9,10 @@
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
-{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}"> --}}
 @endpush
 
 @section('content')
-<!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
-
 	<div class="layout-px-spacing">
 		<div class="layout-top-spacing">
 			<div class="row layout-spacing">
@@ -31,7 +28,7 @@
 						<div class="widget-content widget-content-area">
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
-									<button id="addPortfolio" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+									<button id="addPortfolio" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#formModal">
 										Add Portfolio
 									</button>
 									<thead>
@@ -57,11 +54,11 @@
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal fade " id="formModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-md" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">File Upload</h5>
+					<h5 class="modal-title" id="formModalLabel">Add Portfolio</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
 							<line x1="18" y1="6" x2="6" y2="18"></line>
@@ -71,8 +68,7 @@
 				</div>
 				<div class="modal-body">
 					<form id="portfolio-form" class="section general-info" enctype="multipart/form-data">
-						@csrf
-						<input type="hidden" name="user_id" id="user_id">
+						<input type="hidden" name="portfolio_id" id="portfolio_id">
 						<div class="widget-content widget-content-area">
 							<div class="row mb-4">
 								<div class="col">
@@ -111,7 +107,7 @@
 						</div>
 						<div class="modal-footer">
 							<button class="btn" data-dismiss="modal">Discard</button>
-							<button type="submit" id="saveBtn" class="btn btn-primary">Uplaod</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
 						</div>
 					</form>
 				</div>
@@ -122,7 +118,6 @@
 	@include('manage.includes.footer')
 
 </div>
-<!--  END CONTENT AREA  -->
 @endsection
 
 @push('js')
@@ -135,7 +130,7 @@
 	
 	var firstUpload = new FileUploadWithPreview('myFirstImage')
 
-	$("#exampleModal").on("hidden.bs.modal", function(){
+	$("#formModal").on("hidden.bs.modal", function(){
         $(this).find("form")[0].reset();
 		$('#category').empty().append('<option selected disabled>-Select-</option>');
 		$('#media').val('');
@@ -184,27 +179,26 @@
 	multiCheck(c3);
 
 	$('#addPortfolio').click(function(){
-		// $('#saveBtn').html("Save");
 		getAjaxCategory();
+		$('#portfolio_id').val('');
 	});
 	
 	$('body').on('click', '.editPortfolio', function () {
         var data = c3.row( $(this).parents('tr') ).data();
-
+		$('#formModal').modal('show');
         $('.modal-title').html("Edit Portfolio");
         $('#saveBtn').html("Update");
-        $('#exampleModal').modal('show');
-        $('#user_id').val(data.id);
+        $('#portfolio_id').val(data.id);
 		$('#title').val(data.title);
 		$('#link').val(data.link);
 		$('#text_link').val(data.text_link);
+		$('#media').prop('required', false);
 		getAjaxCategory(data.category_name);
-
     });
 
 	$('body').on('click', '.deletePortfolio', function () {
         var data = c3.row( $(this).parents('tr') ).data();
-        var user_id = data.id;
+        var portfolio_id = data.id;
         swal({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -217,7 +211,7 @@
                 $.ajax({
                     type: "post",
                     url: "{{ route('manage.portfolio.delete') }}",
-                    data: { id: user_id},
+                    data: { id: portfolio_id},
                     success: function (data) {
                         swal({
                             title: 'Deleted!',
@@ -256,7 +250,7 @@
             formdata.append('media', file);
 		}
 
-        formdata.append('id', $("#user_id").val());
+        formdata.append('id', $("#portfolio_id").val());
 		formdata.append('title', $("#title").val());
 		formdata.append('link', $("#link").val());
 		formdata.append('text_link', $("#text_link").val());
@@ -269,17 +263,29 @@
             processData: false,
             contentType: false,
             success: function (data) {
-                swal({
-                    title: 'Success!',
-                    text: 'Portfolio data has been updated.',
-                    type: 'success',
-                    padding: '2em',
-                    timer: 3000
-                }).then(function() {
-                    $('#user-form').trigger("reset");
-                    $('#exampleModal').modal('hide');
-                    c3.draw();
-                })
+				if (data.status == success) {
+					swal({
+						title: 'Success!',
+						text: data.message,
+						type: 'success',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						$('#user-form').trigger("reset");
+						$('#formModal').modal('hide');
+						c3.draw();
+					})
+				} else {
+					swal({
+						title: 'Oops!',
+						text: data.message,
+						type: 'error',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						window.location.reload()
+					})
+				}
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 swal({
@@ -287,7 +293,7 @@
                     text: xhr.responseText,
                     type: 'error',
                     padding: '2em',
-                    // timer: 3000
+                    timer: 3000
                 }).then(function() {
                     window.location.reload()
                 })
