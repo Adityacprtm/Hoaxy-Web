@@ -381,15 +381,17 @@
                     url: "{{ route('admin.manage.users.delete') }}",
                     data: { id: user_id },
                     success: function (data) {
-                        swal({
-                            title: 'Deleted!',
-                            text: 'User has been deleted.',
-                            type: 'success',
-                            padding: '2em',
-                            timer: 3000
-                        }).then(function() {
-                            c3.draw();
-                        })
+						if (data.status == 'success') {
+							swal({
+								title: 'Deleted!',
+								text: data.message,
+								type: 'success',
+								padding: '2em',
+								timer: 3000
+							}).then(function() {
+								c3.draw();
+							})
+						}
                     },
                     error: function (xhr, ajaxOptions, thrownError) {
                         swal({

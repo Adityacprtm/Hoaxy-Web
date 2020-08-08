@@ -14,12 +14,11 @@ class InfoController extends Controller
 	{
 		$info = Info::all();
 		if ($request->ajax()) {
-			// $portfolio = Portfolio::all();
 			return DataTables::of($info)
 				->addIndexColumn()
-				// ->editColumn('created_at', function ($row) {
-				// 	return date('d M, Y - H:i', strtotime($row->created_at));
-				// })
+				->editColumn('type', function ($row) {
+					return $row->type;
+				})
 				->editColumn('value', function ($row) {
 					if ($row->type == 1) {
 						return '<span><img src="' . asset($row->value) . '" style="height:50px" alt="avatar"></span>';
@@ -81,6 +80,11 @@ class InfoController extends Controller
 				['id' => $request->id],
 				['value' => $file_path, 'type' => $request->type, 'key' => $request->key]
 			);
+
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Info data saved successfully'
+			]);
 		} else {
 			if ($request->type == 0) {
 				Info::updateOrCreate(
@@ -88,9 +92,17 @@ class InfoController extends Controller
 					['value' => $request->value_text, 'type' => $request->type, 'key' => $request->key]
 				);
 			}
+
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Info data saved successfully'
+			]);
 		}
 
-		return response()->json(['success' => 'Product saved successfully.']);
+		return response()->json([
+			'status' => 'error',
+			'message' => 'Something went wrong, try again later'
+		]);
 	}
 
 	public function infoDestroy(Request $request)
@@ -101,6 +113,9 @@ class InfoController extends Controller
 		}
 		$info->delete();
 
-		return response()->json(['success' => 'Product deleted successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Info data deleted successfully'
+		]);
 	}
 }

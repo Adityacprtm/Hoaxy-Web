@@ -16,8 +16,7 @@ class UserController extends Controller
 		// $user_need_approval = User::whereNull('approved_at')->get();
 		$users = User::all();
 		if ($request->ajax()) {
-			$user = User::latest()->get();
-			return DataTables::of($user)
+			return DataTables::of($users)
 				->addIndexColumn()
 				->editColumn('birth_date', function ($row) {
 					return $row->birth_date ? date_format(date_create($row->birth_date), "d F Y") : "Not Available";
