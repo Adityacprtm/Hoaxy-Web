@@ -14,7 +14,7 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="format-detection" content="address=no" />
 	<meta name="author" content="Aditya Chamim Pratama" />
-	<meta name="description" content="vCard" />
+	<meta name="description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information." />
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	{{-- Twitter data --}}
