@@ -1,8 +1,10 @@
+var currentTheme = localStorage.getItem("theme") || 'light';
+
 mapboxgl.accessToken =
     "pk.eyJ1IjoiYWRpdHlhY3BydG0iLCJhIjoiY2thd2JvcWxnMjJuODJxbXh2cWY5dHl3ayJ9.Wnk9lMcXHr09UdQ-Iicp9Q";
 var map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/mapbox/" + localStorage.getItem("theme") + "-v10",
+    style: "mapbox://styles/mapbox/" + currentTheme + "-v10",
     center: [114.74047295804884, -3.42994542196984], // starting position
     zoom: 13 // starting zoom
 });
