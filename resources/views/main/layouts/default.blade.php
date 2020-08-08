@@ -22,13 +22,13 @@
 	<meta name="twitter:site" content="@adityacprtm">
 	<meta name="twitter:title" content="adityacprtm">
 	<meta name="twitter:description" content="adityacprtm">
-	<meta name="twitter:image" content="{{ asset('assets/main/images/social.html') }}">
+	<meta name="twitter:image" content="{{ asset('assets/main/images/social.png') }}">
 
 	{{-- Open Graph data --}}
 	<meta property="og:title" content="Adityacprtm" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://adityacprtm.com" />
-	<meta property="og:image" content="{{ asset('assets/main/images/social.html') }}" />
+	<meta property="og:image" content="{{ asset('assets/main/images/social.png') }}" />
 	<meta property="og:description" content="adityacprtm" />
 	<meta property="og:site_name" content="adityacprtm.com" />
 
