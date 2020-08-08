@@ -81,7 +81,7 @@
 											<div class="custom-file-container" data-upload-id="myFirstImage">
 												<label>Upload Thumbnail <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
 												<label class="custom-file-container__custom-file">
-													<input type="file" id="thumbnail" name="thumbnail" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M" required>
+													<input type="file" id="thumbnail" name="thumbnail" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M" {{ (empty($blog->thumbnail)) ? 'required' : '' }}>
 													<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 													<span class="custom-file-container__custom-file__custom-file-control"></span>
 												</label>
