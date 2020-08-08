@@ -38,9 +38,7 @@
 @endpush
 
 @section('content')
-<!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
-
 	<div class="layout-px-spacing">
 		<div class="layout-top-spacing">
 			<div class="row layout-spacing">
@@ -55,8 +53,7 @@
 						</div>
 						<div class="widget-content widget-content-area">
 							<form id="blog-form" class="section general-info" enctype="multipart/form-data">
-								@csrf
-								<input type="hidden" name="user_id" id="user_id" value="{{ isset($blog) ? $blog->id : '' }}">
+								<input type="hidden" name="blog_id" id="blog_id" value="{{ isset($blog) ? $blog->id : '' }}">
 								<div class="widget-content widget-content-area">
 
 									<div class="mb-4">
@@ -132,14 +129,11 @@
         filebrowserUploadMethod: 'form',
 		height: "{{ isset($blog) ? 400 : '' }}",
 		extraAllowedContent: '*[*]{*}(*)',
+		plugin: 'codesnippet',
 		entities: false,
         basicEntities: false,
 		forceSimpleAmpersand: true
 	});
-
-	CKEDITOR.editorConfig = function( config ) {
-    	config.extraPlugins = "codesnippet";
-	};
 
 	$('#tags').tagsinput({
 		allowDuplicates: false,
@@ -172,14 +166,14 @@
             formdata.append('thumbnail', file);
 		}
 
-		var activated
+		var activated = '';
 		if ($("#checkbox-activated").is( ':checked' )) {
             activated = +$("#checkbox-activated").is( ':checked' );
         } else {
 			activated = 0;
 		}
 
-        formdata.append('id', $("#user_id").val());
+        formdata.append('id', $("#blog_id").val());
 		formdata.append('title', $("#title").val());
 		formdata.append('content', CKEDITOR.instances.editor.getData());
 		formdata.append('tags', $("#tags").val());
@@ -192,15 +186,27 @@
             processData: false,
             contentType: false,
             success: function (data) {
-                swal({
-                    title: 'Success!',
-                    text: 'Portfolio data has been updated.',
-                    type: 'success',
-                    padding: '2em',
-                    timer: 3000
-                }).then(function() {
-                    window.location.href = "{{ route('manage.blog') }}"
-                })
+				if (data.status == 'success') {
+					swal({
+						title: 'Success!',
+						text: data.message,
+						type: 'success',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						window.location.href = "{{ route('manage.blog') }}"
+					})	
+				} else {
+					swal({
+						title: 'Oops!',
+						text: data.message,
+						type: 'error',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						window.location.reload()
+					})
+				}
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 swal({
@@ -208,7 +214,7 @@
                     text: xhr.responseText,
                     type: 'error',
                     padding: '2em',
-                    // timer: 3000
+                    timer: 3000
                 }).then(function() {
                     window.location.reload()
                 })

@@ -15,7 +15,6 @@ class BlogController extends Controller
 	{
 		$blog = Blog::all();
 		if ($request->ajax()) {
-			// $portfolio = Portfolio::all();
 			return DataTables::of($blog)
 				->addIndexColumn()
 				->editColumn('thumbnail', function ($row) {
@@ -54,7 +53,6 @@ class BlogController extends Controller
 					</li>
 					</ul>
 					';
-					// $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
 					return $btn;
 				})
 				->rawColumns(['thumbnail', 'action', 'content', 'tags'])
@@ -94,17 +92,27 @@ class BlogController extends Controller
 				['title' => $request->title, 'thumbnail' => $file_path, 'content' => $request->content, 'tags' => $request->tags, 'slug' => $slug, 'activated' => $request->activated]
 			);
 			$post->tag($tags);
+
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Blog data saved successfully'
+			]);
 		} else {
 			$post = Blog::updateOrCreate(
 				['id' => $request->id],
 				['title' => $request->title, 'content' => $request->content, 'tags' => $request->tags, 'slug' => $slug, 'activated' => $request->activated]
 			);
 			$post->tag($tags);
+
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Blog data saved successfully'
+			]);
 		}
 
 		return response()->json([
-			'status' => 'success',
-			'message' => 'Blog Content successfully saved'
+			'status' => 'error',
+			'message' => 'Something went wrong, try again later'
 		]);
 	}
 
@@ -113,7 +121,11 @@ class BlogController extends Controller
 		$blog = Blog::find($request->id);
 		File::delete($blog->thumbnail);
 		$blog->delete();
-		return response()->json(['success' => 'Experience deleted successfully.']);
+
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Blog data deleted successfully'
+		]);
 	}
 
 	public function blogAdd()

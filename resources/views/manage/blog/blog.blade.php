@@ -11,9 +11,7 @@
 @endpush
 
 @section('content')
-<!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
-
 	<div class="layout-px-spacing">
 		<div class="layout-top-spacing">
 			<div class="row layout-spacing">
@@ -59,7 +57,6 @@
 	@include('manage.includes.footer')
 
 </div>
-<!--  END CONTENT AREA  -->
 @endsection
 
 @push('js')
@@ -118,7 +115,7 @@
 
 	$('body').on('click', '.deleteBlog', function () {
         var data = c3.row( $(this).parents('tr') ).data();
-        var user_id = data.id;
+        var blog_id = data.id;
         swal({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -131,17 +128,19 @@
                 $.ajax({
                     type: "post",
                     url: "{{ route('manage.blog.delete') }}",
-                    data: { id: user_id},
+                    data: { id: blog_id },
                     success: function (data) {
-                        swal({
-                            title: 'Deleted!',
-                            text: 'Portfolio has been deleted.',
-                            type: 'success',
-                            padding: '2em',
-                            timer: 3000
-                        }).then(function() {
-                            c3.draw();
-                        })
+						if (data.status == 'success') {
+							swal({
+								title: 'Deleted!',
+								text: data.message,
+								type: 'success',
+								padding: '2em',
+								timer: 3000
+							}).then(function() {
+								c3.draw();
+							})
+						}
                     },
                     error: function (xhr, ajaxOptions, thrownError) {
                         swal({
