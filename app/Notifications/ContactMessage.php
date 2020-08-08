@@ -44,9 +44,11 @@ class ContactMessage extends Notification
 	public function toMail($notifiable)
 	{
 		return (new MailMessage)
-			->line('New message from: ' . $this->contact->name . '( ' . $this->contact->email . ' )')
+			->subject('New Contact Message')
+			->line('Someone has left a message.')
+			->line('From: ' . $this->contact->name . ' (' . $this->contact->email . ')')
 			->line('Message: ' . $this->contact->message)
-			->action('View more', route('manage.blog'))
+			->action('View more', route('manage.contact'))
 			->line('Thank you!');
 	}
 
