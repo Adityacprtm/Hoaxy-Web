@@ -82,12 +82,12 @@
 							</div>
 							<div class="mb-4" id="div_value_text">
 								<label for="value_text">Value text</label>
-								<input type="text" class="form-control" id="value_text" placeholder="Link or Text" required>
+								<input type="text" class="form-control" id="value_text" placeholder="Link or Text">
 							</div>
 							<div class="custom-file-container" data-upload-id="myFirstImage" id="div_value_image">
 								<label>Value Image <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
 								<label class="custom-file-container__custom-file">
-									<input type="file" id="value_image" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M" required>
+									<input type="file" id="value_image" class="custom-file-container__custom-file__custom-file-input" accept="image/*" data-max-file-size="2M">
 									<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 									<span class="custom-file-container__custom-file__custom-file-control"></span>
 								</label>
@@ -167,12 +167,12 @@
 	$('#checkbox-image').change(function() {
 		if ($("#checkbox-image").is( ':checked' )) {
 			$('#div_value_text').hide();
-			$('#value_text').prop('required', false);
+			$('#value_image').prop('required', true);
 			$('#div_value_image').show();
 		} else {
 			$('#div_value_text').show();
 			$('#div_value_image').hide();
-			$('#value_image').prop('required', false);
+			$('#value_text').prop('required', true);
 		}
 	})
 	
@@ -187,12 +187,12 @@
 
         if (data.type == 1) {
 			$('#checkbox-image').prop('checked', true);
-			$('#value_text').prop('required', false);
+			$('#value_image').prop('required', true);
 			$('#div_value_text').hide();
 			$('#div_value_image').show();
         } else {
 			$('#checkbox-image').prop('checked', false);
-			$('#value_image').prop('required', false);
+			$('#value_text').prop('required', true);
 			$('#value_text').val(data.value);
         }
     });
