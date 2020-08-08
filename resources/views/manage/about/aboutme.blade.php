@@ -9,7 +9,6 @@
 @endpush
 
 @section('content')
-<!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
 	<div class="layout-px-spacing">
 		<div class="layout-top-spacing">
@@ -24,7 +23,7 @@
 							</div>
 						</div>
 						<div class="widget-content widget-content-area">
-							<p>Active</p>
+							<p>Current Content</p>
 							<div class="alert alert-primary">
 								{!! $content->content !!}
 							</div>
@@ -77,18 +76,18 @@
 			url: "{{ route('manage.about.me.update') }}",
             type: "POST",
             data: { content: contentText },
-            // processData: false,
-            // contentType: false,
             success: function (data) {
-                swal({
-                    title: 'Success!',
-                    text: 'About has been updated.',
-                    type: 'success',
-                    padding: '2em',
-                    timer: 3000
-                }).then(function() {
-                    window.location.reload();
-                })
+				if (data.status == 'success') {
+					swal({
+						title: 'Success!',
+						text: data.message,
+						type: 'success',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						window.location.reload();
+					})	
+				}
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 swal({

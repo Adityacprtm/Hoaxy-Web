@@ -1,12 +1,11 @@
 @extends('manage.layouts.default')
-@section('title', 'About What I\'m Doing Editor')
+@section('title', 'What I\'m Doing Editor')
 
 @push('css')
 
 @endpush
 
 @section('content')
-<!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
 </div>
 

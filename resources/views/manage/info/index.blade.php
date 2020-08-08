@@ -58,7 +58,7 @@
 		<div class="modal-dialog modal-md" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="formModalLabel">Modal Title</h5>
+					<h5 class="modal-title" id="formModalLabel">Add Info</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
 							<line x1="18" y1="6" x2="6" y2="18"></line>
@@ -179,7 +179,7 @@
 	$('body').on('click', '.editInfo', function () {
         var data = c3.row( $(this).parents('tr') ).data();
 
-        $('.modal-title').html("Edit Client");
+        $('.modal-title').html("Edit Info");
         $('#saveBtn').html("Update");
         $('#formModal').modal('show');
         $('#info_id').val(data.id);

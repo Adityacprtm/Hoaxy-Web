@@ -9,14 +9,8 @@ use App\Models\Client;
 use Illuminate\Support\Facades\File;
 use Yajra\DataTables\Facades\DataTables;
 
-
 class AboutController extends Controller
 {
-	// public function __construct()
-	// {
-	// 	$this->middleware(['auth', 'verified']);
-	// }
-
 	public function index()
 	{
 		$content = Aboutme::where('id', 1)->first();
@@ -26,11 +20,15 @@ class AboutController extends Controller
 	public function aboutUpdate(Request $request)
 	{
 		$id = 1;
-
 		Aboutme::updateOrCreate(
 			['id' => $id],
 			['content' => $request->content]
 		);
+
+		return response()->json([
+			'status' => 'success',
+			'message' => 'About content updated successfully'
+		]);
 	}
 
 	public function doing()
@@ -42,11 +40,10 @@ class AboutController extends Controller
 	{
 		$clients = Client::all();
 		if ($request->ajax()) {
-			$clients = Client::latest()->get();
 			return DataTables::of($clients)
 				->addIndexColumn()
 				->editColumn('image', function ($row) {
-					return '<span><img src="' . asset($row->image) . '" style="height:50px" alt="avatar"></span>';
+					return asset($row->image);
 				})
 				->addColumn('action', function ($row) {
 					$btn = '
@@ -68,10 +65,9 @@ class AboutController extends Controller
                     </li>
 					</ul>
 					';
-					// $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
 					return $btn;
 				})
-				->rawColumns(['image', 'action'])
+				->rawColumns(['action'])
 				->make(true);
 		}
 
@@ -89,7 +85,7 @@ class AboutController extends Controller
 
 			$file = $request->file('image');
 
-			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->title;
+			$filename = \Carbon\Carbon::now()->timestamp . '-' . preg_replace('/\s+/', '', $request->title);
 			$extension = '.' . $request->image->getClientOriginalExtension();
 			$name = $filename . $extension;
 
@@ -103,14 +99,27 @@ class AboutController extends Controller
 				['id' => $request->id],
 				['image' => $file_path, 'title' => $request->title, 'url' => $request->url, 'activated' => $request->activated]
 			);
+
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Client data saved successfully'
+			]);
 		} else {
 			Client::updateOrCreate(
 				['id' => $request->id],
 				['title' => $request->title, 'url' => $request->url, 'activated' => $request->activated]
 			);
+
+			return response()->json([
+				'status' => 'success',
+				'message' => 'Client data saved successfully'
+			]);
 		}
 
-		return response()->json(['success' => 'Product saved successfully.']);
+		return response()->json([
+			'status' => 'error',
+			'message' => 'Something went wrong, try again later'
+		]);
 	}
 
 	public function clientDestroy(Request $request)
@@ -119,6 +128,9 @@ class AboutController extends Controller
 		File::delete($client_data->image);
 		$client_data->delete();
 
-		return response()->json(['success' => 'Product deleted successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Client data deleted successfully'
+		]);
 	}
 }

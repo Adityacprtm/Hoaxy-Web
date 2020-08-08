@@ -13,7 +13,6 @@
 @endpush
 
 @section('content')
-<!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
 
 	<div class="layout-px-spacing">
@@ -31,12 +30,12 @@
 						<div class="widget-content widget-content-area">
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
-									<button id="addClient" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+									<button id="addClient" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#formModal">
 										Add Client
 									</button>
 									<thead>
 										<tr>
-											<th class="checkbox-column text-center"> ID </th>
+											<th class="checkbox-column text-center">ID</th>
 											<th>Title</th>
 											<th>Image</th>
 											<th>URL</th>
@@ -56,11 +55,11 @@
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal fade " id="formModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-md" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">File Upload</h5>
+					<h5 class="modal-title" id="formModalLabel">Add Client</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
 							<line x1="18" y1="6" x2="6" y2="18"></line>
@@ -70,8 +69,7 @@
 				</div>
 				<div class="modal-body">
 					<form id="client-form" class="section general-info" enctype="multipart/form-data">
-						@csrf
-						<input type="hidden" name="user_id" id="user_id">
+						<input type="hidden" name="client_id" id="client_id">
 						<div class="widget-content widget-content-area">
 							<div>
 								<label for="client_title">Title Client</label>
@@ -110,7 +108,6 @@
 	@include('manage.includes.footer')
 
 </div>
-<!--  END CONTENT AREA  -->
 @endsection
 
 @push('js')
@@ -123,8 +120,7 @@
 	
 	var firstUpload = new FileUploadWithPreview('myFirstImage')
 
-	$("#exampleModal").on("hidden.bs.modal", function(){
-		// $(this).find("input").val('').end();
+	$("#formModal").on("hidden.bs.modal", function(){
 		$(this).find("form")[0].reset();
 	});
 	
@@ -135,7 +131,14 @@
             "columns": [
                 {data: 'id', name: 'id', className: "text-center"},
                 {data: 'title', name: 'title'},
-				{data: 'image', name: 'image'},
+				{
+					data: 'image', 
+					name: 'image',
+					className: "text-center",
+					render: function (data,type,row) {
+						return '<span><img src="'+data+'" style="height:50px" alt="avatar"></span>'
+					}
+				},
 				{
 					data: 'url', 
 					name: 'url',
@@ -178,14 +181,13 @@
 	$('body').on('click', '.editClient', function () {
         var data = c3.row( $(this).parents('tr') ).data();
 
+		$('#formModal').modal('show');
         $('.modal-title').html("Edit Client");
         $('#saveBtn').html("Update");
-        $('#exampleModal').modal('show');
-        $('#user_id').val(data.id);
+        $('#client_id').val(data.id);
 		$('#client_title').val(data.title);
 		$('#client_url').val(data.url);
 
-        // Approval
         if (data.activated) {
             $('#checkbox-activated').prop('checked', true);
         } else {
@@ -195,7 +197,7 @@
 
 	$('body').on('click', '.deleteClient', function () {
         var data = c3.row( $(this).parents('tr') ).data();
-        var user_id = data.id;
+        var client_id = data.id;
         swal({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -208,17 +210,19 @@
                 $.ajax({
                     type: "post",
                     url: "{{ route('manage.about.client.delete') }}",
-                    data: { id: user_id},
+                    data: { id: client_id},
                     success: function (data) {
-                        swal({
-                            title: 'Deleted!',
-                            text: 'Client has been deleted.',
-                            type: 'success',
-                            padding: '2em',
-                            timer: 3000
-                        }).then(function() {
-                            c3.draw();
-                        })
+						if (data.status == 'success') {
+							swal({
+								title: 'Deleted!',
+								text: data.message,
+								type: 'success',
+								padding: '2em',
+								timer: 3000
+							}).then(function() {
+								c3.draw();
+							})
+						}
                     },
                     error: function (xhr, ajaxOptions, thrownError) {
                         swal({
@@ -247,14 +251,14 @@
             formdata.append('image', file);
 		}
 		
-		var activated
+		var activated = '';
 		if ($("#checkbox-activated").is( ':checked' )) {
             activated = +$("#checkbox-activated").is( ':checked' );
         } else {
 			activated = 0;
 		}
 
-        formdata.append('id', $("#user_id").val());
+        formdata.append('id', $("#client_id").val());
 		formdata.append('title', $("#client_title").val());
 		formdata.append('url', $("#client_url").val());
 		formdata.append('activated', activated);
@@ -266,17 +270,28 @@
             processData: false,
             contentType: false,
             success: function (data) {
-                swal({
-                    title: 'Success!',
-                    text: 'Client data has been updated.',
-                    type: 'success',
-                    padding: '2em',
-                    timer: 3000
-                }).then(function() {
-                    $('#user-form').trigger("reset");
-                    $('#exampleModal').modal('hide');
-                    c3.draw();
-                })
+				if (data.status == 'success') {
+					swal({
+						title: 'Success!',
+						text: data.message,
+						type: 'success',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						$('#formModal').modal('hide');
+						c3.draw();
+					})
+				} else {
+					swal({
+						title: 'Oops!',
+						text: data.message,
+						type: 'error',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						window.location.reload()
+					})
+				}
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 swal({
