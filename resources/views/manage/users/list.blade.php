@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/datatables.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/dt-global_style.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/table/datatable/custom_dt_custom.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/plugins/dropify/dropify.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/users/account-setting.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
@@ -15,7 +14,6 @@
 @endpush
 
 @section('content')
-<!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
 
 	<div class="layout-px-spacing">
@@ -31,14 +29,24 @@
 							</div>
 						</div>
 						<div class="widget-content widget-content-area">
+
+							@if (session('status'))
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								{!! session('status') !!}
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							@endif
+
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
-									<button id="addUser" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#exampleModal">
+									<button id="addUser" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#formModal">
 										Add User
 									</button>
 									<thead>
 										<tr>
-											<th class="checkbox-column text-center"> ID </th>
+											<th class="text-center">#</th>
 											<th>Name</th>
 											<th>Email</th>
 											<th>Birth of Date</th>
@@ -62,11 +70,11 @@
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal fade " id="formModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-xl" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<h5 class="modal-title" id="formModalLabel">Modal title</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
 							<line x1="18" y1="6" x2="6" y2="18"></line>
@@ -76,10 +84,8 @@
 				</div>
 				<div class="modal-body">
 					<form id="user-form" class="section general-info" enctype="multipart/form-data">
-						@csrf
 						<input type="hidden" name="user_id" id="user_id">
 						<div class="info">
-							{{-- <h6 class="">General Information</h6> --}}
 							<div class="row">
 								<div class="col-lg-11 mx-auto">
 									<div class="row">
@@ -94,8 +100,8 @@
 												<div class="row">
 													<div class="col-sm-6">
 														<div class="form-group">
-															<label for="fullName">Full Name</label>
-															<input type="text" class="form-control mb-4" id="fullName" placeholder="Full Name" required />
+															<label for="name">Full Name</label>
+															<input type="text" class="form-control mb-4" id="name" placeholder="Full Name" required />
 														</div>
 													</div>
 													<div class="col-sm-6">
@@ -103,16 +109,16 @@
 														<div class="d-sm-flex d-block">
 															<div class="form-group mr-1">
 																<select class="form-control" id="day-select" required>
-																	<option id="day" disabled>Day</option>
-																	<option value="1">1</option>
-																	<option value="2">2</option>
-																	<option value="3">3</option>
-																	<option value="4">4</option>
-																	<option value="5">5</option>
-																	<option value="6">6</option>
-																	<option value="7">7</option>
-																	<option value="8">8</option>
-																	<option value="9">9</option>
+																	<option id="day" disabled selected>Day</option>
+																	<option value="1">01</option>
+																	<option value="2">02</option>
+																	<option value="3">03</option>
+																	<option value="4">04</option>
+																	<option value="5">05</option>
+																	<option value="6">06</option>
+																	<option value="7">07</option>
+																	<option value="8">08</option>
+																	<option value="9">09</option>
 																	<option value="10">10</option>
 																	<option value="11">11</option>
 																	<option value="12">12</option>
@@ -139,7 +145,7 @@
 															</div>
 															<div class="form-group mr-1">
 																<select class="form-control" id="month-select" required>
-																	<option value="month" disabled>Month</option>
+																	<option id="month" disabled selected>Month</option>
 																	<option value="1">January</option>
 																	<option value="2">February</option>
 																	<option value="3">March</option>
@@ -156,36 +162,36 @@
 															</div>
 															<div class="form-group mr-1">
 																<select class="form-control" id="year-select" required>
-																	<option id="year" disabled>Year</option>
-																	<option id="year">2018</option>
-																	<option id="year">2017</option>
-																	<option id="year">2016</option>
-																	<option id="year">2015</option>
-																	<option id="year">2014</option>
-																	<option id="year">2013</option>
-																	<option id="year">2012</option>
-																	<option id="year">2011</option>
-																	<option id="year">2010</option>
-																	<option id="year">2009</option>
-																	<option id="year">2008</option>
-																	<option id="year">2007</option>
-																	<option id="year">2006</option>
-																	<option id="year">2005</option>
-																	<option id="year">2004</option>
-																	<option id="year">2003</option>
-																	<option id="year">2002</option>
-																	<option id="year">2001</option>
-																	<option id="year">2000</option>
-																	<option id="year">1999</option>
-																	<option id="year">1998</option>
-																	<option id="year">1997</option>
-																	<option id="year">1996</option>
-																	<option id="year">1995</option>
-																	<option id="year">1994</option>
-																	<option id="year">1993</option>
-																	<option id="year">1992</option>
-																	<option id="year">1991</option>
-																	<option id="year">1990</option>
+																	<option id="year" disabled selected>Year</option>
+																	<option value="2018">2018</option>
+																	<option value="2017">2017</option>
+																	<option value="2016">2016</option>
+																	<option value="2015">2015</option>
+																	<option value="2014">2014</option>
+																	<option value="2013">2013</option>
+																	<option value="2012">2012</option>
+																	<option value="2011">2011</option>
+																	<option value="2010">2010</option>
+																	<option value="2009">2009</option>
+																	<option value="2008">2008</option>
+																	<option value="2007">2007</option>
+																	<option value="2006">2006</option>
+																	<option value="2005">2005</option>
+																	<option value="2004">2004</option>
+																	<option value="2003">2003</option>
+																	<option value="2002">2002</option>
+																	<option value="2001">2001</option>
+																	<option value="2000">2000</option>
+																	<option value="1999">1999</option>
+																	<option value="1998">1998</option>
+																	<option value="1997">1997</option>
+																	<option value="1996">1996</option>
+																	<option value="1995">1995</option>
+																	<option value="1994">1994</option>
+																	<option value="1993">1993</option>
+																	<option value="1992">1992</option>
+																	<option value="1991">1991</option>
+																	<option value="1990">1990</option>
 																</select>
 															</div>
 														</div>
@@ -225,8 +231,8 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-							<button type="submit" id="saveBtn" class="btn btn-primary" value="create">Save</button>
+							<button class="btn" data-dismiss="modal">Discard</button>
+							<button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
 						</div>
 					</form>
 				</div>
@@ -237,7 +243,6 @@
 	@include('manage.includes.footer')
 
 </div>
-<!--  END CONTENT AREA  -->
 @endsection
 
 @push('js')
@@ -251,9 +256,8 @@
 	$('#menu-user').addClass('active');
     $('#menu-user a').attr('data-active','true');
 
-    $("#exampleModal").on("hidden.bs.modal", function(){
+    $("#formModal").on("hidden.bs.modal", function(){
 		$(this).find("form")[0].reset();
-		$('#input-file-max-fs').val(null);
     });
 
     c3 = $('#style-3').DataTable({
@@ -267,8 +271,24 @@
                 {data: 'birth_date', name: 'birth_date'},
                 {data: 'admin', name: 'admin'},
                 {data: 'created_at', name: 'created_at'},
-                {data: 'avatar', name: 'avatar', className: "text-center"},
-                {data: 'email_verified_at', name: 'email_verified_at', className: "text-center"},
+                {
+					data: 'avatar', 
+					name: 'avatar', 
+					className: "text-center",
+					render: function (data,type,row) {
+						return '<span><img src="' + data + '" class="profile-img" alt="avatar"></span>';
+					}
+				},
+                {
+					data: 'email_verified_at', 
+					name: 'email_verified_at', 
+					className: "text-center",
+					render: function ( data, type, row ) {
+                        var badge = (data) ? 'primary' : 'warning';
+                        var text = (data) ? 'Yes' : 'No';
+                        return '<span class="shadow-none badge badge-'+badge+'">'+text+'</span>';
+                    }
+				},
                 {
                     data: 'approved_at', 
                     name: 'approved_at', 
@@ -302,43 +322,36 @@
     });
 
     $('#addUser').click(function () {
+		$('#formModal').modal('show');
+		$('.modal-title').html("Add User");
+		$('#user_id').val('');
         $('#email').prop('readonly', false)
-        $('#saveBtn').val("create-user");
-        $('#user_id').val('');
-        $('#user-form').trigger("reset");
         $('#password-form').show();
-        $('.modal-title').html("Add User");
-        $('#exampleModal').modal('show');
         $('#user').prop('selected', true);
     });
 
     $('body').on('click', '.editUser', function () {
         var data = c3.row( $(this).parents('tr') ).data();
-        
-        $('#password-form').hide();
-
+		$('#formModal').modal('show');
         $('.modal-title').html("Edit User");
-        $('#saveBtn').val("edit-user");
-        $('#exampleModal').modal('show');
+        $('#saveBtn').html("Update");
+		$('#password-form').hide();
         $('#user_id').val(data.id);
-        $('#fullName').val(data.name);
-        $('#email').val(data.email);
-
-        // Approval
+        $('#name').val(data.name);
+		$('#email').val(data.email);
+        
         if (data.approved_at) {
             $('#checkbox-approval').prop('checked', true);
         } else {
             $('#checkbox-approval').prop('checked', false);
         }
 
-        // Role / isAdmin
         if ((data.admin).toLowerCase() == "admin") {
             $('#admin').prop('selected', true);
         } else {
             $('#user').prop('selected', true);
         }
 
-        // date of birth
         if ((data.birth_date).toLowerCase() != 'not available') {
             var date = (data['birth_date']).split(' ')
             $('#day-select option:contains("'+date[0]+'")').prop('selected',true);
@@ -350,7 +363,6 @@
             $('#year').prop('selected', true);
         }
     });
-
 
     $('body').on('click', '.deleteUser', function () {
         var data = c3.row( $(this).parents('tr') ).data();
@@ -367,7 +379,7 @@
                 $.ajax({
                     type: "post",
                     url: "{{ route('admin.manage.users.delete') }}",
-                    data: { id: user_id},
+                    data: { id: user_id },
                     success: function (data) {
                         swal({
                             title: 'Deleted!',
@@ -399,8 +411,8 @@
     $('#user-form').submit(function (e) {
         e.preventDefault();
 
-        var dob
-        var approval
+        var dob = '';
+        var approval = '';
         var formdata = new FormData();
 
         if (!isNaN($('#day-select option:selected').val()) && !isNaN($('#month-select option:selected').val()) && !isNaN($('#year-select option:selected').val())) {
@@ -422,7 +434,7 @@
         }
 
         formdata.append('id',$("#user_id").val());
-        formdata.append('name', $("#fullName").val());
+        formdata.append('name', $("#name").val());
         formdata.append('email', $("#email").val());
         formdata.append('admin', $('#role-select option:selected').val());
         formdata.append('birth_date', dob);
@@ -435,17 +447,28 @@
             processData: false,
             contentType: false,
             success: function (data) {
-                swal({
-                    title: 'Success!',
-                    text: 'User data has been updated.',
-                    type: 'success',
-                    padding: '2em',
-                    timer: 3000
-                }).then(function() {
-                    $('#user-form').trigger("reset");
-                    $('#exampleModal').modal('hide');
-                    c3.draw();
-                })
+				if (data.status == 'success') {
+					swal({
+						title: 'Success!',
+						text: data.message,
+						type: 'success',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						$('#formModal').modal('hide');
+						c3.draw();
+					})
+				} else {
+					swal({
+						title: 'Oops!',
+						text: data.message,
+						type: 'error',
+						padding: '2em',
+						timer: 3000
+					}).then(function() {
+						window.location.reload()
+					})
+				}
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 swal({
@@ -461,5 +484,4 @@
         });
     });
 </script>
-<!-- END PAGE LEVEL SCRIPTS -->
 @endpush

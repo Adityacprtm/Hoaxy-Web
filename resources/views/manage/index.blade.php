@@ -10,7 +10,6 @@
 		top: 50%;
 		left: 50%;
 		margin-left: -70px;
-		/* margin is -0.5 * dimension */
 		margin-top: -25px;
 	}
 </style>
