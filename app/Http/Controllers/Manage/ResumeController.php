@@ -21,8 +21,7 @@ class ResumeController extends Controller
 	{
 		$education = Education::all();
 		if ($request->ajax()) {
-			$clients = Education::latest()->get();
-			return DataTables::of($clients)
+			return DataTables::of($education)
 				->addIndexColumn()
 				->addColumn('action', function ($row) {
 					$btn = '
@@ -44,7 +43,6 @@ class ResumeController extends Controller
                     </li>
 					</ul>
 					';
-					// $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
 					return $btn;
 				})
 				->rawColumns(['action'])
@@ -71,7 +69,10 @@ class ResumeController extends Controller
 			['level' => $request->level, 'sort' => $sort_level[$request->level], 'institution' => $request->institution, 'year' => $request->year, 'description' => $request->description, 'country' => $request->country, 'city' => $request->city]
 		);
 
-		return response()->json(['success' => 'Product saved successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Education data saved successfully'
+		]);
 	}
 
 	public function educationDestroy(Request $request)
@@ -79,15 +80,17 @@ class ResumeController extends Controller
 		$edu = Education::find($request->id);
 		$edu->delete();
 
-		return response()->json(['success' => 'Education deleted successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Education data deleted successfully'
+		]);
 	}
 
 	public function experience(Request $request)
 	{
 		$experience = Experience::all();
 		if ($request->ajax()) {
-			$clients = Experience::latest()->get();
-			return DataTables::of($clients)
+			return DataTables::of($experience)
 				->addIndexColumn()
 				->addColumn('action', function ($row) {
 					$btn = '
@@ -109,7 +112,6 @@ class ResumeController extends Controller
                     </li>
 					</ul>
 					';
-					// $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
 					return $btn;
 				})
 				->rawColumns(['action'])
@@ -125,7 +127,10 @@ class ResumeController extends Controller
 			['company' => $request->company, 'position' => $request->position, 'description' => $request->description, 'startDate' => $request->startDate, 'endDate' => $request->endDate]
 		);
 
-		return response()->json(['success' => 'Experience saved successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Experience data saved successfully'
+		]);
 	}
 
 	public function experienceDestroy(Request $request)
@@ -133,15 +138,17 @@ class ResumeController extends Controller
 		$exp = Experience::find($request->id);
 		$exp->delete();
 
-		return response()->json(['success' => 'Experience deleted successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Experience data deleted successfully'
+		]);
 	}
 
 	public function skill(Request $request)
 	{
 		$skills = Skill::all();
 		if ($request->ajax()) {
-			$clients = Skill::latest()->get();
-			return DataTables::of($clients)
+			return DataTables::of($skills)
 				->addIndexColumn()
 				->addColumn('action', function ($row) {
 					$btn = '
@@ -163,7 +170,6 @@ class ResumeController extends Controller
                     </li>
 					</ul>
 					';
-					// $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
 					return $btn;
 				})
 				->rawColumns(['action'])
@@ -179,7 +185,10 @@ class ResumeController extends Controller
 			['title' => $request->title, 'level' => $request->level, 'activated' => $request->activated]
 		);
 
-		return response()->json(['success' => 'Skill saved successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Skill data saved successfully'
+		]);
 	}
 
 	public function skillDestroy(Request $request)
@@ -187,15 +196,17 @@ class ResumeController extends Controller
 		$exp = Skill::find($request->id);
 		$exp->delete();
 
-		return response()->json(['success' => 'Skill deleted successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Skill data deleted successfully'
+		]);
 	}
 
 	public function codeSkill(Request $request)
 	{
 		$codeSkills = CodeSkill::all();
 		if ($request->ajax()) {
-			$clients = CodeSkill::latest()->get();
-			return DataTables::of($clients)
+			return DataTables::of($codeSkills)
 				->addIndexColumn()
 				->addColumn('action', function ($row) {
 					$btn = '
@@ -233,7 +244,10 @@ class ResumeController extends Controller
 			['title' => $request->title, 'level' => $request->level, 'activated' => $request->activated]
 		);
 
-		return response()->json(['success' => 'Skill saved successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Code Skill data saved successfully'
+		]);
 	}
 
 	public function codeSkillDestroy(Request $request)
@@ -241,6 +255,9 @@ class ResumeController extends Controller
 		$exp = CodeSkill::find($request->id);
 		$exp->delete();
 
-		return response()->json(['success' => 'Skill deleted successfully.']);
+		return response()->json([
+			'status' => 'success',
+			'message' => 'Code Skill data saved successfully'
+		]);
 	}
 }
