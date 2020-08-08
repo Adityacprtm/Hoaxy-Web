@@ -271,7 +271,6 @@
 						padding: '2em',
 						timer: 3000
 					}).then(function() {
-						$('#user-form').trigger("reset");
 						$('#formModal').modal('hide');
 						c3.draw();
 					})

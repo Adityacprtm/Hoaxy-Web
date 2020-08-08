@@ -13,22 +13,24 @@ class ContactController extends Controller
 	{
 		$contact = Contact::all();
 		if ($request->ajax()) {
-			// $portfolio = Portfolio::all();
 			return DataTables::of($contact)
 				->addIndexColumn()
 				->editColumn('created_at', function ($row) {
 					return date('d M, Y - H:i', strtotime($row->created_at));
 				})
 				->editColumn('message', function ($row) {
-					if (strlen($row->message) > 50) {
-						return substr($row->message, 0, 50) . "....";
-					} else {
-						return $row->message;
-					}
+					return $row->message;
 				})
 				->addColumn('action', function ($row) {
 					$btn = '
 					<ul class="table-controls">
+					<li>
+						<a href="javascript:void(0);" title="Edit" data-id="' . $row->id . '" class="viewContact" >
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye">
+								<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>
+							</svg>
+						</a>
+					</li>
 					<li>
 						<a href="javascript:void(0);" title="Edit" data-id="' . $row->id . '" class="editContact" >
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 p-1 br-6 mb-1">
@@ -46,7 +48,6 @@ class ContactController extends Controller
 					</li>
 					</ul>
 					';
-					// $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
 					return $btn;
 				})
 				->rawColumns(['action'])
@@ -70,6 +71,6 @@ class ContactController extends Controller
 		$edu = Contact::find($request->id);
 		$edu->delete();
 
-		return response()->json(['status' => 'success', 'message' => 'Contact successfully deleted.']);
+		return response()->json(['status' => 'success', 'message' => 'Contact deleted successfully.']);
 	}
 }
