@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 
-
-{{-- Mirrored from netgon.net/artstyles/v-card2/full/one-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 May 2020 05:37:41 GMT --}}
-
 <head>
 	<meta charset="utf-8" />
 	<title>@yield('title') | Adityacprtm</title>
@@ -18,18 +15,19 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	{{-- Twitter data --}}
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@adityacprtm">
-	<meta name="twitter:title" content="adityacprtm">
-	<meta name="twitter:description" content="adityacprtm">
-	<meta name="twitter:image" content="{{ asset('assets/main/images/social.png') }}">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://adityacprtm.com/">
+	<meta property="twitter:site" content="@adityacprtm">
+	<meta property="twitter:title" content="Adityacprtm.">
+	<meta property="twitter:description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information.">
+	<meta property="twitter:image" content="{{ asset('assets/main/images/social.png') }}">
 
 	{{-- Open Graph data --}}
-	<meta property="og:title" content="Adityacprtm" />
+	<meta property="og:title" content="Adityacprtm." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://adityacprtm.com" />
 	<meta property="og:image" content="{{ asset('assets/main/images/social.png') }}" />
-	<meta property="og:description" content="adityacprtm" />
+	<meta property="og:description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information." />
 	<meta property="og:site_name" content="adityacprtm.com" />
 
 	<!-- ****** faviconit.com favicons ****** -->
