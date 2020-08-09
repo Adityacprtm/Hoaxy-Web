@@ -170,6 +170,14 @@
 	<script src="{{ asset('assets/main/js/plugins-demo.js') }}"></script>
 	<script src="{{ asset('assets/main/js/prism.js') }}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128216763-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-128216763-1');
+	</script>
 
 	@stack('js')
 </body>
