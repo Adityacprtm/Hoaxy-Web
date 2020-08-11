@@ -15,7 +15,7 @@
 			<article class="timeline__item">
 				<h5 class="title title--h3 timeline__title">{{ $edu->institution }}</h5>
 				<span class="timeline__period">{{ $edu->year }}</span>
-				<p class="timeline__description">{{ $edu->description }}<br>{{ $edu->city }} - {{ $edu->country }}</p>
+				<p class="timeline__description">{{ $edu->description }}{!! ($edu->description) ? '<br>' : '' !!}{{ $edu->city }} - {{ $edu->country }}</p>
 			</article>
 			@endforeach
 
