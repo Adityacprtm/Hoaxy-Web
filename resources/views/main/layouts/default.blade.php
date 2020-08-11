@@ -159,7 +159,7 @@
 			<h4 class="title title--5">More pages</h4>
 		</li>
 		<li class="slideNav__item"><a href="{{ route('manage') }}" target="_blank">Manage</a></li>
-		<li class="slideNav__item"><a href="http://vlsm-calc.adityacprtm.com/" target="_blank">IPv4 VLSM Calc</a></li>
+		<li class="slideNav__item"><a href="{{ route('vlsm') }}" target="_blank">IPv4 VLSM Calc</a></li>
 		<li class="slideNav__item"><a href="{{ route('old.v1') }}">Old Version 1</a></li>
 		<li class="slideNav__item"><a href="{{ route('old.v2') }}">Old Version 2</a></li>
 	</ul>

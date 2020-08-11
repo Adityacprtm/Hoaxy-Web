@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -117,3 +118,6 @@ Route::view('/old/v1', 'old.v1.index')->name('old.v1');
 
 // Route old v2
 Route::view('/old/v2', 'old.v2.index')->name('old.v2');
+
+// IPv4 VLSM Calculator
+Route::view('/vlsm-calc', 'vlsm.index')->name('vlsm');
