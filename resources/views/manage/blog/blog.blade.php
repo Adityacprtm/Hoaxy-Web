@@ -85,8 +85,8 @@
                     name: 'activated', 
                     className: "text-center",
                     render: function ( data, type, row ) {
-                        var badge = (data) ? 'primary' : 'warning';
-                        var text = (data) ? 'Active' : 'Not';
+                        var badge = (data==1) ? 'primary' : 'warning';
+                        var text = (data==1) ? 'Active' : 'Not';
                         return '<span class="shadow-none badge badge-'+badge+'">'+text+'</span>';
                     }
                 },
