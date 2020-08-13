@@ -10,6 +10,12 @@
 
 	@if ($blog)
 	<div class="pb-3">
+
+		<div style="height: 90px !important;">
+			<!-- Ads Blog Detail Horizontal -->
+			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-7614452738762603" data-ad-slot="1924873538"></ins>
+		</div>
+
 		<header class="header-post">
 			<h1 class="title title--h1">{{ $blog->title }}</h1>
 			{{-- <div class="caption-post">
@@ -20,17 +26,72 @@
 			</div>
 		</header>
 
-		<!-- Ads Blog Detail Horizontal -->
-		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7614452738762603" data-ad-slot="1924873538" data-ad-format="auto" data-full-width-responsive="true"></ins>
-		<br>
+		<div class="row">
+			<div class="col-md-8">
 
-		{!! $blog->content !!}
+				{!! $blog->content !!}
 
-		<footer class="footer-post">
-			<div class="addthis_inline_share_toolbox"></div>
-		</footer>
-		<hr>
-		<div id="disqus_thread"></div>
+				<footer class="footer-post">
+					<div class="addthis_inline_share_toolbox"></div>
+				</footer>
+				<hr>
+				<div id="disqus_thread"></div>
+			</div>
+			<div class="col-md-4">
+
+				<div class="right-sidebar">
+					<!-- Ads Blog Detail Vertical -->
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7614452738762603" data-ad-slot="1124897379" data-ad-format="auto" data-full-width-responsive="true"></ins>
+				</div>
+
+				<div class="right-sidebar">
+					<h5>Subscription</h5>
+					<input type="email" class="input form-control" id="email" name="email" placeholder="Email address" required="required" autocomplete="on" oninvalid="setCustomValidity('Email is incorrect')" onkeyup="setCustomValidity('')">
+					<div class="help-block with-errors"></div>
+				</div>
+
+				<div class="right-sidebar">
+					<h5>Artikel Lainnya</h5>
+					<div class="row">
+						@foreach ($otherBlog as $b)
+						<div class="col-md-6">
+							<div class="">
+								<a href="">
+									<img src="{{ asset($b->thumbnail) }}" width="100%" height="100%" alt="">
+								</a>
+							</div>
+							<h3 style="font-size: 11px;line-height: 18px;font-weight: 500;">
+								<a href="{{ route('blog.detail', $b->slug) }}" style="color:black;">{{ (Str::length($b->title)>40) ? substr($b->title, 0, 40).'...' : $b->title }}</a>
+							</h3>
+						</div>
+						@endforeach
+					</div>
+				</div>
+
+				<div class="right-sidebar">
+					<div class="social-media">
+						<h5>Follow Me</h5>
+						<a href="{!! Info::where('key','LINK_FACEBOOK')->value('value') !!}" class="social-media-button icon facebook">
+							<i class="fab fa-facebook-f"></i>
+							<span>Facebook</span>
+						</a>
+						<a href="{!! Info::where('key','LINK_INSTAGRAM')->value('value') !!}" class="social-media-button icon instagram">
+							<i class="fab fa-instagram"></i>
+							<span>Instagram</span>
+						</a>
+						<a href="{!! Info::where('key','LINK_TWITTER')->value('value') !!}" class="social-media-button icon twitter">
+							<i class="fab fa-twitter"></i>
+							<span>Twitter</span>
+						</a>
+						<a href="{!! Info::where('key','LINKEDIN')->value('value') !!}" class="social-media-button icon linkedin">
+							<i class="fab fa-linkedin-in"></i>
+							<span>LinkedIn</span>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
 	</div>
 	@else
 	<p>Oops, not available at this time</p>

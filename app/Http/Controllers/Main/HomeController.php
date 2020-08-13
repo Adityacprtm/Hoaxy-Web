@@ -54,10 +54,12 @@ class HomeController extends Controller
 			['activated', '=', 1]
 		])->first();
 
+		$otherBlog = Blog::where('slug', '!=', $slug)->take(4)->get();
+
 		if (!$blog) {
 			return abort(404);
 		} else {
-			return view('main/blog-detail', compact('blog'));
+			return view('main/blog-detail', compact('blog', 'otherBlog'));
 		}
 	}
 
