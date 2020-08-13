@@ -7,11 +7,13 @@
 		<h1 class="title title--h1 title__separate">Blog</h1>
 	</div>
 	<div class="news-grid section">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-61+dd-1b-8r+ur" data-ad-client="ca-pub-7614452738762603" data-ad-slot="9256552732"></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
+		<article class="news-item box">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-61+dd-1b-8r+ur" data-ad-client="ca-pub-7614452738762603" data-ad-slot="9256552732"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</article>
 		@forelse ($blog as $b)
 		<article class="news-item box">
 			<div class="news-item__image-wrap overlay overlay--45">
