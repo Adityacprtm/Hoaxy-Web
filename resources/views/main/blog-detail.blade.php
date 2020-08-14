@@ -11,10 +11,10 @@
 	@if ($blog)
 	<div class="pb-3">
 
-		<div class="ad-wrap">
+		<div class="ad-wrap mb-3">
 			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Ads Blog Detail Horizontal -->
-			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-7614452738762603" data-ad-slot="1924873538"></ins>
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7614452738762603" data-ad-slot="1924873538" data-ad-format="auto" data-full-width-responsive="true"></ins>
 			<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
@@ -44,33 +44,32 @@
 			<div class="col-md-4">
 
 				<div class="right-sidebar">
-					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!-- Ads Blog Detail Vertical -->
-					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7614452738762603" data-ad-slot="1124897379" data-ad-format="auto" data-full-width-responsive="true"></ins>
-					<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
+					<div class="right-sidebar-ads mt-3">
+						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Ads Blog Detail Vertical -->
+						<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7614452738762603" data-ad-slot="1124897379" data-ad-format="auto" data-full-width-responsive="true"></ins>
+						<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
 				</div>
 
 				<div class="right-sidebar">
-					<h5>Subscription</h5>
-					<input type="email" class="input form-control" id="email" name="email" placeholder="Email address" required="required" autocomplete="on" oninvalid="setCustomValidity('Email is incorrect')" onkeyup="setCustomValidity('')">
-					<div class="help-block with-errors"></div>
+					<h5>Contact Me</h5>
+					<a target="_blank" class="btn btn-sm btn-block" href="{{ route('contact') }}"><i class="font-icon icon-envelope"></i>Contact Me</a>
 				</div>
 
 				<div class="right-sidebar">
-					<h5>Artikel Lainnya</h5>
+					<h5>Other Blogs</h5>
 					<div class="row">
 						@foreach ($otherBlog as $b)
 						<div class="col-md-6">
-							<div class="">
-								<a href="">
-									<img src="{{ asset($b->thumbnail) }}" width="100%" height="100%" alt="">
+							<div class="polaroid">
+								<a href="{{ route('blog.detail', $b->slug) }}" class="other-blog-text">
+									<img src="{{ asset($b->thumbnail) }}" width="100%" height="100%" alt="" />
+									<h3>{{ (Str::length($b->title)>40) ? substr($b->title, 0, 40).'...' : $b->title }}</h3>
 								</a>
 							</div>
-							<h3 style="font-size: 11px;line-height: 18px;font-weight: 500;">
-								<a href="{{ route('blog.detail', $b->slug) }}" style="color:black;">{{ (Str::length($b->title)>40) ? substr($b->title, 0, 40).'...' : $b->title }}</a>
-							</h3>
 						</div>
 						@endforeach
 					</div>
