@@ -54,55 +54,64 @@
 					</div>
 				</div>
 
-				<div class="right-sidebar">
-					<h5>Contact Me</h5>
+				{{-- <div class="right-sidebar">
+					<h5><span>Contact Me</span></h5>
 					<a target="_blank" class="btn btn-sm btn-block" href="{{ route('contact') }}"><i class="font-icon icon-envelope"></i>Contact Me</a>
-				</div>
+			</div> --}}
 
-				<div class="right-sidebar">
-					<h5>Other Blogs</h5>
-					<div class="row">
-						@foreach ($otherBlog as $b)
-						<div class="col-md-6">
-							<div class="polaroid">
-								<a href="{{ route('blog.detail', $b->slug) }}" class="other-blog-text">
-									<img src="{{ asset($b->thumbnail) }}" width="100%" height="100%" alt="" />
-									<h3>{{ (Str::length($b->title)>40) ? substr($b->title, 0, 40).'...' : $b->title }}</h3>
-								</a>
-							</div>
+			<div class="right-sidebar">
+				<h5><span>Other Blogs</span></h5>
+				<div class="row">
+					@foreach ($otherBlog as $b)
+					<div class="col-md-6">
+						<div class="polaroid">
+							<a href="{{ route('blog.detail', $b->slug) }}">
+								<img src="{{ asset($b->thumbnail) }}" alt="" />
+								<h3>{{ (Str::length($b->title)>40) ? substr($b->title, 0, 40).'...' : $b->title }}</h3>
+							</a>
 						</div>
-						@endforeach
 					</div>
+					@endforeach
 				</div>
-
-				<div class="right-sidebar">
-					<div class="social-media">
-						<h5>Follow Me</h5>
-						<a href="{!! Info::where('key','LINK_FACEBOOK')->value('value') !!}" class="social-media-button icon facebook">
-							<i class="fab fa-facebook-f"></i>
-							<span>Facebook</span>
-						</a>
-						<a href="{!! Info::where('key','LINK_INSTAGRAM')->value('value') !!}" class="social-media-button icon instagram">
-							<i class="fab fa-instagram"></i>
-							<span>Instagram</span>
-						</a>
-						<a href="{!! Info::where('key','LINK_TWITTER')->value('value') !!}" class="social-media-button icon twitter">
-							<i class="fab fa-twitter"></i>
-							<span>Twitter</span>
-						</a>
-						<a href="{!! Info::where('key','LINKEDIN')->value('value') !!}" class="social-media-button icon linkedin">
-							<i class="fab fa-linkedin-in"></i>
-							<span>LinkedIn</span>
-						</a>
-					</div>
-				</div>
-
 			</div>
+
+			<div class="right-sidebar">
+				<div class="social-media">
+					<h5><span>Follow Me</span></h5>
+					<a href="{!! Info::where('key','LINK_FACEBOOK')->value('value') !!}" class="social-media-button icon facebook">
+						<i class="fab fa-facebook-f"></i>
+						<span>Facebook</span>
+					</a>
+					<a href="{!! Info::where('key','LINK_INSTAGRAM')->value('value') !!}" class="social-media-button icon instagram">
+						<i class="fab fa-instagram"></i>
+						<span>Instagram</span>
+					</a>
+					<a href="{!! Info::where('key','LINK_TWITTER')->value('value') !!}" class="social-media-button icon twitter">
+						<i class="fab fa-twitter"></i>
+						<span>Twitter</span>
+					</a>
+					<a href="{!! Info::where('key','LINKEDIN')->value('value') !!}" class="social-media-button icon linkedin">
+						<i class="fab fa-linkedin-in"></i>
+						<span>LinkedIn</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="right-sidebar">
+				<div class="n-chk mt-3 float-left">
+					<label class="new-control new-checkbox checkbox-dark">
+						<input type="checkbox" class="new-control-input">
+						<span class="new-control-indicator"></span><span class="weight--500 font-italic ml-2"> Enable Dark mode! </span>
+					</label>
+				</div>
+			</div>
+
 		</div>
 	</div>
-	@else
-	<p>Oops, not available at this time</p>
-	@endif
+</div>
+@else
+<p>Oops, not available at this time</p>
+@endif
 </div>
 @endsection
 
