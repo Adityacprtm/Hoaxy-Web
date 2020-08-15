@@ -83,13 +83,13 @@
 				<li class="nav__item"><a class="{{ (Request::is('/') || Request::is('about')) ? "active" : "" }}" href="{{ route('about') }}">About</a></li>
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'resume') ? "active" : "" }}" href="{{ route('resume') }}">Resume</a></li>
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'portfolio') ? "active" : "" }}" href="{{ route('portfolio') }}">Portfolio</a></li>
-				<li class="nav__item"><a class="{{ (Request::is('blog') || Request::is('blog/*')) ? "active" : "" }}" href="{{ route('blog') }}">Blog</a></li>
+				<li class="nav__item"><a class="{{ (Request::is('blog1') || Request::is('blog1/*')) ? "active" : "" }}" href="https://adityacprtm.com/blog">Blog</a></li>
 				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'contact') ? "active" : "" }}" href="{{ route('contact') }}">Contact</a></li>
 			</ul>
 		</div>
 
 		<div class="wrapper sticky-parent">
-			@if (!Request::is('blog/*'))
+			@if (!Request::is('blog1/*'))
 			<aside class="sidebar">
 				<div class="sticky-column">
 					<div class="avatar-wrap">
