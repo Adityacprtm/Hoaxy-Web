@@ -2,30 +2,31 @@
 @section('title', 'Contact')
 
 @push('css')
-<link rel="stylesheet" href="{{ asset('assets/main/api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css') }}">
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 @endpush
 
 @section('content')
-<div class="content">
-	<div class="section mt-0">
-		<h1 class="title title--h1 title__separate">Contact</h1>
+<div class="box box-content">
+	<div class="pb-2">
+		<h1 class="title title--h1 first-title title__separate">Contact</h1>
 	</div>
-	<div class="map section" id="map"></div>
-	<h2 class="title title--h2">Contact Form</h2>
+
+	<!-- Contact -->
+	<div class="map" id="map"></div>
+	<h2 class="title title--h3">Contact Form</h2>
+
 	<form id="contact-form" class="contact-form" data-toggle="validator">
 		<div class="row">
 			<div class="form-group col-12 col-md-6">
-				<i class="font-icon icon-user"></i>
-				<input type="text" class="input input__icon form-control" id="name" name="name" placeholder="Full name" required="required" autocomplete="on" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')">
+				<input type="text" class="form-control" id="name" name="name" placeholder="Full name" required="required" autocomplete="on" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')">
 				<div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-12 col-md-6">
-				<i class="font-icon icon-at"></i>
-				<input type="email" class="input input__icon form-control" id="email" name="email" placeholder="Email address" required="required" autocomplete="on" oninvalid="setCustomValidity('Email is incorrect')" onkeyup="setCustomValidity('')">
+				<input type="email" class="form-control" id="email" name="email" placeholder="Email address" required="required" autocomplete="on" oninvalid="setCustomValidity('Email is incorrect')" onkeyup="setCustomValidity('')">
 				<div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-12 col-md-12">
-				<textarea class="textarea form-control" id="message" name="message" placeholder="Your Message" rows="6" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')"></textarea>
+				<textarea class="textarea form-control" id="message" name="message" placeholder="Your Message" rows="4" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')"></textarea>
 				<div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-12 col-md-12">
@@ -47,6 +48,7 @@
 @endsection
 
 @push('js')
-<script src="{{ asset('assets/main/api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js') }}"></script>
+<!-- Mapbox init -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
 <script src="{{ asset('assets/main/js/mapbox.init.js') }}"></script>
 @endpush

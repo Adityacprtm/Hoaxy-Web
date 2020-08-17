@@ -1,0 +1,1 @@
+<footer class="footer">© 2020 Adityacprtm. All Rights Reserved</footer>

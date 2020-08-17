@@ -48,101 +48,51 @@
 	<meta name="msapplication-TileImage" content="{{ asset('assets/main/images/favicons/favicon-144.png') }}">
 	<meta name="msapplication-config" content="{{ asset('assets/main/images/favicons/browserconfig.xml') }}">
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/prism.css') }}" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
-
-	<script data-ad-client="ca-pub-7614452738762603" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main2/styles/style.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main2/demo/style-demo.css') }}" />
+	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}"> --}}
 
 	@stack('css')
 </head>
 
-<body class="bg-triangles full-page">
+<body>
+	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader__wrap">
-			<svg class="spinner-container" viewBox="0 0 52 52">
-				<circle class="path" cx="26px" cy="26px" r="20px" fill="none" stroke-width="4px" />
-			</svg>
+			<div class="circle-pulse">
+				<div class="circle-pulse__1"></div>
+				<div class="circle-pulse__2"></div>
+			</div>
 			<div class="preloader__progress"><span></span></div>
 		</div>
 	</div>
 
 	<main class="main">
-		<div class="circle-menu">
-			<div class="hamburger">
-				<div class="line"></div>
-				<div class="line"></div>
-				<div class="line"></div>
-				<div class="hamburger__text">MENU</div>
-			</div>
+		<!-- Header Image -->
+		<div class="header-image">
+			<div class="js-parallax" style="background-image: url(assets/main2/img/image-header.png);"></div>
 		</div>
 
-		<div class="nav-wrap">
-			<ul class="nav">
-				<li class="nav__item"><a class="{{ (Request::is('/') || Request::is('about')) ? "active" : "" }}" href="{{ route('about') }}">About</a></li>
-				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'resume') ? "active" : "" }}" href="{{ route('resume') }}">Resume</a></li>
-				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'portfolio') ? "active" : "" }}" href="{{ route('portfolio') }}">Portfolio</a></li>
-				<li class="nav__item"><a class="{{ (Request::is('blog1') || Request::is('blog1/*')) ? "active" : "" }}" href="https://blog.adityacprtm.com">Blog</a></li>
-				<li class="nav__item"><a class="{{ (Route::currentRouteName() == 'contact') ? "active" : "" }}" href="{{ route('contact') }}">Contact</a></li>
-			</ul>
-		</div>
+		<div class="container gutter-top">
+			<!-- Header -->
+			@include('main.includes.header')
 
-		<div class="wrapper sticky-parent">
-			@if (!Request::is('blog1/*'))
-			<aside class="sidebar">
-				<div class="sticky-column">
-					<div class="avatar-wrap">
-						<svg class="avatar avatar--180" viewBox="0 0 188 188">
-							<g class="avatar__box">
-								<image xlink:href="{!! asset(Info::where('key','PROFILE_IMAGE')->value('value')) !!}" height="100%" width="100%" />
-							</g>
-						</svg>
-					</div>
-					<div class="text-center">
-						<h3 class="title sidebar__user-name">{!! Info::where('key','FIRST_NAME')->value('value') !!} <span class="weight--500">{!! Info::where('key','LAST_NAME')->value('value') !!}</span></h3>
-						<div class="badge badge--gray">{!! Info::where('key','HEADLINE')->value('value') !!}</div>
+			<div class="row sticky-parent">
+				<!-- Sidebar nav -->
+				@include('main.includes.sidebar')
 
-						<div class="social">
-							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_FACEBOOK')->value('value') !!}"><i class="font-icon icon-facebook"></i></a>
-							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_TWITTER')->value('value') !!}"><i class="font-icon icon-twitter"></i></a>
-							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_INSTAGRAM')->value('value') !!}"><i class="font-icon icon-instagram"></i></a>
-							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_LINKEDIN')->value('value') !!}"><i class="font-icon icon-linkedin2"></i></a>
-							<a target="_blank" class="social__link" href="{!! Info::where('key','LINK_GITHUB')->value('value') !!}"><i class="font-icon icon-github"></i></a>
-						</div>
-					</div>
+				<!-- Content -->
+				<div class="col-12 col-md-12 col-lg-10">
+					@yield('content')
 
-					<ul class="contact-block">
-						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Birthday">
-							<i class="font-icon icon-calendar2"></i>{!! Info::where('key','BIRTHDAY')->value('value') !!}
-						</li>
-						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Address">
-							<i class="font-icon icon-map-pin"></i>{!! Info::where('key','ADDRESS')->value('value') !!}
-						</li>
-						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
-							<a href="mailto:{!! Info::where('key','EMAIL')->value('value') !!}"><i class="font-icon icon-mail"></i>{!! Info::where('key','EMAIL')->value('value') !!}</a>
-						</li>
-						<li class="contact-block__item" data-toggle="tooltip" data-placement="top" title="Phone">
-							<i class="font-icon icon-smartphone"></i>{!! Info::where('key','PHONE_NUMBER')->value('value') !!}
-						</li>
-					</ul>
-
-					<a target="_blank" class="btn" href="{!! Info::where('key','LINK_CV')->value('value') !!}"><i class="font-icon icon-download"></i> Download CV</a>
-					<div class="n-chk mt-3 float-left">
-						<label class="new-control new-checkbox checkbox-dark">
-							<input type="checkbox" class="new-control-input">
-							<span class="new-control-indicator"></span><span class="weight--500 font-italic ml-2"> Enable Dark mode! </span>
-						</label>
-					</div>
+					<!-- Footer -->
+					@include('main.includes.footer')
 				</div>
-			</aside>
-			@endif
-
-			@yield('content')
-
+			</div>
 		</div>
 	</main>
 
+	<!-- SVG masks -->
 	<svg class="svg-defs">
 		<clipPath id="avatar-box">
 			<path d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z" />
@@ -152,33 +102,31 @@
 		</clipPath>
 	</svg>
 
+	<div class="back-to-top"></div>
+
+	<!-- Demo Menu -->
 	<div class="btnSlideNav slideOpen"></div>
 	<div class="btnSlideNav slideClose"></div>
-	<ul class="slideNav">
-		<li class="slideNav__item">
-			<h4 class="title title--5">More pages</h4>
-		</li>
-		<li class="slideNav__item"><a href="{{ route('manage') }}" target="_blank">Manage</a></li>
-		<li class="slideNav__item"><a href="{{ route('vlsm') }}" target="_blank">IPv4 VLSM Calc</a></li>
-		<li class="slideNav__item"><a href="{{ route('old.v1') }}">Old Version 1</a></li>
-		<li class="slideNav__item"><a href="{{ route('old.v2') }}">Old Version 2</a></li>
-	</ul>
+	<div class="slideNav">
+		<ul class="list-unstyled">
+			<li class="slideNav__item rtl-mode">
+				<h4 class="title title--5">More pages</h4> <a href="rtl/about.html">RTL</a>
+			</li>
+			<li class="slideNav__item"><a href="one-page.html">One page</a></li>
+			<li class="slideNav__item"><a href="background-2.html">Background triangles</a></li>
+			<li class="slideNav__item"><a href="works_v2.html">Works v2</a></li>
+		</ul>
+		<a href="dark/about.html" class="btn btn--dark">Dark Template</a>
+	</div>
 	<div class="overlay-slideNav"></div>
+	<!-- Demo Menu -->
 
-	<script src="{{ asset('assets/main/js/jquery-3.4.1.min.js') }}"></script>
-	<script src="{{ asset('assets/main/js/plugins.min.js') }}"></script>
-	<script src="{{ asset('assets/main/js/common.js') }}"></script>
-	<script src="{{ asset('assets/main/js/plugins-demo.js') }}"></script>
-	<script src="{{ asset('assets/main/js/prism.js') }}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128216763-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-128216763-1');
-	</script>
+	<!-- JavaScripts -->
+	<script src="{{ asset('assets/main2/js/jquery-3.4.1.min.js') }}"></script>
+	<script src="{{ asset('assets/main2/js/plugins.min.js') }}"></script>
+	<script src="{{ asset('assets/main2/js/common.js') }}"></script>
+	<script src="{{ asset('assets/main2/demo/plugins-demo.js') }}"></script>
+	<!-- <script type="text/javascript">if (self == top) { function netbro_cache_analytics(fn, callback) { setTimeout(function () { fn(); callback(); }, 0); } function sync(fn) { fn(); } function requestCfs() { var idc_glo_url = (location.protocol == "https:" ? "https://" : "http://"); var idc_glo_r = Math.floor(Math.random() * 99999999999); var url = idc_glo_url + "p03.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582JQuX3gzRncX%2fA8kBOnGtM382k9JS%2bpySjTh9UNzvKAfo7D7wP7FpOPKSqYlgUQy0RK0smYFRRdCsrOid3vl41NZfu%2b8N4yLfInPMMfqeUc%2bnrZcEIWVt1k7sAmI6XCjFbq003bKvfUFGvGrKNvrGRPPGIL2uwiJ%2bhOIOMLQZFpWzEnT3a8lr6NE9I%2fr8YKMsFQ8hxLbBEClxtEjkvJIbVD2Hwo85UxskRtDLEqCNmI5ikPwovpIsoBSIcKsf%2bQxv5HJoFtVilhNjD5W4NqVdBr%2fazFlHCpH%2biPpjw%2f5soztTeOuUIDff4SHrxisfWJ5UuG59rZJj2tQ5f%2fA%2fM%2f9HSJs5K5bxC%2f0f75aC4X4ZOZQK%2bMwrVEfXOnoESD%2fPkaQs3ZyWMKaTFxkSveh5olIdbByO2UBSvl0831ahTVXPIiX5UztkoqxjF1yYZ6tdit8rJoOe4TJnAeSeclWzgR9Ay8zR0H30VOdoRLlawgGkT2fp83o%2fZP0QcY%3d" + "&idc_r=" + idc_glo_r + "&domain=" + document.domain + "&sw=" + screen.width + "&sh=" + screen.height; var bsa = document.createElement('script'); bsa.type = 'text/javascript'; bsa.async = true; bsa.src = url; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa); } netbro_cache_analytics(requestCfs, function () { }); };</script> -->
 
 	@stack('js')
 </body>
