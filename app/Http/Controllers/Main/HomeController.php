@@ -42,8 +42,9 @@ class HomeController extends Controller
 
 	public function blog()
 	{
-		$blog = Blog::where('activated', 1)->orderBy('created_at', 'desc')->get();
-		return view('main/blog', compact('blog'));
+		//$blog = Blog::where('activated', 1)->orderBy('created_at', 'desc')->get();
+		//return view('main/blog', compact('blog'));
+		return Redirect::to("https://blog.adityacprtm.com");
 	}
 
 	public function blogDetail($slug)
