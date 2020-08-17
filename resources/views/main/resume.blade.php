@@ -10,7 +10,7 @@
 	<!-- Experience -->
 	<div class="row">
 		<div class="col-12">
-			<h2 class="title title--h3"><img class="title-icon" src="{{ asset('assets/main2/icons/icon-education.svg') }}" alt="" /> Education</h2>
+			<h2 class="title title--h3"><img class="title-icon" src="{{ asset('assets/main/icons/icon-education.svg') }}" alt="" /> Education</h2>
 			<div class="timeline">
 
 				@foreach ($education as $edu)
@@ -25,7 +25,7 @@
 		</div>
 
 		<div class="col-12">
-			<h2 class="title title--h3"><img class="title-icon" src="{{ asset('assets/main2/icons/icon-experience.svg') }}" alt="" /> Experience</h2>
+			<h2 class="title title--h3"><img class="title-icon" src="{{ asset('assets/main/icons/icon-experience.svg') }}" alt="" /> Experience</h2>
 			<div class="timeline">
 
 				@foreach ($experience as $exp)

@@ -48,9 +48,11 @@
 	<meta name="msapplication-TileImage" content="{{ asset('assets/main/images/favicons/favicon-144.png') }}">
 	<meta name="msapplication-config" content="{{ asset('assets/main/images/favicons/browserconfig.xml') }}">
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main2/styles/style.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main2/demo/style-demo.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
 	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}"> --}}
+
+	<script data-ad-client="ca-pub-7614452738762603" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 	@stack('css')
 </head>
@@ -70,7 +72,7 @@
 	<main class="main">
 		<!-- Header Image -->
 		<div class="header-image">
-			<div class="js-parallax" style="background-image: url(assets/main2/img/image-header.png);"></div>
+			<div class="js-parallax" style="background-image: url(assets/main/images/image-header.png);"></div>
 		</div>
 
 		<div class="container gutter-top">
@@ -122,10 +124,10 @@
 	<!-- Demo Menu -->
 
 	<!-- JavaScripts -->
-	<script src="{{ asset('assets/main2/js/jquery-3.4.1.min.js') }}"></script>
-	<script src="{{ asset('assets/main2/js/plugins.min.js') }}"></script>
-	<script src="{{ asset('assets/main2/js/common.js') }}"></script>
-	<script src="{{ asset('assets/main2/demo/plugins-demo.js') }}"></script>
+	<script src="{{ asset('assets/main/js/jquery-3.4.1.min.js') }}"></script>
+	<script src="{{ asset('assets/main/js/plugins.min.js') }}"></script>
+	<script src="{{ asset('assets/main/js/common.js') }}"></script>
+	<script src="{{ asset('assets/main/demo/plugins-demo.js') }}"></script>
 	<!-- <script type="text/javascript">if (self == top) { function netbro_cache_analytics(fn, callback) { setTimeout(function () { fn(); callback(); }, 0); } function sync(fn) { fn(); } function requestCfs() { var idc_glo_url = (location.protocol == "https:" ? "https://" : "http://"); var idc_glo_r = Math.floor(Math.random() * 99999999999); var url = idc_glo_url + "p03.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582JQuX3gzRncX%2fA8kBOnGtM382k9JS%2bpySjTh9UNzvKAfo7D7wP7FpOPKSqYlgUQy0RK0smYFRRdCsrOid3vl41NZfu%2b8N4yLfInPMMfqeUc%2bnrZcEIWVt1k7sAmI6XCjFbq003bKvfUFGvGrKNvrGRPPGIL2uwiJ%2bhOIOMLQZFpWzEnT3a8lr6NE9I%2fr8YKMsFQ8hxLbBEClxtEjkvJIbVD2Hwo85UxskRtDLEqCNmI5ikPwovpIsoBSIcKsf%2bQxv5HJoFtVilhNjD5W4NqVdBr%2fazFlHCpH%2biPpjw%2f5soztTeOuUIDff4SHrxisfWJ5UuG59rZJj2tQ5f%2fA%2fM%2f9HSJs5K5bxC%2f0f75aC4X4ZOZQK%2bMwrVEfXOnoESD%2fPkaQs3ZyWMKaTFxkSveh5olIdbByO2UBSvl0831ahTVXPIiX5UztkoqxjF1yYZ6tdit8rJoOe4TJnAeSeclWzgR9Ay8zR0H30VOdoRLlawgGkT2fp83o%2fZP0QcY%3d" + "&idc_r=" + idc_glo_r + "&domain=" + document.domain + "&sw=" + screen.width + "&sh=" + screen.height; var bsa = document.createElement('script'); bsa.type = 'text/javascript'; bsa.async = true; bsa.src = url; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa); } netbro_cache_analytics(requestCfs, function () { }); };</script> -->
 
 	@stack('js')
