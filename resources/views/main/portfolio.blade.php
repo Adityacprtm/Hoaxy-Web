@@ -1,5 +1,6 @@
 @extends('main.layouts.default')
 @section('title', 'Portfolio')
+@section('description', 'Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information. This page lists my portfolio.')
 
 @section('content')
 <div class="box box-content">

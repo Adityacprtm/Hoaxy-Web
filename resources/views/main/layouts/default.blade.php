@@ -10,21 +10,21 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="format-detection" content="address=no" />
 	<meta name="author" content="Aditya Chamim Pratama" />
-	<meta name="description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information." />
+	<meta name="description" content="@yield('description')" />
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="https://adityacprtm.com/">
 	<meta property="twitter:site" content="@adityacprtm">
-	<meta property="twitter:title" content="Adityacprtm.">
-	<meta property="twitter:description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information.">
+	<meta property="twitter:title" content="@yield('title') | Adityacprtm">
+	<meta property="twitter:description" content="@yield('description')">
 	<meta property="twitter:image" content="{{ asset('assets/main/images/social.png') }}">
 
-	<meta property="og:title" content="Adityacprtm." />
+	<meta property="og:title" content="@yield('title') | Adityacprtm" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://adityacprtm.com" />
 	<meta property="og:image" content="{{ asset('assets/main/images/social.png') }}" />
-	<meta property="og:description" content="Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information." />
+	<meta property="og:description" content="@yield('description')" />
 	<meta property="og:site_name" content="adityacprtm.com" />
 
 	<link rel="shortcut icon" href="{{ asset('assets/main/images/favicons/favicon.ico') }}">

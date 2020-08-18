@@ -1,5 +1,6 @@
 @extends('main.layouts.default')
 @section('title', 'Contact')
+@section('description', 'Adityacprtm.com is a personal website on behalf of Aditya Chamim Pratama which contains portfolio, blog and owner information. Can contact me on this page.')
 
 @push('css')
 <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
