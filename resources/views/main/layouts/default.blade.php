@@ -47,8 +47,7 @@
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="msapplication-TileImage" content="{{ asset('assets/main/images/favicons/favicon-144.png') }}">
 	<meta name="msapplication-config" content="{{ asset('assets/main/images/favicons/browserconfig.xml') }}">
-	{!! (Request::is('about')) ? '
-	<link rel="canonical" href="https://adityacprtm.com" />' : '' !!}
+	<link rel="canonical" href="{!! (Request::is('about')) ? 'https://adityacprtm.com' : url()->current() !!}" />
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
