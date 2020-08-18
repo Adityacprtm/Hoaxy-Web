@@ -104,8 +104,9 @@ Route::get('/', 'Main\HomeController@about')->name('home');
 Route::get('/about', 'Main\HomeController@about')->name('about');
 Route::get('/resume', 'Main\HomeController@resume')->name('resume');
 Route::get('/portfolio', 'Main\HomeController@portfolio')->name('portfolio');
-Route::get('/blog', 'Main\HomeController@blog')->name('blog');
-Route::get('/blog/{slug}', 'Main\HomeController@blogDetail')->name('blog.detail');
+// Route::get('/blog', 'Main\HomeController@blog')->name('blog');
+// Route::get('/blog/{slug}', 'Main\HomeController@blogDetail')->name('blog.detail');
+Route::get('/blog', function () {return redirect('blog');})->name('blog');
 Route::get('/contact', 'Main\HomeController@contact')->name('contact');
 Route::post('/contact', 'Main\HomeController@contactStore')->name('contact.store');
 
