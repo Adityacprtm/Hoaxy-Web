@@ -47,13 +47,13 @@
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="msapplication-TileImage" content="{{ asset('assets/main/images/favicons/favicon-144.png') }}">
 	<meta name="msapplication-config" content="{{ asset('assets/main/images/favicons/browserconfig.xml') }}">
+	{!! (Request::is('about')) ? '
+	<link rel="canonical" href="https://adityacprtm.com" />' : '' !!}
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
 	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}"> --}}
-
 	{{-- <script data-ad-client="ca-pub-7614452738762603" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
-
 	@stack('css')
 </head>
 
