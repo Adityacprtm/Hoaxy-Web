@@ -27,26 +27,34 @@
 	<meta property="og:description" content="@yield('description')" />
 	<meta property="og:site_name" content="adityacprtm.com" />
 
-	<link rel="shortcut icon" href="{{ asset('assets/main/images/favicons/favicon.ico') }}">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="{{ asset('assets/main/images/favicons/favicon.ico') }}">
-	<link rel="icon" type="image/png" sizes="196x196" href="{{ asset('assets/main/images/favicons/favicon-192.png') }}">
-	<link rel="icon" type="image/png" sizes="160x160" href="{{ asset('assets/main/images/favicons/favicon-160.png') }}">
-	<link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/main/images/favicons/favicon-96.png') }}">
-	<link rel="icon" type="image/png" sizes="64x64" href="{{ asset('assets/main/images/favicons/favicon-64.png') }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/main/images/favicons/favicon-32.png') }}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/main/images/favicons/favicon-16.png') }}">
-	<link rel="apple-touch-icon" href="{{ asset('assets/main/images/favicons/favicon-57.png') }}">
-	<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/main/images/favicons/favicon-114.png') }}">
-	<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/main/images/favicons/favicon-72.png') }}">
-	<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/main/images/favicons/favicon-144.png') }}">
-	<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/main/images/favicons/favicon-60.png') }}">
-	<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/main/images/favicons/favicon-120.png') }}">
-	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/main/images/favicons/favicon-76.png') }}">
-	<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/main/images/favicons/favicon-152.png') }}">
-	<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/main/images/favicons/favicon-180.png') }}">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="{{ asset('assets/main/images/favicons/favicon-144.png') }}">
-	<meta name="msapplication-config" content="{{ asset('assets/main/images/favicons/browserconfig.xml') }}">
+	{{-- <link rel="shortcut icon" href="{{ asset('assets/main/images/favicons/favicon.ico') }}">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/main/images/favicons/apple-icon-57x57.png') }}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/main/images/favicons/apple-icon-60x60.png') }}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/main/images/favicons/apple-icon-72x72.png') }}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/main/images/favicons/apple-icon-76x76.png') }}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/main/images/favicons/apple-icon-114x114.png') }}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/main/images/favicons/apple-icon-120x120.png') }}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/main/images/favicons/apple-icon-144x144.png') }}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/main/images/favicons/apple-icon-152x152.png') }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/main/images/favicons/apple-icon-180x180.png') }}">
+	<link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assets/main/images/favicons/android-icon-192x192.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/main/images/favicons/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/main/images/favicons/favicon-96x96.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/main/images/favicons/favicon-16x16.png') }}">
+	<link rel="manifest" href="{{ asset('assets/main/images/favicons/manifest.json') }}">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="{{ asset('assets/main/images/favicons/ms-icon-144x144.png') }}">
+	<meta name="theme-color" content="#ffffff"> --}}
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1e73be">
+	<meta name="msapplication-TileColor" content="#1e73be">
+	<meta name="theme-color" content="#ffffff">
+
 	<link rel="canonical" href="{!! (Request::is('about')) ? 'https://adityacprtm.com' : url()->current() !!}" />
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
