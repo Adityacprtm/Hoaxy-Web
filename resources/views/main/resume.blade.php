@@ -8,9 +8,9 @@
 		<h1 class="title title--h1 first-title title__separate">Resume</h1>
 	</div>
 
-	<!-- Experience -->
+	<!-- Education -->
 	<div class="row">
-		<div class="col-12">
+		<div class="col">
 			<h2 class="title title--h3"><img class="title-icon" src="{{ asset('assets/main/icons/icon-education.svg') }}" alt="" /> Education</h2>
 			<div class="timeline">
 
@@ -24,7 +24,24 @@
 
 			</div>
 		</div>
+		<div class="col">
+			<h2 class="title title--h3"><img class="title-icon" src="{{ asset('assets/main/icons/icon-education.svg') }}" alt="" /> Non-formal Education</h2>
+			<div class="timeline">
 
+				@foreach ($nonformalEducation as $edu)
+				<article class="timeline__item">
+					<h5 class="title title--h5 timeline__title">{{ $edu->institution }}</h5>
+					<span class="timeline__period">{{ $edu->year }} ({!! ($edu->hours) ? $edu->hours : '' !!} hours)</span>
+					<p class="timeline__description">{{ $edu->description }}{!! ($edu->description) ? '<br>' : '' !!}{{ $edu->location }}</p>
+				</article>
+				@endforeach
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Experience -->
+	<div class="row mt-4">
 		<div class="col-12">
 			<h2 class="title title--h3"><img class="title-icon" src="{{ asset('assets/main/icons/icon-experience.svg') }}" alt="" /> Experience</h2>
 			<div class="timeline">
@@ -42,7 +59,7 @@
 	</div>
 
 	<!-- Skills -->
-	<div class="row">
+	<div class="row mt-4">
 		<div class="col-12">
 			<h2 class="title title--h3">My Skills</h2>
 			<div class="box box__border">

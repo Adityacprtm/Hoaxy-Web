@@ -67,6 +67,9 @@ Route::middleware(['auth'])->group(function () {
 			Route::get('/manage/resume/education', 'Manage\ResumeController@education')->name('manage.resume.education');
 			Route::post('/manage/resume/education/update', 'Manage\ResumeController@educationStore')->name('manage.resume.education.update');
 			Route::post('/manage/resume/education/delete', 'Manage\ResumeController@educationDestroy')->name('manage.resume.education.delete');
+			Route::get('/manage/resume/nonformal-education', 'Manage\ResumeController@nonformalEducation')->name('manage.resume.nonformal-education');
+			Route::post('/manage/resume/nonformal-education/update', 'Manage\ResumeController@nonformalEducationStore')->name('manage.resume.nonformal-education.update');
+			Route::post('/manage/resume/nonformal-education/delete', 'Manage\ResumeController@nonformalEducationDestroy')->name('manage.resume.nonformal-education.delete');
 			Route::get('/manage/resume/experience', 'Manage\ResumeController@experience')->name('manage.resume.experience');
 			Route::post('/manage/resume/experience/update', 'Manage\ResumeController@experienceStore')->name('manage.resume.experience.update');
 			Route::post('/manage/resume/experience/delete', 'Manage\ResumeController@experienceDestroy')->name('manage.resume.experience.delete');
@@ -106,7 +109,9 @@ Route::get('/resume', 'Main\HomeController@resume')->name('resume');
 Route::get('/portfolio', 'Main\HomeController@portfolio')->name('portfolio');
 // Route::get('/blog', 'Main\HomeController@blog')->name('blog');
 // Route::get('/blog/{slug}', 'Main\HomeController@blogDetail')->name('blog.detail');
-Route::get('/blog', function () {return redirect('blog');})->name('blog');
+Route::get('/blog', function () {
+	return redirect('blog');
+})->name('blog');
 Route::get('/contact', 'Main\HomeController@contact')->name('contact');
 Route::post('/contact', 'Main\HomeController@contactStore')->name('contact.store');
 

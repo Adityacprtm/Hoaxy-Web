@@ -11,6 +11,7 @@ use App\Models\CodeSkill;
 use App\Models\Contact;
 use App\Models\Education;
 use App\Models\Experience;
+use App\Models\NonformalEducation;
 use App\Models\Portfolio;
 use App\Models\Skill;
 use App\Notifications\ContactMessage;
@@ -27,10 +28,11 @@ class HomeController extends Controller
 	public function resume()
 	{
 		$education = Education::orderBy('sort', 'desc')->get();
+		$nonformalEducation = NonformalEducation::orderBy('year', 'desc')->get();
 		$experience = Experience::orderBy('startDate', 'desc')->get();
 		$skills = Skill::orderBy('title', 'asc')->get();
 		$codeSkills = CodeSkill::orderBy('title', 'asc')->get();
-		return view('main/resume', compact('education', 'experience', 'skills', 'codeSkills'));
+		return view('main/resume', compact('education', 'nonformalEducation', 'experience', 'skills', 'codeSkills'));
 	}
 
 	public function portfolio()
