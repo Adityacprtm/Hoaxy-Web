@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -102,7 +103,7 @@ class UserController extends Controller
 			if ($request->has('password')) {
 				User::updateOrCreate(
 					['id' => $request->id],
-					['password' => $request->password, 'email' => $request->email, 'avatar' => $file_path, 'name' => $request->name, 'admin' => $request->admin, 'birth_date' => $request->birth_date, 'approved_at' => ($request->approval == 1) ? now() : null]
+					['password' => Hash::make($request->password), 'email' => $request->email, 'avatar' => $file_path, 'name' => $request->name, 'admin' => $request->admin, 'birth_date' => $request->birth_date, 'approved_at' => ($request->approval == 1) ? now() : null]
 				);
 			} else {
 				User::updateOrCreate(
@@ -119,7 +120,7 @@ class UserController extends Controller
 			if ($request->has('password')) {
 				User::updateOrCreate(
 					['id' => $request->id],
-					['password' => $request->password, 'email' => $request->email, 'name' => $request->name, 'admin' => $request->admin, 'birth_date' => $request->birth_date, 'approved_at' => ($request->approval == 1) ? now() : null]
+					['password' => Hash::make($request->password), 'email' => $request->email, 'name' => $request->name, 'admin' => $request->admin, 'birth_date' => $request->birth_date, 'approved_at' => ($request->approval == 1) ? now() : null]
 				);
 			} else {
 				User::updateOrCreate(
