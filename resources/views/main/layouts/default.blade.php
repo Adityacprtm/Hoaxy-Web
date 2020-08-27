@@ -60,7 +60,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
 	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}"> --}}
-	{{-- <script data-ad-client="ca-pub-7614452738762603" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
+	<script data-ad-client="ca-pub-7614452738762603" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 	@stack('css')
 </head>
 
