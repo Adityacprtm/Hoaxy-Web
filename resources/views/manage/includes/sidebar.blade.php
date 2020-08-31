@@ -3,7 +3,7 @@
 	<nav id="compactSidebar">
 		<div class="theme-logo">
 			<a href="{{ route('manage') }}">
-				<img src="{{ asset('assets/manage/assets/img/logo.svg') }}" class="navbar-logo" alt="logo">
+				<img src="{{ asset('assets/manage/assets/img/logo.png') }}" class="navbar-logo" alt="logo">
 			</a>
 		</div>
 		<ul class="menu-categories">
