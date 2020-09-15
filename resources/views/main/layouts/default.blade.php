@@ -61,7 +61,7 @@
 	<main class="main">
 		<!-- Header Image -->
 		<div class="header-image">
-			<div class="js-parallax" style="background-image: url(assets/main/images/image-header.png);"></div>
+			<div class="js-parallax" style="background-image: url(assets/main/images/image-header.jpg);"></div>
 		</div>
 
 		<div class="container gutter-top">
