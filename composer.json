@@ -17,8 +17,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
         "rtconner/laravel-tagging": "^4.0",
-        "yajra/laravel-datatables-oracle": "^9.10",
-        "yajra/laravel-disqus": "^1.2"
+        "yajra/laravel-datatables-oracle": "^9.10"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
