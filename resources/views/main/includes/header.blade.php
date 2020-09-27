@@ -18,7 +18,7 @@
 	<div class="header__right">
 		<ul class="header__contact">
 			{{-- <li><span class="overhead">Email</span><a href="mailto:{!! Info::where('key','EMAIL')->value('value') !!}">{!! Info::where('key','EMAIL')->value('value') !!}</a></li> --}}
-			<li><span class="overhead">Email</span><a href="https://hidemail.vercel.app/m/XAzye" onclick='mailhidepopup=window.open("https:\/\/hidemail.vercel.app/m/XAzye","hidemailpopup","width=580,height=635"); return false;'>a......@gmail.com</a></li>
+			<li><span class="overhead">Email</span><a href="https://hidemail.vercel.app/m/XAzye" onclick='hidemailpopup=window.open("https:\/\/hidemail.vercel.app/m/XAzye","hidemailpopup","width=580,height=635"); return false;'>a......@gmail.com</a></li>
 			<li><span class="overhead">Phone</span>{!! Info::where('key','PHONE_NUMBER')->value('value') !!}</li>
 		</ul>
 		<ul class="header__contact">
