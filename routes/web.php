@@ -111,7 +111,7 @@ Route::get('/portfolio', 'Main\HomeController@portfolio')->name('portfolio');
 // Route::get('/blog/{slug}', 'Main\HomeController@blogDetail')->name('blog.detail');
 Route::get('/blog', function () {
 	return redirect('blog');
-})->name('blog');
+})->name('blog'); // handle redirect in cpanel
 Route::get('/contact', 'Main\HomeController@contact')->name('contact');
 Route::post('/contact', 'Main\HomeController@contactStore')->name('contact.store');
 

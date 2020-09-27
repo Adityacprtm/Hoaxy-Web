@@ -40,13 +40,12 @@
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/styles/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/demo/style-demo.css') }}" />
-	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/theme-checkbox-radio.css') }}">
-	--}}
+	<link rel="stylesheet" href="{{ asset('assets/main/styles/style-dark.css') }}" media="(prefers-color-scheme: dark)">
 
 	@stack('css')
 </head>
 
-<body>
+<body class="bg-triangles">
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader__wrap">
@@ -60,9 +59,9 @@
 
 	<main class="main">
 		<!-- Header Image -->
-		<div class="header-image">
+		{{-- <div class="header-image">
 			<div class="js-parallax" style="background-image: url(assets/main/images/image-header.jpg);"></div>
-		</div>
+		</div> --}}
 
 		<div class="container gutter-top">
 			<!-- Header -->
