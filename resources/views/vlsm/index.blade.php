@@ -18,7 +18,7 @@
 	<meta property="og:title" content="IPv4 Variable-Length Subnet Masking (VLSM) Calculator | Adityacprtm">
 	<meta property="og:description"
 		content="IPv4 Variable Length Subnet Masking (VLSM) Calculator is one of the tools from Adityacprtm.com.">
-	<meta property="og:image" content="">
+	<meta property="og:image" content="{{ asset('assets/main/images/social.png') }}">
 
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="https://adityacprtm.com/vlsm-calc/">
@@ -55,8 +55,7 @@
 					<div class="col-md-12 text-center">
 						<div class="domain-search-holder">
 							<div class="input-holder">
-								<input id="input_network" type="text" value="192.168.1.1/24"
-									placeholder="Major Network" />
+								<input id="input_network" type="text" value="192.168.1.1/24" placeholder="Major Network" />
 							</div>
 						</div>
 					</div>
