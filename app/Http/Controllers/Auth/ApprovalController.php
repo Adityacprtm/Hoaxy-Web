@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Auth;
 
 class ApprovalController extends Controller
 {
-    public function index()
-    {
-        return view('auth/approval');
-    }
+	public function index()
+	{
+		return view('auth/approval');
+	}
 }
