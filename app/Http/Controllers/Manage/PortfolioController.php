@@ -23,6 +23,9 @@ class PortfolioController extends Controller
 				->editColumn('media', function ($row) {
 					return '<span><img src="' . asset($row->media) . '" style="height:50px"></span>';
 				})
+				->editColumn('description', function ($row) {
+					return $row->desc_header . '--' .  $row->desc_body;
+				})
 				->addColumn('action', function ($row) {
 					$btn = '
 					<ul class="table-controls">
@@ -45,7 +48,7 @@ class PortfolioController extends Controller
 					';
 					return $btn;
 				})
-				->rawColumns(['media', 'action'])
+				->rawColumns(['media', 'action', 'description'])
 				->make(true);
 		}
 		return view('manage/portfolio/items', compact('portfolio'));
@@ -74,7 +77,7 @@ class PortfolioController extends Controller
 
 			Portfolio::updateOrCreate(
 				['id' => $request->id],
-				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link, 'media' => $file_path]
+				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link, 'desc_header' => $request->desc_header, 'desc_body' => $request->desc_body, 'media' => $file_path]
 			);
 
 			return response()->json([
@@ -84,7 +87,7 @@ class PortfolioController extends Controller
 		} else {
 			Portfolio::updateOrCreate(
 				['id' => $request->id],
-				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link,]
+				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link, 'desc_header' => $request->desc_header, 'desc_body' => $request->desc_body]
 			);
 
 			return response()->json([

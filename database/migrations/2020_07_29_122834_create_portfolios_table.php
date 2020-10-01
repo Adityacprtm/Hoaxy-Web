@@ -19,6 +19,8 @@ class CreatePortfoliosTable extends Migration
 			$table->foreignId('category_id')->references('id')->on('category_portfolio');
 			$table->string('link');
 			$table->string('text_link');
+			$table->string('desc_header');
+			$table->string('desc_body');
 			$table->string('media');
 			$table->timestamps();
 		});

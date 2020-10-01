@@ -31,13 +31,15 @@ portfolio, blog and owner information. This page lists my portfolio.')
 		<figure class="gallery-grid__item category-{{ $p->categoryPortfolio->category_name ?? '' }}">
 			<div class="gallery-grid__image-wrap">
 				<img class="gallery-grid__image cover lazyload" src="{{ asset($p->media) }}" data-zoom alt="">
+				@if ($p->desc_header || $p->desc_body)
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1>Tech Stack</h1>
-						<p>MongoDB - Express - Vue - Nodejs</p>
+						<h1>{{ $p->desc_header }}</h1>
+						<p>{{ $p->desc_body }}</p>
 					</div>
 				</div>
+				@endif
 			</div>
 			<figcaption class="gallery-grid__caption">
 				<h4 class="title title--h4 gallery-grid__title">{{ $p->title }}</h4>
