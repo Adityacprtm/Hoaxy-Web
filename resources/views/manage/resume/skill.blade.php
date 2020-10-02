@@ -8,7 +8,8 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/manage/assets/css/forms/switches.css') }}">
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/manage/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('assets/manage/assets/css/components/custom-sweetalert.css') }}" rel="stylesheet"
+	type="text/css" />
 <style>
 	datalist {
 		width: 130%;
@@ -47,7 +48,8 @@
 						<div class="widget-content widget-content-area">
 							<div class="table-responsive mb-4">
 								<table id="style-3" class="table style-3  table-hover">
-									<button id="addSkill" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3" data-toggle="modal" data-target="#formModal">
+									<button id="addSkill" type="button" class="btn btn-primary mt-1 mb-1 ml-3 mr-3"
+										data-toggle="modal" data-target="#formModal">
 										Add Skill
 									</button>
 									<thead>
@@ -71,13 +73,16 @@
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade " id="formModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal fade " id="formModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+		aria-hidden="true">
 		<div class="modal-dialog modal-md" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="formModalLabel">Add Skill</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+							fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="feather feather-x">
 							<line x1="18" y1="6" x2="6" y2="18"></line>
 							<line x1="6" y1="6" x2="18" y2="18"></line>
 						</svg>
@@ -89,11 +94,13 @@
 						<div class="widget-content widget-content-area">
 							<div class="mb-4">
 								<label for="title">Skill Name</label>
-								<input type="text" class="form-control" name="title" id="title" placeholder="Skill name" required>
+								<input type="text" class="form-control" name="title" id="title" placeholder="Skill name"
+									required>
 							</div>
 							<div class="mb-4">
 								<label for="level">level</label>
-								<input type="range" class="form-control " min="1" max="3" value="1" step="1" id="level" list="scale" required>
+								<input type="range" class="form-control " min="1" max="3" value="1" step="1" id="level"
+									list="scale" required>
 								<datalist id="scale">
 									{{-- <option value="0" label="none"></option> --}}
 									<option value="1" label="Beginner"></option>
@@ -135,26 +142,26 @@
 <script>
 	$('#menu-resume').addClass('active');
 	$('#menu-resume a').attr('data-active','true');
-	
+
 	$("#formModal").on("hidden.bs.modal", function(){
 		$(this).find("form")[0].reset();
 	});
 
 	$.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
+      headers: {
+         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
 	});
 
 	c3 = $('#style-3').DataTable({
-            "processing": true,
-            "serverSide": true,
-            "ajax": "{{ route('manage.resume.skill') }}",
-            "columns": [
-                {data: 'id', name: 'id', className: "text-center"},
-                {data: 'title', name: 'title'},
+			"processing": true,
+			"serverSide": true,
+			"ajax": "{{ route('manage.resume.skill') }}",
+			"columns": [
+				{data: 'id', name: 'id', className: "text-center"},
+				{data: 'title', name: 'title'},
 				{
-					data: 'level', 
+					data: 'level',
 					name: 'level',
 					render: function ( data, type, row ) {
 						if (data == 1) {
@@ -163,149 +170,151 @@
 							data = 'Intermediate'
 						} else if (data == 3) {
 							data = 'Expert'
-					 	} else {
-							 data = 'Not Available'
-						 }
-                        return '<span class="shadow-none badge badge-primary">'+data+'</span>';
-                    }
+						} else {
+							data = 'Not Available'
+						}
+							return '<span class="shadow-none badge badge-primary">'+data+'</span>';
+						}
 				},
-                {
-					data: 'activated', 
-					name: 'activated', 
+				{
+					data: 'activated',
+					name: 'activated',
 					className: "text-center",
 					render: function ( data, type, row ) {
-                        var badge = (data) ? 'primary' : 'danger';
-                        var text = (data) ? 'Active' : 'Not Active';
-                        return '<span class="shadow-none badge badge-'+badge+'">'+text+'</span>';
-                    }
+								var badge = (data == 1) ? 'primary' : 'danger';
+								var text = (data == 1) ? 'Active' : 'Not Active';
+								return '<span class="shadow-none badge badge-'+badge+'">'+text+'</span>';
+					}
 				},
-                {data: 'action', name: 'action', className: "text-center"},
+				{data: 'action', name: 'action', className: "text-center"},
 			],
 			"order": [[1, 'asc']],
             "oLanguage": {
-                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
-                "sInfo": "Showing page _PAGE_ of _PAGES_",
-                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
-                "sSearchPlaceholder": "Search...",
-                "sLengthMenu": "Results :  _MENU_",
+               "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+               "sInfo": "Showing page _PAGE_ of _PAGES_",
+               "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+               "sSearchPlaceholder": "Search...",
+               "sLengthMenu": "Results :  _MENU_",
             },
             "stripeClasses": [],
             "lengthMenu": [5, 10, 20, 50],
-            "pageLength": 5
-        });
+				"pageLength": 5
+			});
 
 	multiCheck(c3);
 
 	$('body').on('click', '.editSkill', function () {
 		var data = c3.row( $(this).parents('tr') ).data();
 		$('#formModal').modal('show');
-        $('.modal-title').html("Edit Skill");
-        $('#saveBtn').html("Update");
-        $('#skill_id').val(data.id);
+      $('.modal-title').html("Edit Skill");
+      $('#saveBtn').html("Update");
+      $('#skill_id').val(data.id);
 		$('#title').val(data.title)
 		$('#level').val(data.level);
 
 		if (data.activated) {
-            $('#checkbox-activated').prop('checked', true);
-        } else {
-            $('#checkbox-activated').prop('checked', false);
-        }
+         $('#checkbox-activated').prop('checked', true);
+      } else {
+         $('#checkbox-activated').prop('checked', false);
+      }
 	});
-	
-	$('#skill-form').submit(function (e) {
-        e.preventDefault();
 
-        var formdata = new FormData();
+	$('#skill-form').submit(function (e) {
+      e.preventDefault();
+
+      var formdata = new FormData();
 
 		var activated = '';
 		if ($("#checkbox-activated").is( ':checked' )) {
-            activated = +$("#checkbox-activated").is( ':checked' );
-        } else {
+         activated = +$("#checkbox-activated").is( ':checked' );
+      } else {
 			activated = 0;
 		}
+
+		console.log(activated)
 
 		formdata.append('id', $("#skill_id").val());
 		formdata.append('title', $("#title").val());
 		formdata.append('level', $("#level").val());
 		formdata.append('activated', activated);
 
-        $.ajax({
-            url: "{{ route('manage.resume.skill.update') }}",
-            type: "POST",
-            data: formdata,
-            processData: false,
-            contentType: false,
-            success: function (data) {
-				if (data.status == 'success') {
-					swal({
-						title: 'Success!',
-						text: data.message,
-						type: 'success',
-						padding: '2em',
-						timer: 3000
-					}).then(function() {
-						$('#formModal').modal('hide');
-						c3.draw();
-					})
-				}
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                swal({
-                    title: 'Oops!',
-                    text: xhr.responseText,
-                    type: 'error',
-                    padding: '2em',
-                    timer: 3000
-                }).then(function() {
-                    window.location.reload()
-                })
-            }
-        });
+      $.ajax({
+			url: "{{ route('manage.resume.skill.update') }}",
+			type: "POST",
+			data: formdata,
+			processData: false,
+			contentType: false,
+			success: function (data) {
+			if (data.status == 'success') {
+				swal({
+					title: 'Success!',
+					text: data.message,
+					type: 'success',
+					padding: '2em',
+					timer: 3000
+				}).then(function() {
+					$('#formModal').modal('hide');
+					c3.draw();
+				})
+			}
+			},
+			error: function (xhr, ajaxOptions, thrownError) {
+				swal({
+					title: 'Oops!',
+					text: xhr.responseText,
+					type: 'error',
+					padding: '2em',
+					timer: 3000
+				}).then(function() {
+					window.location.reload()
+				})
+			}
+      });
 	});
 
 	$('body').on('click', '.deleteSkill', function () {
-        var data = c3.row( $(this).parents('tr') ).data();
-        var skill_id = data.id;
-        swal({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Delete',
-            padding: '2em'
-        }).then(function(result) {
-            if (result.value){
-                $.ajax({
-                    type: "post",
-                    url: "{{ route('manage.resume.skill.delete') }}",
-                    data: { id: skill_id },
-                    success: function (data) {
-						if (data.status == 'success') {
+      var data = c3.row( $(this).parents('tr') ).data();
+      var skill_id = data.id;
+      swal({
+			title: 'Are you sure?',
+			text: "You won't be able to revert this!",
+			type: 'warning',
+			showCancelButton: true,
+			confirmButtonText: 'Delete',
+			padding: '2em'
+      }).then(function(result) {
+			if (result.value){
+				$.ajax({
+					type: "post",
+					url: "{{ route('manage.resume.skill.delete') }}",
+					data: { id: skill_id },
+					success: function (data) {
+					if (data.status == 'success') {
+						swal({
+							title: 'Deleted!',
+							text: data.message,
+							type: 'success',
+							padding: '2em',
+							timer: 3000
+						}).then(function() {
+							c3.draw();
+						})
+					}
+					},
+					error: function (xhr, ajaxOptions, thrownError) {
 							swal({
-								title: 'Deleted!',
-								text: data.message,
-								type: 'success',
+								title: 'Oops!',
+								text: xhr.responseText,
+								type: 'error',
 								padding: '2em',
 								timer: 3000
 							}).then(function() {
-								c3.draw();
+								window.location.reload()
 							})
-						}
-                    },
-                    error: function (xhr, ajaxOptions, thrownError) {
-                        swal({
-                            title: 'Oops!',
-                            text: xhr.responseText,
-                            type: 'error',
-                            padding: '2em',
-                            timer: 3000
-                        }).then(function() {
-                            window.location.reload()
-                        })
-                    }
-                });
-            }
-        })
-    });
+					}
+				});
+			}
+      })
+   });
 </script>
 @endpush
