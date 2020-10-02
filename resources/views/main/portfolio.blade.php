@@ -50,56 +50,57 @@ portfolio, blog and owner information. This page lists my portfolio.')
 		@endforeach
 
 	</div>
-	@endsection
+</div>
+@endsection
 
-	@push('css')
+@push('css')
 
-	{{-- Image Caption Hover --}}
-	<style>
-		.gallery-grid__item:hover .caption {
-			opacity: 1;
-			transform: translateY(-100px);
-			-webkit-transform: translateY(-100px);
-			-moz-transform: translateY(-100px);
-			-ms-transform: translateY(-100px);
-			-o-transform: translateY(-100px);
-		}
+{{-- Image Caption Hover --}}
+<style>
+	.gallery-grid__item:hover .caption {
+		opacity: 1;
+		transform: translateY(-100px);
+		-webkit-transform: translateY(-100px);
+		-moz-transform: translateY(-100px);
+		-ms-transform: translateY(-100px);
+		-o-transform: translateY(-100px);
+	}
 
-		.caption {
-			cursor: pointer;
-			position: absolute;
-			/* opacity: 0; */
-			/* top: 100%; */
-			-webkit-transition: all 0.15s ease-in-out;
-			-moz-transition: all 0.15s ease-in-out;
-			-o-transition: all 0.15s ease-in-out;
-			-ms-transition: all 0.15s ease-in-out;
-			transition: all 0.15s ease-in-out;
-			width: 100%
-		}
+	.caption {
+		cursor: pointer;
+		position: absolute;
+		/* opacity: 0; */
+		/* top: 100%; */
+		-webkit-transition: all 0.15s ease-in-out;
+		-moz-transition: all 0.15s ease-in-out;
+		-o-transition: all 0.15s ease-in-out;
+		-ms-transition: all 0.15s ease-in-out;
+		transition: all 0.15s ease-in-out;
+		width: 100%
+	}
 
-		.blur {
-			background-color: rgba(0, 0, 0, 0.7);
-			height: 200px;
-			width: 100%;
-			z-index: 5;
-			/* position: absolute; */
-		}
+	.blur {
+		background-color: rgba(0, 0, 0, 0.7);
+		height: 200px;
+		width: 100%;
+		z-index: 5;
+		/* position: absolute; */
+	}
 
-		.caption-text h1 {
-			color: #fff;
-			text-transform: uppercase;
-			font-size: 18px;
-		}
+	.caption-text h1 {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
 
-		.caption-text {
-			z-index: 10;
-			color: #fff;
-			position: absolute;
-			width: 100%;
-			/* height: 300px; */
-			text-align: center;
-			top: 20px;
-		}
-	</style>
-	@endpush
+	.caption-text {
+		z-index: 10;
+		color: #fff;
+		position: absolute;
+		width: 100%;
+		/* height: 300px; */
+		text-align: center;
+		top: 20px;
+	}
+</style>
+@endpush
