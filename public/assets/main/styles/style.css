@@ -961,6 +961,19 @@ button:focus {
 		padding: 1rem;
 	}
 }
+.box-gallery-grid__item {
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0px 20px 40px rgba(103, 118, 128, 0.03);
+	padding: 0.75rem;
+	position: relative;
+	transition: box-shadow 0.3s ease-in-out;
+}
+@media only screen and (max-width: 580px) {
+	.box-gallery-grid__item {
+		padding: 0.5rem;
+	}
+}
 .box__border {
 	border: 2px solid #ebf0f2;
 	border-radius: 20px;
@@ -1626,6 +1639,50 @@ button:focus {
 		margin-bottom: 1rem;
 	}
 }
+
+/* Image Caption Hover */
+.gallery-grid__item:hover .caption {
+	opacity: 1;
+	transform: translateY(-100px);
+	-webkit-transform: translateY(-100px);
+	-moz-transform: translateY(-100px);
+	-ms-transform: translateY(-100px);
+	-o-transform: translateY(-100px);
+}
+.caption {
+	cursor: pointer;
+	position: absolute;
+	/* opacity: 0; */
+	/* top: 100%; */
+	-webkit-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.15s ease-in-out;
+	-ms-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+	width: 100%;
+}
+.blur {
+	background-color: rgba(0, 0, 0, 0.7);
+	height: 200px;
+	width: 100%;
+	z-index: 5;
+	/* position: absolute; */
+}
+.caption-text h1 {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+.caption-text {
+	z-index: 10;
+	color: #fff;
+	position: absolute;
+	width: 100%;
+	/* height: 300px; */
+	text-align: center;
+	top: 20px;
+}
+
 /* -----------------------------------------------------------------
     - News
 ----------------------------------------------------------------- */
