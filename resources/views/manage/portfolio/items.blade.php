@@ -43,6 +43,8 @@
 											<th>Description</th>
 											<th>Link</th>
 											<th>Text Link</th>
+											<th>Other Link</th>
+											<th>Other Text Link</th>
 											<th class="text-center">Action</th>
 										</tr>
 									</thead>
@@ -99,6 +101,17 @@
 								<div class="col">
 									<label for="text_link">Text Link <span class="badge badge-warning">Optional</span></label>
 									<input type="text" class="form-control" id="text_link" placeholder="text link">
+								</div>
+							</div>
+							<div class="row mb-4">
+								<div class="col">
+									<label for="link_other">Other Link <span class="badge badge-warning">Optional</span></label>
+									<input type="text" class="form-control" id="link_other" placeholder="http://example.com">
+								</div>
+								<div class="col">
+									<label for="text_link_other">Other Text Link <span
+											class="badge badge-warning">Optional</span></label>
+									<input type="text" class="form-control" id="text_link_other" placeholder="text link">
 								</div>
 							</div>
 							<div class="custom-file-container" data-upload-id="myFirstImage">
@@ -175,14 +188,19 @@
 						data: 'link',
 						name: 'link',
 						render: function ( data, type, row ) {
-							if (data == null) {
-								data = '#';
-							}
-                        return '<a target="_blank" href="'+data+'">'+data+'</a>';
+							return (data == null) ? "-NA-" : '<a target="_blank" href="'+data+'">'+data.substring(0,20)+'...</a>';
                   }
 					},
-				{data: 'text_link', name: 'text_link'},
-            {data: 'action', name: 'action', className: "text-center"},
+					{data: 'text_link', name: 'text_link'},
+					{
+						data: 'link_other',
+						name: 'link_other',
+						render: function ( data, type, row ) {
+							return (data == null) ? "-NA-" : '<a target="_blank" href="'+data+'">'+data.substring(0,20)+'...</a>';
+                  }
+					},
+					{data: 'text_link_other', name: 'text_link_other'},
+					{data: 'action', name: 'action', className: "text-center"},
             ],
             "oLanguage": {
                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
@@ -213,6 +231,8 @@
 		$('#title').val(data.title);
 		$('#link').val(data.link);
 		$('#text_link').val(data.text_link);
+		$('#link_other').val(data.link_other);
+		$('#text_link_other').val(data.text_link_other);
 		$('#media').prop('required', false);
 		$('#desc_header').val(desc[0]);
 		$('#desc_body').val(desc[1]);
@@ -280,6 +300,8 @@
 		formdata.append('title', $("#title").val());
 		formdata.append('link', $("#link").val());
 		formdata.append('text_link', $("#text_link").val());
+		formdata.append('link_other', $("#link_other").val());
+		formdata.append('text_link_other', $("#text_link_other").val());
 		formdata.append('desc_header', $("#desc_header").val());
 		formdata.append('desc_body', $("#desc_body").val());
 		formdata.append('category_id', $('#category option:selected').val());

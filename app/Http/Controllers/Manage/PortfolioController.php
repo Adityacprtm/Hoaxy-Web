@@ -77,7 +77,7 @@ class PortfolioController extends Controller
 
 			Portfolio::updateOrCreate(
 				['id' => $request->id],
-				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link, 'desc_header' => $request->desc_header, 'desc_body' => $request->desc_body, 'media' => $file_path]
+				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link, 'link_other' => $request->link_other, 'text_link_other' => $request->text_link_other, 'desc_header' => $request->desc_header, 'desc_body' => $request->desc_body, 'media' => $file_path]
 			);
 
 			return response()->json([
@@ -87,7 +87,7 @@ class PortfolioController extends Controller
 		} else {
 			Portfolio::updateOrCreate(
 				['id' => $request->id],
-				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link, 'desc_header' => $request->desc_header, 'desc_body' => $request->desc_body]
+				['title' => $request->title, 'category_id' => $request->category_id, 'link' => $request->link, 'text_link' => $request->text_link, 'link_other' => $request->link_other, 'text_link_other' => $request->text_link_other, 'desc_header' => $request->desc_header, 'desc_body' => $request->desc_body]
 			);
 
 			return response()->json([

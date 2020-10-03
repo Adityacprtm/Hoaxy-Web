@@ -1682,6 +1682,27 @@ button:focus {
 	text-align: center;
 	top: 20px;
 }
+a.link-btn {
+	text-decoration: none;
+	background: #304cfd;
+	color: #f5f2f4;
+	vertical-align: middle;
+	align-items: center;
+	border-radius: 4px;
+	display: inline-flex;
+	font-size: 0.75rem;
+	height: 2em;
+	justify-content: center;
+	white-space: nowrap;
+	line-height: 1.5;
+	margin: 0 0.5rem 0 0;
+	padding: 0 0.75em;
+	-webkit-transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
+}
+.link-btn:hover {
+	background: #1b33d1;
+}
 
 /* -----------------------------------------------------------------
     - News
