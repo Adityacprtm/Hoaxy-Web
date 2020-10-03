@@ -18,12 +18,12 @@
 	<meta property="twitter:site" content="@adityacprtm">
 	<meta property="twitter:title" content="@yield('title') | Adityacprtm">
 	<meta property="twitter:description" content="@yield('description')">
-	<meta property="twitter:image" content="{{ asset('assets/main/images/social.png') }}">
+	<meta property="twitter:image" content="{!! asset(Info::where('key','SOCIAL_IMAGE')->value('value')) !!}">
 
 	<meta property="og:title" content="@yield('title') | Adityacprtm" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://adityacprtm.com" />
-	<meta property="og:image" content="{{ asset('assets/main/images/social.png') }}" />
+	<meta property="og:image" content="{!! asset(Info::where('key','SOCIAL_IMAGE')->value('value')) !!}" />
 	<meta property="og:description" content="@yield('description')" />
 	<meta property="og:site_name" content="adityacprtm.com" />
 
