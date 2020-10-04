@@ -1,28 +1,28 @@
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
+   <IfModule mod_negotiation.c>
+      Options -MultiViews -Indexes
+   </IfModule>
 
-    RewriteEngine On
+   RewriteEngine On
 
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+   # Handle Authorization Header
+   RewriteCond %{HTTP:Authorization} .
+   RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 	# RewriteCond %{HTTPS} off
-    # RewriteCond %{HTTP:X-Forwarded-SSL} !on
-    RewriteCond %{HTTP_HOST} ^www\.adityacprtm\.com$
-    RewriteRule ^(.*)$ "https\:\/\/adityacprtm\.com\/$1" [R=301,L]
-    
-    RedirectMatch 301 ^/blog/(.*)$ https://blog.adityacprtm.com/$1
+   # RewriteCond %{HTTP:X-Forwarded-SSL} !on
+   RewriteCond %{HTTP_HOST} ^www\.adityacprtm\.com$
+   RewriteRule ^(.*)$ "https\:\/\/adityacprtm\.com\/$1" [R=301,L]
 
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^ %1 [L,R=301]
+   RedirectMatch 301 ^/blog/(.*)$ https://blog.adityacprtm.com/$1
 
-    # Send Requests To Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+   # Redirect Trailing Slashes If Not A Folder...
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_URI} (.+)/$
+   RewriteRule ^ %1 [L,R=301]
+
+   # Send Requests To Front Controller...
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^ index.php [L]
 </IfModule>
