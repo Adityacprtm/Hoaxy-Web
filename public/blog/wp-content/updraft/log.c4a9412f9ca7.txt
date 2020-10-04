@@ -1,0 +1,74 @@
+0000.002 () Opened log file at time: Fri, 28 Aug 2020 06:54:42 +0000 on https://blog.adityacprtm.com
+0000.002 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.26 WP: 5.5 PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) MySQL: 10.0.38-MariaDB-cll-lve WPLANG: en_US Server: LiteSpeed safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 127.6M | 15M) multisite: N openssl: OpenSSL 1.0.2k  26 Jan 2017 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.002 () Free space on disk containing Updraft's temporary directory: 141021.6 MB
+0000.001 () Opened log file at time: Fri, 28 Aug 2020 06:54:45 +0000 on https://blog.adityacprtm.com
+0000.002 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.26 WP: 5.5 PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) MySQL: 10.0.38-MariaDB-cll-lve WPLANG: en_US Server: LiteSpeed safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 121.1M | 123M) multisite: N openssl: OpenSSL 1.0.2k  26 Jan 2017 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.002 () Free space on disk containing Updraft's temporary directory: 141021.1 MB
+0000.010 () Ensuring WP_Filesystem is setup for a restore
+0000.011 () WP_Filesystem is setup and ready for a restore
+0000.013 () Restore job started. Entities to restore: db. Restore options: {"include_unspecified_tables":false,"tables_to_restore":["wp9v_options","wp9v_users","wp9v_usermeta","wp9v_actionscheduler_actions","wp9v_actionscheduler_claims","wp9v_actionscheduler_groups","wp9v_actionscheduler_logs","wp9v_commentmeta","wp9v_comments","wp9v_links","wp9v_postmeta","wp9v_posts","wp9v_term_relationships","wp9v_term_taxonomy","wp9v_termmeta","wp9v_terms","wp9v_yoast_seo_links","wp9v_yoast_seo_meta","wp9v_revslider_css","wp9v_revslider_css_bkp","wp9v_revslider_layer_animations","wp9v_revslider_layer_animations_bkp","wp9v_revslider_navigations","wp9v_revslider_navigations_bkp","wp9v_revslider_sliders","wp9v_revslider_sliders_bkp","wp9v_revslider_slides","wp9v_revslider_slides_bkp","wp9v_revslider_static_slides","wp9v_revslider_static_slides_bkp","wp9v_smush_dir_images","wp9v_tm_taskmeta","wp9v_tm_tasks","wp9v_trp_gettext_en_us","wp9v_wpmailsmtp_tasks_meta","wp9v_yoast_indexable","wp9v_yoast_indexable_hierarchy","wp9v_yoast_migrations","wp9v_yoast_primary_term"],"tables_to_skip":[],"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.015 () Entity: db
+0000.015 () restore_backup(backup_file=backup_2020-08-28-1413_Blog_by_Adityacprtm_1545f4811523-db.gz, type=db, info=a:0:{}, last_one=1)
+0000.015 () Unpacking backup... (backup_2020-08-28-1413_Blog_by_Adityacprtm_1545f4811523-db.gz, 0.8 Mb)
+0000.016 () Database successfully unpacked
+0000.016 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.016 () Using direct MySQL access; value of use_mysqli is: 1
+0000.016 () SQL compatibility mode is: NO_AUTO_VALUE_ON_ZERO,
+0000.023 () Max packet size: 1024 MB
+0000.023 () Entering maintenance mode
+0000.023 () Enabling Maintenance mode&#8230;
+0000.023 () Backup of: https://blog.adityacprtm.com
+0000.024 () Content URL: https://blog.adityacprtm.com/wp-content
+0000.024 () Uploads URL: https://blog.adityacprtm.com/wp-content/uploads
+0000.024 () Old table prefix: wp9v_
+0000.024 () Site information: multisite=0
+0000.025 () New table prefix: wp9v_
+0000.027 () Processing table (MyISAM): wp9v_options
+0000.150 () Restoring prior UD configuration (table: wp9v_options; keys: 4)
+0000.159 () Processing table (MyISAM): wp9v_users
+0000.162 () Processing table (MyISAM): wp9v_usermeta
+0000.166 () Processing table (MyISAM): wp9v_actionscheduler_actions
+0000.169 () Processing table (MyISAM): wp9v_actionscheduler_claims
+0000.171 () Processing table (MyISAM): wp9v_actionscheduler_groups
+0000.174 () Processing table (MyISAM): wp9v_actionscheduler_logs
+0000.178 () Processing table (MyISAM): wp9v_commentmeta
+0000.181 () Processing table (MyISAM): wp9v_comments
+0000.184 () Processing table (MyISAM): wp9v_links
+0000.187 () Processing table (MyISAM): wp9v_postmeta
+0000.217 () Processing table (MyISAM): wp9v_posts
+0000.223 () Processing table (MyISAM): wp9v_term_relationships
+0000.226 () Processing table (MyISAM): wp9v_term_taxonomy
+0000.228 () Database queries processed: 50 in 0.21 seconds
+0000.228 () Processing table (MyISAM): wp9v_termmeta
+0000.230 () Processing table (MyISAM): wp9v_terms
+0000.234 () Processing table (MyISAM): wp9v_yoast_seo_links
+0000.243 () Processing table (MyISAM): wp9v_yoast_seo_meta
+0000.248 () Processing table (MyISAM): wp9v_revslider_css
+0000.255 () Processing table (MyISAM): wp9v_revslider_css_bkp
+0000.258 () Processing table (MyISAM): wp9v_revslider_layer_animations
+0000.260 () Processing table (MyISAM): wp9v_revslider_layer_animations_bkp
+0000.262 () Processing table (MyISAM): wp9v_revslider_navigations
+0000.264 () Processing table (MyISAM): wp9v_revslider_navigations_bkp
+0000.266 () Processing table (MyISAM): wp9v_revslider_sliders
+0000.268 () Processing table (MyISAM): wp9v_revslider_sliders_bkp
+0000.269 () Processing table (MyISAM): wp9v_revslider_slides
+0000.272 () Processing table (MyISAM): wp9v_revslider_slides_bkp
+0000.273 () Processing table (MyISAM): wp9v_revslider_static_slides
+0000.275 () Processing table (MyISAM): wp9v_revslider_static_slides_bkp
+0000.277 () Processing table (MyISAM): wp9v_smush_dir_images
+0000.279 () Processing table (MyISAM): wp9v_tm_taskmeta
+0000.281 () Processing table (MyISAM): wp9v_tm_tasks
+0000.283 () Processing table (MyISAM): wp9v_trp_gettext_en_us
+0000.284 () Processing table (MyISAM): wp9v_wpmailsmtp_tasks_meta
+0000.286 () Database queries processed: 100 in 0.27 seconds
+0000.289 () Processing table (MyISAM): wp9v_yoast_indexable
+0000.300 () Processing table (MyISAM): wp9v_yoast_indexable_hierarchy
+0000.302 () Processing table (MyISAM): wp9v_yoast_migrations
+0000.305 () Processing table (MyISAM): wp9v_yoast_primary_term
+0000.314 () UpdraftPlus Vault: this site has not been connected - check your settings
+0000.807 () Unlocking database and leaving maintenance mode
+0000.807 () Disabling Maintenance mode&#8230;
+0000.807 () Finished: lines processed: 115 in 0.79 seconds
+0000.808 () Cleaning up rubbish...
+0000.831 () Restore successful!
+0000.831 () Restore successful

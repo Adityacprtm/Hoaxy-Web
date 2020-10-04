@@ -1,0 +1,48 @@
+#uxzgsvdb-blanket {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    z-index: 999999;
+}
+
+.uxzgsvdb-disable-scroll {
+    overflow: hidden;
+}
+
+.uxzgsvdb-disable-scroll #uxzgsvdb-blanket {
+    display: block;
+    opacity: 1;
+}
+
+.uxzgsvdb-disable-scroll #uxzgsvdb-blanket > div {
+    transform: translateY(0px);
+}
+
+#uxzgsvdb-blanket button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    background: none;
+    color: inherit;
+}
+
+#uxzgsvdb-blanket > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all .2s ease-in-out;
+    transform: translateY(-300px);
+}
+
+#uxzgsvdb-blanket > div > div {
+    position: relative;
+    padding: 20px;
+}

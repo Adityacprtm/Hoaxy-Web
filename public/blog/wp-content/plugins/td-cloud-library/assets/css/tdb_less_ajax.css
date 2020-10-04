@@ -1,0 +1,8 @@
+/**
+ * style for posts loaded via ajax on infinite load post feature
+ */
+.td-ss-main-sidebar,
+.td-ss-row .td-pb-span4 .wpb_wrapper:first-child {
+  will-change: top;
+  transform: translate3d(0, 0, 0);
+}

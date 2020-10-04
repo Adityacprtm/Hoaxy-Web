@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Tips &amp; Trik &#8211; Blog by Adityacprtm</title>
+	<atom:link href="https://blog.adityacprtm.com/category/tips-trik/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.adityacprtm.com</link>
+	<description>All About Technology</description>
+	<lastBuildDate>Sun, 06 Sep 2020 03:37:03 +0000</lastBuildDate>
+	<language>id-ID</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+
+<image>
+	<url>https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/cropped-logo-site-512x512-1.png?fit=32%2C32&#038;ssl=1</url>
+	<title>Tips &amp; Trik &#8211; Blog by Adityacprtm</title>
+	<link>https://blog.adityacprtm.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">181785340</site>	<item>
+		<title>Cara Mudah Mengatur Access Control List (ACL) di Linux</title>
+		<link>https://blog.adityacprtm.com/cara-mudah-mengatur-access-control-list-di-linux/</link>
+					<comments>https://blog.adityacprtm.com/cara-mudah-mengatur-access-control-list-di-linux/#respond</comments>
+		
+		<dc:creator><![CDATA[Aditya Pratama]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2020 06:19:16 +0000</pubDate>
+				<category><![CDATA[Keamanan]]></category>
+		<category><![CDATA[Tips & Trik]]></category>
+		<category><![CDATA[ACL]]></category>
+		<category><![CDATA[Linux]]></category>
+		<guid isPermaLink="false">https://blog.adityacprtm.com/?p=501</guid>
+
+					<description><![CDATA[Ada banyak tantangan dalam mengelola Linux di lingkungan bisnis modern, diantaranya bahwa kita harus bisa mengelola siapa yang memiliki akses ke suatu informasi atau biasa yang disebut Access Control List. Untuk melakukan hal itu, dapat menggunakan basic linux filesystem permissions. Review Basic Linux Permissions Ada 3 jenis permissions di Linux filesystem, berikut penjelasan sederhananya: User [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Ada banyak tantangan dalam mengelola Linux di lingkungan bisnis modern, diantaranya bahwa kita harus bisa mengelola siapa yang memiliki akses ke suatu informasi atau biasa yang disebut Access Control List. Untuk melakukan hal itu, dapat menggunakan <em>basic linux filesystem permissions</em>.</p>
+
+
+
+<h2>Review Basic Linux Permissions</h2>
+
+
+
+<p>Ada 3 jenis <em>permissions</em> di <em>Linux filesystem</em>, berikut penjelasan sederhananya:</p>
+
+
+
+<ul><li><strong>U</strong>ser atau user owner</li><li><strong>G</strong>roup atau owner group</li><li><strong>O</strong>ther atau orang lain selain diatas</li></ul>
+
+
+
+<p>Dari ketiga jenis <em>permissions</em> diatas, masing-masing dapat diberikan 3 jenis akses yaitu:</p>
+
+
+
+<ul><li><strong>R</strong>ead</li><li><strong>W</strong>rite</li><li>e<strong>X</strong>ecute</li></ul>
+
+
+
+<p>Sebagai contoh terdapat direktori berisi file dari departemen development dengan <em>permissions</em> sebagai berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>drwxrwxr-x  2 development development 6 Jan  8 15:13</code></pre>
+
+
+
+<p>Dari contoh diatas, user development (user pemilik) dapat membaca dan menulis ke direktori. Anggota dari group development (atau owner group) juga dapat membaca dan menulis direktori, sedangkan orang lain atau other tidak bisa menulis. Sebagai catatan, contoh diatas mengizinkan other dapat membaca atau melihat isi direktori.</p>
+
+
+
+<h2>Linux Access Control List (ACL)</h2>
+
+
+
+<p>Pada situasi tertentu, <em>basic permissions</em> dapat menjadi rumit karena tiap file dan direktori hanya dapat memiliki satu <em>user</em> dan satu  <em>group owner</em> pada satu waktu. Jenis situasi ini dapat diatasi oleh Linux Access Control List (ACLs).</p>
+
+
+
+<p>ACL memungkinkan untuk menerapkan sekumpulan izin yang lebih spesifik ke file atau direktori tanpa mengubah <em>ownership</em> dan <em>permissions</em>.</p>
+
+
+
+<h2>Mengatur ACL</h2>
+
+
+
+<p>Bagian ini membahas penggunaan <em>Access Control List</em> atau ACL di Linux. Hal ini memungkinkan waktu yang lebih mudah untuk menyiapkan izin untuk tugas-tugas otomatis seperti menerapkan aplikasi web.</p>
+
+
+
+<p>Pastikan ACL telah terinstal, jika belum jalankan perintah <code>sudo apt install acl</code>.</p>
+
+
+
+<p>Dalam kasus ini akan menunjukkan pengaturan ACL pada direktori. <em>permissions </em>ACL ini dapat diwarisi oleh direktori induk (<em>parent directories</em>). Mengatur ACL default untuk suatu lokasi sangat efektif, karena mengabaikan kebutuhan untuk selalu mengatur ulang <em>permissions user/group </em>setelah operasi file apa pun (misalnya membuat file baru).</p>
+
+
+
+<h3>Melihat ACL</h3>
+
+
+
+<p>Untuk dapat melihat ACL saat ini di direktori tertentu dapat menggunakan perintah <code>getfacl</code>:</p>
+
+
+
+<pre class="wp-block-code"><code># getfacl /var/www</code></pre>
+
+
+
+<h3>Memasang ACL</h3>
+
+
+
+<p>Syntax untuk menyetel ACL terlihat seperti ini:</p>
+
+
+
+<pre class="wp-block-code"><code>setfacl &#91;option] &#91;action/specification] file</code></pre>
+
+
+
+<p>Mengatur ACL untuk user dan direktori tertentu:</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -R -m u:johndoe:rwx /var/www</code></pre>
+
+
+
+<p>Keterangan syntax diatas:</p>
+
+
+
+<ul class="td-arrow-list"><li><code>setfacl</code>&nbsp;: Set ACL</li><li><code>-R</code>&nbsp;: Rekursif ke dalam file dan direktori</li><li><code>-m</code>&nbsp;: Modifying ACL&#8217;s (-x untuk removing)</li><li><code>u:johndoe:rwx</code>&nbsp;: User johndoe akan mendapatkan permissions <code>rwx</code></li><li><code>/var/www</code>&nbsp;: Memberikan permissions ke direktori <code>/var/www</code></li></ul>
+
+
+
+<p>Mengatur ACL untuk group pada direktori tertentu:</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -R -m g:www-data:rwx /var/www</code></pre>
+
+
+
+<p>Keterangan syntax diatas:</p>
+
+
+
+<ul class="td-arrow-list"><li><code>g:www-data:rwx</code>&nbsp;: Anggota group&nbsp;<code>www-data</code>&nbsp;mendapatkan permissions <code>rwx</code></li></ul>
+
+
+
+<h3>Mengahapus ACL</h3>
+
+
+
+<pre class="wp-block-code"><code># setfacl -x g:www-data /var/www</code></pre>
+
+
+
+<p>Keterangan syntax diatas:</p>
+
+
+
+<ul class="td-arrow-list"><li><code>-x</code>&nbsp;: Hapus ACL&#8217;s untuk&nbsp;<code>g:www-data</code>&nbsp;di <code>/var/www</code></li></ul>
+
+
+
+<h2>Contoh Kasus</h2>
+
+
+
+<p>Untuk lebih memahami, dibawah ini merupakan contoh kasus dalam menerapkan aplikasi web. Terdapat 2 user dengan beda permissions. Baca juga bagaimana konfigurasi awal server untuk deploy aplikasi web <a href="https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server-baru/" class="rank-math-link">disini</a>.</p>
+
+
+
+<h3>Buat User</h3>
+
+
+
+<p>Buat user pertama dengan nama jane dan tambahkan ke group sudo agar dapat melakukan perintah <code>sudo</code>. </p>
+
+
+
+<pre class="wp-block-code"><code># adduser jane
+# usermod -a -G sudo jane</code></pre>
+
+
+
+<p>User kedua beri nama bob, bob merupakan user yang dapat melakukan deploy website dan merupakan anggota dari group <code>www-data</code>.</p>
+
+
+
+<pre class="wp-block-code"><code># adduser bob
+# usermod -a -G www-data bob</code></pre>
+
+
+
+<p>Untuk memastikan file di root web merupakan grup dari <code>www-data</code>, jalankan perintah dibawah. Ini tidak diperlukan untuk ACL permissions, namun tetap dilakukan untuk menjaga konsistensi.</p>
+
+
+
+<pre class="wp-block-code"><code># chown -R www-data:www-data /var/www</code></pre>
+
+
+
+<h3>Penggunaan ACL</h3>
+
+
+
+<p>User akan diberikan permission untuk read/write/execute file dan direktori menggunakan ACL sebagai pengganti dari basic Linux permissions.</p>
+
+
+
+<p>Lihat set ACL secara default, ini terpisah dari basic permission user/group.</p>
+
+
+
+<pre class="wp-block-code"><code># getfacl /var/www</code></pre>
+
+
+
+<p>Selanjutnya berikan permission user jane untuk mengubah file web di direktori <code>/var/www</code>. Secara teknis jane tidak membutuhkan ini, karena dia bisa menggunakan perintah <code>sudo</code>.</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -R -m u:jane:rwx /var/www</code></pre>
+
+
+
+<p>Di atas menetapkan ACL untuk file atau direktori yang ada, di sini akan secara rekursif (-R) menetapkan default (-d flag) untuk file atau direktori mendatang.</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -Rd -m u:jane:rwx /var/www</code></pre>
+
+
+
+<p>Cek perintah diatas telah berhasil ditambahkan</p>
+
+
+
+<pre class="wp-block-code"><code># getfacl /var/www</code></pre>
+
+
+
+<blockquote class="wp-block-quote has-text-align-left is-style-default td_quote_box td_box_center"><p>Dua perintah sebelumnya dapat digabungkan untuk mengatur default dan izin: <code>setfacl -R -m u:jane:rwx,d:u:jane:rwx /var/www</code></p></blockquote>
+
+
+
+<p>Selanjutnya memberikan permission berbasis grup melalui ACL ke file web. Cara ini lebih efisien untuk user memungkinkan mengedit file web, terlepas dari siapa pemilik file tersebut selama menjadi anggota group.</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -R -m g:www-data:rwx /var/www</code></pre>
+
+
+
+<p>Atau menggunakan default (-d) untuk kedepannya</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -Rd -m g:www-data:rwx /var/www</code></pre>
+
+
+
+<p>Jika sudah, sekarang TIAP USER yang menjadi anggota dari grup <code>www-data</code> dapat mengedit file di direktori <code>/var/www</code>. Untuk memastikan cek ACL dengan menjalankan perintah berikut:</p>
+
+
+
+<pre class="wp-block-code"><code># getfacl /var/www</code></pre>
+
+
+
+<p>That&#8217;s it! Kita bisa juga membaca artikel dari website Redhat mengenai ACL <a aria-label=" (opens in a new tab)" href="https://www.redhat.com/sysadmin/linux-access-control-lists" target="_blank" rel="noreferrer noopener" class="rank-math-link">disini</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.adityacprtm.com/cara-mudah-mengatur-access-control-list-di-linux/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">501</post-id>	</item>
+		<item>
+		<title>Membuat OpenVPN Server dalam Hitungan Detik</title>
+		<link>https://blog.adityacprtm.com/membuat-openvpn-server-dalam-hitungan-detik/</link>
+					<comments>https://blog.adityacprtm.com/membuat-openvpn-server-dalam-hitungan-detik/#respond</comments>
+		
+		<dc:creator><![CDATA[Aditya Pratama]]></dc:creator>
+		<pubDate>Fri, 28 Aug 2020 12:04:29 +0000</pubDate>
+				<category><![CDATA[Tips & Trik]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[VPN]]></category>
+		<guid isPermaLink="false">https://adityacprtm.com/blog/?p=5</guid>
+
+					<description><![CDATA[Saat ini membuat VPN server sendiri tidak sesulit yang dibayangkan. Tersedia beberapa repositori Github yang akan mengurangi kesulitan dalam menyiapkan VPN khususnya OpenVPN server. Sebelum mulai membangun VPN server, sedikit bahasan tentang apa itu VPN dan bagaimana cara kerja dari VPN. Apa itu VPN? VPN atau Virtual Private Network adalah layanan koneksi secara aman (secure) [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Saat ini membuat VPN server sendiri tidak sesulit yang dibayangkan. Tersedia beberapa repositori Github yang akan mengurangi kesulitan dalam menyiapkan VPN khususnya OpenVPN server. Sebelum mulai membangun VPN server, sedikit bahasan tentang apa itu VPN dan bagaimana cara kerja dari VPN.</p>
+
+
+
+<h2>Apa itu VPN?</h2>
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Virtual_private_network" target="_blank" rel="noreferrer noopener">VPN</a> atau Virtual Private Network adalah layanan koneksi secara aman (secure) dan pribadi (private) dengan mengenkripsi seluruh lalu lintas jaringan dan mengubah jalur koneksi melalui server VPN dan menyembunyikan pertukaran data yang terjadi.</p>
+
+
+
+<p>Sebagai contoh. klien VPN tidak pernah mengakses server (web) lain secara langsung, semuanya akan diminta dari server VPN dan server VPN akan meneruskan permintaan tersebut.</p>
+
+
+
+<p>Terdapat artikel yang bisa menjelaskan secara lengkap apa itu vpn dan fungsinya serta hal-hal lainnya mengenai VPN dengan kalimat yang mudah dipahami, kalian bisa membaca artikel tersebut <a href="https://www.niagahoster.co.id/blog/apa-itu-vpn" target="_blank" rel="noreferrer noopener nofollow">disini</a>.</p>
+
+
+
+<h2>Mengapa perlu server VPN sendiri?</h2>
+
+
+
+<p>Memiliki VPN sendiri berarti memiliki kendali penuh dan hanya kita yang dapat membaca log server. Tanpa disadari ISP (Internet Service Provider) yang kita gunakan bisa memata-matai lalu lintas kita, sehingga perlu jalur khusus agar lalu lintas kita tidak terlihat. </p>
+
+
+
+<p>Ada banyak layanan VPN dari yang gratis hingga berbayar. Kita bisa menggunakannya, namun tidak menutup kemungkinan data atau trafik kita yang ada pada layanan VPN tersebut bocor. Bisa lihat selengkapnya <a href="https://youtu.be/gxpX_mubz2A" target="_blank" rel="noreferrer noopener nofollow">disini</a>.</p>
+
+
+
+<p>Berikut beberapa kasus penggunaan, di mana VPN dapat membantu:</p>
+
+
+
+<ul><li>Menyembunyikan alamat IP asli</li><li>Berselancar aman di Wi-Fi publik</li><li>Mengakses layanan di dalam jaringan server VPN</li></ul>
+
+
+
+<h2>Hosting server VPN</h2>
+
+
+
+<p>Saya menggunakan server Ubuntu 20.04 LTS yang dihosting di AWS EC2. Sebelum menggunakan server baru sebagai VPN Server, saya melakukan konfigurasi awal dalam mengamankan server, langkah-langkahnya bisa dibaca <a href="https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server-baru/" target="_blank" rel="noreferrer noopener">disini</a>. Khusus dalam kasus ini, tidak melakukan konfigurasi firewall dalam server melainkan menggunakan Security Group yang disediakan AWS.</p>
+
+
+
+<p>Untuk firewall, pastikan UDP port 1194  terbuka karena port tersebut akan digunakan oleh OpenVPN. Atau bisa gunakan port lain dan sesuaikan dengan port ketika tahap instalasi nanti.</p>
+
+
+
+<p>Tutorial ini juga bisa digunakan di Debian, Ubuntu dan CentOS. </p>
+
+
+
+<p>Untuk menginstal server VPN dalam hitungan detik, saya menggunakan script shell yang dibuat oleh <a href="https://github.com/Nyr" target="_blank" rel="noreferrer noopener">Nyr </a>bernama <a href="https://github.com/Nyr/openvpn-install" target="_blank" rel="noreferrer noopener">openvpn-install</a>.</p>
+
+
+
+<h3>Instalasi OpenVPN Server</h3>
+
+
+
+<p>Download script shell.</p>
+
+
+
+<pre class="wp-block-code"><code>wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh</code></pre>
+
+
+
+<p>Setelah downlaod selesai, perlu membuat <code>openvpn-install.sh</code> dapat dieksekusi.</p>
+
+
+
+<pre class="wp-block-code"><code>chmod +x openvpn-install.sh</code></pre>
+
+
+
+<p>Script tersebut akan menanyakan beberapa pertanyaan tentang bagaimana kita ingin mengatur server VPN. Tekan Enter untuk menggunakan opsi default (direkomendasikan).</p>
+
+
+
+<p>Dalam percobaan ini, saya hanya mengubah DNS default menggunakan <code>1.1.1.1</code>.</p>
+
+
+
+<pre class="wp-block-code"><code>Welcome to this OpenVPN road warrior installer!
+
+I need to ask you a few questions before starting setup.
+You can use the default options and just press enter if you are ok with them.
+
+Which protocol do you want for OpenVPN connections?
+   1) UDP (recommended)
+   2) TCP
+Protocol &#91;1]:
+
+What port do you want OpenVPN listening to?
+Port &#91;1194]:
+
+Which DNS do you want to use with the VPN?
+   1) Current system resolvers
+   2) 1.1.1.1
+   3) Google
+   4) OpenDNS
+   5) Verisign
+DNS &#91;1]: 2
+
+Finally, tell me a name for the client certificate.
+Client name &#91;client]:
+
+Okay, that was all I needed. We are ready to set up your OpenVPN server now.
+Press any key to continue...</code></pre>
+
+
+
+<p>Selanjutnya script akan menginstal OpenVPN di server.</p>
+
+
+
+<h3>Mengambil file .ovpn dari server</h3>
+
+
+
+<p>Untuk dapat terhubung dengan VPN server, diperlukan file <code>.ovpn</code> yang dihasilkan. Pada Windows, direkomendasikan menggunakan <a href="https://filezilla-project.org/" target="_blank" rel="noreferrer noopener">Filezilla </a>atau <a href="https://winscp.net/eng/download.php" target="_blank" rel="noreferrer noopener">WinSCP </a>dan masuk ke server menggunakan SFTP. Di macOS dan Linux, dapat menyalin file dari server ke mesin menggunakan <code>scp</code>.</p>
+
+
+
+<p>Untuk menyalin file dengan <code>scp</code> jalankan perintah berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>scp &lt;USERNAME>@&lt;SERVER_IP>:/root/&lt;CLIENT>.ovpn .</code></pre>
+
+
+
+<p>Jika sertifikat atau file .ovpn digunakan untuk smartphone, gunakanlah media pengiriman yang aman. Untuk Mac atau iPhone, disarankan untuk menyalin file menggunakan AirDrop.</p>
+
+
+
+<p>Jika harus menggunakan Email, silakan zip file .ovpn dan berikan password yang kuat untuk file zip sebelum mengirimkannya.</p>
+
+
+
+<h3>Menggunakan file .ovpn</h3>
+
+
+
+<p>Untuk OS Windows bias downlaod apliaksi resmi dari <a href="https://openvpn.net/community-downloads/" target="_blank" rel="noreferrer noopener">OpenVPN</a>, di iOS dan Android ada aplikasi resmi OpenVPN Connect di <a href="https://apps.apple.com/app/openvpn-connect/id590379981" target="_blank" rel="noreferrer noopener">App Store</a> dan <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn" target="_blank" rel="noreferrer noopener">Google Play</a>, sedangkan untuk macOS bisa menggunakan aplikasi <a href="https://tunnelblick.net/" target="_blank" rel="noreferrer noopener">Tunnelblick</a>.</p>
+
+
+
+<p>Cara penggunaannya biasanya sama untuk tiap OS. Pertama harus mengimpor file .ovpn dan kemudian melakukan koneksi ke server. Jika koneksi berhasil, cek alamat IP saat ini dengan mengetik kata &#8220;<a href="https://www.google.com/search?q=what+is+my+ip+address" target="_blank" rel="noreferrer noopener">what is my ip address</a>&#8221; di google dan Google akan menunjukkan alamat IP.</p>
+
+
+
+<p>Jika alamat IP sama dengan server, artinya klien dan server VPN berhasil terhubung.</p>
+
+
+
+<h3>Menambahkan user klien baru</h3>
+
+
+
+<p>Untuk menambahkan pengguna baru cukup jalankan script tersebut dan pilih 1 kemudian nama untuk perangkat yang akan menggunakan sertifikat klien. Dalam kasus ini, saya membuat pengguna untuk iPhone saya.</p>
+
+
+
+<pre class="wp-block-code"><code>./openvpn-install.sh
+
+Looks like OpenVPN is already installed.
+
+What do you want to do?
+   1) Add a new user
+   2) Revoke an existing user
+   3) Remove OpenVPN
+   4) Exit
+Select an option: 1
+
+Tell me a name for the client certificate.
+Client name: iphone
+
+Using SSL: openssl OpenSSL 1.1.1 11
+
+...............
+
+Write out database with 1 new entries
+Data Base Updated
+
+Client iphone added, configuration is available at: /root/iphone.ovpn</code></pre>
+
+
+
+<hr class="wp-block-separator is-style-dots"/>
+
+
+
+<p>That&#8217;s it! Kita sudah membuat privasi kita terlindungi selama di dunia maya dan kita bisa memberi selamat kepada diri sendiri karena baru saja menyiapkan server VPN yang dihosting sendiri <img src="https://s.w.org/images/core/emoji/13.0.0/72x72/1f389.png" alt="🎉" class="wp-smiley" style="height: 1em; max-height: 1em;" />.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.adityacprtm.com/membuat-openvpn-server-dalam-hitungan-detik/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5</post-id>	</item>
+		<item>
+		<title>Konfigurasi Awal Untuk Mengamankan Server Baru</title>
+		<link>https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server/</link>
+					<comments>https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server/#respond</comments>
+		
+		<dc:creator><![CDATA[Aditya Pratama]]></dc:creator>
+		<pubDate>Wed, 26 Aug 2020 17:20:12 +0000</pubDate>
+				<category><![CDATA[Keamanan]]></category>
+		<category><![CDATA[Tips & Trik]]></category>
+		<category><![CDATA[Firewalls]]></category>
+		<category><![CDATA[Server]]></category>
+		<category><![CDATA[SSH]]></category>
+		<guid isPermaLink="false">https://blog.adityacprtm.com/?p=517</guid>
+
+					<description><![CDATA[Server atau dalam bahasa Indonesia disebut Peladen merupakan perangkat atau program komputer yang menyediakan layanan untuk program atau perangkat lain yang biasa disebut klien. Server dapat dibedakan berdasarkan jenisnya sebagai database server, file server, mail server, web server dan lain-lain. Satu server dapat melayani banyak klien, sehingga mengamankan server menjadi hal penting untuk menjaga layanan [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://en.wikipedia.org/wiki/Server_(computing)" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">Server</a> atau dalam bahasa Indonesia disebut <a href="https://id.wikipedia.org/wiki/Peladen" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">Peladen</a> merupakan perangkat atau program komputer yang menyediakan layanan untuk program atau perangkat lain yang biasa disebut klien. Server dapat dibedakan berdasarkan jenisnya sebagai database server, file server, mail server, web server dan lain-lain.</p>
+
+
+
+<p>Satu server dapat melayani banyak klien, sehingga mengamankan server menjadi hal penting untuk menjaga layanan server tetap berjalan. Di artikel ini menjelaskan langkah awal yang harus dilakukan untuk mengamankan server, termasuk pengaturan user, konfigurasi ssh dan firewall.</p>
+
+
+
+<p>Dalam kasus ini, menggunakan Amazon Web Service (AWS) sebagai server. Kamu bisa menggunakan penyedia VPS atau cloud computing lainnya seperti Microsoft Azure, Google Cloud (GCP), Digitalocean dan lain-lain. Login ke server menggunakan connection method sesuai layanan yang digunakan, biasanya sebagai root.</p>
+
+
+
+<h2>Konfigurasi keamanan User</h2>
+
+
+
+<p>Saat sudah login sebagai root di server, mulai dengan membuat user baru dan autorisasi akses berbasis SSH untuk SSH Key pair.</p>
+
+
+
+<p>Buat user baru dan masukkan password, info lainnya bersifat optional</p>
+
+
+
+<pre class="wp-block-code"><code># adduser aditya</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="696" height="395" src="https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/adduser.gif?resize=696%2C395&#038;ssl=1" alt="mengamankan server" class="wp-image-536" data-recalc-dims="1"/></figure>
+
+
+
+<p>Login sebagai user yang telah dibuat</p>
+
+
+
+<pre class="wp-block-code"><code># su aditya</code></pre>
+
+
+
+<p>Buat direktori <code>.ssh</code> didalam direktori user jika belum ada</p>
+
+
+
+<pre class="wp-block-code"><code>$ mkdir /home/aditya/.ssh</code></pre>
+
+
+
+<p>Buat file authorized_keys didalam direktori <code>.ssh</code> dan biarkan tab terminal terbuka.<br>Pastikan permission direktori ssh 700 dan file authorized_keys 600.</p>
+
+
+
+<pre class="wp-block-code"><code>$ vim .ssh/authorized_keys</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="696" height="395" src="https://i1.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/userssh.gif?resize=696%2C395&#038;ssl=1" alt="mengamankan server" class="wp-image-539" data-recalc-dims="1"/></figure>
+
+
+
+<p>Buka tab terminal baru di local, buat <code>key</code> dengan nama key sesuai keinginan difolder <code>.ssh</code><br>Sedikit tambahan, upgrade algoritma untuk SSH Key menggunakan ED25519. Algoritma yang biasanya digunakan seperti DSA atau RSA saat ini telah deprecated. Kamu bisa baca info lanjut <a rel="noreferrer noopener nofollow" href="https://blog.g3rt.nl/upgrade-your-ssh-keys.html" target="_blank">disini</a>.</p>
+
+
+
+<pre class="wp-block-code"><code>$ ssh-keygen -o -a 100 -t ed25519 -f id_key_myserver</code></pre>
+
+
+
+<p>Copy isi dari public key <code>id_key_myserver.pub</code> dan paste-kan ke file <code>authorized_keys</code> diserver pada tab terminal</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="696" height="394" src="https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/ezgif.com-optimize.gif?resize=696%2C394&#038;ssl=1" alt="mengamankan server" class="wp-image-540" data-recalc-dims="1"/></figure>
+
+
+
+<p>Jika sesuai, exit SSH server kemudian login sebagai user baru menggunakan private key <code>id_key_myserver</code></p>
+
+
+
+<pre class="wp-block-code"><code>$ ssh -i &lt;PATH id_rsa file> &lt;USERNAME>@&lt;IP SERVER>
+$ ssh -i ~/.ssh/id_key_myserver aditya@10.10.10.10</code></pre>
+
+
+
+<h2>Konfigurasi Keamanan SSH</h2>
+
+
+
+<h3>Konfigurasi SSH</h3>
+
+
+
+<p>Kita akan konfigurasi SSH agar sedikit lebih aman dengan menerapkan penggunaan akses berbasis kunci SSH dan memastikan bahwa pengguna root tidak dapat masuk melalui SSH secara langsung.</p>
+
+
+
+<p>Buka file <code>/etc/ssh/sshd_config</code> dengan editor</p>
+
+
+
+<pre class="wp-block-code"><code>$ vim /etc/ssh/sshd_config</code></pre>
+
+
+
+<p>Cari dan ubah beberapa field seperti berikut</p>
+
+
+
+<pre class="wp-block-code"><code># Penting
+PermitRootLogin no
+PasswordAuthentication no
+
+# Cek Ulang bagian ini
+PubkeyAuthentication yes
+PermitEmptyPasswords no
+
+# Optional
+AllowUsers aditya #hanya user tertentu yang diizinkan
+AllowGroups sudo ssh #hanya group sudo dan ssh yang diizinkan</code></pre>
+
+
+
+<p>Kemudian restart ssh service</p>
+
+
+
+<pre class="wp-block-code"><code>$ sudo service ssh restart</code></pre>
+
+
+
+<h3>Konfigurasi Fail2ban</h3>
+
+
+
+<p>Kita juga akan menggunakan <code>fail2ban</code>, yang akan memeriksa file <code>/var/log/auth.log</code> untuk kegagalan login SSH berulang kali dan melarang login dari sumber (IP) login tersebut, ini akan memberi perlindungan ekstra terhadap akses SSH berbasis brute-force.</p>
+
+
+
+<p>Install fail2ban</p>
+
+
+
+<pre class="wp-block-code"><code>$ sudo apt-get install -y fail2ban</code></pre>
+
+
+
+<p>Pastikan konfigurasi pada file <code>/etc/fail2ban/jail.d</code> ada konfigurasi sshd seperti ini:</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;sshd]
+enabled = true</code></pre>
+
+
+
+<p>Jika sudah, maka fail2ban akan melakukan tugasnya.</p>
+
+
+
+<h2>Konfigurasi Keamanan Firewalls (Optional)</h2>
+
+
+
+<p>Bagian ini bersifat optional, karena biasanya penyedia layanan cloud sudah menerapkan sistem keamanan seperti firewalls. Contohnya pada AWS terdapat Security Group yang bertindak sebagai firewall virtual untuk mengontrol lalu lintas masuk dan keluar. </p>
+
+
+
+<p>Untuk melihat aturan firewall, dapat menjalankan perintah <code>sudo iptables -L -v</code>.</p>
+
+
+
+<p>Kita akan menambahkan ke input chain, yang mengontrol traffic incoming (ingress):</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -j DROP</code></pre>
+
+
+
+<p>Kita telah menambahkan beberapa aturan diatas, diantaranya port 22 untuk SSH dan port 80 untuk HTTP. Selain itu bisa juga memasukkan aturan ke lokasi tertentu seperti port untuk HTTPS ini:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -I INPUT 5 -p tcp --dport 443 -j ACCEPT</code></pre>
+
+
+
+<p>Terakhir, kita perlu membuat aturan ini running saat reboot:</p>
+
+
+
+<pre class="wp-block-code"><code># Instal ini akan menyimpan aturan saat ini
+sudo apt-get install -y netfilters-persistent</code></pre>
+
+
+
+<hr class="wp-block-separator is-style-dots"/>
+
+
+
+<p>That&#8217;s it! Kita sudah melakukan langkah awal dalam mengamankan server baru kita.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">517</post-id>	</item>
+		<item>
+		<title>Cara Membangun Serverless Website dengan reCAPTCHA di AWS</title>
+		<link>https://blog.adityacprtm.com/cara-membangun-serverless-website-dengan-recaptcha-di-aws/</link>
+					<comments>https://blog.adityacprtm.com/cara-membangun-serverless-website-dengan-recaptcha-di-aws/#respond</comments>
+		
+		<dc:creator><![CDATA[Aditya Pratama]]></dc:creator>
+		<pubDate>Mon, 17 Aug 2020 07:25:04 +0000</pubDate>
+				<category><![CDATA[Tips & Trik]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[Contact Form]]></category>
+		<category><![CDATA[reCaptcha]]></category>
+		<category><![CDATA[Serverless]]></category>
+		<guid isPermaLink="false">https://blog.adityacprtm.com/?p=183</guid>
+
+					<description><![CDATA[Ini berdasarkan pengalaman saya menghosting static website pribadi saya (adityacprtm.com) di AWS.&#160;Saya tidak ingin menjalankan server hanya untuk menangani formulir &#8216;Contact Us&#8217;.&#160;Oh, dan saya juga butuh Captcha karena tidak ingin banyaknya spam yang masuk.&#160;Jadi saya menggunakan arsitektur serverless website dan google recaptcha untuk itu. Note: Artikel ini merupakan re-upload dan terjemahan bahasa, artikel original saya [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p class="has-normal-font-size">Ini berdasarkan pengalaman saya menghosting static website pribadi saya (<a href="https://adityacprtm.com" target="_blank" rel="noopener">adityacprtm.com</a>) di AWS.&nbsp;Saya tidak ingin menjalankan server hanya untuk menangani formulir &#8216;Contact Us&#8217;.&nbsp;Oh, dan saya juga butuh Captcha karena tidak ingin banyaknya spam yang masuk.&nbsp;Jadi saya menggunakan arsitektur serverless website dan google recaptcha untuk itu.</p>
+
+
+
+<p><strong>Note</strong>: Artikel ini merupakan re-upload dan terjemahan bahasa, artikel original saya bisa dilihat dilink <a rel="noreferrer noopener" href="https://link.medium.com/YxF2ZlXBN1" target="_blank">disini</a>.</p>
+
+
+
+<h2>Arsitektur Aplikasi</h2>
+
+
+
+<p class="has-normal-font-size">Arsitektur aplikasi yang digunakan:</p>
+
+
+
+<ol start="1" style="margin-top:0px"><li>AWS Lambda</li><li>Amazon API Gateway</li><li>Amazon S3</li><li>Amazon SNS</li><li>Amazon CloudFront</li><li>Amazon Route 53</li><li>AWS Certificate Manager</li><li>Google reCaptcha</li></ol>
+
+
+
+<h2>Buat Bucket di Amazon S3</h2>
+
+
+
+<ol><li>Buka&nbsp;<strong>Amazon S3 console</strong>&nbsp;atau akses&nbsp;<a href="https://console.aws.amazon.com/s3/" rel="noreferrer noopener" target="_blank">disini</a></li><li>buat&nbsp;<strong>bucket&nbsp;</strong>dengan <strong>nama domain</strong> kamu, contohnya&nbsp;<em>example.com</em></li><li>Cukup sampai sini, kita akan upload file nanti</li></ol>
+
+
+
+<h2>Buat SNS Topic dan Subscription</h2>
+
+
+
+<ol><li>Buka&nbsp;<strong>SNS Console</strong>&nbsp;atau akses <a href="https://console.aws.amazon.com/sns/" rel="noreferrer noopener" target="_blank">disini</a></li><li>Buat&nbsp;<strong>Topic name</strong></li><li>Buat&nbsp;<strong>Subscription</strong>, pilih&nbsp;<strong>Topic ARN</strong>&nbsp;sesuai yang telah dibuat pada point 2</li><li>Pilih <strong>email&nbsp;</strong>pada&nbsp;<strong>protocol type</strong>, lalu <strong>create subscription</strong></li><li>Periksa email yang didaftarkan dan&nbsp;<strong>verify&nbsp;</strong>subscription dari AWS</li></ol>
+
+
+
+<h2>Membuat Serverless Back-end di AWS Lambda</h2>
+
+
+
+<ol><li>Di <a href="https://console.aws.amazon.com/lambda/" rel="noreferrer noopener" target="_blank"><strong>Lambda Console</strong></a>,&nbsp;pilih <strong>create function</strong></li><li>Pilih&nbsp;<strong>Author from scratch</strong></li><li>Masukan&nbsp;<strong>Function name&nbsp;</strong>dan pilih <strong>Node.js</strong>&nbsp;untuk&nbsp;<strong>Runtime</strong></li><li>Kemudian pilih&nbsp;<strong>Create function</strong></li></ol>
+
+
+
+<p>Sampai disini kita akan menggunakan lambda dengan JavaScript.&nbsp;Sayangnya kita tidak dapat dengan mudah memasukkan script ke editor online AWS Lambda yang memiliki dependensi eksternal seperti Axios.&nbsp;Jadi kita perlu membuat proyek Node dengan <code>package.json</code> seperti berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>{
+   "name":"contactForm",
+   "version":"0.0.1",
+   "private":true,
+   "scripts":{},
+   "dependencies":{
+      "aws-sdk":"^2.560.0",
+      "axios":"^0.18.0"
+   }
+}</code></pre>
+
+
+
+<p><br>Kita akan menggunakan Environment variable di lambda untuk mempermudah ketika ada perubahan pada Topik SNS ARN dan ecret Key dari reCaptcha, ubah <code>index.js</code> seperti berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>'use strict';
+const AWS = require("aws-sdk");
+const axios = require('axios');
+const completeUrl = "https://www.google.com";
+// verify recaptcha url
+const reCapUrl = "https://www.google.com/recaptcha/api/siteverify";
+const reCaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+// from Amazon SNS
+const snsTopic = process.env.ARN_SNS_TOPIC;
+module.exports.handler = async (event, context, callback) => {
+    console.log("Starting ContactForm Processing for website form.");
+    // console.log("data event: " + JSON.stringify(event));
+    // verify the result by POSTing to google backend with secret and frontend recaptcha token as payload
+    let verifyResult = await axios({
+        method: 'post',
+        url: reCapUrl,
+        params: {
+            secret: reCaptchaSecret,
+            response: event.captcha
+        }
+    }) // print out the result of that. Its a bit verbose though
+    // console.log("verify result: " + JSON.stringify(verifyResult.data));
+    if (verifyResult.data.success) {
+        let sns = new AWS.SNS();
+        // The structure of the email
+        let emailbody = "Someone left a message for you.\n\nName\t\t: " + event.name + "\nEmail\t\t: " + event.email + "\nSubject\t\t: " + event.subject + "\nMessage\t\t: " + event.message + "\n\nThanks!";
+        let params = {
+            Message: emailbody,
+            Subject: "Contact Form: " + event.subject,
+            TopicArn: snsTopic
+        };
+        // we publish the created message to Amazon SNS now…
+        sns.publish(params, context.done);
+        // now we return a HTTP 302 together with a URL to redirect the browser to success URL (we put in google.com for simplicty)
+        callback(null, {
+            statusCode: 302,
+            headers: {
+                Location: completeUrl,
+            }
+        });
+        console.log("End of the ContactForm Process With Success");
+    } else {
+        console.log("reCaptcha check failed. Most likely SPAM.");
+        callback(null, {
+            statusCode: '500',
+            body: JSON.stringify({
+                message: 'Invalid recaptcha'
+            })
+        });
+    }
+};</code></pre>
+
+
+
+<p>Setelah membuat proyek, kita perlu mengkompres folder tersebut dalam format ZIP untuk diunggah ke Lambda.</p>
+
+
+
+<p>Saat masih di Lambda Console di Function yang telah dibuat sebelumnya, unggah ZIP dan atur environment variable seperti berikut:</p>
+
+
+
+<figure class="wp-block-image alignfull size-large"><img loading="lazy" width="696" height="182" src="https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/1_G0ID6OWstNAsW8ZKoyvHDQ.png?resize=696%2C182&#038;ssl=1" alt="env serverless website" class="wp-image-185" srcset="https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/1_G0ID6OWstNAsW8ZKoyvHDQ.png?w=896&amp;ssl=1 896w, https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/1_G0ID6OWstNAsW8ZKoyvHDQ.png?resize=300%2C78&amp;ssl=1 300w, https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/1_G0ID6OWstNAsW8ZKoyvHDQ.png?resize=768%2C201&amp;ssl=1 768w" sizes="(max-width: 696px) 100vw, 696px" data-recalc-dims="1" /></figure>
+
+
+
+<p>Kemudian pilih <strong>Save</strong>.</p>
+
+
+
+<h2 class="has-text-align-left">Deploy Restful API Gateway</h2>
+
+
+
+<ol><li>Buka <strong>API Gateway Console</strong> atau akses&nbsp;<a href="https://console.aws.amazon.com/apigateway/" target="_blank" rel="noreferrer noopener">disini</a></li><li>Pilih <strong>Create API&nbsp;</strong>dan pilih <strong>REST</strong></li><li>Pilih <strong>New API&nbsp;</strong>dan masukkan <strong>API Name</strong></li><li>Pilih <strong>Create API</strong></li><li>Pada navigasi kiri, Pilih <strong>Resources&nbsp;</strong>dibawah API kamu</li><li>Dari menu dropdown&nbsp;<strong>Actions</strong> pilih&nbsp;<strong>Create Resource</strong></li><li>Masukkan <strong>Resource Name</strong>&nbsp;seperti&nbsp;<em>contact&nbsp;</em>atau&nbsp;<em>prod&nbsp;</em>kemudian klik&nbsp;<strong>Create Resource</strong></li><li>Pada <strong>Resource </strong>yang baru dibuat, dari menu <strong>Action dropdown </strong>pilih <strong>Create Method</strong></li><li>Pilih <code>Post</code>&nbsp;kemudian&nbsp;<strong>checkmark</strong></li><li>Pilih <strong>Lambda Function</strong>&nbsp;untuk integration type</li><li>Pilih&nbsp;<strong>Region&nbsp;</strong>yang kamu gunakan pada <strong>AWS Lambda</strong></li><li>Masukkan nama <strong>function</strong>&nbsp;yang dibuat sebelumnya kemudian&nbsp;<strong>Save</strong></li><li><strong>[Optional CORS]&nbsp;</strong>Pada resource yang baru dibuat, dari dropdown Action pilih&nbsp;<strong>Enable CORS&nbsp;</strong>kemudian klik <strong>enable and replacing</strong></li><li>Pada menu dropdown&nbsp;<strong>Actions</strong> pilih&nbsp;<strong>Deploy API</strong>, masukkan Stage Name kemudain pilih&nbsp;<strong>Deploy</strong></li><li>Catat dan simpan<strong>&nbsp;Invoke URL</strong> yang akan dipakai nanti</li></ol>
+
+
+
+<h2>Mengatur serverless website</h2>
+
+
+
+<p>Sebelumnya, kamu dapat menggunakan reCAPTCHA dengan mendaftarkan nama domain <a href="https://www.google.com/recaptcha/admin" rel="noreferrer noopener" target="_blank">disini</a>.</p>
+
+
+
+<h3>HTML</h3>
+
+
+
+<p>Kita mengikuti dokumentasi Google reCaptcha, yang berarti harus memasukkan code dibawah diantara tag <code>&lt;head&gt;</code> dan <code>&lt;/head&gt;</code></p>
+
+
+
+<pre class="wp-block-code"><code>&lt;script src="https://www.google.com/recaptcha/api.js">&lt;/script></code></pre>
+
+
+
+<p>dan memasukkan code berikut dibagian bawah form sebelum submit button. Jangan lupa memasukkan <strong>siteKey</strong> yang didapat setelah mendaftarkan domain pada Google reCaptcha</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="g-recaptcha" data-sitekey="xxxxxxxxxxxxxxxxxxx">&lt;/div></code></pre>
+
+
+
+<h3>JavaScript</h3>
+
+
+
+<p>Kita dapat menggunakan Ajax untuk melakukan asynchronous HTTP (Ajax) request.&nbsp;Masukkan&nbsp;<strong>URL Ajax</strong>&nbsp;dengan&nbsp;<strong>URL Invoke</strong> yang kita dapatkan saat membangun API gateway.</p>
+
+
+
+<h2>Host Static Website</h2>
+
+
+
+<ol><li>Kembali ke S3 Console,&nbsp;<strong>pilih bucket</strong>&nbsp;yang dibuat sebelumnya</li><li>Upload files website kamu ke dalam bucket</li><li>Setelah selesai, pilih tab <strong>Properties</strong></li><li>Pilih&nbsp;<strong>Static website hosting</strong></li><li>Isi bagian&nbsp;<strong>index&nbsp;</strong>dan <strong>error</strong>&nbsp;dokumen</li><li>Pastikan&nbsp;<strong>Block Public access</strong> tidak tercentang</li><li>Masih di tab&nbsp;<strong>Permissions</strong>, Pilih <strong>Bucket Policy</strong>.<br>Masukkan policy document berikut ke dalam editor bucket policy, gantikan <strong>[YOUR_BUCKET_NAME]</strong>&nbsp;dengan nama bucket yang telah dibuat.</li></ol>
+
+
+
+<pre class="wp-block-code"><code>{
+   "Version":"2012-10-17",
+   "Statement":&#91;
+      {
+         "Effect":"Allow",
+         "Principal":"*",
+         "Action":"s3:GetObject",
+         "Resource":"arn:aws:s3:::&#91;YOUR_BUCKET_NAME]/*"
+      }
+   ]
+}</code></pre>
+
+
+
+<h2>Konfigurasi Domain di Route 53</h2>
+
+
+
+<ol><li>Di Amazon Route 53 kita dapat Mendaftarkan domain baru atau menjadikan Route 53 sebagai Layanan DNS untuk domain yang sudah ada</li><li>Saya sudah memiliki domain sendiri, jadi saya menjadikan Amazon Route 53 sebagai Layanan DNS untuk domain saya</li><li>Di <a style="font-weight: bold;" href="https://console.aws.amazon.com/route53/home?region=us-east-2#hosted-zones:" rel="noreferrer noopener" target="_blank">Route 53 Consol</a>, pilih <strong>Create Hosted Zone</strong>.</li><li>Pada panel <strong>Create Hosted Zone</strong>, masukkan nama domain</li><li>Pada bagian <strong>Type</strong>, biarkan default pada&nbsp;<strong>Public Hosted Zone</strong></li><li>Pilih <strong>Create</strong>.</li></ol>
+
+
+
+<h2>Request SSL Certificate di AWS Certificate Manager</h2>
+
+
+
+<ol><li>Buka <strong>ACM Console</strong>&nbsp;atau akses <a href="https://console.aws.amazon.com/apigateway/" rel="noreferrer noopener" target="_blank">disini</a></li><li>pilih&nbsp;<strong>Request a Certificate</strong></li><li>Pilih <strong>Request a public certificate</strong></li><li><strong>Add domain name</strong>&nbsp;dengan nama domain kamu, contohnya&nbsp;<em>example.com&nbsp;</em>atau <em>*.example.com</em></li><li>Kita perlu&nbsp;<strong>memvalidasi certificate request</strong>, caranya pilih&nbsp;<strong>DNS validation</strong>&nbsp;atau&nbsp;<strong>email validation</strong>. Disini saya menggunakan&nbsp;<strong>DNS validation</strong>&nbsp;karna itu lebih cepat dan mudah.</li><li>Tambahkan <strong>CNAME</strong>&nbsp;di&nbsp;<strong>Amazon Route 53&nbsp;</strong>atau cukup klik tombol di bawah domain kamu untuk menambahkannya secara otomatis.</li></ol>
+
+
+
+<h2>Buat CloudFront Web Distribution</h2>
+
+
+
+<ol><li>Buka CloudFront konsol atau akses <a href="https://console.aws.amazon.com/cloudfront/home" rel="noreferrer noopener" target="_blank">disini</a></li><li>Buat distribution</li><li>pilih <strong>Origin Domain Name</strong>&nbsp;dengan nama bucket yang dibuat sebelumnya.</li><li>Pilih <strong>Redirect HTTP to HTTPS</strong></li><li>Pilih Yes dibagian&nbsp;<strong>Restrict Bucket Access</strong></li><li>Pada&nbsp;<strong>Distribution Settings</strong>, gunakan <strong>Custom SSL Certificate&nbsp;</strong>dan pilih sertifikat yang telah dibuat pada ACM</li><li>Scroll dan temukan&nbsp;<strong>Default Root Object,&nbsp;</strong>masukkan default file&nbsp;<code>Index.html</code></li><li>Biarkan lainnya default dan <strong>create</strong>&nbsp;distribution.</li><li>Tunggu sampai status <strong>Deployed</strong>, biasanya&nbsp;ini membutuhkan waktu beberapa menit.</li><li>Catat <strong>Domain name</strong>&nbsp;dari cloudfront</li></ol>
+
+
+
+<h2>Menggunakan Custom Domain di Route 53</h2>
+
+
+
+<ol><li>Kembali ke Route 53 Console</li><li>Pilih domain yang telah didaftarkan</li><li>Pilih <strong>Create Record Set</strong></li><li>Kita akan membuat 2 record set</li><li>Pertama ialah <strong>example.com</strong> dan yang kedua adalah <strong>www.example.com</strong></li><li>Gunakan <strong>A record</strong>&nbsp;dan pilih&nbsp;<strong>CloudFront</strong>&nbsp;yang telah dibuat.</li></ol>
+
+
+
+<p>That’s it, Kita telah membangun serverless static website dengan perlindungan reCaptcha dan notifikasi untuk pemilik atau admin jika ada yang mengirimkan pesan pada form.</p>
+
+
+
+<hr class="wp-block-separator is-style-dots"/>
+
+
+
+<p>Referensi:</p>
+
+
+
+<ol><li>AWS Documentations</li></ol>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.adityacprtm.com/cara-membangun-serverless-website-dengan-recaptcha-di-aws/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">183</post-id>	</item>
+		<item>
+		<title>Really, How To Check Even Numbers Easily in Python(?)</title>
+		<link>https://blog.adityacprtm.com/how-to-check-even-numbers-in-python/</link>
+					<comments>https://blog.adityacprtm.com/how-to-check-even-numbers-in-python/#respond</comments>
+		
+		<dc:creator><![CDATA[Aditya Pratama]]></dc:creator>
+		<pubDate>Mon, 17 Aug 2020 07:15:05 +0000</pubDate>
+				<category><![CDATA[Tips & Trik]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">https://blog.adityacprtm.com/?p=180</guid>
+
+					<description><![CDATA[Hello world! For my first blog, as well as a starting marker. I will try how to check even numbers using python with a syntax that is human readable. That&#8217;s it, God I wish there was an easier way to do that.]]></description>
+										<content:encoded><![CDATA[
+<amp-fit-text layout="fixed-height" min-font-size="6" max-font-size="72" height="80"><p style="font-size:18px">Hello world! For my first blog, as well as a starting marker. I will try how to check even numbers using python with a syntax that is human readable.</p></amp-fit-text>
+
+
+
+<amp-fit-text layout="fixed-height" min-font-size="6" max-font-size="72" height="80"><pre class="wp-block-code"><code>def isEven(number):
+    if (number == 1):return False
+    elif (number == 2):return True
+    elif (number == 3):return False
+    elif (number == 4):return True
+    elif (number == 5):return False
+    elif (number == 6):return True
+    elif (number == 7):return False
+    elif (number == 8):return True
+    elif (number == 9):return False
+    elif (number == 10):return True
+    elif (number == 11):return False
+    elif (number == 12):return True
+    elif (number == 13):return False
+    elif (number == 14):return True
+    elif (number == 15):return False
+    elif (number == 16):return True
+    elif (number == 17):return False
+    elif (number == 18):return True
+    elif (number == 19):return False
+    elif (number == 20):return True
+
+print(isEven(2))</code></pre></amp-fit-text>
+
+
+
+<amp-fit-text layout="fixed-height" min-font-size="6" max-font-size="72" height="80"><p style="font-size:18px">That&#8217;s it, God I wish there was an easier way to do that.</p></amp-fit-text>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.adityacprtm.com/how-to-check-even-numbers-in-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">180</post-id>	</item>
+	</channel>
+</rss>

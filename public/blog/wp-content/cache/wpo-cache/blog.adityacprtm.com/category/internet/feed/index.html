@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Internet &#8211; Blog by Adityacprtm</title>
+	<atom:link href="https://blog.adityacprtm.com/category/internet/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.adityacprtm.com</link>
+	<description>All About Technology</description>
+	<lastBuildDate>Sun, 06 Sep 2020 03:37:03 +0000</lastBuildDate>
+	<language>id-ID</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+
+<image>
+	<url>https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/cropped-logo-site-512x512-1.png?fit=32%2C32&#038;ssl=1</url>
+	<title>Internet &#8211; Blog by Adityacprtm</title>
+	<link>https://blog.adityacprtm.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">181785340</site>	<item>
+		<title>Membuat OpenVPN Server dalam Hitungan Detik</title>
+		<link>https://blog.adityacprtm.com/membuat-openvpn-server-dalam-hitungan-detik/</link>
+					<comments>https://blog.adityacprtm.com/membuat-openvpn-server-dalam-hitungan-detik/#respond</comments>
+		
+		<dc:creator><![CDATA[Aditya Pratama]]></dc:creator>
+		<pubDate>Fri, 28 Aug 2020 12:04:29 +0000</pubDate>
+				<category><![CDATA[Tips & Trik]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[VPN]]></category>
+		<guid isPermaLink="false">https://adityacprtm.com/blog/?p=5</guid>
+
+					<description><![CDATA[Saat ini membuat VPN server sendiri tidak sesulit yang dibayangkan. Tersedia beberapa repositori Github yang akan mengurangi kesulitan dalam menyiapkan VPN khususnya OpenVPN server. Sebelum mulai membangun VPN server, sedikit bahasan tentang apa itu VPN dan bagaimana cara kerja dari VPN. Apa itu VPN? VPN atau Virtual Private Network adalah layanan koneksi secara aman (secure) [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Saat ini membuat VPN server sendiri tidak sesulit yang dibayangkan. Tersedia beberapa repositori Github yang akan mengurangi kesulitan dalam menyiapkan VPN khususnya OpenVPN server. Sebelum mulai membangun VPN server, sedikit bahasan tentang apa itu VPN dan bagaimana cara kerja dari VPN.</p>
+
+
+
+<h2>Apa itu VPN?</h2>
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Virtual_private_network" target="_blank" rel="noreferrer noopener">VPN</a> atau Virtual Private Network adalah layanan koneksi secara aman (secure) dan pribadi (private) dengan mengenkripsi seluruh lalu lintas jaringan dan mengubah jalur koneksi melalui server VPN dan menyembunyikan pertukaran data yang terjadi.</p>
+
+
+
+<p>Sebagai contoh. klien VPN tidak pernah mengakses server (web) lain secara langsung, semuanya akan diminta dari server VPN dan server VPN akan meneruskan permintaan tersebut.</p>
+
+
+
+<p>Terdapat artikel yang bisa menjelaskan secara lengkap apa itu vpn dan fungsinya serta hal-hal lainnya mengenai VPN dengan kalimat yang mudah dipahami, kalian bisa membaca artikel tersebut <a href="https://www.niagahoster.co.id/blog/apa-itu-vpn" target="_blank" rel="noreferrer noopener nofollow">disini</a>.</p>
+
+
+
+<h2>Mengapa perlu server VPN sendiri?</h2>
+
+
+
+<p>Memiliki VPN sendiri berarti memiliki kendali penuh dan hanya kita yang dapat membaca log server. Tanpa disadari ISP (Internet Service Provider) yang kita gunakan bisa memata-matai lalu lintas kita, sehingga perlu jalur khusus agar lalu lintas kita tidak terlihat. </p>
+
+
+
+<p>Ada banyak layanan VPN dari yang gratis hingga berbayar. Kita bisa menggunakannya, namun tidak menutup kemungkinan data atau trafik kita yang ada pada layanan VPN tersebut bocor. Bisa lihat selengkapnya <a href="https://youtu.be/gxpX_mubz2A" target="_blank" rel="noreferrer noopener nofollow">disini</a>.</p>
+
+
+
+<p>Berikut beberapa kasus penggunaan, di mana VPN dapat membantu:</p>
+
+
+
+<ul><li>Menyembunyikan alamat IP asli</li><li>Berselancar aman di Wi-Fi publik</li><li>Mengakses layanan di dalam jaringan server VPN</li></ul>
+
+
+
+<h2>Hosting server VPN</h2>
+
+
+
+<p>Saya menggunakan server Ubuntu 20.04 LTS yang dihosting di AWS EC2. Sebelum menggunakan server baru sebagai VPN Server, saya melakukan konfigurasi awal dalam mengamankan server, langkah-langkahnya bisa dibaca <a href="https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server-baru/" target="_blank" rel="noreferrer noopener">disini</a>. Khusus dalam kasus ini, tidak melakukan konfigurasi firewall dalam server melainkan menggunakan Security Group yang disediakan AWS.</p>
+
+
+
+<p>Untuk firewall, pastikan UDP port 1194  terbuka karena port tersebut akan digunakan oleh OpenVPN. Atau bisa gunakan port lain dan sesuaikan dengan port ketika tahap instalasi nanti.</p>
+
+
+
+<p>Tutorial ini juga bisa digunakan di Debian, Ubuntu dan CentOS. </p>
+
+
+
+<p>Untuk menginstal server VPN dalam hitungan detik, saya menggunakan script shell yang dibuat oleh <a href="https://github.com/Nyr" target="_blank" rel="noreferrer noopener">Nyr </a>bernama <a href="https://github.com/Nyr/openvpn-install" target="_blank" rel="noreferrer noopener">openvpn-install</a>.</p>
+
+
+
+<h3>Instalasi OpenVPN Server</h3>
+
+
+
+<p>Download script shell.</p>
+
+
+
+<pre class="wp-block-code"><code>wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh</code></pre>
+
+
+
+<p>Setelah downlaod selesai, perlu membuat <code>openvpn-install.sh</code> dapat dieksekusi.</p>
+
+
+
+<pre class="wp-block-code"><code>chmod +x openvpn-install.sh</code></pre>
+
+
+
+<p>Script tersebut akan menanyakan beberapa pertanyaan tentang bagaimana kita ingin mengatur server VPN. Tekan Enter untuk menggunakan opsi default (direkomendasikan).</p>
+
+
+
+<p>Dalam percobaan ini, saya hanya mengubah DNS default menggunakan <code>1.1.1.1</code>.</p>
+
+
+
+<pre class="wp-block-code"><code>Welcome to this OpenVPN road warrior installer!
+
+I need to ask you a few questions before starting setup.
+You can use the default options and just press enter if you are ok with them.
+
+Which protocol do you want for OpenVPN connections?
+   1) UDP (recommended)
+   2) TCP
+Protocol &#91;1]:
+
+What port do you want OpenVPN listening to?
+Port &#91;1194]:
+
+Which DNS do you want to use with the VPN?
+   1) Current system resolvers
+   2) 1.1.1.1
+   3) Google
+   4) OpenDNS
+   5) Verisign
+DNS &#91;1]: 2
+
+Finally, tell me a name for the client certificate.
+Client name &#91;client]:
+
+Okay, that was all I needed. We are ready to set up your OpenVPN server now.
+Press any key to continue...</code></pre>
+
+
+
+<p>Selanjutnya script akan menginstal OpenVPN di server.</p>
+
+
+
+<h3>Mengambil file .ovpn dari server</h3>
+
+
+
+<p>Untuk dapat terhubung dengan VPN server, diperlukan file <code>.ovpn</code> yang dihasilkan. Pada Windows, direkomendasikan menggunakan <a href="https://filezilla-project.org/" target="_blank" rel="noreferrer noopener">Filezilla </a>atau <a href="https://winscp.net/eng/download.php" target="_blank" rel="noreferrer noopener">WinSCP </a>dan masuk ke server menggunakan SFTP. Di macOS dan Linux, dapat menyalin file dari server ke mesin menggunakan <code>scp</code>.</p>
+
+
+
+<p>Untuk menyalin file dengan <code>scp</code> jalankan perintah berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>scp &lt;USERNAME>@&lt;SERVER_IP>:/root/&lt;CLIENT>.ovpn .</code></pre>
+
+
+
+<p>Jika sertifikat atau file .ovpn digunakan untuk smartphone, gunakanlah media pengiriman yang aman. Untuk Mac atau iPhone, disarankan untuk menyalin file menggunakan AirDrop.</p>
+
+
+
+<p>Jika harus menggunakan Email, silakan zip file .ovpn dan berikan password yang kuat untuk file zip sebelum mengirimkannya.</p>
+
+
+
+<h3>Menggunakan file .ovpn</h3>
+
+
+
+<p>Untuk OS Windows bias downlaod apliaksi resmi dari <a href="https://openvpn.net/community-downloads/" target="_blank" rel="noreferrer noopener">OpenVPN</a>, di iOS dan Android ada aplikasi resmi OpenVPN Connect di <a href="https://apps.apple.com/app/openvpn-connect/id590379981" target="_blank" rel="noreferrer noopener">App Store</a> dan <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn" target="_blank" rel="noreferrer noopener">Google Play</a>, sedangkan untuk macOS bisa menggunakan aplikasi <a href="https://tunnelblick.net/" target="_blank" rel="noreferrer noopener">Tunnelblick</a>.</p>
+
+
+
+<p>Cara penggunaannya biasanya sama untuk tiap OS. Pertama harus mengimpor file .ovpn dan kemudian melakukan koneksi ke server. Jika koneksi berhasil, cek alamat IP saat ini dengan mengetik kata &#8220;<a href="https://www.google.com/search?q=what+is+my+ip+address" target="_blank" rel="noreferrer noopener">what is my ip address</a>&#8221; di google dan Google akan menunjukkan alamat IP.</p>
+
+
+
+<p>Jika alamat IP sama dengan server, artinya klien dan server VPN berhasil terhubung.</p>
+
+
+
+<h3>Menambahkan user klien baru</h3>
+
+
+
+<p>Untuk menambahkan pengguna baru cukup jalankan script tersebut dan pilih 1 kemudian nama untuk perangkat yang akan menggunakan sertifikat klien. Dalam kasus ini, saya membuat pengguna untuk iPhone saya.</p>
+
+
+
+<pre class="wp-block-code"><code>./openvpn-install.sh
+
+Looks like OpenVPN is already installed.
+
+What do you want to do?
+   1) Add a new user
+   2) Revoke an existing user
+   3) Remove OpenVPN
+   4) Exit
+Select an option: 1
+
+Tell me a name for the client certificate.
+Client name: iphone
+
+Using SSL: openssl OpenSSL 1.1.1 11
+
+...............
+
+Write out database with 1 new entries
+Data Base Updated
+
+Client iphone added, configuration is available at: /root/iphone.ovpn</code></pre>
+
+
+
+<hr class="wp-block-separator is-style-dots"/>
+
+
+
+<p>That&#8217;s it! Kita sudah membuat privasi kita terlindungi selama di dunia maya dan kita bisa memberi selamat kepada diri sendiri karena baru saja menyiapkan server VPN yang dihosting sendiri <img src="https://s.w.org/images/core/emoji/13.0.0/72x72/1f389.png" alt="🎉" class="wp-smiley" style="height: 1em; max-height: 1em;" />.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.adityacprtm.com/membuat-openvpn-server-dalam-hitungan-detik/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5</post-id>	</item>
+	</channel>
+</rss>

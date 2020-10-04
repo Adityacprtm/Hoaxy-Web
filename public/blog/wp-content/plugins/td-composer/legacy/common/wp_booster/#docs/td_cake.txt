@@ -1,0 +1,25 @@
+//td_cake (new td_js)
+
+@td_js            =>  require td_js class
+
+//db keys structure (new => old)
+array( 'td_011'    => 'td_envato_code'
+       'td_011_'   => 'td_cake_status',
+       'td_011_tp' => 'td_cake_lp_status',
+       'td_011_ta' => 'td_cake_status_time');
+
+//td_util
+td_util::$e_keys          =>  new db keys
+td_util::get_option_      =>  get 'td_cake_status', 'td_cake_status_time' and 'td_cake_lp_status'
+td_util::update_option_   =>  update 'td_cake_status', 'td_cake_status_time' and 'td_cake_lp_status'
+td_util::ajax_handle      =>  activate theme
+
+//b64 (helper)
+td_handle::set_var        =>  b64 encode variable
+td_handle::get_var        =>  b64 decode variable
+
+//AJAX
+td_ajax::on_ajax_check_envato_code       =>  check if envato code is valid and if it's used on the forum
+td_ajax::on_ajax_register_forum_user     => register new forum user
+td_ajax::on_ajax_manual_activation       => manual activation
+td_ajax::td_validate_data                => validate manual activation code

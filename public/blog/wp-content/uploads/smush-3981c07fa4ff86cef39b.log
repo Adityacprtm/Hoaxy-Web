@@ -1,0 +1,962 @@
+[2020-08-27 07:08:43 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:13:43 : INFO] - 
+ 
+[2020-08-27 07:13:43 : INFO] - Header for logs at time:  Thu, 27 Aug 2020 07:13:43 +0000 on https://blog.adityacprtm.com 
+[2020-08-27 07:13:43 : INFO] - WP: 5.5 
+[2020-08-27 07:13:43 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-27 07:13:43 : INFO] - MySQL: 5.5.5 
+[2020-08-27 07:13:43 : INFO] - WPLANG: en_US 
+[2020-08-27 07:13:43 : INFO] - Server: LiteSpeed 
+[2020-08-27 07:13:43 : INFO] - Outbound connections: N 
+[2020-08-27 07:13:43 : INFO] - safe_mode: 0 
+[2020-08-27 07:13:43 : INFO] - max_execution_time: 30 
+[2020-08-27 07:13:43 : INFO] - memory_limit: 128M (used: 104.1M | 106.5M) 
+[2020-08-27 07:13:43 : INFO] - multisite: N 
+[2020-08-27 07:13:43 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-27 07:13:43 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2020-08-27 07:13:43 : INFO] - Set semaphore last lock (smush) time to 2020-08-27 07:13:43 
+[2020-08-27 07:13:43 : INFO] - Semaphore lock (smush) complete 
+[2020-08-27 07:13:43 : INFO] - Processing task with ID : 56, and type 'smush' 
+[2020-08-27 07:13:43 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:13:43 : INFO] - 95 
+[2020-08-27 07:13:46 : INFO] - Backing up the original image - 2020/08/ezgif.com-optimize-updraft-pre-smush-original.gif 
+[2020-08-27 07:13:46 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:13:46 : INFO] - 95 
+[2020-08-27 07:13:48 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:13:48 : INFO] - 95 
+[2020-08-27 07:13:49 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:13:49 : INFO] - 95 
+[2020-08-27 07:13:52 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:13:52 : INFO] - 95 
+[2020-08-27 07:13:54 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:13:54 : INFO] - 95 
+[2020-08-27 07:13:59 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:13:59 : INFO] - 95 
+[2020-08-27 07:14:00 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:00 : INFO] - 95 
+[2020-08-27 07:14:01 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:01 : INFO] - 95 
+[2020-08-27 07:14:02 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:02 : INFO] - 95 
+[2020-08-27 07:14:03 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:03 : INFO] - 95 
+[2020-08-27 07:14:05 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:05 : INFO] - 95 
+[2020-08-27 07:14:07 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:07 : INFO] - 95 
+[2020-08-27 07:14:09 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:09 : INFO] - 95 
+[2020-08-27 07:14:11 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:11 : INFO] - 95 
+[2020-08-27 07:14:15 : INFO] - Re_Smush_It_Task with attachment ID : 540, autocreated on : August 27, 2020 07:08:43 
+[2020-08-27 07:14:15 : INFO] - 95 
+[2020-08-27 07:14:19 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/ezgif.com-optimize.gif.The file was compressed from 693.42 KB to 693.42 KB saving 0 percent using WP-Optimize 
+[2020-08-27 07:14:19 : INFO] - Completed processing task with ID : 56, and type 'smush' 
+[2020-08-27 07:14:19 : INFO] - Set semaphore last lock (smush) time to 2020-08-27 07:14:19 
+[2020-08-27 07:14:19 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-27 07:14:19 : INFO] - Semaphore (smush) unlocked 
+[2020-08-27 07:14:19 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2020-08-27 07:14:19 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-27 07:14:19 : INFO] - Cleaning up tasks of type (smush). A total of 1 tasks will be deleted. 
+[2020-08-27 07:36:58 : INFO] - 
+ 
+[2020-08-27 07:36:58 : INFO] - Header for logs at time:  Thu, 27 Aug 2020 07:36:58 +0000 on https://blog.adityacprtm.com 
+[2020-08-27 07:36:58 : INFO] - WP: 5.5 
+[2020-08-27 07:36:58 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-27 07:36:58 : INFO] - MySQL: 5.5.5 
+[2020-08-27 07:36:58 : INFO] - WPLANG: en_US 
+[2020-08-27 07:36:58 : INFO] - Server: LiteSpeed 
+[2020-08-27 07:36:58 : INFO] - Outbound connections: N 
+[2020-08-27 07:36:58 : INFO] - safe_mode: 0 
+[2020-08-27 07:36:58 : INFO] - max_execution_time: 30 
+[2020-08-27 07:36:58 : INFO] - memory_limit: 128M (used: 105.4M | 106.5M) 
+[2020-08-27 07:36:58 : INFO] - multisite: N 
+[2020-08-27 07:36:58 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-27 07:36:58 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2020-08-28 05:53:56 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 06:15:30 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 06:16:03 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 06:17:50 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 06:18:20 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 06:22:19 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 06:22:22 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 06:58:03 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 06:58:51 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 07:11:37 : INFO] - Re_Smush_It_Task with attachment ID : 581, autocreated on : August 28, 2020 07:11:37 
+[2020-08-28 07:11:38 : INFO] - Re_Smush_It_Task with attachment ID : 582, autocreated on : August 28, 2020 07:11:38 
+[2020-08-28 07:11:38 : INFO] - Re_Smush_It_Task with attachment ID : 583, autocreated on : August 28, 2020 07:11:38 
+[2020-08-28 07:17:35 : INFO] - Could not find file for image: ID=220, file=/home/adityacp/public_html/blog/wp-content/uploads/2020/08/14.jpg 
+[2020-08-28 12:50:41 : INFO] - Re_Smush_It_Task with attachment ID : 613, autocreated on : August 28, 2020 12:50:41 
+[2020-08-28 12:51:01 : INFO] - Re_Smush_It_Task with attachment ID : 614, autocreated on : August 28, 2020 12:51:01 
+[2020-08-28 12:51:18 : INFO] - Re_Smush_It_Task with attachment ID : 615, autocreated on : August 28, 2020 12:51:18 
+[2020-08-28 12:51:40 : INFO] - Re_Smush_It_Task with attachment ID : 616, autocreated on : August 28, 2020 12:51:40 
+[2020-08-28 12:51:56 : INFO] - Re_Smush_It_Task with attachment ID : 617, autocreated on : August 28, 2020 12:51:56 
+[2020-08-28 12:52:40 : INFO] - Re_Smush_It_Task with attachment ID : 618, autocreated on : August 28, 2020 12:52:40 
+[2020-08-28 12:57:08 : INFO] - 
+ 
+[2020-08-28 12:57:08 : INFO] - Header for logs at time:  Fri, 28 Aug 2020 12:57:08 +0000 on https://blog.adityacprtm.com 
+[2020-08-28 12:57:08 : INFO] - WP: 5.5 
+[2020-08-28 12:57:08 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-28 12:57:08 : INFO] - MySQL: 5.5.5 
+[2020-08-28 12:57:08 : INFO] - WPLANG: id_ID 
+[2020-08-28 12:57:08 : INFO] - Server: LiteSpeed 
+[2020-08-28 12:57:08 : INFO] - Outbound connections: N 
+[2020-08-28 12:57:08 : INFO] - safe_mode: 0 
+[2020-08-28 12:57:08 : INFO] - max_execution_time: 30 
+[2020-08-28 12:57:08 : INFO] - memory_limit: 256M (used: 120M | 123M) 
+[2020-08-28 12:57:08 : INFO] - multisite: N 
+[2020-08-28 12:57:08 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-28 12:57:08 : INFO] - A total of 9 tasks of type smush found and will be processed in this iteration 
+[2020-08-28 12:57:08 : INFO] - Set semaphore last lock (smush) time to 2020-08-28 12:57:08 
+[2020-08-28 12:57:08 : INFO] - Semaphore lock (smush) complete 
+[2020-08-28 12:57:08 : INFO] - Processing task with ID : 57, and type 'smush' 
+[2020-08-28 12:57:08 : INFO] - Task with ID 57 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2020-08-28 12:57:08 : INFO] - Processing task with ID : 58, and type 'smush' 
+[2020-08-28 12:57:08 : INFO] - Task with ID 58 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2020-08-28 12:57:08 : INFO] - Processing task with ID : 59, and type 'smush' 
+[2020-08-28 12:57:08 : INFO] - Task with ID 59 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2020-08-28 12:57:08 : INFO] - Processing task with ID : 60, and type 'smush' 
+[2020-08-28 12:57:08 : INFO] - Re_Smush_It_Task with attachment ID : 613, autocreated on : August 28, 2020 12:50:41 
+[2020-08-28 12:57:08 : INFO] - 95 
+[2020-08-28 12:57:12 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-76x76-1-updraft-pre-smush-original.png 
+[2020-08-28 12:57:12 : INFO] - Re_Smush_It_Task with attachment ID : 613, autocreated on : August 28, 2020 12:50:41 
+[2020-08-28 12:57:12 : INFO] - 95 
+[2020-08-28 12:57:14 : INFO] - Re_Smush_It_Task with attachment ID : 613, autocreated on : August 28, 2020 12:50:41 
+[2020-08-28 12:57:14 : INFO] - 95 
+[2020-08-28 12:57:15 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-76x76-1.png.The file was compressed from 3.32 KB to 1.99 KB saving 39.92 percent using WP-Optimize 
+[2020-08-28 12:57:15 : INFO] - Completed processing task with ID : 60, and type 'smush' 
+[2020-08-28 12:57:15 : INFO] - Processing task with ID : 61, and type 'smush' 
+[2020-08-28 12:57:15 : INFO] - Re_Smush_It_Task with attachment ID : 614, autocreated on : August 28, 2020 12:51:01 
+[2020-08-28 12:57:15 : INFO] - 95 
+[2020-08-28 12:57:16 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-114x114-1-updraft-pre-smush-original.png 
+[2020-08-28 12:57:16 : INFO] - Re_Smush_It_Task with attachment ID : 614, autocreated on : August 28, 2020 12:51:01 
+[2020-08-28 12:57:16 : INFO] - 95 
+[2020-08-28 12:57:18 : INFO] - Re_Smush_It_Task with attachment ID : 614, autocreated on : August 28, 2020 12:51:01 
+[2020-08-28 12:57:18 : INFO] - 95 
+[2020-08-28 12:57:19 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-114x114-1.png.The file was compressed from 5.19 KB to 2.72 KB saving 47.59 percent using WP-Optimize 
+[2020-08-28 12:57:19 : INFO] - Completed processing task with ID : 61, and type 'smush' 
+[2020-08-28 12:57:19 : INFO] - Processing task with ID : 62, and type 'smush' 
+[2020-08-28 12:57:19 : INFO] - Re_Smush_It_Task with attachment ID : 615, autocreated on : August 28, 2020 12:51:18 
+[2020-08-28 12:57:19 : INFO] - 95 
+[2020-08-28 12:57:21 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-120x120-1-updraft-pre-smush-original.png 
+[2020-08-28 12:57:21 : INFO] - Re_Smush_It_Task with attachment ID : 615, autocreated on : August 28, 2020 12:51:18 
+[2020-08-28 12:57:21 : INFO] - 95 
+[2020-08-28 12:57:22 : INFO] - Re_Smush_It_Task with attachment ID : 615, autocreated on : August 28, 2020 12:51:18 
+[2020-08-28 12:57:22 : INFO] - 95 
+[2020-08-28 12:57:23 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-120x120-1.png.The file was compressed from 5.41 KB to 2.81 KB saving 48.11 percent using WP-Optimize 
+[2020-08-28 12:57:23 : INFO] - Completed processing task with ID : 62, and type 'smush' 
+[2020-08-28 12:57:23 : INFO] - Processing task with ID : 63, and type 'smush' 
+[2020-08-28 12:57:23 : INFO] - Task with ID 63 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2020-08-28 12:57:23 : INFO] - Processing task with ID : 64, and type 'smush' 
+[2020-08-28 12:57:23 : INFO] - Re_Smush_It_Task with attachment ID : 617, autocreated on : August 28, 2020 12:51:56 
+[2020-08-28 12:57:23 : INFO] - 95 
+[2020-08-28 12:57:24 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-152x152-1-updraft-pre-smush-original.png 
+[2020-08-28 12:57:24 : INFO] - Re_Smush_It_Task with attachment ID : 617, autocreated on : August 28, 2020 12:51:56 
+[2020-08-28 12:57:24 : INFO] - 95 
+[2020-08-28 12:57:25 : INFO] - Re_Smush_It_Task with attachment ID : 617, autocreated on : August 28, 2020 12:51:56 
+[2020-08-28 12:57:25 : INFO] - 95 
+[2020-08-28 12:57:26 : INFO] - Re_Smush_It_Task with attachment ID : 617, autocreated on : August 28, 2020 12:51:56 
+[2020-08-28 12:57:26 : INFO] - 95 
+[2020-08-28 12:57:30 : INFO] - Re_Smush_It_Task with attachment ID : 617, autocreated on : August 28, 2020 12:51:56 
+[2020-08-28 12:57:30 : INFO] - 95 
+[2020-08-28 12:57:33 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-152x152-1.png.The file was compressed from 6.84 KB to 3.40 KB saving 50.23 percent using WP-Optimize 
+[2020-08-28 12:57:33 : INFO] - Completed processing task with ID : 64, and type 'smush' 
+[2020-08-28 12:57:33 : INFO] - Set semaphore last lock (smush) time to 2020-08-28 12:57:33 
+[2020-08-28 12:57:33 : INFO] - Processing task with ID : 65, and type 'smush' 
+[2020-08-28 12:57:33 : INFO] - Re_Smush_It_Task with attachment ID : 618, autocreated on : August 28, 2020 12:52:40 
+[2020-08-28 12:57:33 : INFO] - 95 
+[2020-08-28 12:57:35 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-144x144-1-updraft-pre-smush-original.png 
+[2020-08-28 12:57:35 : INFO] - Re_Smush_It_Task with attachment ID : 618, autocreated on : August 28, 2020 12:52:40 
+[2020-08-28 12:57:35 : INFO] - 95 
+[2020-08-28 12:57:37 : INFO] - Re_Smush_It_Task with attachment ID : 618, autocreated on : August 28, 2020 12:52:40 
+[2020-08-28 12:57:37 : INFO] - 95 
+[2020-08-28 12:57:38 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-144x144-1.png.The file was compressed from 6.50 KB to 3.27 KB saving 49.67 percent using WP-Optimize 
+[2020-08-28 12:57:38 : INFO] - Completed processing task with ID : 65, and type 'smush' 
+[2020-08-28 12:57:38 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-28 12:57:38 : INFO] - Semaphore (smush) unlocked 
+[2020-08-28 12:57:38 : INFO] - Successfully processed the queue (smush). 9 tasks were processed out of 9. 
+[2020-08-28 12:57:38 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-28 12:57:38 : INFO] - Cleaning up tasks of type (smush). A total of 9 tasks will be deleted. 
+[2020-08-28 12:58:01 : INFO] - 
+ 
+[2020-08-28 12:58:01 : INFO] - Header for logs at time:  Fri, 28 Aug 2020 12:58:01 +0000 on https://blog.adityacprtm.com 
+[2020-08-28 12:58:01 : INFO] - WP: 5.5 
+[2020-08-28 12:58:01 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-28 12:58:01 : INFO] - MySQL: 5.5.5 
+[2020-08-28 12:58:01 : INFO] - WPLANG: id_ID 
+[2020-08-28 12:58:01 : INFO] - Server: LiteSpeed 
+[2020-08-28 12:58:01 : INFO] - Outbound connections: N 
+[2020-08-28 12:58:01 : INFO] - safe_mode: 0 
+[2020-08-28 12:58:01 : INFO] - max_execution_time: 30 
+[2020-08-28 12:58:01 : INFO] - memory_limit: 256M (used: 120M | 123M) 
+[2020-08-28 12:58:01 : INFO] - multisite: N 
+[2020-08-28 12:58:01 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-28 12:58:01 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2020-08-28 12:59:39 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:42 : INFO] - 
+ 
+[2020-08-28 13:04:42 : INFO] - Header for logs at time:  Fri, 28 Aug 2020 13:04:42 +0000 on https://blog.adityacprtm.com 
+[2020-08-28 13:04:42 : INFO] - WP: 5.5 
+[2020-08-28 13:04:42 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-28 13:04:42 : INFO] - MySQL: 5.5.5 
+[2020-08-28 13:04:42 : INFO] - WPLANG: id_ID 
+[2020-08-28 13:04:42 : INFO] - Server: LiteSpeed 
+[2020-08-28 13:04:42 : INFO] - Outbound connections: N 
+[2020-08-28 13:04:42 : INFO] - safe_mode: 0 
+[2020-08-28 13:04:42 : INFO] - max_execution_time: 30 
+[2020-08-28 13:04:42 : INFO] - memory_limit: 256M (used: 120M | 123M) 
+[2020-08-28 13:04:42 : INFO] - multisite: N 
+[2020-08-28 13:04:42 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-28 13:04:42 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2020-08-28 13:04:42 : INFO] - Set semaphore last lock (smush) time to 2020-08-28 13:04:42 
+[2020-08-28 13:04:42 : INFO] - Semaphore lock (smush) complete 
+[2020-08-28 13:04:42 : INFO] - Processing task with ID : 66, and type 'smush' 
+[2020-08-28 13:04:42 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:42 : INFO] - 95 
+[2020-08-28 13:04:44 : INFO] - Backing up the original image - 2020/08/logo-long-colors-margin-updraft-pre-smush-original.png 
+[2020-08-28 13:04:44 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:44 : INFO] - 95 
+[2020-08-28 13:04:45 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:45 : INFO] - 95 
+[2020-08-28 13:04:47 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:47 : INFO] - 95 
+[2020-08-28 13:04:48 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:48 : INFO] - 95 
+[2020-08-28 13:04:54 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:54 : INFO] - 95 
+[2020-08-28 13:04:58 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:58 : INFO] - 95 
+[2020-08-28 13:04:59 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:04:59 : INFO] - 95 
+[2020-08-28 13:05:00 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:00 : INFO] - 95 
+[2020-08-28 13:05:03 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:03 : INFO] - 95 
+[2020-08-28 13:05:06 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:06 : INFO] - 95 
+[2020-08-28 13:05:08 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:08 : INFO] - 95 
+[2020-08-28 13:05:12 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:12 : INFO] - 95 
+[2020-08-28 13:05:13 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:13 : INFO] - 95 
+[2020-08-28 13:05:14 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:14 : INFO] - 95 
+[2020-08-28 13:05:16 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:16 : INFO] - 95 
+[2020-08-28 13:05:17 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:17 : INFO] - 95 
+[2020-08-28 13:05:19 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:19 : INFO] - 95 
+[2020-08-28 13:05:21 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:21 : INFO] - 95 
+[2020-08-28 13:05:26 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:26 : INFO] - 95 
+[2020-08-28 13:05:29 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:29 : INFO] - 95 
+[2020-08-28 13:05:31 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:31 : INFO] - 95 
+[2020-08-28 13:05:33 : INFO] - Re_Smush_It_Task with attachment ID : 619, autocreated on : August 28, 2020 12:59:39 
+[2020-08-28 13:05:33 : INFO] - 95 
+[2020-08-28 13:05:37 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/logo-long-colors-margin.png.The file was compressed from 164.56 KB to 34.72 KB saving 78.9 percent using WP-Optimize 
+[2020-08-28 13:05:37 : INFO] - Completed processing task with ID : 66, and type 'smush' 
+[2020-08-28 13:05:37 : INFO] - Set semaphore last lock (smush) time to 2020-08-28 13:05:37 
+[2020-08-28 13:05:37 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-28 13:05:37 : INFO] - Semaphore (smush) unlocked 
+[2020-08-28 13:05:37 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2020-08-28 13:05:37 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-28 13:05:37 : INFO] - Cleaning up tasks of type (smush). A total of 1 tasks will be deleted. 
+[2020-08-28 13:15:10 : INFO] - 
+ 
+[2020-08-28 13:15:10 : INFO] - Header for logs at time:  Fri, 28 Aug 2020 13:15:10 +0000 on https://blog.adityacprtm.com 
+[2020-08-28 13:15:10 : INFO] - WP: 5.5 
+[2020-08-28 13:15:10 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-28 13:15:10 : INFO] - MySQL: 5.5.5 
+[2020-08-28 13:15:10 : INFO] - WPLANG: id_ID 
+[2020-08-28 13:15:10 : INFO] - Server: LiteSpeed 
+[2020-08-28 13:15:10 : INFO] - Outbound connections: N 
+[2020-08-28 13:15:10 : INFO] - safe_mode: 0 
+[2020-08-28 13:15:10 : INFO] - max_execution_time: 30 
+[2020-08-28 13:15:10 : INFO] - memory_limit: 256M (used: 120M | 123M) 
+[2020-08-28 13:15:10 : INFO] - multisite: N 
+[2020-08-28 13:15:10 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-28 13:15:10 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2020-08-29 09:53:00 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:05 : INFO] - 
+ 
+[2020-08-29 09:59:05 : INFO] - Header for logs at time:  Sat, 29 Aug 2020 09:59:05 +0000 on https://blog.adityacprtm.com 
+[2020-08-29 09:59:05 : INFO] - WP: 5.5 
+[2020-08-29 09:59:05 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-29 09:59:05 : INFO] - MySQL: 5.5.5 
+[2020-08-29 09:59:05 : INFO] - WPLANG: id_ID 
+[2020-08-29 09:59:05 : INFO] - Server: LiteSpeed 
+[2020-08-29 09:59:05 : INFO] - Outbound connections: N 
+[2020-08-29 09:59:05 : INFO] - safe_mode: 0 
+[2020-08-29 09:59:05 : INFO] - max_execution_time: 30 
+[2020-08-29 09:59:05 : INFO] - memory_limit: 256M (used: 121.3M | 123M) 
+[2020-08-29 09:59:05 : INFO] - multisite: N 
+[2020-08-29 09:59:05 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-29 09:59:05 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2020-08-29 09:59:05 : INFO] - Set semaphore last lock (smush) time to 2020-08-29 09:59:05 
+[2020-08-29 09:59:05 : INFO] - Semaphore lock (smush) complete 
+[2020-08-29 09:59:05 : INFO] - Processing task with ID : 76, and type 'smush' 
+[2020-08-29 09:59:05 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:05 : INFO] - 95 
+[2020-08-29 09:59:08 : INFO] - Backing up the original image - 2020/08/linux-acl-updraft-pre-smush-original.png 
+[2020-08-29 09:59:08 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:08 : INFO] - 95 
+[2020-08-29 09:59:09 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:09 : INFO] - 95 
+[2020-08-29 09:59:12 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:12 : INFO] - 95 
+[2020-08-29 09:59:13 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:13 : INFO] - 95 
+[2020-08-29 09:59:15 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:15 : INFO] - 95 
+[2020-08-29 09:59:17 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:17 : INFO] - 95 
+[2020-08-29 09:59:19 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:19 : INFO] - 95 
+[2020-08-29 09:59:21 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:21 : INFO] - 95 
+[2020-08-29 09:59:24 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:24 : INFO] - 95 
+[2020-08-29 09:59:27 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:27 : INFO] - 95 
+[2020-08-29 09:59:28 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:28 : INFO] - 95 
+[2020-08-29 09:59:30 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:30 : INFO] - 95 
+[2020-08-29 09:59:32 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:32 : INFO] - 95 
+[2020-08-29 09:59:33 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:33 : INFO] - 95 
+[2020-08-29 09:59:35 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:35 : INFO] - 95 
+[2020-08-29 09:59:37 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:37 : INFO] - 95 
+[2020-08-29 09:59:40 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:40 : INFO] - 95 
+[2020-08-29 09:59:42 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:42 : INFO] - 95 
+[2020-08-29 09:59:44 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:44 : INFO] - 95 
+[2020-08-29 09:59:47 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:47 : INFO] - 95 
+[2020-08-29 09:59:50 : INFO] - Re_Smush_It_Task with attachment ID : 629, autocreated on : August 29, 2020 09:53:00 
+[2020-08-29 09:59:50 : INFO] - 95 
+[2020-08-29 09:59:53 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/linux-acl.png.The file was compressed from 97.02 KB to 34.00 KB saving 64.96 percent using WP-Optimize 
+[2020-08-29 09:59:53 : INFO] - Completed processing task with ID : 76, and type 'smush' 
+[2020-08-29 09:59:53 : INFO] - Set semaphore last lock (smush) time to 2020-08-29 09:59:53 
+[2020-08-29 09:59:53 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-29 09:59:53 : INFO] - Semaphore (smush) unlocked 
+[2020-08-29 09:59:53 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2020-08-29 09:59:53 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-29 09:59:53 : INFO] - Cleaning up tasks of type (smush). A total of 1 tasks will be deleted. 
+[2020-08-29 10:09:06 : INFO] - 
+ 
+[2020-08-29 10:09:06 : INFO] - Header for logs at time:  Sat, 29 Aug 2020 10:09:06 +0000 on https://blog.adityacprtm.com 
+[2020-08-29 10:09:06 : INFO] - WP: 5.5 
+[2020-08-29 10:09:06 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-29 10:09:06 : INFO] - MySQL: 5.5.5 
+[2020-08-29 10:09:06 : INFO] - WPLANG: id_ID 
+[2020-08-29 10:09:06 : INFO] - Server: LiteSpeed 
+[2020-08-29 10:09:06 : INFO] - Outbound connections: N 
+[2020-08-29 10:09:06 : INFO] - safe_mode: 0 
+[2020-08-29 10:09:06 : INFO] - max_execution_time: 120 
+[2020-08-29 10:09:06 : INFO] - memory_limit: 256M (used: 120.7M | 123M) 
+[2020-08-29 10:09:06 : INFO] - multisite: N 
+[2020-08-29 10:09:06 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-29 10:09:06 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2020-08-31 03:40:38 : INFO] - Re_Smush_It_Task with attachment ID : 642, autocreated on : August 31, 2020 03:40:38 
+[2020-08-31 03:41:09 : INFO] - Re_Smush_It_Task with attachment ID : 643, autocreated on : August 31, 2020 03:41:09 
+[2020-08-31 03:46:22 : INFO] - 
+ 
+[2020-08-31 03:46:22 : INFO] - Header for logs at time:  Mon, 31 Aug 2020 03:46:22 +0000 on https://blog.adityacprtm.com 
+[2020-08-31 03:46:22 : INFO] - WP: 5.5 
+[2020-08-31 03:46:22 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-31 03:46:22 : INFO] - MySQL: 5.5.5 
+[2020-08-31 03:46:22 : INFO] - WPLANG: id_ID 
+[2020-08-31 03:46:22 : INFO] - Server: LiteSpeed 
+[2020-08-31 03:46:22 : INFO] - Outbound connections: N 
+[2020-08-31 03:46:22 : INFO] - safe_mode: 0 
+[2020-08-31 03:46:22 : INFO] - max_execution_time: 30 
+[2020-08-31 03:46:22 : INFO] - memory_limit: 256M (used: 119.9M | 123M) 
+[2020-08-31 03:46:22 : INFO] - multisite: N 
+[2020-08-31 03:46:22 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-31 03:46:22 : INFO] - A total of 2 tasks of type smush found and will be processed in this iteration 
+[2020-08-31 03:46:22 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 03:46:22 
+[2020-08-31 03:46:22 : INFO] - Semaphore lock (smush) complete 
+[2020-08-31 03:46:22 : INFO] - Processing task with ID : 77, and type 'smush' 
+[2020-08-31 03:46:22 : INFO] - Task with ID 77 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2020-08-31 03:46:22 : INFO] - Processing task with ID : 78, and type 'smush' 
+[2020-08-31 03:46:22 : INFO] - Re_Smush_It_Task with attachment ID : 643, autocreated on : August 31, 2020 03:41:09 
+[2020-08-31 03:46:22 : INFO] - 95 
+[2020-08-31 03:46:23 : INFO] - Backing up the original image - 2020/08/Copy-of-Copy-of-Original-size-My-Logo-updraft-pre-smush-original.png 
+[2020-08-31 03:46:23 : INFO] - Re_Smush_It_Task with attachment ID : 643, autocreated on : August 31, 2020 03:41:09 
+[2020-08-31 03:46:23 : INFO] - 95 
+[2020-08-31 03:46:25 : INFO] - Re_Smush_It_Task with attachment ID : 643, autocreated on : August 31, 2020 03:41:09 
+[2020-08-31 03:46:25 : INFO] - 95 
+[2020-08-31 03:46:26 : INFO] - Re_Smush_It_Task with attachment ID : 643, autocreated on : August 31, 2020 03:41:09 
+[2020-08-31 03:46:26 : INFO] - 95 
+[2020-08-31 03:46:27 : INFO] - Re_Smush_It_Task with attachment ID : 643, autocreated on : August 31, 2020 03:41:09 
+[2020-08-31 03:46:27 : INFO] - 95 
+[2020-08-31 03:46:29 : INFO] - Re_Smush_It_Task with attachment ID : 643, autocreated on : August 31, 2020 03:41:09 
+[2020-08-31 03:46:29 : INFO] - 95 
+[2020-08-31 03:46:30 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/Copy-of-Copy-of-Original-size-My-Logo.png.The file was compressed from 8.09 KB to 3.79 KB saving 53.1 percent using WP-Optimize 
+[2020-08-31 03:46:30 : INFO] - Completed processing task with ID : 78, and type 'smush' 
+[2020-08-31 03:46:30 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-31 03:46:30 : INFO] - Semaphore (smush) unlocked 
+[2020-08-31 03:46:30 : INFO] - Successfully processed the queue (smush). 2 tasks were processed out of 2. 
+[2020-08-31 03:46:30 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-31 03:46:30 : INFO] - Cleaning up tasks of type (smush). A total of 2 tasks will be deleted. 
+[2020-08-31 03:57:02 : INFO] - 
+ 
+[2020-08-31 03:57:02 : INFO] - Header for logs at time:  Mon, 31 Aug 2020 03:57:02 +0000 on https://blog.adityacprtm.com 
+[2020-08-31 03:57:02 : INFO] - WP: 5.5 
+[2020-08-31 03:57:02 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-31 03:57:02 : INFO] - MySQL: 5.5.5 
+[2020-08-31 03:57:02 : INFO] - WPLANG: id_ID 
+[2020-08-31 03:57:02 : INFO] - Server: LiteSpeed 
+[2020-08-31 03:57:02 : INFO] - Outbound connections: N 
+[2020-08-31 03:57:02 : INFO] - safe_mode: 0 
+[2020-08-31 03:57:02 : INFO] - max_execution_time: 30 
+[2020-08-31 03:57:02 : INFO] - memory_limit: 256M (used: 119.9M | 123M) 
+[2020-08-31 03:57:02 : INFO] - multisite: N 
+[2020-08-31 03:57:02 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-31 03:57:02 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2020-08-31 04:03:13 : INFO] - Re_Smush_It_Task with attachment ID : 644, autocreated on : August 31, 2020 04:03:13 
+[2020-08-31 04:03:32 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:04:01 : INFO] - Re_Smush_It_Task with attachment ID : 646, autocreated on : August 31, 2020 04:04:01 
+[2020-08-31 04:07:23 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:07:35 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:07:39 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:13 : INFO] - 
+ 
+[2020-08-31 04:08:13 : INFO] - Header for logs at time:  Mon, 31 Aug 2020 04:08:13 +0000 on https://blog.adityacprtm.com 
+[2020-08-31 04:08:13 : INFO] - WP: 5.5 
+[2020-08-31 04:08:13 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-31 04:08:13 : INFO] - MySQL: 5.5.5 
+[2020-08-31 04:08:13 : INFO] - WPLANG: id_ID 
+[2020-08-31 04:08:13 : INFO] - Server: LiteSpeed 
+[2020-08-31 04:08:13 : INFO] - Outbound connections: N 
+[2020-08-31 04:08:13 : INFO] - safe_mode: 0 
+[2020-08-31 04:08:13 : INFO] - max_execution_time: 30 
+[2020-08-31 04:08:13 : INFO] - memory_limit: 256M (used: 119.9M | 123M) 
+[2020-08-31 04:08:13 : INFO] - multisite: N 
+[2020-08-31 04:08:13 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-31 04:08:13 : INFO] - A total of 6 tasks of type smush found and will be processed in this iteration 
+[2020-08-31 04:08:13 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:08:13 
+[2020-08-31 04:08:13 : INFO] - Semaphore lock (smush) complete 
+[2020-08-31 04:08:13 : INFO] - Processing task with ID : 84, and type 'smush' 
+[2020-08-31 04:08:13 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:13 : INFO] - 95 
+[2020-08-31 04:08:15 : INFO] - Backing up the original image - 2020/08/cropped-logo-site-512x512-1-1-updraft-pre-smush-original.png 
+[2020-08-31 04:08:15 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:15 : INFO] - 95 
+[2020-08-31 04:08:17 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:17 : INFO] - 95 
+[2020-08-31 04:08:18 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:18 : INFO] - 95 
+[2020-08-31 04:08:20 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:20 : INFO] - 95 
+[2020-08-31 04:08:22 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:22 : INFO] - 95 
+[2020-08-31 04:08:24 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:24 : INFO] - 95 
+[2020-08-31 04:08:25 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:25 : INFO] - 95 
+[2020-08-31 04:08:27 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:27 : INFO] - 95 
+[2020-08-31 04:08:29 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:29 : INFO] - 95 
+[2020-08-31 04:08:30 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:30 : INFO] - 95 
+[2020-08-31 04:08:32 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:32 : INFO] - 95 
+[2020-08-31 04:08:34 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:34 : INFO] - 95 
+[2020-08-31 04:08:36 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:36 : INFO] - 95 
+[2020-08-31 04:08:37 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:37 : INFO] - 95 
+[2020-08-31 04:08:39 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:39 : INFO] - 95 
+[2020-08-31 04:08:41 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:41 : INFO] - 95 
+[2020-08-31 04:08:42 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:42 : INFO] - 95 
+[2020-08-31 04:08:43 : INFO] - Re_Smush_It_Task with attachment ID : 651, autocreated on : August 31, 2020 04:08:43 
+[2020-08-31 04:08:44 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:44 : INFO] - 95 
+[2020-08-31 04:08:46 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:46 : INFO] - 95 
+[2020-08-31 04:08:47 : INFO] - Re_Smush_It_Task with attachment ID : 650, autocreated on : August 31, 2020 04:07:39 
+[2020-08-31 04:08:47 : INFO] - 95 
+[2020-08-31 04:08:48 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/cropped-logo-site-512x512-1-1.png.The file was compressed from 20.82 KB to 9.04 KB saving 56.61 percent using WP-Optimize 
+[2020-08-31 04:08:48 : INFO] - Completed processing task with ID : 84, and type 'smush' 
+[2020-08-31 04:08:48 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:08:48 
+[2020-08-31 04:08:48 : INFO] - Processing task with ID : 83, and type 'smush' 
+[2020-08-31 04:08:48 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:08:48 : INFO] - 95 
+[2020-08-31 04:08:50 : INFO] - Backing up the original image - 2020/08/cropped-logo-site-512x512-1-updraft-pre-smush-original.png 
+[2020-08-31 04:08:50 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:08:50 : INFO] - 95 
+[2020-08-31 04:08:52 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:08:52 : INFO] - 95 
+[2020-08-31 04:08:53 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:08:53 : INFO] - 95 
+[2020-08-31 04:08:55 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:08:55 : INFO] - 95 
+[2020-08-31 04:08:57 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:08:57 : INFO] - 95 
+[2020-08-31 04:08:58 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:08:59 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:08:59 : INFO] - 95 
+[2020-08-31 04:09:00 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:00 : INFO] - 95 
+[2020-08-31 04:09:02 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:02 : INFO] - 95 
+[2020-08-31 04:09:03 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:03 : INFO] - 95 
+[2020-08-31 04:09:05 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:05 : INFO] - 95 
+[2020-08-31 04:09:07 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:07 : INFO] - 95 
+[2020-08-31 04:09:09 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:09 : INFO] - 95 
+[2020-08-31 04:09:11 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:11 : INFO] - 95 
+[2020-08-31 04:09:12 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:12 : INFO] - 95 
+[2020-08-31 04:09:14 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:14 : INFO] - 95 
+[2020-08-31 04:09:15 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:15 : INFO] - 95 
+[2020-08-31 04:09:17 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:17 : INFO] - 95 
+[2020-08-31 04:09:19 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:19 : INFO] - 95 
+[2020-08-31 04:09:20 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:20 : INFO] - 95 
+[2020-08-31 04:09:22 : INFO] - Re_Smush_It_Task with attachment ID : 648, autocreated on : August 31, 2020 04:07:35 
+[2020-08-31 04:09:22 : INFO] - 95 
+[2020-08-31 04:09:23 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/cropped-logo-site-512x512-1.png.The file was compressed from 20.82 KB to 9.04 KB saving 56.61 percent using WP-Optimize 
+[2020-08-31 04:09:23 : INFO] - Completed processing task with ID : 83, and type 'smush' 
+[2020-08-31 04:09:23 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:09:23 
+[2020-08-31 04:09:23 : INFO] - Processing task with ID : 82, and type 'smush' 
+[2020-08-31 04:09:23 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:23 : INFO] - 95 
+[2020-08-31 04:09:24 : INFO] - Backing up the original image - 2020/08/logo-site-512x512-1-updraft-pre-smush-original.png 
+[2020-08-31 04:09:24 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:24 : INFO] - 95 
+[2020-08-31 04:09:26 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:26 : INFO] - 95 
+[2020-08-31 04:09:28 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:28 : INFO] - 95 
+[2020-08-31 04:09:29 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:29 : INFO] - 95 
+[2020-08-31 04:09:31 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:31 : INFO] - 95 
+[2020-08-31 04:09:33 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:33 : INFO] - 95 
+[2020-08-31 04:09:35 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:35 : INFO] - 95 
+[2020-08-31 04:09:36 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:36 : INFO] - 95 
+[2020-08-31 04:09:38 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:38 : INFO] - 95 
+[2020-08-31 04:09:40 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:40 : INFO] - 95 
+[2020-08-31 04:09:42 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:42 : INFO] - 95 
+[2020-08-31 04:09:43 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:43 : INFO] - 95 
+[2020-08-31 04:09:46 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:46 : INFO] - 95 
+[2020-08-31 04:09:47 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:47 : INFO] - 95 
+[2020-08-31 04:09:49 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:49 : INFO] - 95 
+[2020-08-31 04:09:50 : INFO] - Re_Smush_It_Task with attachment ID : 647, autocreated on : August 31, 2020 04:07:23 
+[2020-08-31 04:09:50 : INFO] - 95 
+[2020-08-31 04:09:52 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/logo-site-512x512-1.png.The file was compressed from 21.52 KB to 9.32 KB saving 56.71 percent using WP-Optimize 
+[2020-08-31 04:09:52 : INFO] - Completed processing task with ID : 82, and type 'smush' 
+[2020-08-31 04:09:52 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:09:52 
+[2020-08-31 04:09:52 : INFO] - Processing task with ID : 81, and type 'smush' 
+[2020-08-31 04:09:52 : INFO] - Re_Smush_It_Task with attachment ID : 646, autocreated on : August 31, 2020 04:04:01 
+[2020-08-31 04:09:52 : INFO] - 95 
+[2020-08-31 04:09:53 : INFO] - Backing up the original image - 2020/08/favicon-16x16-2-updraft-pre-smush-original.png 
+[2020-08-31 04:09:53 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/favicon-16x16-2.png.The file was compressed from 450 bytes to 450 bytes saving 0 percent using WP-Optimize 
+[2020-08-31 04:09:53 : INFO] - Completed processing task with ID : 81, and type 'smush' 
+[2020-08-31 04:09:53 : INFO] - Processing task with ID : 80, and type 'smush' 
+[2020-08-31 04:09:53 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:09:53 : INFO] - 95 
+[2020-08-31 04:09:54 : INFO] - Backing up the original image - 2020/08/header-logo-544x180-1-updraft-pre-smush-original.png 
+[2020-08-31 04:09:54 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:09:54 : INFO] - 95 
+[2020-08-31 04:09:56 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:09:56 : INFO] - 95 
+[2020-08-31 04:09:57 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:09:57 : INFO] - 95 
+[2020-08-31 04:09:59 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:09:59 : INFO] - 95 
+[2020-08-31 04:10:00 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:10:00 : INFO] - 95 
+[2020-08-31 04:10:02 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:10:02 : INFO] - 95 
+[2020-08-31 04:10:03 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:10:03 : INFO] - 95 
+[2020-08-31 04:10:04 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:10:04 : INFO] - 95 
+[2020-08-31 04:10:06 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:10:06 : INFO] - 95 
+[2020-08-31 04:10:07 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:10:07 : INFO] - 95 
+[2020-08-31 04:10:09 : INFO] - Re_Smush_It_Task with attachment ID : 645, autocreated on : August 31, 2020 04:03:32 
+[2020-08-31 04:10:09 : INFO] - 95 
+[2020-08-31 04:10:10 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/header-logo-544x180-1.png.The file was compressed from 16.23 KB to 7.12 KB saving 56.15 percent using WP-Optimize 
+[2020-08-31 04:10:10 : INFO] - Completed processing task with ID : 80, and type 'smush' 
+[2020-08-31 04:10:10 : INFO] - Processing task with ID : 79, and type 'smush' 
+[2020-08-31 04:10:10 : INFO] - Re_Smush_It_Task with attachment ID : 644, autocreated on : August 31, 2020 04:03:13 
+[2020-08-31 04:10:10 : INFO] - 95 
+[2020-08-31 04:10:11 : INFO] - Backing up the original image - 2020/08/header-logo-272x90-1-updraft-pre-smush-original.png 
+[2020-08-31 04:10:11 : INFO] - Re_Smush_It_Task with attachment ID : 644, autocreated on : August 31, 2020 04:03:13 
+[2020-08-31 04:10:11 : INFO] - 95 
+[2020-08-31 04:10:13 : INFO] - Re_Smush_It_Task with attachment ID : 644, autocreated on : August 31, 2020 04:03:13 
+[2020-08-31 04:10:13 : INFO] - 95 
+[2020-08-31 04:10:14 : INFO] - Re_Smush_It_Task with attachment ID : 644, autocreated on : August 31, 2020 04:03:13 
+[2020-08-31 04:10:14 : INFO] - 95 
+[2020-08-31 04:10:16 : INFO] - Re_Smush_It_Task with attachment ID : 644, autocreated on : August 31, 2020 04:03:13 
+[2020-08-31 04:10:16 : INFO] - 95 
+[2020-08-31 04:10:17 : INFO] - Re_Smush_It_Task with attachment ID : 644, autocreated on : August 31, 2020 04:03:13 
+[2020-08-31 04:10:17 : INFO] - 95 
+[2020-08-31 04:10:18 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/header-logo-272x90-1.png.The file was compressed from 8.09 KB to 3.79 KB saving 53.1 percent using WP-Optimize 
+[2020-08-31 04:10:18 : INFO] - Completed processing task with ID : 79, and type 'smush' 
+[2020-08-31 04:10:18 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:10:18 
+[2020-08-31 04:10:18 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-31 04:10:18 : INFO] - Semaphore (smush) unlocked 
+[2020-08-31 04:10:18 : INFO] - Successfully processed the queue (smush). 6 tasks were processed out of 6. 
+[2020-08-31 04:10:18 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-31 04:18:17 : INFO] - 
+ 
+[2020-08-31 04:18:17 : INFO] - Header for logs at time:  Mon, 31 Aug 2020 04:18:17 +0000 on https://blog.adityacprtm.com 
+[2020-08-31 04:18:17 : INFO] - WP: 5.5 
+[2020-08-31 04:18:17 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-31 04:18:17 : INFO] - MySQL: 5.5.5 
+[2020-08-31 04:18:17 : INFO] - WPLANG: id_ID 
+[2020-08-31 04:18:17 : INFO] - Server: LiteSpeed 
+[2020-08-31 04:18:17 : INFO] - Outbound connections: N 
+[2020-08-31 04:18:17 : INFO] - safe_mode: 0 
+[2020-08-31 04:18:17 : INFO] - max_execution_time: 30 
+[2020-08-31 04:18:17 : INFO] - memory_limit: 256M (used: 121.2M | 123M) 
+[2020-08-31 04:18:17 : INFO] - multisite: N 
+[2020-08-31 04:18:17 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-31 04:18:17 : INFO] - A total of 2 tasks of type smush found and will be processed in this iteration 
+[2020-08-31 04:18:17 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:18:17 
+[2020-08-31 04:18:17 : INFO] - Semaphore lock (smush) complete 
+[2020-08-31 04:18:17 : INFO] - Processing task with ID : 86, and type 'smush' 
+[2020-08-31 04:18:17 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:17 : INFO] - 95 
+[2020-08-31 04:18:18 : INFO] - Backing up the original image - 2020/08/footer-logo-544x180-1-updraft-pre-smush-original.png 
+[2020-08-31 04:18:18 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:18 : INFO] - 95 
+[2020-08-31 04:18:19 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:19 : INFO] - 95 
+[2020-08-31 04:18:21 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:21 : INFO] - 95 
+[2020-08-31 04:18:22 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:22 : INFO] - 95 
+[2020-08-31 04:18:23 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:23 : INFO] - 95 
+[2020-08-31 04:18:25 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:25 : INFO] - 95 
+[2020-08-31 04:18:26 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:26 : INFO] - 95 
+[2020-08-31 04:18:28 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:28 : INFO] - 95 
+[2020-08-31 04:18:29 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:29 : INFO] - 95 
+[2020-08-31 04:18:30 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:30 : INFO] - 95 
+[2020-08-31 04:18:32 : INFO] - Re_Smush_It_Task with attachment ID : 652, autocreated on : August 31, 2020 04:08:58 
+[2020-08-31 04:18:32 : INFO] - 95 
+[2020-08-31 04:18:33 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/footer-logo-544x180-1.png.The file was compressed from 11.24 KB to 7.06 KB saving 37.2 percent using WP-Optimize 
+[2020-08-31 04:18:33 : INFO] - Completed processing task with ID : 86, and type 'smush' 
+[2020-08-31 04:18:33 : INFO] - Processing task with ID : 85, and type 'smush' 
+[2020-08-31 04:18:33 : INFO] - Re_Smush_It_Task with attachment ID : 651, autocreated on : August 31, 2020 04:08:43 
+[2020-08-31 04:18:33 : INFO] - 95 
+[2020-08-31 04:18:36 : INFO] - Backing up the original image - 2020/08/footer-logo-272x90-1-updraft-pre-smush-original.png 
+[2020-08-31 04:18:36 : INFO] - Re_Smush_It_Task with attachment ID : 651, autocreated on : August 31, 2020 04:08:43 
+[2020-08-31 04:18:36 : INFO] - 95 
+[2020-08-31 04:18:37 : INFO] - Re_Smush_It_Task with attachment ID : 651, autocreated on : August 31, 2020 04:08:43 
+[2020-08-31 04:18:37 : INFO] - 95 
+[2020-08-31 04:18:38 : INFO] - Re_Smush_It_Task with attachment ID : 651, autocreated on : August 31, 2020 04:08:43 
+[2020-08-31 04:18:38 : INFO] - 95 
+[2020-08-31 04:18:40 : INFO] - Re_Smush_It_Task with attachment ID : 651, autocreated on : August 31, 2020 04:08:43 
+[2020-08-31 04:18:40 : INFO] - 95 
+[2020-08-31 04:18:41 : INFO] - Re_Smush_It_Task with attachment ID : 651, autocreated on : August 31, 2020 04:08:43 
+[2020-08-31 04:18:41 : INFO] - 95 
+[2020-08-31 04:18:42 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/footer-logo-272x90-1.png.The file was compressed from 5.34 KB to 3.74 KB saving 29.97 percent using WP-Optimize 
+[2020-08-31 04:18:42 : INFO] - Completed processing task with ID : 85, and type 'smush' 
+[2020-08-31 04:18:42 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:18:42 
+[2020-08-31 04:18:42 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-31 04:18:42 : INFO] - Semaphore (smush) unlocked 
+[2020-08-31 04:18:42 : INFO] - Successfully processed the queue (smush). 2 tasks were processed out of 2. 
+[2020-08-31 04:18:42 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-31 04:18:42 : INFO] - Cleaning up tasks of type (smush). A total of 8 tasks will be deleted. 
+[2020-08-31 04:21:21 : INFO] - Re_Smush_It_Task with attachment ID : 653, autocreated on : August 31, 2020 04:21:21 
+[2020-08-31 04:21:38 : INFO] - Re_Smush_It_Task with attachment ID : 654, autocreated on : August 31, 2020 04:21:38 
+[2020-08-31 04:23:50 : INFO] - Re_Smush_It_Task with attachment ID : 655, autocreated on : August 31, 2020 04:23:50 
+[2020-08-31 04:24:23 : INFO] - Re_Smush_It_Task with attachment ID : 656, autocreated on : August 31, 2020 04:24:23 
+[2020-08-31 04:24:46 : INFO] - Re_Smush_It_Task with attachment ID : 657, autocreated on : August 31, 2020 04:24:46 
+[2020-08-31 04:25:02 : INFO] - Re_Smush_It_Task with attachment ID : 658, autocreated on : August 31, 2020 04:25:02 
+[2020-08-31 04:25:16 : INFO] - Re_Smush_It_Task with attachment ID : 659, autocreated on : August 31, 2020 04:25:16 
+[2020-08-31 04:28:31 : INFO] - 
+ 
+[2020-08-31 04:28:31 : INFO] - Header for logs at time:  Mon, 31 Aug 2020 04:28:31 +0000 on https://blog.adityacprtm.com 
+[2020-08-31 04:28:31 : INFO] - WP: 5.5 
+[2020-08-31 04:28:31 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-31 04:28:31 : INFO] - MySQL: 5.5.5 
+[2020-08-31 04:28:31 : INFO] - WPLANG: id_ID 
+[2020-08-31 04:28:31 : INFO] - Server: LiteSpeed 
+[2020-08-31 04:28:31 : INFO] - Outbound connections: N 
+[2020-08-31 04:28:31 : INFO] - safe_mode: 0 
+[2020-08-31 04:28:31 : INFO] - max_execution_time: 30 
+[2020-08-31 04:28:31 : INFO] - memory_limit: 256M (used: 119.9M | 123M) 
+[2020-08-31 04:28:31 : INFO] - multisite: N 
+[2020-08-31 04:28:31 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-31 04:28:31 : INFO] - A total of 7 tasks of type smush found and will be processed in this iteration 
+[2020-08-31 04:28:31 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:28:31 
+[2020-08-31 04:28:31 : INFO] - Semaphore lock (smush) complete 
+[2020-08-31 04:28:31 : INFO] - Processing task with ID : 101, and type 'smush' 
+[2020-08-31 04:28:31 : INFO] - Re_Smush_It_Task with attachment ID : 659, autocreated on : August 31, 2020 04:25:16 
+[2020-08-31 04:28:31 : INFO] - 95 
+[2020-08-31 04:28:33 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-152x152-1-updraft-pre-smush-original.png 
+[2020-08-31 04:28:33 : INFO] - Re_Smush_It_Task with attachment ID : 659, autocreated on : August 31, 2020 04:25:16 
+[2020-08-31 04:28:33 : INFO] - 95 
+[2020-08-31 04:28:34 : INFO] - Re_Smush_It_Task with attachment ID : 659, autocreated on : August 31, 2020 04:25:16 
+[2020-08-31 04:28:34 : INFO] - 95 
+[2020-08-31 04:28:35 : INFO] - Re_Smush_It_Task with attachment ID : 659, autocreated on : August 31, 2020 04:25:16 
+[2020-08-31 04:28:35 : INFO] - 95 
+[2020-08-31 04:28:37 : INFO] - Re_Smush_It_Task with attachment ID : 659, autocreated on : August 31, 2020 04:25:16 
+[2020-08-31 04:28:37 : INFO] - 95 
+[2020-08-31 04:28:38 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-152x152-1.png.The file was compressed from 11.52 KB to 7.45 KB saving 35.33 percent using WP-Optimize 
+[2020-08-31 04:28:38 : INFO] - Completed processing task with ID : 101, and type 'smush' 
+[2020-08-31 04:28:38 : INFO] - Processing task with ID : 100, and type 'smush' 
+[2020-08-31 04:28:38 : INFO] - Re_Smush_It_Task with attachment ID : 658, autocreated on : August 31, 2020 04:25:02 
+[2020-08-31 04:28:38 : INFO] - 95 
+[2020-08-31 04:28:40 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-144x144-1-updraft-pre-smush-original.png 
+[2020-08-31 04:28:40 : INFO] - Re_Smush_It_Task with attachment ID : 658, autocreated on : August 31, 2020 04:25:02 
+[2020-08-31 04:28:40 : INFO] - 95 
+[2020-08-31 04:28:41 : INFO] - Re_Smush_It_Task with attachment ID : 658, autocreated on : August 31, 2020 04:25:02 
+[2020-08-31 04:28:41 : INFO] - 95 
+[2020-08-31 04:28:42 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-144x144-1.png.The file was compressed from 11.20 KB to 7.35 KB saving 34.34 percent using WP-Optimize 
+[2020-08-31 04:28:42 : INFO] - Completed processing task with ID : 100, and type 'smush' 
+[2020-08-31 04:28:42 : INFO] - Processing task with ID : 99, and type 'smush' 
+[2020-08-31 04:28:42 : INFO] - Re_Smush_It_Task with attachment ID : 657, autocreated on : August 31, 2020 04:24:46 
+[2020-08-31 04:28:42 : INFO] - 95 
+[2020-08-31 04:28:44 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-120x120-1-updraft-pre-smush-original.png 
+[2020-08-31 04:28:44 : INFO] - Re_Smush_It_Task with attachment ID : 657, autocreated on : August 31, 2020 04:24:46 
+[2020-08-31 04:28:44 : INFO] - 95 
+[2020-08-31 04:28:45 : INFO] - Re_Smush_It_Task with attachment ID : 657, autocreated on : August 31, 2020 04:24:46 
+[2020-08-31 04:28:45 : INFO] - 95 
+[2020-08-31 04:28:47 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-120x120-1.png.The file was compressed from 10.35 KB to 7.00 KB saving 32.38 percent using WP-Optimize 
+[2020-08-31 04:28:47 : INFO] - Completed processing task with ID : 99, and type 'smush' 
+[2020-08-31 04:28:47 : INFO] - Processing task with ID : 88, and type 'smush' 
+[2020-08-31 04:28:47 : INFO] - Task with ID 88 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2020-08-31 04:28:47 : INFO] - Processing task with ID : 87, and type 'smush' 
+[2020-08-31 04:28:47 : INFO] - Task with ID 87 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2020-08-31 04:28:47 : INFO] - Processing task with ID : 98, and type 'smush' 
+[2020-08-31 04:28:47 : INFO] - Re_Smush_It_Task with attachment ID : 656, autocreated on : August 31, 2020 04:24:23 
+[2020-08-31 04:28:47 : INFO] - 95 
+[2020-08-31 04:28:48 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-114x114-1-updraft-pre-smush-original.png 
+[2020-08-31 04:28:48 : INFO] - Re_Smush_It_Task with attachment ID : 656, autocreated on : August 31, 2020 04:24:23 
+[2020-08-31 04:28:48 : INFO] - 95 
+[2020-08-31 04:28:49 : INFO] - Re_Smush_It_Task with attachment ID : 656, autocreated on : August 31, 2020 04:24:23 
+[2020-08-31 04:28:49 : INFO] - 95 
+[2020-08-31 04:28:51 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-114x114-1.png.The file was compressed from 10.22 KB to 6.98 KB saving 31.69 percent using WP-Optimize 
+[2020-08-31 04:28:51 : INFO] - Completed processing task with ID : 98, and type 'smush' 
+[2020-08-31 04:28:51 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:28:51 
+[2020-08-31 04:28:51 : INFO] - Processing task with ID : 97, and type 'smush' 
+[2020-08-31 04:28:51 : INFO] - Re_Smush_It_Task with attachment ID : 655, autocreated on : August 31, 2020 04:23:50 
+[2020-08-31 04:28:51 : INFO] - 95 
+[2020-08-31 04:28:52 : INFO] - Backing up the original image - 2020/08/apple-touch-icon-76x76-1-updraft-pre-smush-original.png 
+[2020-08-31 04:28:52 : INFO] - Re_Smush_It_Task with attachment ID : 655, autocreated on : August 31, 2020 04:23:50 
+[2020-08-31 04:28:52 : INFO] - 95 
+[2020-08-31 04:28:54 : INFO] - Re_Smush_It_Task with attachment ID : 655, autocreated on : August 31, 2020 04:23:50 
+[2020-08-31 04:28:54 : INFO] - 95 
+[2020-08-31 04:28:55 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/apple-touch-icon-76x76-1.png.The file was compressed from 8.37 KB to 6.82 KB saving 18.53 percent using WP-Optimize 
+[2020-08-31 04:28:55 : INFO] - Completed processing task with ID : 97, and type 'smush' 
+[2020-08-31 04:28:55 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-31 04:28:55 : INFO] - Semaphore (smush) unlocked 
+[2020-08-31 04:28:55 : INFO] - Successfully processed the queue (smush). 7 tasks were processed out of 7. 
+[2020-08-31 04:28:55 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-31 04:28:55 : INFO] - Cleaning up tasks of type (smush). A total of 7 tasks will be deleted. 
+[2020-08-31 04:30:24 : INFO] - Re_Smush_It_Task with attachment ID : 660, autocreated on : August 31, 2020 04:30:24 
+[2020-08-31 04:30:47 : INFO] - Re_Smush_It_Task with attachment ID : 661, autocreated on : August 31, 2020 04:30:47 
+[2020-08-31 04:40:00 : INFO] - 
+ 
+[2020-08-31 04:40:00 : INFO] - Header for logs at time:  Mon, 31 Aug 2020 04:40:00 +0000 on https://blog.adityacprtm.com 
+[2020-08-31 04:40:00 : INFO] - WP: 5.5 
+[2020-08-31 04:40:00 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-31 04:40:00 : INFO] - MySQL: 5.5.5 
+[2020-08-31 04:40:00 : INFO] - WPLANG: id_ID 
+[2020-08-31 04:40:00 : INFO] - Server: LiteSpeed 
+[2020-08-31 04:40:00 : INFO] - Outbound connections: N 
+[2020-08-31 04:40:00 : INFO] - safe_mode: 0 
+[2020-08-31 04:40:00 : INFO] - max_execution_time: 30 
+[2020-08-31 04:40:00 : INFO] - memory_limit: 256M (used: 119.9M | 123M) 
+[2020-08-31 04:40:00 : INFO] - multisite: N 
+[2020-08-31 04:40:00 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-31 04:40:00 : INFO] - A total of 2 tasks of type smush found and will be processed in this iteration 
+[2020-08-31 04:40:00 : INFO] - Set semaphore last lock (smush) time to 2020-08-31 04:40:00 
+[2020-08-31 04:40:00 : INFO] - Semaphore lock (smush) complete 
+[2020-08-31 04:40:00 : INFO] - Processing task with ID : 103, and type 'smush' 
+[2020-08-31 04:40:00 : INFO] - Re_Smush_It_Task with attachment ID : 661, autocreated on : August 31, 2020 04:30:47 
+[2020-08-31 04:40:00 : INFO] - 95 
+[2020-08-31 04:40:01 : INFO] - Backing up the original image - 2020/08/header-mobile-logo-280x96-1-updraft-pre-smush-original.png 
+[2020-08-31 04:40:01 : INFO] - Re_Smush_It_Task with attachment ID : 661, autocreated on : August 31, 2020 04:30:47 
+[2020-08-31 04:40:01 : INFO] - 95 
+[2020-08-31 04:40:03 : INFO] - Re_Smush_It_Task with attachment ID : 661, autocreated on : August 31, 2020 04:30:47 
+[2020-08-31 04:40:03 : INFO] - 95 
+[2020-08-31 04:40:04 : INFO] - Re_Smush_It_Task with attachment ID : 661, autocreated on : August 31, 2020 04:30:47 
+[2020-08-31 04:40:04 : INFO] - 95 
+[2020-08-31 04:40:05 : INFO] - Re_Smush_It_Task with attachment ID : 661, autocreated on : August 31, 2020 04:30:47 
+[2020-08-31 04:40:05 : INFO] - 95 
+[2020-08-31 04:40:07 : INFO] - Re_Smush_It_Task with attachment ID : 661, autocreated on : August 31, 2020 04:30:47 
+[2020-08-31 04:40:07 : INFO] - 95 
+[2020-08-31 04:40:08 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/header-mobile-logo-280x96-1.png.The file was compressed from 8.01 KB to 3.80 KB saving 52.48 percent using WP-Optimize 
+[2020-08-31 04:40:08 : INFO] - Completed processing task with ID : 103, and type 'smush' 
+[2020-08-31 04:40:08 : INFO] - Processing task with ID : 102, and type 'smush' 
+[2020-08-31 04:40:08 : INFO] - Re_Smush_It_Task with attachment ID : 660, autocreated on : August 31, 2020 04:30:24 
+[2020-08-31 04:40:08 : INFO] - 95 
+[2020-08-31 04:40:09 : INFO] - Backing up the original image - 2020/08/header-mobile-logo-140x48-1-updraft-pre-smush-original.png 
+[2020-08-31 04:40:09 : INFO] - Re_Smush_It_Task with attachment ID : 660, autocreated on : August 31, 2020 04:30:24 
+[2020-08-31 04:40:09 : INFO] - 95 
+[2020-08-31 04:40:11 : INFO] - Re_Smush_It_Task with attachment ID : 660, autocreated on : August 31, 2020 04:30:24 
+[2020-08-31 04:40:11 : INFO] - 95 
+[2020-08-31 04:40:12 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/08/header-mobile-logo-140x48-1.png.The file was compressed from 3.96 KB to 2.33 KB saving 41.09 percent using WP-Optimize 
+[2020-08-31 04:40:12 : INFO] - Completed processing task with ID : 102, and type 'smush' 
+[2020-08-31 04:40:12 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-08-31 04:40:12 : INFO] - Semaphore (smush) unlocked 
+[2020-08-31 04:40:12 : INFO] - Successfully processed the queue (smush). 2 tasks were processed out of 2. 
+[2020-08-31 04:40:12 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-08-31 04:40:12 : INFO] - Cleaning up tasks of type (smush). A total of 2 tasks will be deleted. 
+[2020-08-31 04:52:08 : INFO] - 
+ 
+[2020-08-31 04:52:08 : INFO] - Header for logs at time:  Mon, 31 Aug 2020 04:52:08 +0000 on https://blog.adityacprtm.com 
+[2020-08-31 04:52:08 : INFO] - WP: 5.5 
+[2020-08-31 04:52:08 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-08-31 04:52:08 : INFO] - MySQL: 5.5.5 
+[2020-08-31 04:52:08 : INFO] - WPLANG: id_ID 
+[2020-08-31 04:52:08 : INFO] - Server: LiteSpeed 
+[2020-08-31 04:52:08 : INFO] - Outbound connections: N 
+[2020-08-31 04:52:08 : INFO] - safe_mode: 0 
+[2020-08-31 04:52:08 : INFO] - max_execution_time: 30 
+[2020-08-31 04:52:08 : INFO] - memory_limit: 256M (used: 121.2M | 123M) 
+[2020-08-31 04:52:08 : INFO] - multisite: N 
+[2020-08-31 04:52:08 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-08-31 04:52:08 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2020-09-05 15:11:55 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:00 : INFO] - 
+ 
+[2020-09-05 15:17:00 : INFO] - Header for logs at time:  Sat, 05 Sep 2020 15:17:00 +0000 on https://blog.adityacprtm.com 
+[2020-09-05 15:17:00 : INFO] - WP: 5.5.1 
+[2020-09-05 15:17:00 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-09-05 15:17:00 : INFO] - MySQL: 5.5.5 
+[2020-09-05 15:17:00 : INFO] - WPLANG: id_ID 
+[2020-09-05 15:17:00 : INFO] - Server: LiteSpeed 
+[2020-09-05 15:17:00 : INFO] - Outbound connections: N 
+[2020-09-05 15:17:00 : INFO] - safe_mode: 0 
+[2020-09-05 15:17:00 : INFO] - max_execution_time: 30 
+[2020-09-05 15:17:00 : INFO] - memory_limit: 256M (used: 119.2M | 123M) 
+[2020-09-05 15:17:00 : INFO] - multisite: N 
+[2020-09-05 15:17:00 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-09-05 15:17:00 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2020-09-05 15:17:00 : INFO] - Set semaphore last lock (smush) time to 2020-09-05 15:17:00 
+[2020-09-05 15:17:00 : INFO] - Semaphore lock (smush) complete 
+[2020-09-05 15:17:00 : INFO] - Processing task with ID : 158, and type 'smush' 
+[2020-09-05 15:17:00 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:00 : INFO] - 95 
+[2020-09-05 15:17:02 : INFO] - Backing up the original image - 2020/09/social-image-updraft-pre-smush-original.png 
+[2020-09-05 15:17:02 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:02 : INFO] - 95 
+[2020-09-05 15:17:04 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:04 : INFO] - 95 
+[2020-09-05 15:17:06 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:06 : INFO] - 95 
+[2020-09-05 15:17:07 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:07 : INFO] - 95 
+[2020-09-05 15:17:09 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:09 : INFO] - 95 
+[2020-09-05 15:17:11 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:11 : INFO] - 95 
+[2020-09-05 15:17:13 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:13 : INFO] - 95 
+[2020-09-05 15:17:15 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:15 : INFO] - 95 
+[2020-09-05 15:17:18 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:18 : INFO] - 95 
+[2020-09-05 15:17:20 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:20 : INFO] - 95 
+[2020-09-05 15:17:22 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:22 : INFO] - 95 
+[2020-09-05 15:17:23 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:23 : INFO] - 95 
+[2020-09-05 15:17:25 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:25 : INFO] - 95 
+[2020-09-05 15:17:26 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:26 : INFO] - 95 
+[2020-09-05 15:17:28 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:28 : INFO] - 95 
+[2020-09-05 15:17:30 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:30 : INFO] - 95 
+[2020-09-05 15:17:32 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:32 : INFO] - 95 
+[2020-09-05 15:17:35 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:35 : INFO] - 95 
+[2020-09-05 15:17:37 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:37 : INFO] - 95 
+[2020-09-05 15:17:39 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:39 : INFO] - 95 
+[2020-09-05 15:17:41 : INFO] - Re_Smush_It_Task with attachment ID : 681, autocreated on : September 05, 2020 03:11:55 
+[2020-09-05 15:17:41 : INFO] - 95 
+[2020-09-05 15:17:45 : INFO] - Successfully optimized the image - /home/adityacp/public_html/blog/wp-content/uploads/2020/09/social-image.png.The file was compressed from 31.46 KB to 11.05 KB saving 64.88 percent using WP-Optimize 
+[2020-09-05 15:17:45 : INFO] - Completed processing task with ID : 158, and type 'smush' 
+[2020-09-05 15:17:45 : INFO] - Set semaphore last lock (smush) time to 2020-09-05 15:17:45 
+[2020-09-05 15:17:45 : INFO] - Decremented the semaphore (smush) by 1 
+[2020-09-05 15:17:45 : INFO] - Semaphore (smush) unlocked 
+[2020-09-05 15:17:45 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2020-09-05 15:17:45 : INFO] - Semaphore (smush, wp9v_options) was successfully cleaned up 
+[2020-09-05 15:17:45 : INFO] - Cleaning up tasks of type (smush). A total of 1 tasks will be deleted. 
+[2020-09-05 15:27:26 : INFO] - 
+ 
+[2020-09-05 15:27:26 : INFO] - Header for logs at time:  Sat, 05 Sep 2020 15:27:26 +0000 on https://blog.adityacprtm.com 
+[2020-09-05 15:27:26 : INFO] - WP: 5.5.1 
+[2020-09-05 15:27:26 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-09-05 15:27:26 : INFO] - MySQL: 5.5.5 
+[2020-09-05 15:27:26 : INFO] - WPLANG: id_ID 
+[2020-09-05 15:27:26 : INFO] - Server: LiteSpeed 
+[2020-09-05 15:27:26 : INFO] - Outbound connections: N 
+[2020-09-05 15:27:26 : INFO] - safe_mode: 0 
+[2020-09-05 15:27:26 : INFO] - max_execution_time: 30 
+[2020-09-05 15:27:26 : INFO] - memory_limit: 256M (used: 119.3M | 123M) 
+[2020-09-05 15:27:26 : INFO] - multisite: N 
+[2020-09-05 15:27:26 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-09-05 15:27:26 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2020-09-05 15:27:30 : INFO] - 
+ 
+[2020-09-05 15:27:30 : INFO] - Header for logs at time:  Sat, 05 Sep 2020 15:27:30 +0000 on https://blog.adityacprtm.com 
+[2020-09-05 15:27:30 : INFO] - WP: 5.5.1 
+[2020-09-05 15:27:30 : INFO] - PHP: 7.4.9 (litespeed, Linux rubick.jagoanhosting.com 3.10.0-962.3.2.lve1.5.25.12.el7.x86_64 #1 SMP Thu Jun 27 08:04:52 EDT 2019 x86_64) 
+[2020-09-05 15:27:30 : INFO] - MySQL: 5.5.5 
+[2020-09-05 15:27:30 : INFO] - WPLANG: id_ID 
+[2020-09-05 15:27:30 : INFO] - Server: LiteSpeed 
+[2020-09-05 15:27:30 : INFO] - Outbound connections: N 
+[2020-09-05 15:27:30 : INFO] - safe_mode: 0 
+[2020-09-05 15:27:30 : INFO] - max_execution_time: 30 
+[2020-09-05 15:27:30 : INFO] - memory_limit: 256M (used: 119.3M | 123M) 
+[2020-09-05 15:27:30 : INFO] - multisite: N 
+[2020-09-05 15:27:30 : INFO] - openssl: OpenSSL 1.0.2k  26 Jan 2017 
+[2020-09-05 15:27:30 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 

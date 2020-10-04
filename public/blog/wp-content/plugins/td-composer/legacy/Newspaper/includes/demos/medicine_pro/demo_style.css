@@ -1,0 +1,69 @@
+/*  ----------------------------------------------------------------------------
+    responsive settings
+*/
+/* responsive landscape tablet */
+/* responsive portrait tablet */
+/* responsive portrait phone */
+/*
+Medicine Pro Demo
+*/
+.td-medicine-pro .td-medicine-pro-logo .tdb-logo-text-tagline {
+  position: relative;
+  left: 2px;
+}
+.td-medicine-pro .td-medicine-pro-logo span.td-logo-pro {
+  color: #0db588;
+}
+.td-medicine-pro .tdb_header_menu .tdb-menu > li > a:after {
+  left: -9px;
+  right: auto;
+  margin: auto;
+  border-radius: 100%;
+}
+.td-medicine-pro .tdb-mega-modules-wrap .td-next-prev-wrap,
+.td-medicine-pro .td-hero-articles .td-next-prev-wrap {
+  margin-left: -6px;
+}
+.td-medicine-pro .tdb-mega-modules-wrap .td-next-prev-wrap a,
+.td-medicine-pro .td-hero-articles .td-next-prev-wrap a {
+  margin-right: 16px;
+}
+.td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_block_inner {
+  margin: 0 -10px;
+}
+.td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_module_wrap {
+  float: left;
+  width: 33.33333%;
+  padding: 0 10px;
+}
+.td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_module_wrap:nth-last-child(-n+3) {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_module_wrap:nth-child(3n+1) {
+  clear: both;
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_block_inner {
+    margin: 0 -5px;
+  }
+  .td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_module_wrap {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 767px) {
+  .td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_block_inner {
+    margin: 0;
+  }
+  .td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_module_wrap {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .td-medicine-pro .td-medicine-pro-quick.td_flex_block_2 .td_module_wrap:nth-last-child(-n+3) {
+    margin-bottom: 30px !important;
+  }
+}
+.td-medicine-pro .td_wrapper_video_playlist .td_container_video_playlist {
+  background-color: #000;
+}

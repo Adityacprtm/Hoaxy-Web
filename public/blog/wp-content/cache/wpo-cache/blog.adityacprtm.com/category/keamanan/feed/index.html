@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Keamanan &#8211; Blog by Adityacprtm</title>
+	<atom:link href="https://blog.adityacprtm.com/category/keamanan/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.adityacprtm.com</link>
+	<description>All About Technology</description>
+	<lastBuildDate>Sun, 06 Sep 2020 03:35:41 +0000</lastBuildDate>
+	<language>id-ID</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+
+<image>
+	<url>https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/cropped-logo-site-512x512-1.png?fit=32%2C32&#038;ssl=1</url>
+	<title>Keamanan &#8211; Blog by Adityacprtm</title>
+	<link>https://blog.adityacprtm.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">181785340</site>	<item>
+		<title>Cara Mudah Mengatur Access Control List (ACL) di Linux</title>
+		<link>https://blog.adityacprtm.com/cara-mudah-mengatur-access-control-list-di-linux/</link>
+					<comments>https://blog.adityacprtm.com/cara-mudah-mengatur-access-control-list-di-linux/#respond</comments>
+		
+		<dc:creator><![CDATA[Aditya Pratama]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2020 06:19:16 +0000</pubDate>
+				<category><![CDATA[Keamanan]]></category>
+		<category><![CDATA[Tips & Trik]]></category>
+		<category><![CDATA[ACL]]></category>
+		<category><![CDATA[Linux]]></category>
+		<guid isPermaLink="false">https://blog.adityacprtm.com/?p=501</guid>
+
+					<description><![CDATA[Ada banyak tantangan dalam mengelola Linux di lingkungan bisnis modern, diantaranya bahwa kita harus bisa mengelola siapa yang memiliki akses ke suatu informasi atau biasa yang disebut Access Control List. Untuk melakukan hal itu, dapat menggunakan basic linux filesystem permissions. Review Basic Linux Permissions Ada 3 jenis permissions di Linux filesystem, berikut penjelasan sederhananya: User [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Ada banyak tantangan dalam mengelola Linux di lingkungan bisnis modern, diantaranya bahwa kita harus bisa mengelola siapa yang memiliki akses ke suatu informasi atau biasa yang disebut Access Control List. Untuk melakukan hal itu, dapat menggunakan <em>basic linux filesystem permissions</em>.</p>
+
+
+
+<h2>Review Basic Linux Permissions</h2>
+
+
+
+<p>Ada 3 jenis <em>permissions</em> di <em>Linux filesystem</em>, berikut penjelasan sederhananya:</p>
+
+
+
+<ul><li><strong>U</strong>ser atau user owner</li><li><strong>G</strong>roup atau owner group</li><li><strong>O</strong>ther atau orang lain selain diatas</li></ul>
+
+
+
+<p>Dari ketiga jenis <em>permissions</em> diatas, masing-masing dapat diberikan 3 jenis akses yaitu:</p>
+
+
+
+<ul><li><strong>R</strong>ead</li><li><strong>W</strong>rite</li><li>e<strong>X</strong>ecute</li></ul>
+
+
+
+<p>Sebagai contoh terdapat direktori berisi file dari departemen development dengan <em>permissions</em> sebagai berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>drwxrwxr-x  2 development development 6 Jan  8 15:13</code></pre>
+
+
+
+<p>Dari contoh diatas, user development (user pemilik) dapat membaca dan menulis ke direktori. Anggota dari group development (atau owner group) juga dapat membaca dan menulis direktori, sedangkan orang lain atau other tidak bisa menulis. Sebagai catatan, contoh diatas mengizinkan other dapat membaca atau melihat isi direktori.</p>
+
+
+
+<h2>Linux Access Control List (ACL)</h2>
+
+
+
+<p>Pada situasi tertentu, <em>basic permissions</em> dapat menjadi rumit karena tiap file dan direktori hanya dapat memiliki satu <em>user</em> dan satu  <em>group owner</em> pada satu waktu. Jenis situasi ini dapat diatasi oleh Linux Access Control List (ACLs).</p>
+
+
+
+<p>ACL memungkinkan untuk menerapkan sekumpulan izin yang lebih spesifik ke file atau direktori tanpa mengubah <em>ownership</em> dan <em>permissions</em>.</p>
+
+
+
+<h2>Mengatur ACL</h2>
+
+
+
+<p>Bagian ini membahas penggunaan <em>Access Control List</em> atau ACL di Linux. Hal ini memungkinkan waktu yang lebih mudah untuk menyiapkan izin untuk tugas-tugas otomatis seperti menerapkan aplikasi web.</p>
+
+
+
+<p>Pastikan ACL telah terinstal, jika belum jalankan perintah <code>sudo apt install acl</code>.</p>
+
+
+
+<p>Dalam kasus ini akan menunjukkan pengaturan ACL pada direktori. <em>permissions </em>ACL ini dapat diwarisi oleh direktori induk (<em>parent directories</em>). Mengatur ACL default untuk suatu lokasi sangat efektif, karena mengabaikan kebutuhan untuk selalu mengatur ulang <em>permissions user/group </em>setelah operasi file apa pun (misalnya membuat file baru).</p>
+
+
+
+<h3>Melihat ACL</h3>
+
+
+
+<p>Untuk dapat melihat ACL saat ini di direktori tertentu dapat menggunakan perintah <code>getfacl</code>:</p>
+
+
+
+<pre class="wp-block-code"><code># getfacl /var/www</code></pre>
+
+
+
+<h3>Memasang ACL</h3>
+
+
+
+<p>Syntax untuk menyetel ACL terlihat seperti ini:</p>
+
+
+
+<pre class="wp-block-code"><code>setfacl &#91;option] &#91;action/specification] file</code></pre>
+
+
+
+<p>Mengatur ACL untuk user dan direktori tertentu:</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -R -m u:johndoe:rwx /var/www</code></pre>
+
+
+
+<p>Keterangan syntax diatas:</p>
+
+
+
+<ul class="td-arrow-list"><li><code>setfacl</code>&nbsp;: Set ACL</li><li><code>-R</code>&nbsp;: Rekursif ke dalam file dan direktori</li><li><code>-m</code>&nbsp;: Modifying ACL&#8217;s (-x untuk removing)</li><li><code>u:johndoe:rwx</code>&nbsp;: User johndoe akan mendapatkan permissions <code>rwx</code></li><li><code>/var/www</code>&nbsp;: Memberikan permissions ke direktori <code>/var/www</code></li></ul>
+
+
+
+<p>Mengatur ACL untuk group pada direktori tertentu:</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -R -m g:www-data:rwx /var/www</code></pre>
+
+
+
+<p>Keterangan syntax diatas:</p>
+
+
+
+<ul class="td-arrow-list"><li><code>g:www-data:rwx</code>&nbsp;: Anggota group&nbsp;<code>www-data</code>&nbsp;mendapatkan permissions <code>rwx</code></li></ul>
+
+
+
+<h3>Mengahapus ACL</h3>
+
+
+
+<pre class="wp-block-code"><code># setfacl -x g:www-data /var/www</code></pre>
+
+
+
+<p>Keterangan syntax diatas:</p>
+
+
+
+<ul class="td-arrow-list"><li><code>-x</code>&nbsp;: Hapus ACL&#8217;s untuk&nbsp;<code>g:www-data</code>&nbsp;di <code>/var/www</code></li></ul>
+
+
+
+<h2>Contoh Kasus</h2>
+
+
+
+<p>Untuk lebih memahami, dibawah ini merupakan contoh kasus dalam menerapkan aplikasi web. Terdapat 2 user dengan beda permissions. Baca juga bagaimana konfigurasi awal server untuk deploy aplikasi web <a href="https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server-baru/" class="rank-math-link">disini</a>.</p>
+
+
+
+<h3>Buat User</h3>
+
+
+
+<p>Buat user pertama dengan nama jane dan tambahkan ke group sudo agar dapat melakukan perintah <code>sudo</code>. </p>
+
+
+
+<pre class="wp-block-code"><code># adduser jane
+# usermod -a -G sudo jane</code></pre>
+
+
+
+<p>User kedua beri nama bob, bob merupakan user yang dapat melakukan deploy website dan merupakan anggota dari group <code>www-data</code>.</p>
+
+
+
+<pre class="wp-block-code"><code># adduser bob
+# usermod -a -G www-data bob</code></pre>
+
+
+
+<p>Untuk memastikan file di root web merupakan grup dari <code>www-data</code>, jalankan perintah dibawah. Ini tidak diperlukan untuk ACL permissions, namun tetap dilakukan untuk menjaga konsistensi.</p>
+
+
+
+<pre class="wp-block-code"><code># chown -R www-data:www-data /var/www</code></pre>
+
+
+
+<h3>Penggunaan ACL</h3>
+
+
+
+<p>User akan diberikan permission untuk read/write/execute file dan direktori menggunakan ACL sebagai pengganti dari basic Linux permissions.</p>
+
+
+
+<p>Lihat set ACL secara default, ini terpisah dari basic permission user/group.</p>
+
+
+
+<pre class="wp-block-code"><code># getfacl /var/www</code></pre>
+
+
+
+<p>Selanjutnya berikan permission user jane untuk mengubah file web di direktori <code>/var/www</code>. Secara teknis jane tidak membutuhkan ini, karena dia bisa menggunakan perintah <code>sudo</code>.</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -R -m u:jane:rwx /var/www</code></pre>
+
+
+
+<p>Di atas menetapkan ACL untuk file atau direktori yang ada, di sini akan secara rekursif (-R) menetapkan default (-d flag) untuk file atau direktori mendatang.</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -Rd -m u:jane:rwx /var/www</code></pre>
+
+
+
+<p>Cek perintah diatas telah berhasil ditambahkan</p>
+
+
+
+<pre class="wp-block-code"><code># getfacl /var/www</code></pre>
+
+
+
+<blockquote class="wp-block-quote has-text-align-left is-style-default td_quote_box td_box_center"><p>Dua perintah sebelumnya dapat digabungkan untuk mengatur default dan izin: <code>setfacl -R -m u:jane:rwx,d:u:jane:rwx /var/www</code></p></blockquote>
+
+
+
+<p>Selanjutnya memberikan permission berbasis grup melalui ACL ke file web. Cara ini lebih efisien untuk user memungkinkan mengedit file web, terlepas dari siapa pemilik file tersebut selama menjadi anggota group.</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -R -m g:www-data:rwx /var/www</code></pre>
+
+
+
+<p>Atau menggunakan default (-d) untuk kedepannya</p>
+
+
+
+<pre class="wp-block-code"><code># setfacl -Rd -m g:www-data:rwx /var/www</code></pre>
+
+
+
+<p>Jika sudah, sekarang TIAP USER yang menjadi anggota dari grup <code>www-data</code> dapat mengedit file di direktori <code>/var/www</code>. Untuk memastikan cek ACL dengan menjalankan perintah berikut:</p>
+
+
+
+<pre class="wp-block-code"><code># getfacl /var/www</code></pre>
+
+
+
+<p>That&#8217;s it! Kita bisa juga membaca artikel dari website Redhat mengenai ACL <a aria-label=" (opens in a new tab)" href="https://www.redhat.com/sysadmin/linux-access-control-lists" target="_blank" rel="noreferrer noopener" class="rank-math-link">disini</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.adityacprtm.com/cara-mudah-mengatur-access-control-list-di-linux/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">501</post-id>	</item>
+		<item>
+		<title>Konfigurasi Awal Untuk Mengamankan Server Baru</title>
+		<link>https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server/</link>
+					<comments>https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server/#respond</comments>
+		
+		<dc:creator><![CDATA[Aditya Pratama]]></dc:creator>
+		<pubDate>Wed, 26 Aug 2020 17:20:12 +0000</pubDate>
+				<category><![CDATA[Keamanan]]></category>
+		<category><![CDATA[Tips & Trik]]></category>
+		<category><![CDATA[Firewalls]]></category>
+		<category><![CDATA[Server]]></category>
+		<category><![CDATA[SSH]]></category>
+		<guid isPermaLink="false">https://blog.adityacprtm.com/?p=517</guid>
+
+					<description><![CDATA[Server atau dalam bahasa Indonesia disebut Peladen merupakan perangkat atau program komputer yang menyediakan layanan untuk program atau perangkat lain yang biasa disebut klien. Server dapat dibedakan berdasarkan jenisnya sebagai database server, file server, mail server, web server dan lain-lain. Satu server dapat melayani banyak klien, sehingga mengamankan server menjadi hal penting untuk menjaga layanan [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://en.wikipedia.org/wiki/Server_(computing)" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">Server</a> atau dalam bahasa Indonesia disebut <a href="https://id.wikipedia.org/wiki/Peladen" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">Peladen</a> merupakan perangkat atau program komputer yang menyediakan layanan untuk program atau perangkat lain yang biasa disebut klien. Server dapat dibedakan berdasarkan jenisnya sebagai database server, file server, mail server, web server dan lain-lain.</p>
+
+
+
+<p>Satu server dapat melayani banyak klien, sehingga mengamankan server menjadi hal penting untuk menjaga layanan server tetap berjalan. Di artikel ini menjelaskan langkah awal yang harus dilakukan untuk mengamankan server, termasuk pengaturan user, konfigurasi ssh dan firewall.</p>
+
+
+
+<p>Dalam kasus ini, menggunakan Amazon Web Service (AWS) sebagai server. Kamu bisa menggunakan penyedia VPS atau cloud computing lainnya seperti Microsoft Azure, Google Cloud (GCP), Digitalocean dan lain-lain. Login ke server menggunakan connection method sesuai layanan yang digunakan, biasanya sebagai root.</p>
+
+
+
+<h2>Konfigurasi keamanan User</h2>
+
+
+
+<p>Saat sudah login sebagai root di server, mulai dengan membuat user baru dan autorisasi akses berbasis SSH untuk SSH Key pair.</p>
+
+
+
+<p>Buat user baru dan masukkan password, info lainnya bersifat optional</p>
+
+
+
+<pre class="wp-block-code"><code># adduser aditya</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="696" height="395" src="https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/adduser.gif?resize=696%2C395&#038;ssl=1" alt="mengamankan server" class="wp-image-536" data-recalc-dims="1"/></figure>
+
+
+
+<p>Login sebagai user yang telah dibuat</p>
+
+
+
+<pre class="wp-block-code"><code># su aditya</code></pre>
+
+
+
+<p>Buat direktori <code>.ssh</code> didalam direktori user jika belum ada</p>
+
+
+
+<pre class="wp-block-code"><code>$ mkdir /home/aditya/.ssh</code></pre>
+
+
+
+<p>Buat file authorized_keys didalam direktori <code>.ssh</code> dan biarkan tab terminal terbuka.<br>Pastikan permission direktori ssh 700 dan file authorized_keys 600.</p>
+
+
+
+<pre class="wp-block-code"><code>$ vim .ssh/authorized_keys</code></pre>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="696" height="395" src="https://i1.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/userssh.gif?resize=696%2C395&#038;ssl=1" alt="mengamankan server" class="wp-image-539" data-recalc-dims="1"/></figure>
+
+
+
+<p>Buka tab terminal baru di local, buat <code>key</code> dengan nama key sesuai keinginan difolder <code>.ssh</code><br>Sedikit tambahan, upgrade algoritma untuk SSH Key menggunakan ED25519. Algoritma yang biasanya digunakan seperti DSA atau RSA saat ini telah deprecated. Kamu bisa baca info lanjut <a rel="noreferrer noopener nofollow" href="https://blog.g3rt.nl/upgrade-your-ssh-keys.html" target="_blank">disini</a>.</p>
+
+
+
+<pre class="wp-block-code"><code>$ ssh-keygen -o -a 100 -t ed25519 -f id_key_myserver</code></pre>
+
+
+
+<p>Copy isi dari public key <code>id_key_myserver.pub</code> dan paste-kan ke file <code>authorized_keys</code> diserver pada tab terminal</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="696" height="394" src="https://i0.wp.com/blog.adityacprtm.com/wp-content/uploads/2020/08/ezgif.com-optimize.gif?resize=696%2C394&#038;ssl=1" alt="mengamankan server" class="wp-image-540" data-recalc-dims="1"/></figure>
+
+
+
+<p>Jika sesuai, exit SSH server kemudian login sebagai user baru menggunakan private key <code>id_key_myserver</code></p>
+
+
+
+<pre class="wp-block-code"><code>$ ssh -i &lt;PATH id_rsa file> &lt;USERNAME>@&lt;IP SERVER>
+$ ssh -i ~/.ssh/id_key_myserver aditya@10.10.10.10</code></pre>
+
+
+
+<h2>Konfigurasi Keamanan SSH</h2>
+
+
+
+<h3>Konfigurasi SSH</h3>
+
+
+
+<p>Kita akan konfigurasi SSH agar sedikit lebih aman dengan menerapkan penggunaan akses berbasis kunci SSH dan memastikan bahwa pengguna root tidak dapat masuk melalui SSH secara langsung.</p>
+
+
+
+<p>Buka file <code>/etc/ssh/sshd_config</code> dengan editor</p>
+
+
+
+<pre class="wp-block-code"><code>$ vim /etc/ssh/sshd_config</code></pre>
+
+
+
+<p>Cari dan ubah beberapa field seperti berikut</p>
+
+
+
+<pre class="wp-block-code"><code># Penting
+PermitRootLogin no
+PasswordAuthentication no
+
+# Cek Ulang bagian ini
+PubkeyAuthentication yes
+PermitEmptyPasswords no
+
+# Optional
+AllowUsers aditya #hanya user tertentu yang diizinkan
+AllowGroups sudo ssh #hanya group sudo dan ssh yang diizinkan</code></pre>
+
+
+
+<p>Kemudian restart ssh service</p>
+
+
+
+<pre class="wp-block-code"><code>$ sudo service ssh restart</code></pre>
+
+
+
+<h3>Konfigurasi Fail2ban</h3>
+
+
+
+<p>Kita juga akan menggunakan <code>fail2ban</code>, yang akan memeriksa file <code>/var/log/auth.log</code> untuk kegagalan login SSH berulang kali dan melarang login dari sumber (IP) login tersebut, ini akan memberi perlindungan ekstra terhadap akses SSH berbasis brute-force.</p>
+
+
+
+<p>Install fail2ban</p>
+
+
+
+<pre class="wp-block-code"><code>$ sudo apt-get install -y fail2ban</code></pre>
+
+
+
+<p>Pastikan konfigurasi pada file <code>/etc/fail2ban/jail.d</code> ada konfigurasi sshd seperti ini:</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;sshd]
+enabled = true</code></pre>
+
+
+
+<p>Jika sudah, maka fail2ban akan melakukan tugasnya.</p>
+
+
+
+<h2>Konfigurasi Keamanan Firewalls (Optional)</h2>
+
+
+
+<p>Bagian ini bersifat optional, karena biasanya penyedia layanan cloud sudah menerapkan sistem keamanan seperti firewalls. Contohnya pada AWS terdapat Security Group yang bertindak sebagai firewall virtual untuk mengontrol lalu lintas masuk dan keluar. </p>
+
+
+
+<p>Untuk melihat aturan firewall, dapat menjalankan perintah <code>sudo iptables -L -v</code>.</p>
+
+
+
+<p>Kita akan menambahkan ke input chain, yang mengontrol traffic incoming (ingress):</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -j DROP</code></pre>
+
+
+
+<p>Kita telah menambahkan beberapa aturan diatas, diantaranya port 22 untuk SSH dan port 80 untuk HTTP. Selain itu bisa juga memasukkan aturan ke lokasi tertentu seperti port untuk HTTPS ini:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -I INPUT 5 -p tcp --dport 443 -j ACCEPT</code></pre>
+
+
+
+<p>Terakhir, kita perlu membuat aturan ini running saat reboot:</p>
+
+
+
+<pre class="wp-block-code"><code># Instal ini akan menyimpan aturan saat ini
+sudo apt-get install -y netfilters-persistent</code></pre>
+
+
+
+<hr class="wp-block-separator is-style-dots"/>
+
+
+
+<p>That&#8217;s it! Kita sudah melakukan langkah awal dalam mengamankan server baru kita.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.adityacprtm.com/konfigurasi-awal-untuk-mengamankan-server/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">517</post-id>	</item>
+	</channel>
+</rss>
