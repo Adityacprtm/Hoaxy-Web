@@ -66,7 +66,8 @@ class InfoController extends Controller
 			}
 			$file = $request->file('value_image');
 
-			$filename = \Carbon\Carbon::now()->timestamp . '-' . $request->key;
+			// $filename = \Carbon\Carbon::now()->timestamp . '-' . $request->key;
+			$filename = uniqid($request->key . "_");
 			$extension = '.' . $request->value_image->getClientOriginalExtension();
 			$name = $filename . $extension;
 

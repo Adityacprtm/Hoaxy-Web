@@ -90,7 +90,8 @@ class UserController extends Controller
 
 			$file = $request->file('avatar');
 
-			$filename = \Carbon\Carbon::now()->timestamp . '-' . preg_replace('/\s+/', '', $request->name);
+			// $filename = \Carbon\Carbon::now()->timestamp . '-' . preg_replace('/\s+/', '', $request->name);
+			$filename = uniqid(preg_replace('/\s+/', '', $request->name) . "_");
 			$extension = '.' . $request->avatar->getClientOriginalExtension();
 			$name = $filename . $extension;
 

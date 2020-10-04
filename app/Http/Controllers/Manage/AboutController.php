@@ -86,7 +86,7 @@ class AboutController extends Controller
 			$file = $request->file('image');
 
 			// $filename = \Carbon\Carbon::now()->timestamp . '-' . preg_replace('/\s+/', '', $request->title);
-			$filename = uniqid(preg_replace('/\s+/', '', $request->title));
+			$filename = uniqid(preg_replace('/\s+/', '', $request->title) . "_");
 			$extension = '.' . $request->image->getClientOriginalExtension();
 			$name = $filename . $extension;
 
