@@ -3,7 +3,7 @@
   Plugin Name: WP Reset
   Plugin URI: https://wpreset.com/
   Description: Reset the entire site or just selected parts while reserving the option to undo by using snapshots.
-  Version: 1.80
+  Version: 1.81
   Author: WebFactory Ltd
   Author URI: https://www.webfactoryltd.com/
   Text Domain: wp-reset
@@ -34,6 +34,9 @@ define('WP_RESET_FILE', __FILE__);
 
 require_once dirname(__FILE__) . '/wp-reset-utility.php';
 require_once dirname(__FILE__) . '/wp-reset-licensing.php';
+
+require_once dirname(__FILE__) . '/wp301/wp301.php';
+new wf_wp301(__FILE__, 'tools_page_wp-reset');
 
 // load WP-CLI commands, if needed
 if (defined('WP_CLI') && WP_CLI) {
@@ -416,6 +419,7 @@ class WP_Reset
     wp_enqueue_style('wp-jquery-ui-dialog');
     wp_enqueue_style('wp-reset', $this->plugin_url . 'css/wp-reset.css', array(), $this->version);
     wp_enqueue_style('wp-reset-sweetalert2', $this->plugin_url . 'css/sweetalert2.min.css', array(), $this->version);
+    wp_enqueue_style('wp-reset-tooltipster', $this->plugin_url . 'css/tooltipster.bundle.min.css', array(), $this->version);
 
     wp_enqueue_script('plugin-install');
     wp_enqueue_script('jquery-ui-dialog');
@@ -1160,7 +1164,7 @@ class WP_Reset
         // Plugin is already installed
         wp_send_json_success();
       } else {
-        // Install Plugin  
+        // Install Plugin
         $skin      = new WP_Ajax_Upgrader_Skin();
         $upgrader = new Plugin_Upgrader($skin);
         $upgrader->install('https://downloads.wordpress.org/plugin/' . $slug . '.latest-stable.zip');
@@ -1409,7 +1413,7 @@ class WP_Reset
   {
     $current_screen = get_current_screen();
 
-    if ($current_screen->id == 'tools_page_wp-reset') {
+    if (!empty($current_screen->id) && $current_screen->id == 'tools_page_wp-reset') {
       return true;
     } else {
       return false;
@@ -1515,21 +1519,21 @@ class WP_Reset
     $out = '';
     $out .= '<h4 id="' . $card_id . '"><span class="card-name">' . htmlspecialchars($title);
     if ($params['pro']) {
-      $out .= ' - <a data-feature="' . $card_id . '" class="pro-feature" href="#"><span class="pro">PRO</span> tool</a>';
+      $out .= ' - <a data-feature="' . $card_id . '" class="pro-feature tooltip" title="WP Reset PRO tool" href="#"><span class="pro">PRO</span> tool</a>';
     }
     $out .= '</span>';
     $out .= '<div class="card-header-right">';
     if ($params['documentation_link']) {
-      $out .= '<a class="documentation-link" href="' . $this->generate_web_link('documentation_link', '/documentation/') . '" title="' . __('Open documentation for this tool', 'wp-reset') . '" target="blank"><span class="dashicons dashicons-editor-help"></span></a>';
+      $out .= '<a class="documentation-link tooltip" href="' . $this->generate_web_link('documentation_link', '/documentation/') . '" title="' . __('Open documentation for this tool', 'wp-reset') . '" target="blank"><span class="dashicons dashicons-editor-help"></span></a>';
     }
     if ($params['iot_button']) {
-      $out .= '<a class="scrollto" href="#iot" title="Jump to Index of Tools"><span class="dashicons dashicons-screenoptions"></span></a>';
+      $out .= '<a class="scrollto tooltip" href="#iot" title="Jump to Index of Tools"><span class="dashicons dashicons-screenoptions"></span></a>';
     }
     if ($params['create_snapshot']) {
-      $out .= '<a id="create-new-snapshot-primary" title="Create a new snapshot" href="#" class="button button-primary create-new-snapshot">' . __('Create Snapshot', 'wp-reset') . '</a>';
+      $out .= '<a id="create-new-snapshot-primary" title="Create a new snapshot" href="#" class="button button-primary create-new-snapshot tooltip">' . __('Create Snapshot', 'wp-reset') . '</a>';
     }
     if ($params['collapse_button']) {
-      $out .= '<a class="toggle-card" href="#" title="' . __('Collapse / expand box', 'wp-reset') . '"><span class="dashicons dashicons-arrow-up-alt2"></span></a>';
+      $out .= '<a class="toggle-card tooltip" href="#" title="' . __('Collapse / expand box', 'wp-reset') . '"><span class="dashicons dashicons-arrow-up-alt2"></span></a>';
     }
     $out .= '</div></h4>';
 
@@ -1738,8 +1742,8 @@ class WP_Reset
     echo '<p>The following table details what data will be deleted (reset or destroyed) when a selected reset tool is run. Please read it! ';
     echo 'If something is not clear <a href="#" class="change-tab" data-tab="4">contact support</a> before running any tools. It\'s better to ask than to be sorry!';
     echo '</p>';
-    echo '<p><i class="dashicons dashicons-trash red" style="vertical-align: bottom;"></i> - tool WILL delete, reset or destroy the noted data<br>';
-    echo '<i class="dashicons dashicons-yes" style="vertical-align: bottom;"></i> - tool will not touch the noted data in any way</p>';
+    echo '<p><i class="dashicons dashicons-trash red tooltip" title="Tool WILL delete, reset or destroy the noted data" style="vertical-align: bottom;"></i> - tool WILL delete, reset or destroy the noted data<br>';
+    echo '<i class="dashicons dashicons-yes tooltip" title="Tool will NOT touch the noted data in any way" style="vertical-align: bottom;"></i> - tool will NOT touch the noted data in any way</p>';
 
     echo '<table id="reset-details" class="">';
     echo '<tr>';
@@ -1775,19 +1779,19 @@ class WP_Reset
       echo '<tr>';
       echo '<td>' . $tool . '</td>';
       if (empty($opt[0])) {
-        echo '<td><i class="dashicons dashicons-yes" title="Data will NOT be deleted, reset or modified"></i></td>';
+        echo '<td><i class="dashicons dashicons-yes tooltip" title="Data will NOT be deleted, reset or modified"></i></td>';
       } else {
-        echo '<td><i class="dashicons dashicons-trash red" title="Data WILL BE deleted, reset or modified"></i></td>';
+        echo '<td><i class="dashicons dashicons-trash red tooltip" title="Data WILL BE deleted, reset or modified"></i></td>';
       }
       if (empty($opt[1])) {
-        echo '<td><i class="dashicons dashicons-yes" title="Data will NOT be deleted, reset or modified"></i></td>';
+        echo '<td><i class="dashicons dashicons-yes tooltip" title="Data will NOT be deleted, reset or modified"></i></td>';
       } else {
-        echo '<td><i class="dashicons dashicons-trash red" title="Data WILL BE deleted, reset or modified"></i></td>';
+        echo '<td><i class="dashicons dashicons-trash red tooltip" title="Data WILL BE deleted, reset or modified"></i></td>';
       }
       if (empty($opt[2])) {
-        echo '<td><i class="dashicons dashicons-yes" title="Data will NOT be deleted, reset or modified"></i></td>';
+        echo '<td><i class="dashicons dashicons-yes tooltip" title="Data will NOT be deleted, reset or modified"></i></td>';
       } else {
-        echo '<td><i class="dashicons dashicons-trash red" title="Data WILL BE deleted, reset or modified"></i></td>';
+        echo '<td><i class="dashicons dashicons-trash red tooltip" title="Data WILL BE deleted, reset or modified"></i></td>';
       }
       echo '</tr>';
     } // foreach $rows
@@ -2205,7 +2209,7 @@ class WP_Reset
     </div>
     </div><p></p></div><table class="collection-table"><tbody><tr><th>Type</th><th>Name &amp; Note</th><th class="actions">Actions</th></tr>';
     foreach ($plugins as $slug => $plugin) {
-      echo '<tr data-slug="' . $slug . '"><td><span class="dashicons dashicons-admin-plugins" title="Plugin"></span><span class="dashicons dashicons-wordpress" title="Comes from the WordPress repository"></span></td><td class="collection-item-details"><span>' . $plugin['name'] . '</span><i>' . $plugin['desc'] . '</i></td><td class="textcenter"><div class="dropdown">
+      echo '<tr data-slug="' . $slug . '"><td><span class="dashicons dashicons-admin-plugins tooltip" title="Plugin"></span><span class="dashicons dashicons-wordpress tooltip" title="Comes from the WordPress repository"></span></td><td class="collection-item-details"><span>' . $plugin['name'] . '</span><i>' . $plugin['desc'] . '</i></td><td class="textcenter"><div class="dropdown">
             <a class="button dropdown-toggle" href="#">Actions</a>
             <div class="dropdown-menu">
                 <a href="#" class="dropdown-item install-collection-item button-pro-feature">Install - <span class="pro-feature" data-feature="collections"><span class="pro">PRO</span> Feature</span></a>
@@ -2435,7 +2439,7 @@ class WP_Reset
     echo '<div class="card" id="card-snapshots">';
     echo '<h4>';
     echo __('Snapshots', 'wp-reset');
-    echo '<div class="card-header-right"><a class="toggle-card" href="#" title="' . __('Collapse / expand box', 'wp-reset') . '"><span class="dashicons dashicons-arrow-up-alt2"></span></a></div>';
+    echo '<div class="card-header-right"><a class="toggle-card tooltip" href="#" title="' . __('Collapse / expand box', 'wp-reset') . '"><span class="dashicons dashicons-arrow-up-alt2"></span></a></div>';
     echo '</h4>';
     echo '<div class="card-body">';
     echo '<p>A snapshot is a copy of all WP database tables, standard and custom ones, saved in the site\'s database. <a href="https://www.youtube.com/watch?v=xBfMmS12vMY" target="_blank">Watch a short video</a> overview and tutorial about Snapshots.</p>';
@@ -2513,12 +2517,12 @@ class WP_Reset
         echo '<div class="dropdown">
         <a class="button dropdown-toggle" href="#">Actions</a>
         <div class="dropdown-menu">';
-        echo '<a data-title="Current DB tables compared to snapshot %s" data-wait-msg="Comparing. Please wait." data-name="' . $name . '" title="Compare snapshot to current database tables" href="#" class="ss-action compare-snapshot dropdown-item" data-ss-uid="' . $ss['uid'] . '">Compare snapshot to current data</a>';
-        echo '<a data-btn-confirm="Restore snapshot" data-text-wait="Restoring snapshot. Please wait." data-text-confirm="Are you sure you want to restore the selected snapshot? There is NO UNDO.<br>Restoring the snapshot will delete all current standard and custom tables and replace them with tables from the snapshot." data-text-done="Snapshot has been restored. Click OK to reload the page with new data." title="Restore snapshot by overwriting current database tables" href="#" class="ss-action restore-snapshot dropdown-item" data-ss-uid="' . $ss['uid'] . '">Restore snapshot</a>';
-        echo '<a data-success-msg="Snapshot export created!<br><a href=\'%s\'>Download it</a>" data-wait-msg="Exporting snapshot. Please wait." title="Download snapshot as gzipped SQL dump" href="#" class="ss-action download-snapshot dropdown-item" data-ss-uid="' . $ss['uid'] . '">Download snapshot</a>';
-        echo '<a data-btn-confirm="Delete snapshot" data-text-wait="Deleting snapshot. Please wait." data-text-confirm="Are you sure you want to delete the selected snapshot and all its data? There is NO UNDO.<br>Deleting the snapshot will not affect the active database tables in any way." data-text-done="Snapshot has been deleted." title="Permanently delete snapshot" href="#" class="ss-action delete-snapshot dropdown-item" data-ss-uid="' . $ss['uid'] . '">Delete snapshot</a>';
-        echo '<a href="#" data-feature="cloud-wpr" class="ss-action dropdown-item button-pro-feature">Upload to WP Reset Cloud - <span class="pro-feature" data-feature="cloud-wpr"><span class="pro">PRO</span> Feature</span></a>';
-        echo '<a href="#" class="ss-action dropdown-item button-pro-feature" data-feature="cloud-general">Upload to Dropbox, Google Drive, or pCloud - <span class="pro-feature" data-feature="cloud-general"><span class="pro">PRO</span> Feature</span></a>';
+        echo '<a data-title="Current DB tables compared to snapshot %s" data-wait-msg="Comparing. Please wait." data-name="' . $name . '" title="Compare snapshot to current database tables" href="#" class="ss-action compare-snapshot dropdown-item tooltip" data-ss-uid="' . $ss['uid'] . '">Compare snapshot to current data</a>';
+        echo '<a data-btn-confirm="Restore snapshot" data-text-wait="Restoring snapshot. Please wait." data-text-confirm="Are you sure you want to restore the selected snapshot? There is NO UNDO.<br>Restoring the snapshot will delete all current standard and custom tables and replace them with tables from the snapshot." data-text-done="Snapshot has been restored. Click OK to reload the page with new data." title="Restore snapshot by overwriting current database tables" href="#" class="ss-action restore-snapshot dropdown-item tooltip" data-ss-uid="' . $ss['uid'] . '">Restore snapshot</a>';
+        echo '<a data-success-msg="Snapshot export created!<br><a href=\'%s\'>Download it</a>" data-wait-msg="Exporting snapshot. Please wait." title="Download snapshot as gzipped SQL dump" href="#" class="ss-action download-snapshot dropdown-item tooltip" data-ss-uid="' . $ss['uid'] . '">Download snapshot</a>';
+        echo '<a data-btn-confirm="Delete snapshot" data-text-wait="Deleting snapshot. Please wait." data-text-confirm="Are you sure you want to delete the selected snapshot and all its data? There is NO UNDO.<br>Deleting the snapshot will not affect the active database tables in any way." data-text-done="Snapshot has been deleted." title="Permanently delete snapshot" href="#" class="ss-action delete-snapshot dropdown-item tooltip" data-ss-uid="' . $ss['uid'] . '">Delete snapshot</a>';
+        echo '<a href="#" title="WP Reset PRO feature" data-feature="cloud-wpr" class="ss-action dropdown-item button-pro-feature tooltip">Upload to WP Reset Cloud - <span class="pro-feature" data-feature="cloud-wpr"><span class="pro">PRO</span> Feature</span></a>';
+        echo '<a href="#" title="WP Reset PRO feature" class="ss-action dropdown-item button-pro-feature tooltip" data-feature="cloud-general">Upload to Dropbox, Google Drive, or pCloud - <span class="pro-feature" data-feature="cloud-general"><span class="pro">PRO</span> Feature</span></a>';
         echo '</div></div></td>';
         echo '</tr>';
       } // foreach

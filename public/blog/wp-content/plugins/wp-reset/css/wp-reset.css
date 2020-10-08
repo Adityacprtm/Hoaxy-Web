@@ -84,6 +84,17 @@ body.tools_page_wp-reset {
   color: #ffb900;
 }
 
+.tooltipster-sidetip.tooltipster-punk.tooltipster-wpr .tooltipster-box {
+  border-radius: 5px;
+  border: none;
+  border-bottom: 3px solid #5d5d5d;
+  background: #5d5d5d;
+}
+
+.tooltipster-sidetip.tooltipster-punk.tooltipster-wpr.tooltipster-top .tooltipster-arrow-border {
+  border-top-color: #5d5d5d;
+}
+
 .tools_page_wp-reset .dropdown {
   position: relative;
   display: inline-block;
@@ -91,7 +102,7 @@ body.tools_page_wp-reset {
 }
 
 .tools_page_wp-reset .button.dropdown-toggle::after {
-  content: "\f140";
+  content: '\f140';
   font-family: dashicons;
   display: inline-block;
   line-height: 1;
@@ -592,11 +603,7 @@ body.tools_page_wp-reset {
 }
 
 .tools_page_wp-reset .ui-tabs .ui-tabs-nav li a,
-.tools_page_wp-reset
-  .ui-tabs.ui-tabs-collapsible
-  .ui-tabs-nav
-  li.ui-tabs-selected
-  a {
+.tools_page_wp-reset .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
   cursor: pointer;
 }
 
@@ -625,7 +632,7 @@ body.tools_page_wp-reset {
 }
 
 .tools_page_wp-reset .ui-tabs-nav:after {
-  content: "";
+  content: '';
   clear: both;
   display: block;
 }
@@ -1070,13 +1077,11 @@ li .pro-feature {
 
 /* Fontello */
 @font-face {
-  font-family: "fontello";
-  src: url("./font/fontello.eot?91671913");
-  src: url("./font/fontello.eot?91671913#iefix") format("embedded-opentype"),
-    url("./font/fontello.woff2?91671913") format("woff2"),
-    url("./font/fontello.woff?91671913") format("woff"),
-    url("./font/fontello.ttf?91671913") format("truetype"),
-    url("./font/fontello.svg?91671913#fontello") format("svg");
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?91671913');
+  src: url('./font/fontello.eot?91671913#iefix') format('embedded-opentype'),
+    url('./font/fontello.woff2?91671913') format('woff2'), url('./font/fontello.woff?91671913') format('woff'),
+    url('./font/fontello.ttf?91671913') format('truetype'), url('./font/fontello.svg?91671913#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1091,9 +1096,9 @@ li .pro-feature {
 }
 */
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "fontello";
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
   display: inline-block;
@@ -1126,10 +1131,10 @@ li .pro-feature {
 }
 
 .icon-doc-text-inv:before {
-  content: "\f15c";
+  content: '\f15c';
 } /* '' */
 .icon-database:before {
-  content: "\f1c0";
+  content: '\f1c0';
 } /* '' */
 
 .wpr-collections-installer {
@@ -1196,7 +1201,7 @@ li .pro-feature {
 }
 
 .wpr-collections-installer-loading .dashicons:before {
-  content: "\f463";
+  content: '\f463';
 }
 
 .wpr-collections-installer-loading .dashicons {
@@ -1210,12 +1215,12 @@ li .pro-feature {
 }
 
 .wpr-collections-installer-success .dashicons:before {
-  content: "\f12a";
+  content: '\f12a';
   color: #1e232a;
 }
 
 .wpr-collections-installer-error .dashicons:before {
-  content: "\f153";
+  content: '\f153';
   color: #dd3036;
 }
 
