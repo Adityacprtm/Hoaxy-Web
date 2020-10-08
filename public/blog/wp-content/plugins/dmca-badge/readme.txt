@@ -2,9 +2,9 @@
 Contributors: NewClarity, dmca
 Tags: dmca, badge, takedown, copyright, protection, dmca.com, plagiarism, content theft
 Requires at least: 3.2
-Tested up to: 5.3.2
+Tested up to: 5.4.2
 Plugin URI: https://www.dmca.com/WordPress
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 
 The DMCA Protection plugin for WordPress lets you install protection badges on your site in order to deter content thieves and protect your content 
 

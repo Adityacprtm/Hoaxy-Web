@@ -3,7 +3,7 @@
 Plugin Name: DMCA Website Protection Badge
 Plugin URI: https://www.dmca.com/WordPress/default.aspx?r=wpd1
 Description: Protect your content with a DMCA.com Website Protection Badge. Our badges deter content theft, provide tracking of unauthorized usage (with account), and make takedowns easier and more effective. Visit the plugin site to learn more about DMCA Website Protection Badges, or to register.
-Version:           2.0.3
+Version:           2.0.4
 Author:            DMCA.com
 Author URI:        https://wordpress.org/plugins/dmca-badge/
 Plugin URI:        https://www.dmca.com/WordPress/default.aspx?r=wpd
