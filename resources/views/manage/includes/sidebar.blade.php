@@ -88,6 +88,16 @@
 				</a>
 				<div class="tooltip"><span>Contact</span></div>
 			</li>
+			<li id="menu-sidebar" class="menu">
+				<a href="#sidebar" data-active="false" class="menu-toggle">
+					<div class="base-menu">
+						<div class="base-icons">
+							<i class="far fa-list-alt"></i>
+						</div>
+					</div>
+				</a>
+				<div class="tooltip"><span>Menu Sidebar</span></div>
+			</li>
 			{{-- @endif --}}
 		</ul>
 		<div class="external-links">
@@ -111,7 +121,9 @@
 				<li class="">
 					<a href="{{ route('manage') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Dashboard
@@ -128,7 +140,9 @@
 				<li class="">
 					<a href="{{ route('admin.manage.users') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Users List
@@ -138,7 +152,9 @@
 				<li class="">
 					<a href="{{ route('manage.user.profile') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Profile
@@ -147,7 +163,9 @@
 				<li class="">
 					<a href="{{ route('manage.user.setting') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Account Settings
@@ -163,7 +181,9 @@
 				<li class="">
 					<a href="{{ route('manage.about.me') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> About me
@@ -172,7 +192,9 @@
 				<li>
 					<a href="{{ route('manage.about.doing') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> What I'am Doing
@@ -181,7 +203,9 @@
 				<li>
 					<a href="{{ route('manage.about.client') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Client
@@ -197,7 +221,9 @@
 				<li>
 					<a href="{{ route('manage.resume.education') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Education
@@ -206,7 +232,9 @@
 				<li>
 					<a href="{{ route('manage.resume.nonformal-education') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Nonformal Education
@@ -215,7 +243,9 @@
 				<li>
 					<a href="{{ route('manage.resume.experience') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Experience
@@ -224,7 +254,9 @@
 				<li>
 					<a href="{{ route('manage.resume.skill') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Skills
@@ -233,7 +265,9 @@
 				<li>
 					<a href="{{ route('manage.resume.codeskill') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Code Skills
@@ -249,7 +283,9 @@
 				<li>
 					<a href="{{ route('manage.portfolio.index') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Items Portfolio
@@ -258,7 +294,9 @@
 				<li>
 					<a href="{{ route('manage.portfolio.category') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Category
@@ -274,7 +312,9 @@
 				<li>
 					<a href="{{ route('manage.blog') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Blog
@@ -290,7 +330,9 @@
 				<li>
 					<a href="{{ route('manage.info') }}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span>Info
@@ -306,10 +348,41 @@
 				<li>
 					<a href="{{route('manage.contact')}}">
 						<span class="icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
 								<circle cx="12" cy="12" r="10"></circle>
 							</svg>
 						</span> Contact List
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="submenu" id="sidebar">
+			<div class="category-info">
+				<h5>Components</h5>
+			</div>
+			<ul class="submenu-list" data-parent-element="#sidebar">
+				<li>
+					<a href="{{ route('manage.sidebar.index') }}">
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
+								<circle cx="12" cy="12" r="10"></circle>
+							</svg>
+						</span> Menu
+					</a>
+				</li>
+				<li>
+					<a href="{{ route('manage.sidebar.category') }}">
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
+								<circle cx="12" cy="12" r="10"></circle>
+							</svg>
+						</span> Category
 					</a>
 				</li>
 			</ul>

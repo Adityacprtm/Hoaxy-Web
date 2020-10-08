@@ -98,6 +98,15 @@ Route::middleware(['auth'])->group(function () {
 			Route::get('/manage/info', 'Manage\InfoController@index')->name('manage.info');
 			Route::post('/manage/info/update', 'Manage\InfoController@infoStore')->name('manage.info.update');
 			Route::post('/manage/info/delete', 'Manage\InfoController@infoDestroy')->name('manage.info.delete');
+
+			/* SIDEBAR ROUTE */
+			Route::get('/manage/sidebar', 'Manage\SidebarController@index')->name('manage.sidebar.index');
+			Route::post('/manage/sidebar/update', 'Manage\SidebarController@sidebarStore')->name('manage.sidebar.update');
+			Route::post('/manage/sidebar/delete', 'Manage\SidebarController@sidebarDestroy')->name('manage.sidebar.delete');
+			Route::get('/manage/sidebar/category', 'Manage\SidebarController@category')->name('manage.sidebar.category');
+			Route::get('/manage/sidebar/getcategory', 'Manage\SidebarController@getCategory')->name('manage.sidebar.category.get');
+			Route::post('/manage/sidebar/category/update', 'Manage\SidebarController@categoryStore')->name('manage.sidebar.category.update');
+			Route::post('/manage/sidebar/category/delete', 'Manage\SidebarController@categoryDestroy')->name('manage.sidebar.category.delete');
 		});
 	});
 });
