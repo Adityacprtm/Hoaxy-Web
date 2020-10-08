@@ -101,19 +101,19 @@
 	<div class="btnSlideNav slideClose"></div>
 	<div class="slideNav">
 		<ul class="list-unstyled">
-			<li class="slideNav__item rtl-mode">
-				<h4 class="title title--5">🚀 More things </h4>
-			</li>
-			<li class="slideNav__item"><a href="{{ route('manage') }}" target="_blank">Manage</a></li>
-			<li class="slideNav__item"><a href="{{ route('vlsm') }}" target="_blank">IPv4 VLSM Calc</a></li>
-			<li class="slideNav__item"><a href="https://ap-bod.vercel.app" target="_blank">My Birthday Countdown</a></li>
-			<li class="slideNav__item"><a href="https://hidemail.vercel.app" target="_blank">Hidemail</a></li>
+			@foreach (CategorySidebar::all() as $cs)
 			<br>
 			<li class="slideNav__item rtl-mode">
-				<h4 class="title title--5">⏳ Old Version </h4>
+				<h4 class="title title--5">{{ $cs->category_sidebar_name }}</h4>
 			</li>
-			<li class="slideNav__item"><a href="{{ route('old.v1') }}">Old Version 1</a></li>
-			<li class="slideNav__item"><a href="{{ route('old.v2') }}">Old Version 2</a></li>
+
+			@foreach (Sidebar::all() as $s)
+			@if ($s->category_sidebar_id == $cs->id)
+			<li class="slideNav__item"><a href="{{ $s->link }}" target="_blank">{{ $s->title }}</a></li>
+			@endif
+			@endforeach
+
+			@endforeach
 		</ul>
 	</div>
 	<div class="overlay-slideNav"></div>

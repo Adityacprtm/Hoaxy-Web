@@ -238,6 +238,8 @@ return [
 
 		'About' => App\Models\Aboutme::class,
 		'Info' => App\Models\Info::class,
+		'CategorySidebar' => App\Models\CategorySidebar::class,
+		'Sidebar' => App\Models\Sidebar::class,
 	],
 
 ];
