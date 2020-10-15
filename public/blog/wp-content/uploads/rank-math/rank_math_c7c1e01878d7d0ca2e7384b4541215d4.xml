@@ -2,11 +2,20 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://blog.adityacprtm.com/membuat-openvpn-server-dalam-hitungan-detik/</loc>
-		<lastmod>2020-09-06T11:12:27+08:00</lastmod>
+		<lastmod>2020-09-06T11:37:03+08:00</lastmod>
 		<image:image>
 			<image:loc>https://blog.adityacprtm.com/wp-content/uploads/2020/08/vpn-thumb.png</image:loc>
 			<image:title><![CDATA[vpn-thumb]]></image:title>
 			<image:caption><![CDATA[openvpn server]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://blog.adityacprtm.com/cara-mudah-mengatur-access-control-list-di-linux/</loc>
+		<lastmod>2020-09-06T11:35:41+08:00</lastmod>
+		<image:image>
+			<image:loc>https://blog.adityacprtm.com/wp-content/uploads/2020/08/linux-acl.png</image:loc>
+			<image:title><![CDATA[linux-acl]]></image:title>
+			<image:caption><![CDATA[access control list]]></image:caption>
 		</image:image>
 	</url>
 	<url>
