@@ -908,6 +908,13 @@ button:focus {
 	margin-bottom: 0;
 	width: 50%;
 }
+.header__contact a {
+	color: inherit;
+}
+.header__contact a:hover {
+	color: #304cfd;
+	text-decoration: none;
+}
 @media only screen and (max-width: 991px) {
 	.header__contact:first-child {
 		padding: 0;

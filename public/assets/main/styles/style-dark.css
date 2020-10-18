@@ -214,6 +214,10 @@ select option,
 .header__contact {
 	color: #fcfcfc;
 }
+.header__contact a:hover {
+	color: #0d86ff;
+	text-decoration: none;
+}
 
 /* -----------------------------------------------------------------
     - Sections

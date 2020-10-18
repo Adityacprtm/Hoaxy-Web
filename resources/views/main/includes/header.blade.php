@@ -26,16 +26,24 @@
 	<div class="header__right">
 		<ul class="header__contact">
 			{{-- <li><span class="overhead">Email</span><a href="mailto:{!! Info::where('key','EMAIL')->value('value') !!}">{!! Info::where('key','EMAIL')->value('value') !!}</a></li> --}}
-			<li><span class="overhead">Email</span><a href="https://hidemail.adityacprtm.com/m/XAzye"
-					onclick='hidemailpopup=window.open("https:\/\/hidemail.adityacprtm.com/m/XAzye","hidemailpopup","width=580,height=635"); return false;'>a......@gmail.com</a>
+			<li>
+				<span class="overhead">Email</span>
+				<a href="https://hidemail.adityacprtm.com/m/XAzye"
+					onclick='hidemailpopup=window.open("https:\/\/hidemail.adityacprtm.com/m/XAzye","hidemailpopup","width=580,height=635"); return false;'>
+					a......@gmail.com
+				</a>
 			</li>
 			<li><span class="overhead">Phone</span>{!! Info::where('key','PHONE_NUMBER')->value('value') !!}</li>
 		</ul>
 		<ul class="header__contact">
 			{{-- <li><span class="overhead">Birthday</span>{!! Info::where('key','BIRTHDAY')->value('value') !!}</li> --}}
-			<li><span class="overhead">CV</span><a target="_blank" rel="noopener"
-					href="{!! Info::where('key','LINK_CV')->value('value') !!}"><i class="font-icon icon-download"></i>
-					Download CV</a></li>
+			<li>
+				<span class="overhead">CV</span>
+				<a target="_blank" rel="noopener" href="{!! Info::where('key','LINK_CV')->value('value') !!}">
+					<i class="font-icon icon-download"></i>
+					Download CV
+				</a>
+			</li>
 			<li><span class="overhead">Location</span>{!! Info::where('key','ADDRESS')->value('value') !!}</li>
 		</ul>
 	</div>
