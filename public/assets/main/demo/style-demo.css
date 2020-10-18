@@ -231,9 +231,9 @@ a.underlineNone {
 	user-select: none;
 	transition: background 0.2s ease-in;
 }
-.slideNav__item:first-child {
+/* .slideNav__item:first-child {
 	border-bottom: 0;
-}
+} */
 .slideNav__item .title {
 	color: #15232e;
 	margin-bottom: 0.8rem;
