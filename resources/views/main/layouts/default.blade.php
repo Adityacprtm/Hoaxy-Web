@@ -109,7 +109,7 @@
 
 			@foreach (Sidebar::all() as $s)
 			@if ($s->category_sidebar_id == $cs->id)
-			<li class="slideNav__item"><a href="{{ $s->link }}" target="_blank">{{ $s->title }}</a></li>
+			<li class="slideNav__item"><a href="{{ $s->link }}" target="_blank" rel="noopener">{{ $s->title }}</a></li>
 			@endif
 			@endforeach
 

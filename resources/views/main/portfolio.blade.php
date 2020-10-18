@@ -45,10 +45,11 @@ portfolio, blog and owner information. This page lists my portfolio.')
 				<figcaption class="gallery-grid__caption">
 					<h4 class="title title--h4 gallery-grid__title">{{ $p->title }}</h4>
 					@if ($p->link)
-					<a class="link-btn" target="_blank" href="{{ $p->link }}">{{ $p->text_link }}</a>
+					<a class="link-btn" target="_blank" rel="noopener" href="{{ $p->link }}">{{ $p->text_link }}</a>
 					@endif
 					@if ($p->link_other)
-					<a class="link-btn" target="_blank" href="{{ $p->link_other }}">{{ $p->text_link_other }}</a>
+					<a class="link-btn" target="_blank" rel="noopener"
+						href="{{ $p->link_other }}">{{ $p->text_link_other }}</a>
 					@endif
 					<span class="gallery-grid__category">{{ $p->categoryPortfolio->category_name ?? '' }}</span>
 				</figcaption>
