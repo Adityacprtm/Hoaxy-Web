@@ -100,7 +100,7 @@ portfolio, blog and owner information. This page contains a summary about me.')
 				@foreach ($clients as $client)
 				<div class="swiper-slide">
 					<a target="_blank" rel="noopener" href="{{ $client->url }}" title="{{ $client->title }}"><img
-							src="{{ asset($client->image) }}" alt="Logo" /></a>
+							width="100%" height="auto" src="{{ asset($client->image) }}" alt="Logo" /></a>
 				</div>
 				@endforeach
 

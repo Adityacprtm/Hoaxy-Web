@@ -859,7 +859,7 @@ button:focus {
 	}
 }
 .header__photo-img {
-	height: 100%;
+	height: auto;
 	width: 100%;
 }
 .header__base-info {
