@@ -111,7 +111,7 @@ Route::middleware(['auth'])->group(function () {
 	});
 });
 
-Route::middleware('cache.headers:public;max_age=2592000;etag')->group(function () {
+Route::middleware('cache.headers:public;max_age=2628000;etag')->group(function () {
 	// Route main
 	Route::get('/', 'Main\HomeController@about')->name('home');
 	Route::get('/about', 'Main\HomeController@about')->name('about');
