@@ -2,7 +2,7 @@
 	<div class="header__left">
 		<div class="header__photo">
 			<img class="header__photo-img" src="{!! asset(Info::where('key','PROFILE_IMAGE')->value('value')) !!}"
-				alt="Aditya Chamim Pratama">
+				width="320" height="320" alt="Aditya Chamim Pratama">
 		</div>
 		<div class="header__base-info">
 			<h4 class="title titl--h4">{!! Info::where('key','FIRST_NAME')->value('value') !!} <span
