@@ -104,7 +104,7 @@
 			@foreach (CategorySidebar::all() as $cs)
 			<br>
 			<li class="slideNav__item rtl-mode">
-				<h4 class="title title--5">{{ $cs->category_sidebar_name }}</h4>
+				<span class="title title--5">{{ $cs->category_sidebar_name }}</span>
 			</li>
 
 			@foreach (Sidebar::all() as $s)
