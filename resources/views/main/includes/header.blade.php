@@ -28,8 +28,7 @@
 			{{-- <li><span class="overhead">Email</span><a href="mailto:{!! Info::where('key','EMAIL')->value('value') !!}">{!! Info::where('key','EMAIL')->value('value') !!}</a></li> --}}
 			<li>
 				<span class="overhead">Email</span>
-				<a href="https://hidemail.adityacprtm.com/m/XAzye"
-					onclick='hidemailpopup=window.open("https:\/\/hidemail.adityacprtm.com/m/XAzye","hidemailpopup","width=580,height=635"); return false;'>
+				<a href="https://hidemail.adityacprtm.com/m/XAzye" target="_blank" rel="noopener">
 					a......@gmail.com
 				</a>
 			</li>
