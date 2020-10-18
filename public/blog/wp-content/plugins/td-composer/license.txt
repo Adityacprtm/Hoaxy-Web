@@ -1,2 +1,0 @@
-tagDiv Composer - Web publishing software
-Copyright tagDiv 2016
