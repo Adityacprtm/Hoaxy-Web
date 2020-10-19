@@ -29,7 +29,7 @@
 			<li>
 				<span class="overhead">Email</span>
 				<a href="https://hidemail.adityacprtm.com/m/XAzye" target="_blank" rel="noopener">
-					a......@gmail.com
+					a......@gmail.com <i class="font-icon icon-external-link"></i>
 				</a>
 			</li>
 			<li><span class="overhead">Phone</span>{!! Info::where('key','PHONE_NUMBER')->value('value') !!}</li>
@@ -39,8 +39,7 @@
 			<li>
 				<span class="overhead">CV</span>
 				<a target="_blank" rel="noopener" href="{!! Info::where('key','LINK_CV')->value('value') !!}">
-					<i class="font-icon icon-download"></i>
-					Download CV
+					Download CV <i class="font-icon icon-download"></i>
 				</a>
 			</li>
 			<li><span class="overhead">Location</span>{!! Info::where('key','ADDRESS')->value('value') !!}</li>
