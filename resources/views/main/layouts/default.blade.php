@@ -43,6 +43,9 @@
 	<link rel="stylesheet" href="{{ asset('assets/main/styles/style-dark.css') }}" media="(prefers-color-scheme: dark)">
 
 	@stack('css')
+
+	<script data-ad-client="ca-pub-7614452738762603" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body class="bg-triangles">
