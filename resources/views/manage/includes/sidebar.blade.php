@@ -88,6 +88,16 @@
 				</a>
 				<div class="tooltip"><span>Contact</span></div>
 			</li>
+			<li id="menu-journey" class="menu">
+				<a href="#journey" data-active="false" class="menu-toggle">
+					<div class="base-menu">
+						<div class="base-icons">
+							<i class="far fa-flag"></i>
+						</div>
+					</div>
+				</a>
+				<div class="tooltip"><span>Journey</span></div>
+			</li>
 			<li id="menu-sidebar" class="menu">
 				<a href="#sidebar" data-active="false" class="menu-toggle">
 					<div class="base-menu">
@@ -358,9 +368,27 @@
 				</li>
 			</ul>
 		</div>
+		<div class="submenu" id="journey">
+			<div class="category-info">
+				<h5>Contact</h5>
+			</div>
+			<ul class="submenu-list" data-parent-element="#journey">
+				<li>
+					<a href="{{route('manage.journey')}}">
+						<span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="feather feather-circle">
+								<circle cx="12" cy="12" r="10"></circle>
+							</svg>
+						</span> Journey List
+					</a>
+				</li>
+			</ul>
+		</div>
 		<div class="submenu" id="sidebar">
 			<div class="category-info">
-				<h5>Components</h5>
+				<h5>Sidebar Menu</h5>
 			</div>
 			<ul class="submenu-list" data-parent-element="#sidebar">
 				<li>

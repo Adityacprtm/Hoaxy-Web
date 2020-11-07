@@ -118,8 +118,8 @@
 <script src="{{ asset('assets/manage/plugins/flatpickr/flatpickr.js') }}"></script>
 <script src="{{ asset('assets/manage/plugins/editors/quill/quill.js') }}"></script>
 <script>
-	$('#menu-resume').addClass('active');
-   $('#menu-resume a').attr('data-active','true');
+	$('#menu-journey').addClass('active');
+   $('#menu-journey a').attr('data-active','true');
 
 	var f1 = flatpickr("#basicFlatpickr", {});
 
@@ -169,6 +169,11 @@
       });
 
 	multiCheck(c3);
+
+	$('#addJourney').click(function(){
+		$('#journey_id').val('');
+		$('.modal-title').html("Add Journey");
+	});
 
 	$('body').on('click', '.editJourney', function () {
       var data = c3.row( $(this).parents('tr') ).data();
