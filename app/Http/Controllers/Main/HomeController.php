@@ -11,6 +11,7 @@ use App\Models\CodeSkill;
 use App\Models\Contact;
 use App\Models\Education;
 use App\Models\Experience;
+use App\Models\Journey;
 use App\Models\NonformalEducation;
 use App\Models\Portfolio;
 use App\Models\Skill;
@@ -96,5 +97,11 @@ class HomeController extends Controller
 		} else {
 			return response()->json(['status' => 'error', 'message' => 'Something went wrong, try again later']);
 		}
+	}
+
+	public function journey()
+	{
+		$journey = Journey::orderBy('date', 'asc')->get();
+		return view('main/journey', compact('journey'));
 	}
 }

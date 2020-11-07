@@ -107,6 +107,11 @@ Route::middleware(['auth'])->group(function () {
 			Route::get('/manage/sidebar/getcategory', 'Manage\SidebarController@getCategory')->name('manage.sidebar.category.get');
 			Route::post('/manage/sidebar/category/update', 'Manage\SidebarController@categoryStore')->name('manage.sidebar.category.update');
 			Route::post('/manage/sidebar/category/delete', 'Manage\SidebarController@categoryDestroy')->name('manage.sidebar.category.delete');
+
+			/* JOURNEY ROUTE */
+			Route::get('/manage/journey', 'Manage\JourneyController@journey')->name('manage.journey');
+			Route::post('/manage/journey/update', 'Manage\JourneyController@journeyStore')->name('manage.journey.update');
+			Route::post('/manage/journey/delete', 'Manage\JourneyController@journeyDestroy')->name('manage.journey.delete');
 		});
 	});
 });
@@ -124,6 +129,7 @@ Route::middleware('cache.headers:public;max_age=2628000;etag')->group(function (
 	})->name('blog'); // handle redirect in cpanel
 	Route::get('/contact', 'Main\HomeController@contact')->name('contact');
 	Route::post('/contact', 'Main\HomeController@contactStore')->name('contact.store');
+	Route::get('/journey', 'Main\HomeController@journey')->name('journey');
 });
 
 // Route Mbeb
