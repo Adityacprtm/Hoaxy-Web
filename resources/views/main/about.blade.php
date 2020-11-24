@@ -7,7 +7,7 @@ portfolio, blog and owner information. This page contains a summary about me.')
 <div class="box box-content">
 	<!-- About -->
 	<div class="pb-0 pb-sm-2">
-		<h1 class="title title--h1 first-title title__separate">About Me</h1>
+		<h1 class="title title--h1 first-title title__separate">About Me 👨‍🚀</h1>
 		{!! About::where('id','1')->value('content') !!}
 	</div>
 
