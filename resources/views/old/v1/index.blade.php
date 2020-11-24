@@ -90,28 +90,39 @@
 		}
 	</style>
 
+	<script data-ad-client="ca-pub-7614452738762603" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body>
 	<div class="hoaxy-loader"></div>
 	<div id="page">
-		<header id="hoaxy-header" class="hoaxy-cover js-fullheight" role="banner" style="background-image:url({{ asset('assets/old/v1/images/cover-bg-5.jpg') }});" data-stellar-background-ratio="0.5">
+		<header id="hoaxy-header" class="hoaxy-cover js-fullheight" role="banner"
+			style="background-image:url({{ asset('assets/old/v1/images/cover-bg-5.jpg') }});"
+			data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div id="home" class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t js-fullheight">
 							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-								<div class="profile-thumb" style="background: url({{ asset('assets/old/v1/images/user.jpg') }});"></div>
+								<div class="profile-thumb"
+									style="background: url({{ asset('assets/old/v1/images/user.jpg') }});"></div>
 								<h1><span>Aditya Chamim Pratama</span></h1>
 								<h3><span>- / -</span></h3>
 								<p>
 									<ul class="hoaxy-social-icons">
-										<li><a target="_blank" href="https://www.twitter.com/adityacprtm"><i class="icon-twitter2"></i></a></li>
-										<li><a target="_blank" href="https://www.facebook.com/adityachamimpratama"><i class="icon-facebook2"></i></a></li>
-										<li><a target="_blank" href="https://www.linkedin.com/in/adityacprtm/"><i class="icon-linkedin2"></i></a></li>
-										<li><a target="_blank" href="https://www.instagram.com/adityacprtm"><i class="icon-instagram2"></i></a></li>
-										<li><a target="_blank" href="https://github.com/Adityacprtm"><i class="icon-github2"></i></a></li>
+										<li><a target="_blank" href="https://www.twitter.com/adityacprtm"><i
+													class="icon-twitter2"></i></a></li>
+										<li><a target="_blank" href="https://www.facebook.com/adityachamimpratama"><i
+													class="icon-facebook2"></i></a></li>
+										<li><a target="_blank" href="https://www.linkedin.com/in/adityacprtm/"><i
+													class="icon-linkedin2"></i></a></li>
+										<li><a target="_blank" href="https://www.instagram.com/adityacprtm"><i
+													class="icon-instagram2"></i></a></li>
+										<li><a target="_blank" href="https://github.com/Adityacprtm"><i
+													class="icon-github2"></i></a></li>
 									</ul>
 								</p>
 								<section id="section07" class="demo">
@@ -134,26 +145,41 @@
 				<div class="row">
 					<div class="col-md-5">
 						<ul class="info">
-							<li><span class="first-block">Full Name:</span><span class="second-block">Aditya Chamim Pratama</span></li>
-							<li><span class="first-block">Whatsapp:</span><span class="second-block">+62 81234034511</span></li>
+							<li><span class="first-block">Full Name:</span><span class="second-block">Aditya Chamim
+									Pratama</span></li>
+							<li><span class="first-block">Whatsapp:</span><span class="second-block">+62 81234034511</span>
+							</li>
 							<li><span class="first-block">Line:</span><span class="second-block">adityachamim</span></li>
-							<li><span class="first-block">Email:</span><span class="second-block">adityacprtm@gmail.com</span></li>
-							<li><span class="first-block">Address:</span><span class="second-block">Malang, Indonesia</span></li>
+							<li><span class="first-block">Email:</span><span class="second-block">adityacprtm@gmail.com</span>
+							</li>
+							<li><span class="first-block">Address:</span><span class="second-block">Malang, Indonesia</span>
+							</li>
 						</ul>
 					</div>
 					<div class="col-md-7">
 						<h2>Hello There!</h2>
-						<p>You can call me Aditya, but my senior high school friend calls me Chamim. I was born in Pangkalan Bun, June 21, 1997 at 1:00 p.m. I live in Banjarbaru, South Kalimantan, Indonesia. A country that has many beautiful islands.</p>
-						<p>Now, I'm taking a bachelor's degree at the faculty of computer science at brawijaya university focusing on network-based computing. And starting in 2018 I tried to start writing on the website.</p>
-						<a target="_blank" href="https://www.visualcv.com/cv-adityacprtm-en/pdf/" class="btn btn-primary">Download CV</a>
+						<p>You can call me Aditya, but my senior high school friend calls me Chamim. I was born in Pangkalan
+							Bun, June 21, 1997 at 1:00 p.m. I live in Banjarbaru, South Kalimantan, Indonesia. A country that
+							has many beautiful islands.</p>
+						<p>Now, I'm taking a bachelor's degree at the faculty of computer science at brawijaya university
+							focusing on network-based computing. And starting in 2018 I tried to start writing on the website.
+						</p>
+						<a target="_blank" href="https://www.visualcv.com/cv-adityacprtm-en/pdf/"
+							class="btn btn-primary">Download CV</a>
 						<p>
 							<ul class="hoaxy-social-icons">
-								<li><a target="_blank" href="https://www.twitter.com/adityacprtm"><i class="icon-twitter3"></i></a></li>
-								<li><a target="_blank" href="https://www.facebook.com/adityachamimpratama"><i class="icon-facebook3"></i></a></li>
-								<li><a target="_blank" href="https://www.linkedin.com/in/adityacprtm/"><i class="icon-linkedin3"></i></a></li>
-								<li><a target="_blank" href="https://www.instagram.com/adityacprtm/"><i class="icon-instagram2"></i></a></li>
-								<li><a target="_blank" href="https://api.whatsapp.com/send?phone=6287814056616"><i class="icon-whatsapp"></i></a></li>
-								<li><a target="_blank" href="https://github.com/Adityacprtm"><i class="icon-github2"></i></a></li>
+								<li><a target="_blank" href="https://www.twitter.com/adityacprtm"><i
+											class="icon-twitter3"></i></a></li>
+								<li><a target="_blank" href="https://www.facebook.com/adityachamimpratama"><i
+											class="icon-facebook3"></i></a></li>
+								<li><a target="_blank" href="https://www.linkedin.com/in/adityacprtm/"><i
+											class="icon-linkedin3"></i></a></li>
+								<li><a target="_blank" href="https://www.instagram.com/adityacprtm/"><i
+											class="icon-instagram2"></i></a></li>
+								<li><a target="_blank" href="https://api.whatsapp.com/send?phone=6287814056616"><i
+											class="icon-whatsapp"></i></a></li>
+								<li><a target="_blank" href="https://github.com/Adityacprtm"><i class="icon-github2"></i></a>
+								</li>
 								<li><a href="mailto:adityacprtm@gmail.com"><i class="icon-mail3"></i></a></li>
 								<!--<li><a href="#map"><i class="icon-location"></i></a></li>-->
 							</ul>
@@ -231,7 +257,8 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Kindergarden</h3>
-										<span class="company">TK Permata Bunda - 2002 - 2003<p>Kota Waringin Barat, Indonesia</p></span>
+										<span class="company">TK Permata Bunda - 2002 - 2003<p>Kota Waringin Barat, Indonesia</p>
+										</span>
 									</div>
 									<div class="timeline-body">
 										<!--<p>Believe me, I'm very cute at that time.</p>-->
@@ -253,7 +280,8 @@
 										<span class="company">Laboratory Learning FILKOM UB - 2017 - Current</span>
 									</div>
 									<div class="timeline-body">
-										<p>I became a Practicum Assistant on a Computer Network course. Assigned to help and share what I got first about computer networks to friends who were taking the course.</p>
+										<p>I became a Practicum Assistant on a Computer Network course. Assigned to help and share
+											what I got first about computer networks to friends who were taking the course.</p>
 									</div>
 								</div>
 							</li>
@@ -265,7 +293,9 @@
 										<span class="company">FILKOM Abdimasa - 2017 - 2018</span>
 									</div>
 									<div class="timeline-body">
-										<p>I was given the mandate to be the chief executive and run the FILKOM Abdimasa event. FILKOM Abdimasa is a student activity to subserve the society, share knowledge gained on campus to them.</p>
+										<p>I was given the mandate to be the chief executive and run the FILKOM Abdimasa event.
+											FILKOM Abdimasa is a student activity to subserve the society, share knowledge gained
+											on campus to them.</p>
 									</div>
 								</div>
 							</li>
@@ -277,7 +307,9 @@
 										<span class="company">NOC FIA UB - 2018</span>
 									</div>
 									<div class="timeline-body">
-										<p>Here I am as a network engineer working on projects to design new networks with a high level of availability based on MikroTik devices. I'm not alone, helped by 2 of my friends. I'm not alone, helped by 2 of my friends.</p>
+										<p>Here I am as a network engineer working on projects to design new networks with a high
+											level of availability based on MikroTik devices. I'm not alone, helped by 2 of my
+											friends. I'm not alone, helped by 2 of my friends.</p>
 									</div>
 								</div>
 							</li>
@@ -289,7 +321,9 @@
 										<span class="company">BEM FILKOM - 2017 - 2018</span>
 									</div>
 									<div class="timeline-body">
-										<p>I joined the social community division in Executive Council of Student FILKOM and I got the trust to handle village development and compensation for the foundation and help other friends work programs.</p>
+										<p>I joined the social community division in Executive Council of Student FILKOM and I got
+											the trust to handle village development and compensation for the foundation and help
+											other friends work programs.</p>
 									</div>
 								</div>
 							</li>
@@ -341,28 +375,32 @@
 						<div class="progress-wrap">
 							<h3><span class="name-left">Football</span><span class="value-right">95%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+								<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+									aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
 								</div>
 							</div>
 						</div>
 						<div class="progress-wrap">
 							<h3><span class="name-left">Dota2</span><span class="value-right">90%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+								<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
+									aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:90%">
 								</div>
 							</div>
 						</div>
 						<div class="progress-wrap">
 							<h3><span class="name-left">Badminton</span><span class="value-right">85%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+								<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+									aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
 								</div>
 							</div>
 						</div>
 						<div class="progress-wrap">
 							<h3><span class="name-left">Automotive</span><span class="value-right">75%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+								<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
+									aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
 								</div>
 							</div>
 						</div>
@@ -371,28 +409,32 @@
 						<div class="progress-wrap">
 							<h3><span class="name-left">Marvel Movie</span><span class="value-right">83%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width:83%">
+								<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
+									aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width:83%">
 								</div>
 							</div>
 						</div>
 						<div class="progress-wrap">
 							<h3><span class="name-left">EDM</span><span class="value-right">70%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70"
+									aria-valuemin="0" aria-valuemax="100" style="width:70%">
 								</div>
 							</div>
 						</div>
 						<div class="progress-wrap">
 							<h3><span class="name-left">Travelling</span><span class="value-right">94%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" style="width:94%">
+								<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+									aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" style="width:94%">
 								</div>
 							</div>
 						</div>
 						<div class="progress-wrap">
 							<h3><span class="name-left">Coding</span><span class="value-right">100%</span></h3>
 							<div class="progress">
-								<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+								<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+									aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
 								</div>
 							</div>
 						</div>
@@ -410,7 +452,8 @@
 				</div>
 				<div class="row">
 					<div class="col-md-3 text-center col-padding animate-box">
-						<a target="_blank" href="https://github.com/Adityacprtm/lobaha" class="work" style="background-image: url({{ asset('assets/old/v1/images/portfolio-1.jpg') }});">
+						<a target="_blank" href="https://github.com/Adityacprtm/lobaha" class="work"
+							style="background-image: url({{ asset('assets/old/v1/images/portfolio-1.jpg') }});">
 							<div class="desc">
 								<h3>LoBaHa</h3>
 								<span>Load Balancing HAproxy Ubuntu 14.04 (trusty64) via Vagrant</span>
@@ -418,7 +461,8 @@
 						</a>
 					</div>
 					<div class="col-md-3 text-center col-padding animate-box">
-						<a target="_blank" href="https://github.com/Adityacprtm/Distributed-Computing-Systems" class="work" style="background-image: url({{ asset('assets/old/v1/images/portfolio-2.jpg') }});">
+						<a target="_blank" href="https://github.com/Adityacprtm/Distributed-Computing-Systems" class="work"
+							style="background-image: url({{ asset('assets/old/v1/images/portfolio-2.jpg') }});">
 							<div class="desc">
 								<h3>Distributed Computing Systems</h3>
 								<span>My collection of codes results from a distributed computing system course.</span>
@@ -426,7 +470,8 @@
 						</a>
 					</div>
 					<div class="col-md-3 text-center col-padding animate-box">
-						<a target="_blank" href="https://github.com/Adityacprtm/Network-Programming" class="work" style="background-image: url({{ asset('assets/old/v1/images/portfolio-3.jpg') }});">
+						<a target="_blank" href="https://github.com/Adityacprtm/Network-Programming" class="work"
+							style="background-image: url({{ asset('assets/old/v1/images/portfolio-3.jpg') }});">
 							<div class="desc">
 								<h3>Network Programing</h3>
 								<span>My collection of codes results from a network programming course with python.</span>
@@ -434,7 +479,8 @@
 						</a>
 					</div>
 					<div class="col-md-3 text-center col-padding animate-box">
-						<a target="_blank" href="https://github.com/Adityacprtm/Cryptography" class="work" style="background-image: url({{ asset('assets/old/v1/images/portfolio-4.jpg') }});">
+						<a target="_blank" href="https://github.com/Adityacprtm/Cryptography" class="work"
+							style="background-image: url({{ asset('assets/old/v1/images/portfolio-4.jpg') }});">
 							<div class="desc">
 								<h3>Cryptography</h3>
 								<span></span>
@@ -442,7 +488,8 @@
 						</a>
 					</div>
 					<div class="col-md-3 text-center col-padding animate-box">
-						<a target="_blank" href="https://github.com/Adityacprtm/FilkomApps-Dosen-Staff" class="work" style="background-image: url({{ asset('assets/old/v1/images/portfolio-5.jpg') }});">
+						<a target="_blank" href="https://github.com/Adityacprtm/FilkomApps-Dosen-Staff" class="work"
+							style="background-image: url({{ asset('assets/old/v1/images/portfolio-5.jpg') }});">
 							<div class="desc">
 								<h3>FilkomApps Lecture And Staff</h3>
 								<span></span>
@@ -450,7 +497,8 @@
 						</a>
 					</div>
 					<div class="col-md-3 text-center col-padding animate-box">
-						<a target="_blank" href="https://github.com/Adityacprtm/Linear-Regression-Java" class="work" style="background-image: url({{ asset('assets/old/v1/images/portfolio-6.jpg') }});">
+						<a target="_blank" href="https://github.com/Adityacprtm/Linear-Regression-Java" class="work"
+							style="background-image: url({{ asset('assets/old/v1/images/portfolio-6.jpg') }});">
 							<div class="desc">
 								<h3>Linear Regression Java</h3>
 								<span></span>
@@ -461,7 +509,8 @@
 			</div>
 		</div>
 		<div id="hoaxy-consult">
-			<div class="video hoaxy-video" style="background-image: url({{ asset('assets/old/v1/images/cover_bg_1.jpg') }});">
+			<div class="video hoaxy-video"
+				style="background-image: url({{ asset('assets/old/v1/images/cover_bg_1.jpg') }});">
 				<div class="overlay"></div>
 			</div>
 			<div class="choose animate-box">
@@ -469,30 +518,35 @@
 				<form action="" method="POST">
 					<div class="row form-group">
 						<div class="col-md-6">
-							<input type="text" name="fname" id="fname" class="form-control" placeholder="Your firstname" required>
+							<input type="text" name="fname" id="fname" class="form-control" placeholder="Your firstname"
+								required>
 						</div>
 					</div>
 					<div class="row form-group">
 						<div class="col-md-6">
-							<input type="text" name="lname" id="lname" class="form-control" placeholder="Your lastname" required>
+							<input type="text" name="lname" id="lname" class="form-control" placeholder="Your lastname"
+								required>
 						</div>
 					</div>
 
 					<div class="row form-group">
 						<div class="col-md-12">
-							<input type="email" name="email" id="email" class="form-control" placeholder="Your email address" required>
+							<input type="email" name="email" id="email" class="form-control" placeholder="Your email address"
+								required>
 						</div>
 					</div>
 
 					<div class="row form-group">
 						<div class="col-md-12">
-							<input type="text" name="subject" id="subject" class="form-control" placeholder="Your subject of this message" required>
+							<input type="text" name="subject" id="subject" class="form-control"
+								placeholder="Your subject of this message" required>
 						</div>
 					</div>
 
 					<div class="row form-group">
 						<div class="col-md-12">
-							<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us" required></textarea>
+							<textarea name="message" id="message" cols="30" rows="10" class="form-control"
+								placeholder="Say something about us" required></textarea>
 						</div>
 					</div>
 					<div class="form-group">
@@ -519,14 +573,17 @@
 				marker.setMap(map);
 			}
 		</script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCODm7I5gcJhL-aBPd0I5MqrBdiIrsvddo&callback=myMap"></script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCODm7I5gcJhL-aBPd0I5MqrBdiIrsvddo&callback=myMap">
+		</script>
 	</div>
 
 	<div id="hoaxy-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<p>&copy; 2018 Aditya Chamim Pratama. All Rights Reserved. <br>Designed by <a href="https://www.adityacprtm.com" target="_blank">adityacprtm.com</a></p>
+					<p>&copy; 2018 Aditya Chamim Pratama. All Rights Reserved. <br>Designed by <a
+							href="https://www.adityacprtm.com" target="_blank">adityacprtm.com</a></p>
 				</div>
 			</div>
 		</div>
@@ -536,7 +593,8 @@
 		<a href="#home" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
 
-	<a href="/" class="float-back" style="text-decoration: none" title="Back"><span style="font-size: 30px">&#8629;</span></a>
+	<a href="/" class="float-back" style="text-decoration: none" title="Back"><span
+			style="font-size: 30px">&#8629;</span></a>
 
 	<!-- jQuery -->
 	<script src="{{ asset('assets/old/v1/js/jquery.min.js') }}"></script>

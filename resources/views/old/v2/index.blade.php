@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/all.min.css') }}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/simple-line-icons.css') }}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/slick.css') }}" type="text/css" media="all">
-	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/jquery.mCustomScrollbar.min.css') }}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/jquery.mCustomScrollbar.min.css') }}" type="text/css"
+		media="all">
 	<link rel="stylesheet" href="{{ asset('assets/old/v2/css/style.css') }}" type="text/css" media="all">
 
 	<style>
@@ -31,6 +32,9 @@
 			text-align: center;
 		}
 	</style>
+
+	<script data-ad-client="ca-pub-7614452738762603" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -71,7 +75,8 @@
 				<span aria-hidden="true">&times;</span>
 			</button>
 			<div class="header-inner d-flex align-items-start flex-column">
-				<a href="/"><img src="{{ asset('assets/old/v2/images/logo.png') }}" alt="Bako Doe" width="70" height="70" /></a>
+				<a href="/"><img src="{{ asset('assets/old/v2/images/logo.png') }}" alt="Bako Doe" width="70"
+						height="70" /></a>
 				<a href="/" class="site-title dot mt-3">Adityacprtm.</a>
 				<span class="site-slogan">Tech Enthusiast</span>
 
@@ -93,11 +98,16 @@
 
 					<!-- social icons -->
 					<ul class="social-icons list-inline">
-						<li class="list-inline-item" title="Facebook"><a target="_blank" href="https://facebook.com/adityacprtm"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="list-inline-item" title="Twitter"><a target="_blank" href="https://twitter.com/adityacprtm"><i class="fab fa-twitter"></i></a></li>
-						<li class="list-inline-item" title="Instagram"><a target="_blank" href="https://instagram.com/adityacprtm"><i class="fab fa-instagram"></i></a></li>
-						<li class="list-inline-item" title="Linkedin"><a target="_blank" href="https://linkedin.com/in/adityacprtm"><i class="fab fa-linkedin-in"></i></a></li>
-						<li class="list-inline-item" title="Github"><a target="_blank" href="https://github.com/adityacprtm"><i class="fab fa-github"></i></a></li>
+						<li class="list-inline-item" title="Facebook"><a target="_blank"
+								href="https://facebook.com/adityacprtm"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="list-inline-item" title="Twitter"><a target="_blank"
+								href="https://twitter.com/adityacprtm"><i class="fab fa-twitter"></i></a></li>
+						<li class="list-inline-item" title="Instagram"><a target="_blank"
+								href="https://instagram.com/adityacprtm"><i class="fab fa-instagram"></i></a></li>
+						<li class="list-inline-item" title="Linkedin"><a target="_blank"
+								href="https://linkedin.com/in/adityacprtm"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="list-inline-item" title="Github"><a target="_blank"
+								href="https://github.com/adityacprtm"><i class="fab fa-github"></i></a></li>
 					</ul>
 
 					<!-- dark mode button -->
@@ -110,7 +120,8 @@
 					</div>
 
 					<!-- copyright -->
-					<span class="copyright">Configured with <i style="color: #FF5959" class="fas fa-heart"></i> at 2019 <br> by <a target="_blank" href="https://adityacprtm.com"><strong>Adityacprtm.com</strong></a></span>
+					<span class="copyright">Configured with <i style="color: #FF5959" class="fas fa-heart"></i> at 2019 <br>
+						by <a target="_blank" href="https://adityacprtm.com"><strong>Adityacprtm.com</strong></a></span>
 				</div>
 			</div>
 		</header>
@@ -119,14 +130,20 @@
 		<main class="content float-right">
 
 			<!-- section hero -->
-			<section class="hero background parallax shadow-dark d-flex align-items-center" id="home" data-image-src="{{ asset('assets/old/v2/images/background-1.jpg') }}">
+			<section class="hero background parallax shadow-dark d-flex align-items-center" id="home"
+				data-image-src="{{ asset('assets/old/v2/images/background-1.jpg') }}">
 				<div class="cta mx-auto mt-2">
 					{{-- <h1 class="mt-0 mb-4">I’m Bako Doe<span class="dot"></span></h1> --}}
-					<h1 class="mt-0 mb-4 typewrite" data-period="2000" data-type='[ "Hello World!", "I Am Aditya.", "Hi, mbeb." ]'><span class="wrap"></span><span class="dot"></span></h1>
-					<p class="mb-4">Just because something doesn’t do what you planned it to do doesn’t mean it’s useless. –Thomas Edison</p>
+					<h1 class="mt-0 mb-4 typewrite" data-period="2000"
+						data-type='[ "Hello World!", "I Am Aditya.", "Hi, mbeb." ]'><span class="wrap"></span><span
+							class="dot"></span></h1>
+					<p class="mb-4">Just because something doesn’t do what you planned it to do doesn’t mean it’s useless.
+						–Thomas Edison</p>
 					<a href="#resume" class="btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View Resume</a>
 					<div class="spacer d-md-none d-lg-none d-sm-none" data-height="10"></div>
-					<a target="_blank" href="mailto:adityacprtm[at]gmail[dot]com?body=PLEASE CHANGE RECIPIENT'S EMAIL WITH THE CORRECT SYMBOL!" class="btn btn-border-light btn-lg"><i class="icon-envelope"></i>Contact Me</a>
+					<a target="_blank"
+						href="mailto:adityacprtm[at]gmail[dot]com?body=PLEASE CHANGE RECIPIENT'S EMAIL WITH THE CORRECT SYMBOL!"
+						class="btn btn-border-light btn-lg"><i class="icon-envelope"></i>Contact Me</a>
 				</div>
 				<div class="overlay"></div>
 			</section>
@@ -142,7 +159,11 @@
 					</div>
 					<div class="col-md-9">
 						<h2 class="mt-4 mt-md-0 mb-4">Hello,</h2>
-						<p class="mb-0">I was Born in Pangkalan Bun, June 21, 1997 at 13:00. I live in Banjarbaru, South Kalimantan, Indonesia. Currently pursuing a bachelor's degree at the Faculty of Computer Science, Universitas Brawijaya focuses on Network Based Computing. Become one of the selected participants to take part in the Partner Certification of the DIGITALENT 2019 program implemented by the Ministry of Communication and Information.</p>
+						<p class="mb-0">I was Born in Pangkalan Bun, June 21, 1997 at 13:00. I live in Banjarbaru, South
+							Kalimantan, Indonesia. Currently pursuing a bachelor's degree at the Faculty of Computer Science,
+							Universitas Brawijaya focuses on Network Based Computing. Become one of the selected participants
+							to take part in the Partner Certification of the DIGITALENT 2019 program implemented by the
+							Ministry of Communication and Information.</p>
 						<div class="row my-4">
 							<div class="col-md-6">
 								<p class="mb-2">Name: <span class="text-dark">Aditya Chamim Pratama</span></p>
@@ -153,8 +174,12 @@
 								<p class="mb-0">Email: <span class="text-dark">adityacprtm[at]gmail[dot]com</span></p>
 							</div>
 						</div>
-						<a target="_blank" href="https://adityacprtm-shared.s3-ap-southeast-1.amazonaws.com/pdf/Aditya_Pratama_CV.pdf" class="btn btn-default mr-3"><i class="icon-cloud-download"></i>Download CV</a>
-						<a target="_blank" href="mailto:adityacprtm[at]gmail[dot]com?body=PLEASE CHANGE RECIPIENT'S EMAIL WITH THE CORRECT SYMBOL!" class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Contact me</a>
+						<a target="_blank"
+							href="https://adityacprtm-shared.s3-ap-southeast-1.amazonaws.com/pdf/Aditya_Pratama_CV.pdf"
+							class="btn btn-default mr-3"><i class="icon-cloud-download"></i>Download CV</a>
+						<a target="_blank"
+							href="mailto:adityacprtm[at]gmail[dot]com?body=PLEASE CHANGE RECIPIENT'S EMAIL WITH THE CORRECT SYMBOL!"
+							class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Contact me</a>
 					</div>
 				</div>
 			</section>
@@ -164,7 +189,8 @@
 				<h3 class="section-title">My skills</h3>
 				<div class="spacer" data-height="80"></div>
 
-				<p class="mb-0">Don’t compare yourself with anyone in this world…if you do so, you are insulting yourself. <strong>-Bill Gates</strong></p>
+				<p class="mb-0">Don’t compare yourself with anyone in this world…if you do so, you are insulting yourself.
+					<strong>-Bill Gates</strong></p>
 
 				<div class="row mt-5">
 
@@ -176,7 +202,8 @@
 								<span class="float-right">Intermediate</span>
 							</div>
 							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+									aria-valuenow="60">
 								</div>
 							</div>
 							<div class="spacer" data-height="50"></div>
@@ -191,7 +218,8 @@
 								<span class="float-right">Expert</span>
 							</div>
 							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+									aria-valuenow="100">
 								</div>
 							</div>
 							<div class="spacer" data-height="50"></div>
@@ -206,7 +234,8 @@
 								<span class="float-right">Intermediate</span>
 							</div>
 							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+									aria-valuenow="60">
 								</div>
 							</div>
 							<div class="spacer" data-height="50"></div>
@@ -221,7 +250,8 @@
 								<span class="float-right">Intermediate</span>
 							</div>
 							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+									aria-valuenow="60">
 								</div>
 							</div>
 							<div class="spacer" data-height="50"></div>
@@ -236,7 +266,8 @@
 								<span class="float-right">Expert</span>
 							</div>
 							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+									aria-valuenow="100">
 								</div>
 							</div>
 							<div class="spacer d-md-none d-lg-none" data-height="50"></div>
@@ -251,7 +282,8 @@
 								<span class="float-right">Expert</span>
 							</div>
 							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+								<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+									aria-valuenow="100">
 								</div>
 							</div>
 							<div class="spacer d-md-none d-lg-none" data-height="50"></div>
@@ -262,7 +294,8 @@
 			</section>
 
 			<!-- section facts -->
-			<section id="facts" class="shadow-dark color-white background parallax padding-50" data-image-src="{{ asset('assets/old/v2/images/background-2.jpg') }}">
+			<section id="facts" class="shadow-dark color-white background parallax padding-50"
+				data-image-src="{{ asset('assets/old/v2/images/background-2.jpg') }}">
 
 				<div class="row relative z-1">
 					<div class="col-md-3 col-sm-6">
@@ -567,7 +600,8 @@
 								<div class="column col-md-6">
 									<!-- Name input -->
 									<div class="form-group">
-										<input type="text" class="form-control" name="name" id="name" placeholder="Your name" required="required" data-error="Name is required.">
+										<input type="text" class="form-control" name="name" id="name" placeholder="Your name"
+											required="required" data-error="Name is required.">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
@@ -575,7 +609,8 @@
 								<div class="column col-md-6">
 									<!-- Email input -->
 									<div class="form-group">
-										<input type="email" class="form-control" id="email" name="email" placeholder="Email address" required="required" data-error="Email is required.">
+										<input type="email" class="form-control" id="email" name="email"
+											placeholder="Email address" required="required" data-error="Email is required.">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
@@ -583,7 +618,8 @@
 								<div class="column col-md-12">
 									<!-- Email input -->
 									<div class="form-group">
-										<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required="required" data-error="Subject is required.">
+										<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
+											required="required" data-error="Subject is required.">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
@@ -591,16 +627,20 @@
 								<div class="column col-md-12">
 									<!-- Message textarea -->
 									<div class="form-group">
-										<textarea name="message" id="message" class="form-control" rows="5" placeholder="Message" required="required" data-error="Message is required."></textarea>
+										<textarea name="message" id="message" class="form-control" rows="5" placeholder="Message"
+											required="required" data-error="Message is required."></textarea>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="column col-md-12">
-									<div class="g-recaptcha" data-sitekey="6Lf2DrYUAAAAAGrNQQHNaSUEW6YuzLCSPuRkMXwh" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+									<div class="g-recaptcha" data-sitekey="6Lf2DrYUAAAAAGrNQQHNaSUEW6YuzLCSPuRkMXwh"
+										style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;">
+									</div>
 								</div>
 							</div>
 
-							<button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default"><i class="icon-paper-plane"></i>Send Message</button><!-- Send Button -->
+							<button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default"><i
+									class="icon-paper-plane"></i>Send Message</button><!-- Send Button -->
 
 						</form>
 						<!-- Contact Form end -->
@@ -617,7 +657,8 @@
 	<!-- Go to top button -->
 	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
-	<a href="/" class="float-back" style="text-decoration: none" title="Back"><span style="font-size: 30px">&#8629;</span></a>
+	<a href="/" class="float-back" style="text-decoration: none" title="Back"><span
+			style="font-size: 30px">&#8629;</span></a>
 
 	<!-- SCRIPTS -->
 	<script src="{{ asset('assets/old/v2/js/jquery-1.12.3.min.js') }}"></script>
